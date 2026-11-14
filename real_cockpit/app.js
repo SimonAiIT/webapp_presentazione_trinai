@@ -10,7 +10,7 @@
   // STATO GLOBALE DELL'APPLICAZIONE
   const STATO = {
     vistaAttiva: 'torre',
-    sedeAttivaId: 'treviso',
+    sedeAttivaId: 'nodo_alfa',
     nomiInChiaro: true, // true = Dottore vede nomi autentici; false = modalità riservata PZ_
     allarmi: JSON.parse(JSON.stringify(DATI_COCKPIT.allarmi)),
     lezioni: JSON.parse(JSON.stringify(DATI_COCKPIT.memoria.lezioniDaApprovare)),
@@ -42,7 +42,7 @@
     inizializzaMappaCelle46();
     inizializzaMarqueeFeed();
     inizializzaSedeDettaglio();
-    inizializzaMappaTriveneto();
+    inizializzaMappaRete();
     inizializzaSpettroAudio();
     inizializzaAllarmi();
     inizializzaCompagnoChat();
@@ -176,16 +176,16 @@
 
     // 2. Le 10 Sedi Arcada distribuite su tutta la larghezza e altezza con ancoraggi dedicati
     const sediConfig = [
-      { id: 'treviso', nome: 'Treviso HQ', rx: 0.52, ry: 0.52, align: 'right' },
-      { id: 'oderzo', nome: 'Oderzo', rx: 0.72, ry: 0.46, align: 'right' },
-      { id: 'conegliano', nome: 'Conegliano', rx: 0.65, ry: 0.26, align: 'top-right' },
-      { id: 'venezia', nome: 'Venezia S. Marco', rx: 0.58, ry: 0.78, align: 'bottom' },
-      { id: 'mestre', nome: 'Mestre', rx: 0.38, ry: 0.80, align: 'bottom-left' },
-      { id: 'vittorio', nome: 'Vittorio Veneto', rx: 0.50, ry: 0.16, align: 'top' },
-      { id: 'belluno', nome: 'Belluno', rx: 0.30, ry: 0.22, align: 'top-left' },
-      { id: 'pordenone', nome: 'Pordenone', rx: 0.85, ry: 0.32, align: 'top-right' },
-      { id: 'villorba', nome: 'Villorba', rx: 0.34, ry: 0.46, align: 'left' },
-      { id: 'londra', nome: 'Londra Wimpole St', rx: 0.14, ry: 0.48, align: 'left' }
+      { id: 'nodo_alfa', nome: 'Polo Alfa HQ', rx: 0.52, ry: 0.52, align: 'right' },
+      { id: 'nodo_beta', nome: 'Polo Beta', rx: 0.72, ry: 0.46, align: 'right' },
+      { id: 'nodo_gamma', nome: 'Polo Gamma', rx: 0.65, ry: 0.26, align: 'top-right' },
+      { id: 'nodo_delta', nome: 'Polo Delta S. Marco', rx: 0.58, ry: 0.78, align: 'bottom' },
+      { id: 'nodo_epsilon', nome: 'Polo Epsilon', rx: 0.38, ry: 0.80, align: 'bottom-left' },
+      { id: 'vittorio', nome: 'Polo Zeta', rx: 0.50, ry: 0.16, align: 'top' },
+      { id: 'nodo_eta', nome: 'Polo Eta', rx: 0.30, ry: 0.22, align: 'top-left' },
+      { id: 'nodo_theta', nome: 'Polo Theta', rx: 0.85, ry: 0.32, align: 'top-right' },
+      { id: 'nodo_iota', nome: 'Polo Iota', rx: 0.34, ry: 0.46, align: 'left' },
+      { id: 'nodo_omega', nome: 'Polo Omega Wimpole St', rx: 0.14, ry: 0.48, align: 'left' }
     ];
 
     const sedeNodesMap = {};
@@ -300,16 +300,16 @@
 
     // 4. Connessioni sinaptiche incrociate tra cliniche vicine (Maglia di rete)
     const sinapsi = [
-      ['treviso', 'villorba'],
-      ['treviso', 'mestre'],
-      ['treviso', 'conegliano'],
-      ['mestre', 'venezia'],
-      ['conegliano', 'vittorio'],
-      ['conegliano', 'oderzo'],
-      ['vittorio', 'belluno'],
-      ['oderzo', 'pordenone'],
-      ['villorba', 'belluno'],
-      ['treviso', 'londra']
+      ['nodo_alfa', 'nodo_iota'],
+      ['nodo_alfa', 'nodo_epsilon'],
+      ['nodo_alfa', 'nodo_gamma'],
+      ['nodo_epsilon', 'nodo_delta'],
+      ['nodo_gamma', 'vittorio'],
+      ['nodo_gamma', 'nodo_beta'],
+      ['vittorio', 'nodo_eta'],
+      ['nodo_beta', 'nodo_theta'],
+      ['nodo_iota', 'nodo_eta'],
+      ['nodo_alfa', 'nodo_omega']
     ];
 
     sinapsi.forEach(([id1, id2]) => {
@@ -372,50 +372,50 @@
       {
         tag: "CHIRURGIA ALL-ON-4",
         title: "Direttore Clinico · Caso Clinico A1",
-        detail: "Treviso Chirurgia 1 · Straumann BLX 4.5 guidato · Osteotomia corticale nominale",
-        targetNodeId: 'sede_treviso',
+        detail: "Polo Alfa Chirurgia 1 · Straumann BLX 4.5 guidato · Osteotomia corticale nominale",
+        targetNodeId: 'sede_nodo_alfa',
         targetXRatio: 0.52, targetYRatio: 0.52
       },
       {
         tag: "MONITORAGGIO ACUSTICO",
         title: "Compressore Kaeser SX6",
-        detail: "Conegliano Sala Macchine · Frequenza 53.4 Hz sotto osservazione preventiva",
-        targetNodeId: 'sede_conegliano',
+        detail: "Polo Gamma Sala Macchine · Frequenza 53.4 Hz sotto osservazione preventiva",
+        targetNodeId: 'sede_nodo_gamma',
         targetXRatio: 0.65, targetYRatio: 0.26
       },
       {
         tag: "PIANO TERAPEUTICO ACCETTATO",
         title: "Dott. Cantice · Caso Clinico B2",
-        detail: "Venezia San Marco · Accettato Toronto Bridge €14.800 con anteprima 3D",
-        targetNodeId: 'sede_venezia',
+        detail: "Polo Delta San Marco · Accettato Toronto Bridge €14.800 con anteprima 3D",
+        targetNodeId: 'sede_nodo_delta',
         targetXRatio: 0.58, targetYRatio: 0.78
       },
       {
         tag: "STERILIZZAZIONE CERTIFICATA",
         title: "Melag Vacuklav 44B+ · 134°C",
-        detail: "Mestre Centrale Sterilizzazione · Pressione 2.18 bar validata da Victor",
-        targetNodeId: 'sede_mestre',
+        detail: "Polo Epsilon Centrale Sterilizzazione · Pressione 2.18 bar validata da Victor",
+        targetNodeId: 'sede_nodo_epsilon',
         targetXRatio: 0.38, targetYRatio: 0.80
       },
       {
         tag: "RICONOSCIMENTO IMPIANTO",
         title: "Computer Vision Impianti",
-        detail: "Villorba Sala 2 · Straumann BLX verificato e scalato dal magazzino",
-        targetNodeId: 'sede_villorba',
+        detail: "Polo Iota Sala 2 · Straumann BLX verificato e scalato dal magazzino",
+        targetNodeId: 'sede_nodo_iota',
         targetXRatio: 0.34, targetYRatio: 0.46
       },
       {
         tag: "DIAGNOSI COMPUTER-GUIDATA",
         title: "Planmeca ProFace 3D",
-        detail: "Belluno Diagnostica · Acquisizione volumetrica ossea completata",
-        targetNodeId: 'sede_belluno',
+        detail: "Polo Eta Diagnostica · Acquisizione volumetrica ossea completata",
+        targetNodeId: 'sede_nodo_eta',
         targetXRatio: 0.30, targetYRatio: 0.22
       },
       {
-        tag: "CANALE LONDRA ATTIVO",
+        tag: "CANALE POLO OMEGA ATTIVO",
         title: "Avamposto Wimpole Street",
-        detail: "Londra · Sincronizzazione 6 sale in tempo reale · Protocollo Victor",
-        targetNodeId: 'sede_londra',
+        detail: "Polo Omega · Sincronizzazione 6 sale in tempo reale · Protocollo Victor",
+        targetNodeId: 'sede_nodo_omega',
         targetXRatio: 0.14, targetYRatio: 0.48
       }
     ];
@@ -907,14 +907,14 @@
     if (!track) return;
 
     const news = [
-      { time: '13:46:12', tag: 'TREVISO', text: 'Chirurgia All-on-4 Sala 1: completato inserimento 4 impianti Straumann BLX da Direttore Clinico' },
-      { time: '13:45:01', tag: 'CONEGLIANO', text: 'Compressore Kaeser SX6: frequenza monitorata a 53.4 Hz, parametri di sicurezza nominali' },
-      { time: '13:43:20', tag: 'VENEZIA', text: 'Accettato piano di riabilitazione arcata superiore con Toronto Bridge in zirconia (€14.800)' },
-      { time: '13:41:15', tag: 'MESTRE', text: 'Centrale sterilizzazione: ciclo autoclave 134°C registrato con successo (32/32 lotti conformi)' },
-      { time: '13:38:50', tag: 'LONDRA', text: 'Wimpole Street: sincronizzazione WireGuard nominale a 24.2 ms, prima visita delle 14:00 pronta' },
-      { time: '13:35:40', tag: 'ODERZO', text: 'Sensore perimetrale pelle: passaggio automatico a protocollo diurno verificato' },
-      { time: '13:32:00', tag: 'BELLUNO', text: 'CBCT 3D Planmeca: acquisita scansione volumetrica per chirurgia guidata computerizzata' },
-      { time: '13:28:10', tag: 'VILLORBA', text: 'Richiamo igiene orale: 8 pazienti hanno confermato lappuntamento tramite recall automatico' }
+      { time: '13:46:12', tag: 'POLO ALFA', text: 'Chirurgia All-on-4 Sala 1: completato inserimento 4 impianti Straumann BLX da Direttore Clinico' },
+      { time: '13:45:01', tag: 'POLO GAMMA', text: 'Compressore Kaeser SX6: frequenza monitorata a 53.4 Hz, parametri di sicurezza nominali' },
+      { time: '13:43:20', tag: 'POLO DELTA', text: 'Accettato piano di riabilitazione arcata superiore con Toronto Bridge in zirconia (€14.800)' },
+      { time: '13:41:15', tag: 'POLO EPSILON', text: 'Centrale sterilizzazione: ciclo autoclave 134°C registrato con successo (32/32 lotti conformi)' },
+      { time: '13:38:50', tag: 'POLO OMEGA', text: 'Wimpole Street: sincronizzazione WireGuard nominale a 24.2 ms, prima visita delle 14:00 pronta' },
+      { time: '13:35:40', tag: 'POLO BETA', text: 'Sensore perimetrale pelle: passaggio automatico a protocollo diurno verificato' },
+      { time: '13:32:00', tag: 'POLO ETA', text: 'CBCT 3D Planmeca: acquisita scansione volumetrica per chirurgia guidata computerizzata' },
+      { time: '13:28:10', tag: 'POLO IOTA', text: 'Richiamo igiene orale: 8 pazienti hanno confermato lappuntamento tramite recall automatico' }
     ];
 
     let itemsHtml = '';
@@ -1039,7 +1039,7 @@
     if (machinesGrid) {
       let machHtml = '';
       const macchine = [
-        { nome: 'Compressore Kaeser SX6', stato: sede.id === 'conegliano' ? 'Scostamento armonico' : 'Regime Nominale', vibrazione: sede.id === 'conegliano' ? '4.2 mm/s' : '0.42 mm/s', t: '48.2 °C' },
+        { nome: 'Compressore Kaeser SX6', stato: sede.id === 'nodo_gamma' ? 'Scostamento armonico' : 'Regime Nominale', vibrazione: sede.id === 'nodo_gamma' ? '4.2 mm/s' : '0.42 mm/s', t: '48.2 °C' },
         { nome: 'Autoclave Melag Vacuklav 44B+', stato: '100% Conforme', cicli: '4 cicli oggi (134°C)', p: '2.18 bar' },
         { nome: 'Centrale Aspirazione Cattani', stato: 'In aspirazione', vuoto: '-0.22 bar', db: '48 dB(A)' },
         { nome: 'Gruppo Continuità Riello UPS', stato: 'Batterie Cariche (100%)', autonom: '45 minuti', carico: '28%' }
@@ -1063,30 +1063,30 @@
       machinesGrid.innerHTML = machHtml;
     }
 
-    aggiornaMappaTriveneto(sede.id);
+    aggiornaMappaRete(sede.id);
   }
 
   /* ==========================================================================
-     8B. MAPPA VETTORIALE STILIZZATA TRIVENETO + LONDRA INSET
+     8B. MAPPA VETTORIALE STILIZZATA RETE TERRITORIALE + POLO OMEGA INSET
      ========================================================================== */
-  function inizializzaMappaTriveneto() {
-    aggiornaMappaTriveneto(STATO.sedeAttivaId);
+  function inizializzaMappaRete() {
+    aggiornaMappaRete(STATO.sedeAttivaId);
   }
 
-  function aggiornaMappaTriveneto(activeSedeId) {
-    const svg = document.getElementById('trivenetoMapSvg');
+  function aggiornaMappaRete(activeSedeId) {
+    const svg = document.getElementById('reteMapSvg');
     if (!svg) return;
 
     const sedi = DATI_COCKPIT.sedi;
 
-    // Linee di collegamento tra sedi del Triveneto
+    // Linee di collegamento tra sedi del Rete Territoriale
     let linesHtml = '';
-    const treviso = sedi.find(s => s.id === 'treviso');
-    if (treviso && treviso.mapCoords) {
+    const nodo_alfa = sedi.find(s => s.id === 'nodo_alfa');
+    if (nodo_alfa && nodo_alfa.mapCoords) {
       sedi.forEach(s => {
-        if (s.id !== 'treviso' && s.id !== 'londra' && s.mapCoords) {
+        if (s.id !== 'nodo_alfa' && s.id !== 'nodo_omega' && s.mapCoords) {
           linesHtml += `
-            <line x1="${treviso.mapCoords.x}" y1="${treviso.mapCoords.y}" x2="${s.mapCoords.x}" y2="${s.mapCoords.y}" stroke="rgba(56, 189, 248, 0.2)" stroke-width="1.2" stroke-dasharray="3,3" />
+            <line x1="${nodo_alfa.mapCoords.x}" y1="${nodo_alfa.mapCoords.y}" x2="${s.mapCoords.x}" y2="${s.mapCoords.y}" stroke="rgba(56, 189, 248, 0.2)" stroke-width="1.2" stroke-dasharray="3,3" />
           `;
         }
       });
@@ -1109,20 +1109,20 @@
       `;
     });
 
-    // Inset Londra (Wimpole Street)
+    // Inset Polo Omega (Wimpole Street)
     const londonInsetHtml = `
       <rect x="15" y="15" width="130" height="90" rx="3" fill="#0c111a" stroke="rgba(201, 162, 75, 0.4)" stroke-width="1" />
       <text x="25" y="32" font-family="'JetBrains Mono'" font-size="8.5" font-weight="700" fill="#c9a24b" letter-spacing="0.5">REGNO UNITO · INSET</text>
       <text x="25" y="44" font-family="'JetBrains Mono'" font-size="7.5" fill="#64748b">18 Wimpole St, London</text>
       <line x1="15" y1="52" x2="145" y2="52" stroke="rgba(255, 255, 255, 0.08)" />
-      <g style="cursor: pointer;" onclick="window.selezionaSede('londra')">
-        <circle cx="45" cy="74" r="${activeSedeId === 'londra' ? 6 : 4}" fill="${activeSedeId === 'londra' ? '#f97316' : '#10b981'}" />
-        <text x="56" y="78" font-family="'JetBrains Mono'" font-size="10" font-weight="700" fill="${activeSedeId === 'londra' ? '#f97316' : '#f8fafc'}">Londra HQ</text>
+      <g style="cursor: pointer;" onclick="window.selezionaSede('nodo_omega')">
+        <circle cx="45" cy="74" r="${activeSedeId === 'nodo_omega' ? 6 : 4}" fill="${activeSedeId === 'nodo_omega' ? '#f97316' : '#10b981'}" />
+        <text x="56" y="78" font-family="'JetBrains Mono'" font-size="10" font-weight="700" fill="${activeSedeId === 'nodo_omega' ? '#f97316' : '#f8fafc'}">Polo Omega HQ</text>
       </g>
     `;
 
     svg.innerHTML = `
-      <!-- Sfondo stilizzato Triveneto -->
+      <!-- Sfondo stilizzato Rete Territoriale -->
       <path d="M 220 50 L 320 60 L 410 140 L 420 220 L 340 330 L 260 340 L 230 290 Z" fill="rgba(255, 255, 255, 0.015)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1" />
       ${linesHtml}
       ${dotsHtml}
@@ -1134,8 +1134,8 @@
      9. VISTA 03: SPETTRO AUDIO ANIMATO PER I SENSI
      ========================================================================== */
   function inizializzaSpettroAudio() {
-    const spConegliano = document.getElementById('spectrumConegliano');
-    const spTreviso = document.getElementById('spectrumTreviso');
+    const spPoloGamma = document.getElementById('spectrumPoloGamma');
+    const spPoloAlfa = document.getElementById('spectrumPoloAlfa');
 
     function createBars(container, isAnomaly) {
       if (!container) return;
@@ -1147,12 +1147,12 @@
       container.innerHTML = html;
     }
 
-    createBars(spConegliano, true);
-    createBars(spTreviso, false);
+    createBars(spPoloGamma, true);
+    createBars(spPoloAlfa, false);
 
     setInterval(() => {
-      createBars(spConegliano, true);
-      createBars(spTreviso, false);
+      createBars(spPoloGamma, true);
+      createBars(spPoloAlfa, false);
     }, 800);
   }
 
@@ -1328,7 +1328,7 @@
       btnMic.addEventListener('click', () => {
         btnMic.style.backgroundColor = '#f97316';
         btnMic.style.color = '#000';
-        input.value = "Come sta andando oggi la saturazione a Conegliano e a Treviso?";
+        input.value = "Come sta andando oggi la saturazione a Polo Gamma e a Polo Alfa?";
         setTimeout(() => {
           btnMic.style.backgroundColor = '';
           btnMic.style.color = '';
@@ -1522,8 +1522,8 @@
             <div class="subbox-val" style="color: var(--accent-green);">${r.latenzaReteNodiLocali}</div>
           </div>
           <div class="subbox-terminal">
-            <div class="subbox-name">Canale Londra Wimpole St</div>
-            <div class="subbox-val" style="color: var(--accent-cyan);">${r.canaleLondraLatenza}</div>
+            <div class="subbox-name">Canale Polo Omega Wimpole St</div>
+            <div class="subbox-val" style="color: var(--accent-cyan);">${r.canaleOmegaLatenza}</div>
           </div>
         </div>
       `;

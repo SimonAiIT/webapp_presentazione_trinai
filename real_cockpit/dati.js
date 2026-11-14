@@ -52,23 +52,23 @@ const DATI_COCKPIT = {
     },
 
     sensiStatus: {
-      orecchie: { stato: "allerta_lieve", attive: 32, anomalie: 1, label: "1 scostamento armonico rilevato (Conegliano)" },
+      orecchie: { stato: "allerta_lieve", attive: 32, anomalie: 1, label: "1 scostamento armonico rilevato (Polo Gamma)" },
       pelle: { stato: "ottimale", attive: 240, anomalie: 0, label: "Parametri microclimatici e sicurezza ottimali" },
       occhi: { stato: "ottimale", attive: 18, anomalie: 0, label: "74 scansioni elaborate oggi — 100% tracciate" },
-      flusso: { stato: "ricostruito", attive: 46, anomalie: 1, label: "1 sensore muto ricostruito via scialitica (Conegliano)" }
+      flusso: { stato: "ricostruito", attive: 46, anomalie: 1, label: "1 sensore muto ricostruito via scialitica (Polo Gamma)" }
     }
   },
 
-  // Coordinate geografiche stilizzate (x: 0-500, y: 0-420) per la mappa vettoriale del Triveneto
+  // Coordinate geografiche stilizzate (x: 0-500, y: 0-420) per la mappa vettoriale del Rete Territoriale
   sedi: [
     {
-      id: "treviso",
-      nome: "Treviso",
-      denominazioneUfficiale: "Polo Arcada Demo Treviso — Centro Chirurgico Principale",
-      indirizzo: "Via del Nodo Centrale, 1",
-      cap: "31100",
-      citta: "Treviso (TV)",
-      telefono: "0000 000000",
+      id: "nodo_alfa",
+      nome: "Polo Alfa",
+      denominazioneUfficiale: "Polo Arcada Demo Polo Alfa — Centro Chirurgico Principale",
+      indirizzo: "Via del Nodo Demo, 10",
+      cap: "00000",
+      citta: "Polo Alfa",
+      telefono: "000 000000",
       direttoreSanitario: "Direttore Sanitario",
       semaforo: "verde", // verde, ambra, rosso
       statusMotivo: "Regime nominale eccellente. 6 sale attive, saturazione all'88%.",
@@ -85,9 +85,9 @@ const DATI_COCKPIT = {
         { id: "S1", nome: "Sala 1 — Chirurgia Guidata A", stato: "chirurgia", procedura: "Impianto All-on-4 arcata sup.", paziente: "Soggetto Demo 01", codicePz: "PZ_3914_TRE", operatore: "Direttore Clinico", orario: "11:30 - 13:45", fineStimata: "fra 18 min" },
         { id: "S2", nome: "Sala 2 — Chirurgia Guidata B", stato: "in_sanificazione", procedura: "Sanificazione aerosol post-estrazione complessa", paziente: "—", codicePz: "—", operatore: "Équipe Assistenza", orario: "13:20 - 13:45", fineStimata: "fra 8 min" },
         { id: "S3", nome: "Sala 3 — Riabilitazione Protesica", stato: "occupata", procedura: "Impronta ottica 3D e prova struttura zirconia", paziente: "Soggetto Demo 02", codicePz: "PZ_4120_TRE", operatore: "Direttore Sanitario", orario: "13:00 - 14:00", fineStimata: "fra 25 min" },
-        { id: "S4", nome: "Sala 4 — Igiene & Terapia Parodontale", stato: "occupata", procedura: "Protocollo GBT AirFlow e debridement sonico", paziente: "Soggetto Demo 03", codicePz: "PZ_2744_TRE", operatore: "Dott.ssa B. Barbieri", orario: "13:15 - 14:15", fineStimata: "fra 40 min" },
-        { id: "S5", nome: "Sala 5 — Ortodonzia Invisibile & Pedo", stato: "libera", procedura: "Pronta per prima visita allineatori ore 14:00", paziente: "—", codicePz: "—", operatore: "Dott.ssa L. Meneghel", orario: "14:00 - 14:45", fineStimata: "Disponibile" },
-        { id: "S6", nome: "Sala 6 — Prima Visita & Diagnosi 3D", stato: "occupata", procedura: "Valutazione TAC CBCT e piano di trattamento", paziente: "Soggetto Demo 04", codicePz: "PZ_5201_TRE", operatore: "Dott. S. Rinaldi", orario: "13:30 - 14:15", fineStimata: "Iniziata da 5 min" }
+        { id: "S4", nome: "Sala 4 — Igiene & Terapia Parodontale", stato: "occupata", procedura: "Protocollo GBT AirFlow e debridement sonico", paziente: "Soggetto Demo 03", codicePz: "PZ_2744_TRE", operatore: "Operatore Clinico", orario: "13:15 - 14:15", fineStimata: "fra 40 min" },
+        { id: "S5", nome: "Sala 5 — Ortodonzia Invisibile & Pedo", stato: "libera", procedura: "Pronta per prima visita allineatori ore 14:00", paziente: "—", codicePz: "—", operatore: "Operatore Clinico", orario: "14:00 - 14:45", fineStimata: "Disponibile" },
+        { id: "S6", nome: "Sala 6 — Prima Visita & Diagnosi 3D", stato: "occupata", procedura: "Valutazione TAC CBCT e piano di trattamento", paziente: "Soggetto Demo 04", codicePz: "PZ_5201_TRE", operatore: "Operatore Clinico", orario: "13:30 - 14:15", fineStimata: "Iniziata da 5 min" }
       ],
 
       agendaGiornata: [
@@ -132,13 +132,13 @@ const DATI_COCKPIT = {
     },
 
     {
-      id: "oderzo",
-      nome: "Oderzo",
-      denominazioneUfficiale: "Polo Arcada Demo Oderzo — Polo Opitergino",
-      indirizzo: "Piazzale Europa, 1/B",
-      cap: "31046",
-      citta: "Oderzo (TV)",
-      telefono: "0422 815000",
+      id: "nodo_beta",
+      nome: "Polo Beta",
+      denominazioneUfficiale: "Polo Arcada Demo Polo Beta — Polo Settore Beta",
+      indirizzo: "Via del Nodo Demo, 10",
+      cap: "00000",
+      citta: "Polo Beta",
+      telefono: "000 000000",
       direttoreSanitario: "Dott. Michele Dal Vera",
       semaforo: "verde",
       statusMotivo: "4 sale su 4 operative, flusso regolare, accettazione preventivi all'82%.",
@@ -152,10 +152,10 @@ const DATI_COCKPIT = {
       mapCoords: { x: 355, y: 230, labelX: 365, labelY: 235 },
 
       sale: [
-        { id: "S1", nome: "Sala 1 — Chirurgia Avanzata", stato: "occupata", procedura: "Impianto post-estrattivo immediato", paziente: "Soggetto Demo 14", codicePz: "PZ_2819_ODE", operatore: "Dott. Michele Dal Vera", orario: "13:00 - 14:15", fineStimata: "fra 35 min" },
-        { id: "S2", nome: "Sala 2 — Conservativa & Protesi", stato: "occupata", procedura: "Intarsio in disilicato su 2.6", paziente: "Soggetto Demo 15", codicePz: "PZ_1194_ODE", operatore: "Dott. F. Tomasi", orario: "13:15 - 14:00", fineStimata: "fra 20 min" },
-        { id: "S3", nome: "Sala 3 — Igiene & Mantenimento", stato: "libera", procedura: "Sanificata e predisposta per seduta ore 14:00", paziente: "—", codicePz: "—", operatore: "Dott.ssa M. Furlan", orario: "14:00 - 15:00", fineStimata: "Disponibile" },
-        { id: "S4", nome: "Sala 4 — Prima Visita & Ortodonzia", stato: "occupata", procedura: "Check-up ortodontico 3D", paziente: "Soggetto Demo 16", codicePz: "PZ_4901_ODE", operatore: "Dott. A. Varaschin", orario: "13:30 - 14:15", fineStimata: "In corso" }
+        { id: "S1", nome: "Sala 1 — Chirurgia Avanzata", stato: "occupata", procedura: "Impianto post-estrattivo immediato", paziente: "Soggetto Demo 14", codicePz: "PZ_2819_ODE", operatore: "Operatore Clinico", orario: "13:00 - 14:15", fineStimata: "fra 35 min" },
+        { id: "S2", nome: "Sala 2 — Conservativa & Protesi", stato: "occupata", procedura: "Intarsio in disilicato su 2.6", paziente: "Soggetto Demo 15", codicePz: "PZ_1194_ODE", operatore: "Operatore Clinico", orario: "13:15 - 14:00", fineStimata: "fra 20 min" },
+        { id: "S3", nome: "Sala 3 — Igiene & Mantenimento", stato: "libera", procedura: "Sanificata e predisposta per seduta ore 14:00", paziente: "—", codicePz: "—", operatore: "Operatore Clinico", orario: "14:00 - 15:00", fineStimata: "Disponibile" },
+        { id: "S4", nome: "Sala 4 — Prima Visita & Ortodonzia", stato: "occupata", procedura: "Check-up ortodontico 3D", paziente: "Soggetto Demo 16", codicePz: "PZ_4901_ODE", operatore: "Operatore Clinico", orario: "13:30 - 14:15", fineStimata: "In corso" }
       ],
 
       agendaGiornata: [
@@ -189,13 +189,13 @@ const DATI_COCKPIT = {
     },
 
     {
-      id: "conegliano",
-      nome: "Conegliano",
-      denominazioneUfficiale: "Polo Arcada Demo Conegliano — Polo Colline del Prosecco",
-      indirizzo: "Via Adolfo Vital, 96",
-      cap: "31015",
-      citta: "Conegliano (TV)",
-      telefono: "0438 418140",
+      id: "nodo_gamma",
+      nome: "Polo Gamma",
+      denominazioneUfficiale: "Polo Arcada Demo Polo Gamma — Polo Settore Gamma",
+      indirizzo: "Via del Nodo Demo, 10",
+      cap: "00000",
+      citta: "Polo Gamma",
+      telefono: "000 000000",
       direttoreSanitario: "Dott. Pietro Cantice",
       semaforo: "ambra", // ALLERTA: Autoclave 2 + Sensore sala 2
       statusMotivo: "Anomalia lieve: Autoclave 2 scostamento vuoto frazionato. Sensore flusso Sala 2 offline (ricostruito via scialitica).",
@@ -209,11 +209,11 @@ const DATI_COCKPIT = {
       mapCoords: { x: 285, y: 195, labelX: 295, labelY: 195 },
 
       sale: [
-        { id: "S1", nome: "Sala 1 — Chirurgia Guidata", stato: "chirurgia", procedura: "Chirurgia implantare computer-assistita", paziente: "Soggetto Demo 21", codicePz: "PZ_3108_CON", operatore: "Dott. Pietro Cantice", orario: "12:45 - 14:15", fineStimata: "fra 30 min" },
-        { id: "S2", nome: "Sala 2 — Conservativa Avanzata", stato: "occupata", procedura: "Ricostruzione estetica composito (Flusso ricostruito)", paziente: "Soggetto Demo 22", codicePz: "PZ_1842_CON", operatore: "Dott. M. Pol", orario: "13:15 - 14:30", fineStimata: "fra 45 min" },
-        { id: "S3", nome: "Sala 3 — Riabilitazione Orale", stato: "occupata", procedura: "Registrazione masticatoria e montaggio articolatore", paziente: "Soggetto Demo 23", codicePz: "PZ_5022_CON", operatore: "Dott.ssa G. Zanon", orario: "13:00 - 13:45", fineStimata: "fra 10 min" },
+        { id: "S1", nome: "Sala 1 — Chirurgia Guidata", stato: "chirurgia", procedura: "Chirurgia implantare computer-assistita", paziente: "Soggetto Demo 21", codicePz: "PZ_3108_CON", operatore: "Operatore Clinico", orario: "12:45 - 14:15", fineStimata: "fra 30 min" },
+        { id: "S2", nome: "Sala 2 — Conservativa Avanzata", stato: "occupata", procedura: "Ricostruzione estetica composito (Flusso ricostruito)", paziente: "Soggetto Demo 22", codicePz: "PZ_1842_CON", operatore: "Operatore Clinico", orario: "13:15 - 14:30", fineStimata: "fra 45 min" },
+        { id: "S3", nome: "Sala 3 — Riabilitazione Orale", stato: "occupata", procedura: "Registrazione masticatoria e montaggio articolatore", paziente: "Soggetto Demo 23", codicePz: "PZ_5022_CON", operatore: "Operatore Clinico", orario: "13:00 - 13:45", fineStimata: "fra 10 min" },
         { id: "S4", nome: "Sala 4 — Igiene & Laser Terapia", stato: "in_sanificazione", procedura: "Sanificazione post laser-terapia perimplantare", paziente: "—", codicePz: "—", operatore: "Équipe Assistenza", orario: "13:30 - 13:45", fineStimata: "fra 5 min" },
-        { id: "S5", nome: "Sala 5 — Diagnostica & Prime Visite", stato: "libera", procedura: "Pronta per accoglienza prima visita ore 14:00", paziente: "—", codicePz: "—", operatore: "Dott. P. Cantice", orario: "14:00 - 14:45", fineStimata: "Disponibile" }
+        { id: "S5", nome: "Sala 5 — Diagnostica & Prime Visite", stato: "libera", procedura: "Pronta per accoglienza prima visita ore 14:00", paziente: "—", codicePz: "—", operatore: "Operatore Clinico", orario: "14:00 - 14:45", fineStimata: "Disponibile" }
       ],
 
       agendaGiornata: [
@@ -248,13 +248,13 @@ const DATI_COCKPIT = {
     },
 
     {
-      id: "venezia",
-      nome: "Venezia",
-      denominazioneUfficiale: "Polo Arcada Demo Venezia — Sede Storica San Marco",
-      indirizzo: "San Marco, 5254",
-      cap: "30124",
-      citta: "Venezia (VE)",
-      telefono: "041 5210068",
+      id: "nodo_delta",
+      nome: "Polo Delta",
+      denominazioneUfficiale: "Polo Arcada Demo Polo Delta — Sede Storica Delta",
+      indirizzo: "Via del Nodo Demo, 10",
+      cap: "00000",
+      citta: "Polo Delta",
+      telefono: "000 000000",
       direttoreSanitario: "Direttore Clinico",
       semaforo: "verde",
       statusMotivo: "Prestazioni esclusive in corso. 3 sale a saturazione piena (92%), comfort pazienti 98/100.",
@@ -268,15 +268,15 @@ const DATI_COCKPIT = {
       mapCoords: { x: 315, y: 345, labelX: 325, labelY: 350 },
 
       sale: [
-        { id: "S1", nome: "Sala San Marco — Chirurgia & Estetica", stato: "chirurgia", procedura: "Faccette ceramiche e allineamento guidato", paziente: "Soggetto Demo 28", codicePz: "PZ_2290_VEN", operatore: "Direttore Clinico", orario: "12:30 - 14:30", fineStimata: "fra 45 min" },
-        { id: "S2", nome: "Sala Rialto — Riabilitazione Implantare", stato: "occupata", procedura: "Finalizzazione protesica Toronto Bridge su 6 impianti", paziente: "Soggetto Demo 29", codicePz: "PZ_1044_VEN", operatore: "Dott. G. Arcada / Équipe", orario: "13:15 - 14:15", fineStimata: "fra 30 min" },
-        { id: "S3", nome: "Sala Fenice — Igiene & Comfort Spa", stato: "occupata", procedura: "Detartrasi piezoelettrica a temperatura corporea", paziente: "Soggetto Demo 30", codicePz: "PZ_3821_VEN", operatore: "Dott.ssa C. Trevisiol", orario: "13:30 - 14:15", fineStimata: "Iniziata" }
+        { id: "S1", nome: "Sala 1 — Chirurgia & Estetica", stato: "chirurgia", procedura: "Faccette ceramiche e allineamento guidato", paziente: "Soggetto Demo 28", codicePz: "PZ_2290_VEN", operatore: "Direttore Clinico", orario: "12:30 - 14:30", fineStimata: "fra 45 min" },
+        { id: "S2", nome: "Sala 2 — Riabilitazione Implantare", stato: "occupata", procedura: "Finalizzazione protesica Toronto Bridge su 6 impianti", paziente: "Soggetto Demo 29", codicePz: "PZ_1044_VEN", operatore: "Operatore Clinico", orario: "13:15 - 14:15", fineStimata: "fra 30 min" },
+        { id: "S3", nome: "Sala 3 — Igiene & Comfort Spa", stato: "occupata", procedura: "Detartrasi piezoelettrica a temperatura corporea", paziente: "Soggetto Demo 30", codicePz: "PZ_3821_VEN", operatore: "Operatore Clinico", orario: "13:30 - 14:15", fineStimata: "Iniziata" }
       ],
 
       agendaGiornata: [
-        { ora: "09:30 - 11:30", sala: "Sala San Marco", procedura: "Chirurgia implantare post-estrattiva 1.4-1.5", paziente: "Soggetto Demo 31", codicePz: "PZ_1912_VEN", stato: "completato" },
-        { ora: "12:30 - 14:30", sala: "Sala San Marco", procedura: "Faccette ceramiche e allineamento guidato", paziente: "Soggetto Demo 32", codicePz: "PZ_2290_VEN", stato: "in_corso" },
-        { ora: "15:00 - 17:00", sala: "Sala San Marco", procedura: "Consulenza direzionale seconda opinione riabilitativa", paziente: "Soggetto Demo 33", codicePz: "PZ_5109_VEN", stato: "programmato" }
+        { ora: "09:30 - 11:30", sala: "Sala 1", procedura: "Chirurgia implantare post-estrattiva 1.4-1.5", paziente: "Soggetto Demo 31", codicePz: "PZ_1912_VEN", stato: "completato" },
+        { ora: "12:30 - 14:30", sala: "Sala 1", procedura: "Faccette ceramiche e allineamento guidato", paziente: "Soggetto Demo 32", codicePz: "PZ_2290_VEN", stato: "in_corso" },
+        { ora: "15:00 - 17:00", sala: "Sala 1", procedura: "Consulenza direzionale seconda opinione riabilitativa", paziente: "Soggetto Demo 33", codicePz: "PZ_5109_VEN", stato: "programmato" }
       ],
 
       macchine: {
@@ -289,7 +289,7 @@ const DATI_COCKPIT = {
           frequenzaArmonica: "50.0 Hz",
           vibrazioneRMS: "0.64 mm/s",
           statoAudio: "Suona come il suo normale",
-          statoDettaglio: "Isolamento antivibrante veneziano perfetto. Zero risonanze verso il piano nobile."
+          statoDettaglio: "Isolamento antivibrante nodo_deltano perfetto. Zero risonanze verso il piano nobile."
         },
         aspiratore: { modello: "Dürr VS 600", portata: "310 l/min", depressione: "-178 mbar", stato: "ottimale" }
       },
@@ -303,13 +303,13 @@ const DATI_COCKPIT = {
     },
 
     {
-      id: "mestre",
-      nome: "Mestre",
-      denominazioneUfficiale: "Polo Arcada Demo Mestre — Centro Diagnostico e Riabilitativo",
-      indirizzo: "Via Torquato Tasso, 21",
-      cap: "30172",
-      citta: "Mestre — Venezia (VE)",
-      telefono: "041 970147",
+      id: "nodo_epsilon",
+      nome: "Polo Epsilon",
+      denominazioneUfficiale: "Polo Arcada Demo Polo Epsilon — Centro Diagnostico e Riabilitativo",
+      indirizzo: "Via del Nodo Demo, 10",
+      cap: "00000",
+      citta: "Polo Epsilon — Polo Delta",
+      telefono: "000 000000",
       direttoreSanitario: "Direttore Clinico",
       semaforo: "verde",
       statusMotivo: "6 sale attive, altissima affluenza prime visite (6 oggi), chirurgia a pieno regime.",
@@ -324,11 +324,11 @@ const DATI_COCKPIT = {
 
       sale: [
         { id: "S1", nome: "Sala Chirurgica 1", stato: "chirurgia", procedura: "All-on-6 arcata sup. con carico immediato", paziente: "Soggetto Demo 34", codicePz: "PZ_4412_MES", operatore: "Direttore Clinico", orario: "11:00 - 13:45", fineStimata: "fra 10 min" },
-        { id: "S2", nome: "Sala Chirurgica 2", stato: "occupata", procedura: "Innesto biomateriale e sutura", paziente: "Soggetto Demo 35", codicePz: "PZ_3019_MES", operatore: "Dott. F. Scarpa", orario: "13:00 - 14:15", fineStimata: "fra 35 min" },
-        { id: "S3", nome: "Sala Riabilitazione 3", stato: "occupata", procedura: "Rimozione punti e controllo guarigione impianti", paziente: "Soggetto Demo 36", codicePz: "PZ_2100_MES", operatore: "Dott.ssa M. Zaccaria", orario: "13:20 - 13:50", fineStimata: "fra 15 min" },
-        { id: "S4", nome: "Sala Ortodonzia 4", stato: "libera", procedura: "Predisposta per consegna allineatori ore 14:00", paziente: "—", codicePz: "—", operatore: "Dott. P. Barbato", orario: "14:00 - 14:45", fineStimata: "Disponibile" },
-        { id: "S5", nome: "Sala Igiene 5", stato: "occupata", procedura: "Seduta di igiene orale e fluoro-profilassi", paziente: "Soggetto Demo 37", codicePz: "PZ_4890_MES", operatore: "Dott.ssa A. Pavan", orario: "13:15 - 14:00", fineStimata: "fra 20 min" },
-        { id: "S6", nome: "Sala Prima Visita 6", stato: "occupata", procedura: "Prima visita chirurgia computer-guidata con TAC", paziente: "Soggetto Demo 38", codicePz: "PZ_5301_MES", operatore: "Dott. R. Vecchiato", orario: "13:30 - 14:15", fineStimata: "In corso" }
+        { id: "S2", nome: "Sala Chirurgica 2", stato: "occupata", procedura: "Innesto biomateriale e sutura", paziente: "Soggetto Demo 35", codicePz: "PZ_3019_MES", operatore: "Operatore Clinico", orario: "13:00 - 14:15", fineStimata: "fra 35 min" },
+        { id: "S3", nome: "Sala Riabilitazione 3", stato: "occupata", procedura: "Rimozione punti e controllo guarigione impianti", paziente: "Soggetto Demo 36", codicePz: "PZ_2100_MES", operatore: "Operatore Clinico", orario: "13:20 - 13:50", fineStimata: "fra 15 min" },
+        { id: "S4", nome: "Sala Ortodonzia 4", stato: "libera", procedura: "Predisposta per consegna allineatori ore 14:00", paziente: "—", codicePz: "—", operatore: "Operatore Clinico", orario: "14:00 - 14:45", fineStimata: "Disponibile" },
+        { id: "S5", nome: "Sala Igiene 5", stato: "occupata", procedura: "Seduta di igiene orale e fluoro-profilassi", paziente: "Soggetto Demo 37", codicePz: "PZ_4890_MES", operatore: "Operatore Clinico", orario: "13:15 - 14:00", fineStimata: "fra 20 min" },
+        { id: "S6", nome: "Sala Prima Visita 6", stato: "occupata", procedura: "Prima visita chirurgia computer-guidata con TAC", paziente: "Soggetto Demo 38", codicePz: "PZ_5301_MES", operatore: "Operatore Clinico", orario: "13:30 - 14:15", fineStimata: "In corso" }
       ],
 
       agendaGiornata: [
@@ -362,13 +362,13 @@ const DATI_COCKPIT = {
     },
 
     {
-      id: "vittorio_veneto",
-      nome: "Vittorio Veneto",
-      denominazioneUfficiale: "Polo Arcada Demo Vittorio Veneto — Centro Pedemontano",
-      indirizzo: "Viale A. Da Mosto, 22",
-      cap: "31029",
-      citta: "Vittorio Veneto (TV)",
-      telefono: "0438 554420",
+      id: "nodo_zeta",
+      nome: "Polo Zeta",
+      denominazioneUfficiale: "Polo Arcada Demo Polo Zeta — Centro Pedemontano",
+      indirizzo: "Via del Nodo Demo, 10",
+      cap: "00000",
+      citta: "Polo Zeta",
+      telefono: "000 000000",
       direttoreSanitario: "Dott. Marco Da Re",
       semaforo: "verde",
       statusMotivo: "4 sale operative, pieno controllo flussi di sterilizzazione, nessun disallineamento.",
@@ -382,10 +382,10 @@ const DATI_COCKPIT = {
       mapCoords: { x: 270, y: 155, labelX: 230, labelY: 155 },
 
       sale: [
-        { id: "S1", nome: "Sala Chirurgia 1", stato: "occupata", procedura: "Moncone implantare e provvisorio immediato", paziente: "Soggetto Demo 42", codicePz: "PZ_2911_VIT", operatore: "Dott. M. Da Re", orario: "13:00 - 14:00", fineStimata: "fra 25 min" },
-        { id: "S2", nome: "Sala Conservativa 2", stato: "libera", procedura: "Disponibile per seduta ore 14:00", paziente: "—", codicePz: "—", operatore: "Dott. A. De Marchi", orario: "14:00 - 15:00", fineStimata: "Disponibile" },
-        { id: "S3", nome: "Sala Igiene 3", stato: "occupata", procedura: "Terapia igienica e polishing al glicina", paziente: "Soggetto Demo 43", codicePz: "PZ_3408_VIT", operatore: "Dott.ssa E. Bernardi", orario: "13:15 - 14:00", fineStimata: "fra 20 min" },
-        { id: "S4", nome: "Sala Ortodonzia & Diagnosi 4", stato: "occupata", procedura: "Scansione digitale per espansore rapido palato", paziente: "Soggetto Demo 44", codicePz: "PZ_4719_VIT", operatore: "Dott. S. Salvador", orario: "13:30 - 14:15", fineStimata: "Iniziata" }
+        { id: "S1", nome: "Sala Chirurgia 1", stato: "occupata", procedura: "Moncone implantare e provvisorio immediato", paziente: "Soggetto Demo 42", codicePz: "PZ_2911_VIT", operatore: "Operatore Clinico", orario: "13:00 - 14:00", fineStimata: "fra 25 min" },
+        { id: "S2", nome: "Sala Conservativa 2", stato: "libera", procedura: "Disponibile per seduta ore 14:00", paziente: "—", codicePz: "—", operatore: "Operatore Clinico", orario: "14:00 - 15:00", fineStimata: "Disponibile" },
+        { id: "S3", nome: "Sala Igiene 3", stato: "occupata", procedura: "Terapia igienica e polishing al glicina", paziente: "Soggetto Demo 43", codicePz: "PZ_3408_VIT", operatore: "Operatore Clinico", orario: "13:15 - 14:00", fineStimata: "fra 20 min" },
+        { id: "S4", nome: "Sala Ortodonzia & Diagnosi 4", stato: "occupata", procedura: "Scansione digitale per espansore rapido palato", paziente: "Soggetto Demo 44", codicePz: "PZ_4719_VIT", operatore: "Operatore Clinico", orario: "13:30 - 14:15", fineStimata: "Iniziata" }
       ],
 
       agendaGiornata: [
@@ -418,13 +418,13 @@ const DATI_COCKPIT = {
     },
 
     {
-      id: "belluno",
-      nome: "Belluno",
-      denominazioneUfficiale: "Polo Arcada Demo Belluno — Polo Dolomiti",
-      indirizzo: "Via Vittorio Veneto, 158/L",
-      cap: "32100",
-      citta: "Belluno (BL)",
-      telefono: "0437 940088",
+      id: "nodo_eta",
+      nome: "Polo Eta",
+      denominazioneUfficiale: "Polo Arcada Demo Polo Eta — Polo Dolomiti",
+      indirizzo: "Via del Nodo Demo, 10",
+      cap: "00000",
+      citta: "Polo Eta",
+      telefono: "000 000000",
       direttoreSanitario: "Direttore Clinico",
       semaforo: "verde",
       statusMotivo: "4 sale attive, protocollo alta montagna operativo, pressione linea stabile a 7.0 bar.",
@@ -439,9 +439,9 @@ const DATI_COCKPIT = {
 
       sale: [
         { id: "S1", nome: "Sala Dolomiti — Chirurgia", stato: "chirurgia", procedura: "Innesto osseo autologo e impianto Straumann BLX", paziente: "Soggetto Demo 48", codicePz: "PZ_1982_BEL", operatore: "Direttore Clinico", orario: "12:00 - 14:00", fineStimata: "fra 25 min" },
-        { id: "S2", nome: "Sala 2 — Conservativa & Estetica", stato: "occupata", procedura: "Restauro adesivo ceramico indiretto", paziente: "Soggetto Demo 49", codicePz: "PZ_3411_BEL", operatore: "Dott. R. Fontana", orario: "13:15 - 14:15", fineStimata: "fra 35 min" },
-        { id: "S3", nome: "Sala 3 — Igiene & Prevenzione", stato: "occupata", procedura: "Igiene orale e motivazione domiciliare", paziente: "Soggetto Demo 50", codicePz: "PZ_4102_BEL", operatore: "Dott.ssa F. Viel", orario: "13:30 - 14:15", fineStimata: "Iniziata" },
-        { id: "S4", nome: "Sala 4 — Prima Visita & Diagnosi", stato: "libera", procedura: "Pronta per consulto implantare ore 14:30", paziente: "—", codicePz: "—", operatore: "Dott. G. Arcada", orario: "14:30 - 15:15", fineStimata: "Disponibile" }
+        { id: "S2", nome: "Sala 2 — Conservativa & Estetica", stato: "occupata", procedura: "Restauro adesivo ceramico indiretto", paziente: "Soggetto Demo 49", codicePz: "PZ_3411_BEL", operatore: "Operatore Clinico", orario: "13:15 - 14:15", fineStimata: "fra 35 min" },
+        { id: "S3", nome: "Sala 3 — Igiene & Prevenzione", stato: "occupata", procedura: "Igiene orale e motivazione domiciliare", paziente: "Soggetto Demo 50", codicePz: "PZ_4102_BEL", operatore: "Operatore Clinico", orario: "13:30 - 14:15", fineStimata: "Iniziata" },
+        { id: "S4", nome: "Sala 4 — Prima Visita & Diagnosi", stato: "libera", procedura: "Pronta per consulto implantare ore 14:30", paziente: "—", codicePz: "—", operatore: "Operatore Clinico", orario: "14:30 - 15:15", fineStimata: "Disponibile" }
       ],
 
       agendaGiornata: [
@@ -473,13 +473,13 @@ const DATI_COCKPIT = {
     },
 
     {
-      id: "pordenone",
-      nome: "Pordenone",
+      id: "nodo_theta",
+      nome: "Polo Theta",
       denominazioneUfficiale: "Ottoboni Dental Clinic — Gruppo Polo Arcada Demo",
-      indirizzo: "Piazzetta Ottoboni, 4/C",
-      cap: "33170",
-      citta: "Pordenone (PN)",
-      telefono: "0434 29112",
+      indirizzo: "Via del Nodo Demo, 10",
+      cap: "00000",
+      citta: "Polo Theta",
+      telefono: "000 000000",
       direttoreSanitario: "Dott. Alberto Ottoboni",
       semaforo: "verde",
       statusMotivo: "Polo friulano a regime ideale. 5 sale operative, accettazione preventivi all'80%.",
@@ -493,11 +493,11 @@ const DATI_COCKPIT = {
       mapCoords: { x: 410, y: 185, labelX: 420, labelY: 190 },
 
       sale: [
-        { id: "S1", nome: "Sala Ottoboni 1 — Chirurgia", stato: "chirurgia", procedura: "Impianti multipli settore posteriore inferiore", paziente: "Soggetto Demo 53", codicePz: "PZ_3190_POR", operatore: "Dott. A. Ottoboni", orario: "12:30 - 14:00", fineStimata: "fra 25 min" },
-        { id: "S2", nome: "Sala 2 — Protesi Fissa", stato: "occupata", procedura: "Cementazione ponte su impianti con serraggio dinamometrico", paziente: "Soggetto Demo 54", codicePz: "PZ_1740_POR", operatore: "Dott. E. Santarossa", orario: "13:00 - 13:45", fineStimata: "fra 10 min" },
+        { id: "S1", nome: "Sala Ottoboni 1 — Chirurgia", stato: "chirurgia", procedura: "Impianti multipli settore posteriore inferiore", paziente: "Soggetto Demo 53", codicePz: "PZ_3190_POR", operatore: "Operatore Clinico", orario: "12:30 - 14:00", fineStimata: "fra 25 min" },
+        { id: "S2", nome: "Sala 2 — Protesi Fissa", stato: "occupata", procedura: "Cementazione ponte su impianti con serraggio dinamometrico", paziente: "Soggetto Demo 54", codicePz: "PZ_1740_POR", operatore: "Operatore Clinico", orario: "13:00 - 13:45", fineStimata: "fra 10 min" },
         { id: "S3", nome: "Sala 3 — Igiene & Prevenzione", stato: "in_sanificazione", procedura: "Sanificazione e ricambio filtri aria", paziente: "—", codicePz: "—", operatore: "Équipe Assistenza", orario: "13:30 - 13:45", fineStimata: "fra 6 min" },
-        { id: "S4", nome: "Sala 4 — Ortodonzia Digitale", stato: "occupata", procedura: "Applicazione bottoni ortodontici per allineatori", paziente: "Soggetto Demo 55", codicePz: "PZ_4812_POR", operatore: "Dott.ssa S. Del Ben", orario: "13:15 - 14:00", fineStimata: "fra 20 min" },
-        { id: "S5", nome: "Sala 5 — Prima Visita & CBCT", stato: "libera", procedura: "Pronta per prima visita ore 14:00", paziente: "—", codicePz: "—", operatore: "Dott. A. Ottoboni", orario: "14:00 - 14:45", fineStimata: "Disponibile" }
+        { id: "S4", nome: "Sala 4 — Ortodonzia Digitale", stato: "occupata", procedura: "Applicazione bottoni ortodontici per allineatori", paziente: "Soggetto Demo 55", codicePz: "PZ_4812_POR", operatore: "Operatore Clinico", orario: "13:15 - 14:00", fineStimata: "fra 20 min" },
+        { id: "S5", nome: "Sala 5 — Prima Visita & CBCT", stato: "libera", procedura: "Pronta per prima visita ore 14:00", paziente: "—", codicePz: "—", operatore: "Operatore Clinico", orario: "14:00 - 14:45", fineStimata: "Disponibile" }
       ],
 
       agendaGiornata: [
@@ -529,13 +529,13 @@ const DATI_COCKPIT = {
     },
 
     {
-      id: "villorba",
-      nome: "Villorba",
-      denominazioneUfficiale: "Polo Arcada Demo Villorba — Polo Tecnologico Nord",
-      indirizzo: "Viale della Repubblica, 12",
-      cap: "31020",
-      citta: "Villorba (TV)",
-      telefono: "0422 910034",
+      id: "nodo_iota",
+      nome: "Polo Iota",
+      denominazioneUfficiale: "Polo Arcada Demo Polo Iota — Polo Tecnologico Nord",
+      indirizzo: "Via del Nodo Demo, 10",
+      cap: "00000",
+      citta: "Polo Iota",
+      telefono: "000 000000",
       direttoreSanitario: "Direttore Sanitario",
       semaforo: "verde",
       statusMotivo: "5 sale operative, laboratorio protesico digitale integrato ad altissima efficienza.",
@@ -549,11 +549,11 @@ const DATI_COCKPIT = {
       mapCoords: { x: 285, y: 242, labelX: 235, labelY: 240 },
 
       sale: [
-        { id: "S1", nome: "Sala Chirurgia 1", stato: "chirurgia", procedura: "Chirurgia implantare con guida dima 3D", paziente: "Soggetto Demo 58", codicePz: "PZ_3822_VIL", operatore: "Dott. G. Arcada", orario: "12:15 - 13:45", fineStimata: "fra 10 min" },
-        { id: "S2", nome: "Sala 2 — Protesi Digitale", stato: "occupata", procedura: "Fresatura chairside e prova corona ceramica integrale", paziente: "Soggetto Demo 59", codicePz: "PZ_1903_VIL", operatore: "Dott. R. Marcon", orario: "13:00 - 14:15", fineStimata: "fra 35 min" },
-        { id: "S3", nome: "Sala 3 — Igiene & Mantenimento", stato: "occupata", procedura: "Richiamo semestrale igiene orale con decontaminazione", paziente: "Soggetto Demo 60", codicePz: "PZ_2741_VIL", operatore: "Dott.ssa S. De Vidi", orario: "13:15 - 14:00", fineStimata: "fra 20 min" },
-        { id: "S4", nome: "Sala 4 — Ortodonzia Digitale", stato: "libera", procedura: "Predisposta per controllo apparecchio ore 14:00", paziente: "—", codicePz: "—", operatore: "Dott.ssa C. Sartori", orario: "14:00 - 14:45", fineStimata: "Disponibile" },
-        { id: "S5", nome: "Sala 5 — Diagnosi & Prime Visite", stato: "occupata", procedura: "Colloquio preliminare e foto intraorali", paziente: "Soggetto Demo 61", codicePz: "PZ_5199_VIL", operatore: "Dott. A. Bordin", orario: "13:30 - 14:15", fineStimata: "Iniziata" }
+        { id: "S1", nome: "Sala Chirurgia 1", stato: "chirurgia", procedura: "Chirurgia implantare con guida dima 3D", paziente: "Soggetto Demo 58", codicePz: "PZ_3822_VIL", operatore: "Operatore Clinico", orario: "12:15 - 13:45", fineStimata: "fra 10 min" },
+        { id: "S2", nome: "Sala 2 — Protesi Digitale", stato: "occupata", procedura: "Fresatura chairside e prova corona ceramica integrale", paziente: "Soggetto Demo 59", codicePz: "PZ_1903_VIL", operatore: "Operatore Clinico", orario: "13:00 - 14:15", fineStimata: "fra 35 min" },
+        { id: "S3", nome: "Sala 3 — Igiene & Mantenimento", stato: "occupata", procedura: "Richiamo semestrale igiene orale con decontaminazione", paziente: "Soggetto Demo 60", codicePz: "PZ_2741_VIL", operatore: "Operatore Clinico", orario: "13:15 - 14:00", fineStimata: "fra 20 min" },
+        { id: "S4", nome: "Sala 4 — Ortodonzia Digitale", stato: "libera", procedura: "Predisposta per controllo apparecchio ore 14:00", paziente: "—", codicePz: "—", operatore: "Operatore Clinico", orario: "14:00 - 14:45", fineStimata: "Disponibile" },
+        { id: "S5", nome: "Sala 5 — Diagnosi & Prime Visite", stato: "occupata", procedura: "Colloquio preliminare e foto intraorali", paziente: "Soggetto Demo 61", codicePz: "PZ_5199_VIL", operatore: "Operatore Clinico", orario: "13:30 - 14:15", fineStimata: "Iniziata" }
       ],
 
       agendaGiornata: [
@@ -585,13 +585,13 @@ const DATI_COCKPIT = {
     },
 
     {
-      id: "londra",
-      nome: "Londra",
+      id: "nodo_omega",
+      nome: "Polo Omega",
       denominazioneUfficiale: "Polo Arcada Demo London — Harley Street Medical Area",
-      indirizzo: "18 Wimpole Street",
-      cap: "W1G 8GD",
-      citta: "London (UK)",
-      telefono: "+44 20 7935 4811",
+      indirizzo: "Via del Nodo Demo, 10",
+      cap: "00000",
+      citta: "London",
+      telefono: "000 000000",
       direttoreSanitario: "Dr. Giovanni Arcada (GDC Registered)",
       semaforo: "verde",
       statusMotivo: "Sede internazionale di prestigio. 4 sale attive, protocolli clinici Arcada sincronizzati.",
@@ -635,7 +635,7 @@ const DATI_COCKPIT = {
         orecchie: "Normale (conformità acustica Wimpole Street rispettata)",
         pelle: "Temp 21.0°C, Umidità 48%, Rack server 25.4°C (ventola ausiliaria raccomandata per sicurezza estiva)",
         occhi: "7 CBCT/panoramiche elaborate con matching lotto Straumann",
-        datoMancante: "Regolare. Canale criptato Londra-Treviso latenza 24 ms."
+        datoMancante: "Regolare. Canale criptato Polo Omega-Polo Alfa latenza 24 ms."
       }
     }
   ],
@@ -644,9 +644,9 @@ const DATI_COCKPIT = {
   allarmi: [
     {
       id: "ALL_01",
-      titolo: "Anomalia Vuoto Frazionato — Autoclave 2 Conegliano",
-      sedeId: "conegliano",
-      sedeNome: "Conegliano (Via Adolfo Vital)",
+      titolo: "Anomalia Vuoto Frazionato — Autoclave 2 Polo Gamma",
+      sedeId: "nodo_gamma",
+      sedeNome: "Polo Gamma (Via Adolfo Vital)",
       senso: "Orecchie & Pelle (Pressione)",
       livello: "alta_priorita", // alta_priorita, media_priorita, preventiva
       confidenza: 94.2,
@@ -659,29 +659,29 @@ const DATI_COCKPIT = {
     },
     {
       id: "ALL_02",
-      titolo: "Discrepanza Riconoscimento Lotto Impianto in Sala 1 Treviso",
-      sedeId: "treviso",
-      sedeNome: "Treviso (Nodo Centrale)",
+      titolo: "Discrepanza Riconoscimento Lotto Impianto in Sala 1 Polo Alfa",
+      sedeId: "nodo_alfa",
+      sedeNome: "Polo Alfa (Nodo Centrale)",
       senso: "Occhi (Computer Vision Impianti)",
       livello: "media_priorita",
       confidenza: 98.6,
       rilevatoDaMinuti: 18,
       descrizione: "La scansione visiva e il codice a barre della confezione sterile aperta in Sala 1 identificano un impianto Straumann BLX 4.5x10mm per il paziente Caso Clinico A1, mentre a scheda gestionale era associato un lotto BLX 4.0x10mm.",
-      propostaVictor: "Aggiornare automaticamente la cartella clinica digitale e il passaporto implantare della paziente con il lotto effettivo BLX 4.5x10mm (Lotto CH-89211-B) e scalare dal magazzino centrale di Treviso la scorta corretta, notificando la segreteria clinica.",
+      propostaVictor: "Aggiornare automaticamente la cartella clinica digitale e il passaporto implantare della paziente con il lotto effettivo BLX 4.5x10mm (Lotto CH-89211-B) e scalare dal magazzino centrale di Polo Alfa la scorta corretta, notificando la segreteria clinica.",
       azioneRichiesta: "Conferma Allineamento Passaporto e Magazzino",
       confermato: false,
       confermatoTimestamp: null
     },
     {
       id: "ALL_03",
-      titolo: "Ricalibrazione Preventiva Filtro Aspirazione Liquidi Belluno",
-      sedeId: "belluno",
-      sedeNome: "Belluno (Via Vittorio Veneto)",
+      titolo: "Ricalibrazione Preventiva Filtro Aspirazione Liquidi Polo Eta",
+      sedeId: "nodo_eta",
+      sedeNome: "Polo Eta (Via Polo Zeta)",
       senso: "Orecchie & Flusso",
       livello: "preventiva",
       confidenza: 88.4,
       rilevatoDaMinuti: 49,
-      descrizione: "Rilevata micro-turbolenza acustica a 1.250 Hz sull'aspiratore chirurgico di Belluno combinata con un calo di depressione da -175 a -168 mbar durante l'intervento osseo.",
+      descrizione: "Rilevata micro-turbolenza acustica a 1.250 Hz sull'aspiratore chirurgico di Polo Eta combinata con un calo di depressione da -175 a -168 mbar durante l'intervento osseo.",
       propostaVictor: "Notificare l'assistente alla poltrona di turno per la sostituzione rapida della cartuccia filtro nell'intervallo tra la chirurgia delle 12:00 e la successiva seduta delle 14:30, prevenendo il blocco a metà seduta.",
       azioneRichiesta: "Invia Notifica Operativa Assistente Capo",
       confermato: false,
@@ -689,14 +689,14 @@ const DATI_COCKPIT = {
     },
     {
       id: "ALL_04",
-      titolo: "Soglia Termica Rack Edge Londra (18 Wimpole St)",
-      sedeId: "londra",
-      sedeNome: "Londra (Wimpole Street)",
+      titolo: "Soglia Termica Rack Edge Polo Omega (18 Wimpole St)",
+      sedeId: "nodo_omega",
+      sedeNome: "Polo Omega (Wimpole Street)",
       senso: "Pelle (Temperatura Server)",
       livello: "preventiva",
       confidenza: 91.0,
       rilevatoDaMinuti: 62,
-      descrizione: "La temperatura interna del rack Victor Edge a Londra ha raggiunto 25.8°C (soglia di allerta preventiva fissata a 25.5°C) a causa della chiusura della porta del locale CED durante il weekend.",
+      descrizione: "La temperatura interna del rack Victor Edge a Polo Omega ha raggiunto 25.8°C (soglia di allerta preventiva fissata a 25.5°C) a causa della chiusura della porta del locale CED durante il weekend.",
       propostaVictor: "Attivare da remoto il profilo di ventilazione dinamica ausiliaria del nodo server e inviare promemoria al facility manager londinese per verificare la bocchetta di mandata dell'aria condizionata.",
       azioneRichiesta: "Attiva Ventilazione Dinamica Ausiliaria",
       confermato: false,
@@ -710,8 +710,8 @@ const DATI_COCKPIT = {
       {
         id: "REQ_01",
         data: "07/11/2026",
-        oggetto: "Sonda di contropressione differenziale su aspirazione Belluno",
-        testo: "Victor richiede l'installazione di una sonda piezoresistiva a monte del collettore di aspirazione di Belluno. La quota altimetrica (390 m s.l.m.) genera una variazione barometrica di 14 mbar che falsa la stima predittiva dell'intasamento dei micro-filtri a canula stretta.",
+        oggetto: "Sonda di contropressione differenziale su aspirazione Polo Eta",
+        testo: "Victor richiede l'installazione di una sonda piezoresistiva a monte del collettore di aspirazione di Polo Eta. La quota altimetrica (390 m s.l.m.) genera una variazione barometrica di 14 mbar che falsa la stima predittiva dell'intasamento dei micro-filtri a canula stretta.",
         priorita: "Alta — Riduzione falsi positivi",
         stato: "In lavorazione nel laboratorio TrinAI (consegna prevista 18/11/2026)"
       },
@@ -721,13 +721,13 @@ const DATI_COCKPIT = {
         oggetto: "Modello ottico per riconoscimento frese usurate Zimmer Biomet",
         testo: "Victor ha un'accuratezza del 99.2% su impianti e frese Straumann e Nobel, ma scende all'89.4% sulle frese sagomate Zimmer a gradino. Si richiede dataset addizionale di 400 fotogrammi macro con diversa angolazione d'illuminazione.",
         priorita: "Media — Espansione catalogo computer vision",
-        stato: "Dataset fotografico in acquisizione presso la clinica di Oderzo"
+        stato: "Dataset fotografico in acquisizione presso la clinica di Polo Beta"
       },
       {
         id: "REQ_03",
         data: "29/10/2026",
-        oggetto: "Integrazione driver contatore polimerizzazione lampade scialitiche Conegliano",
-        testo: "Per garantire la totale affidabilità della ricostruzione del 'dato mancante' in assenza di segnale dal riunito, Victor richiede l'accesso al bus seriale delle lampade LED di Sala 2 e 3 a Conegliano.",
+        oggetto: "Integrazione driver contatore polimerizzazione lampade scialitiche Polo Gamma",
+        testo: "Per garantire la totale affidabilità della ricostruzione del 'dato mancante' in assenza di segnale dal riunito, Victor richiede l'accesso al bus seriale delle lampade LED di Sala 2 e 3 a Polo Gamma.",
         priorita: "Bassa — Affinamento sensori surrogati",
         stato: "Studio di fattibilità hardware completato"
       }
@@ -736,9 +736,9 @@ const DATI_COCKPIT = {
     lezioniDaApprovare: [
       {
         id: "LEZ_01",
-        cue: "Caduta temporanea di vuoto (0.16 bar) al 14° minuto del ciclo 3 su Melag 44B+ verificatasi contemporaneamente all'apertura simultanea delle turbine chirurgiche in 3 sale adiacenti a Oderzo.",
+        cue: "Caduta temporanea di vuoto (0.16 bar) al 14° minuto del ciclo 3 su Melag 44B+ verificatasi contemporaneamente all'apertura simultanea delle turbine chirurgiche in 3 sale adiacenti a Polo Beta.",
         lesson: "Sfasare di almeno 6 minuti l'avvio del ciclo di sterilizzazione pesante rispetto all'orario di inizio delle chirurgie a carico immediato nelle sale attigue per stabilizzare la portata dell'aria compressa sul generatore di vuoto pneumatico.",
-        evidence: "Zero cali di vuoto e 14 cicli consecutivi 100% conformi registrati nelle ultime due settimane a Oderzo dopo aver applicato la regola empirica.",
+        evidence: "Zero cali di vuoto e 14 cicli consecutivi 100% conformi registrati nelle ultime due settimane a Polo Beta dopo aver applicato la regola empirica.",
         confidence: 96.8,
         stato: "in_attesa" // in_attesa, approvata, scartata
       },
@@ -746,15 +746,15 @@ const DATI_COCKPIT = {
         id: "LEZ_02",
         cue: "I pazienti anziani sopra i 65 anni assegnati a prime visite implantari mostrano un tasso di accettazione preventivo del +14.2% quando il tempo di attesa in sala non supera i 5 minuti e la temperatura percepita è compresa tra 21.5°C e 22.0°C.",
         lesson: "Impostare una pre-accoglienza termica specifica nelle sale diagnosi prima dell'arrivo del paziente over 65 e sincronizzare la segreteria con Victor per far trovare la stanza già pronta all'ingresso del paziente.",
-        evidence: "Campione di 128 prime visite comparate su Treviso, Mestre e Villorba negli ultimi 45 giorni.",
+        evidence: "Campione di 128 prime visite comparate su Polo Alfa, Polo Epsilon e Polo Iota negli ultimi 45 giorni.",
         confidence: 93.4,
         stato: "in_attesa"
       },
       {
         id: "LEZ_03",
-        cue: "Vibrazione ad alta frequenza (3.8 kHz) rilevata sui manipoli contrangolo per chirurgia guidata dopo 42 ore continuative d'impiego a Venezia.",
+        cue: "Vibrazione ad alta frequenza (3.8 kHz) rilevata sui manipoli contrangolo per chirurgia guidata dopo 42 ore continuative d'impiego a Polo Delta.",
         lesson: "Anticipare il ciclo di lubrificazione automatica pressurizzata a 35 ore di lavoro effettivo invece delle 50 ore raccomandate dalla casa madre per evitare micro-giochi sui cuscinetti ceramici.",
-        evidence: "Riduzione del 100% dei blocchi manipolo su Venezia e zero surriscaldamenti percepiti durante le mascherine dima chirurgica.",
+        evidence: "Riduzione del 100% dei blocchi manipolo su Polo Delta e zero surriscaldamenti percepiti durante le mascherine dima chirurgica.",
         confidence: 98.1,
         stato: "in_attesa"
       }
@@ -763,15 +763,15 @@ const DATI_COCKPIT = {
     lezioniStoricheAdottate: [
       {
         titolo: "Protocollo pre-raffreddamento manipoli implantari All-on-4",
-        origine: "Treviso (Chirurgia A)",
+        origine: "Polo Alfa (Chirurgia A)",
         estesaA: "Tutte le 10 sedi del gruppo",
         dataAdozione: "14 Ottobre 2026",
         risultato: "Azzerato il micro-surriscaldamento osseo durante la fresatura ossea corticale."
       },
       {
         titolo: "Sincronizzazione oraria scarico condensa compressori in orario non clinico",
-        origine: "Mestre",
-        estesaA: "Conegliano, Villorba, Belluno, Oderzo",
+        origine: "Polo Epsilon",
+        estesaA: "Polo Gamma, Polo Iota, Polo Eta, Polo Beta",
         dataAdozione: "22 Settembre 2026",
         risultato: "Eliminati i rumori di spurgo improvviso durante i colloqui delicati di prima visita."
       }
@@ -808,16 +808,16 @@ const DATI_COCKPIT = {
     },
 
     dettaglioPerSede: [
-      { sede: "Treviso", attesaMedia: "5.8 min", comfortAcustico: "96%", preferenzaRender: "74%", stile: "Essenziale a tappe" },
-      { sede: "Oderzo", attesaMedia: "6.4 min", comfortAcustico: "95%", preferenzaRender: "70%", stile: "Essenziale a tappe" },
-      { sede: "Conegliano", attesaMedia: "7.1 min", comfortAcustico: "94%", preferenzaRender: "71%", stile: "Essenziale a tappe" },
-      { sede: "Venezia", attesaMedia: "4.9 min", comfortAcustico: "99%", preferenzaRender: "78%", stile: "Essenziale a tappe" },
-      { sede: "Mestre", attesaMedia: "6.8 min", comfortAcustico: "95%", preferenzaRender: "73%", stile: "Essenziale a tappe" },
-      { sede: "Vittorio Veneto", attesaMedia: "6.0 min", comfortAcustico: "96%", preferenzaRender: "68%", stile: "Essenziale a tappe" },
-      { sede: "Belluno", attesaMedia: "5.5 min", comfortAcustico: "97%", preferenzaRender: "66%", stile: "Dettaglio anatomico" },
-      { sede: "Pordenone", attesaMedia: "6.2 min", comfortAcustico: "96%", preferenzaRender: "72%", stile: "Essenziale a tappe" },
-      { sede: "Villorba", attesaMedia: "6.3 min", comfortAcustico: "96%", preferenzaRender: "71%", stile: "Essenziale a tappe" },
-      { sede: "Londra", attesaMedia: "4.5 min", comfortAcustico: "98%", preferenzaRender: "82%", stile: "Essenziale su misura" }
+      { sede: "Polo Alfa", attesaMedia: "5.8 min", comfortAcustico: "96%", preferenzaRender: "74%", stile: "Essenziale a tappe" },
+      { sede: "Polo Beta", attesaMedia: "6.4 min", comfortAcustico: "95%", preferenzaRender: "70%", stile: "Essenziale a tappe" },
+      { sede: "Polo Gamma", attesaMedia: "7.1 min", comfortAcustico: "94%", preferenzaRender: "71%", stile: "Essenziale a tappe" },
+      { sede: "Polo Delta", attesaMedia: "4.9 min", comfortAcustico: "99%", preferenzaRender: "78%", stile: "Essenziale a tappe" },
+      { sede: "Polo Epsilon", attesaMedia: "6.8 min", comfortAcustico: "95%", preferenzaRender: "73%", stile: "Essenziale a tappe" },
+      { sede: "Polo Zeta", attesaMedia: "6.0 min", comfortAcustico: "96%", preferenzaRender: "68%", stile: "Essenziale a tappe" },
+      { sede: "Polo Eta", attesaMedia: "5.5 min", comfortAcustico: "97%", preferenzaRender: "66%", stile: "Dettaglio anatomico" },
+      { sede: "Polo Theta", attesaMedia: "6.2 min", comfortAcustico: "96%", preferenzaRender: "72%", stile: "Essenziale a tappe" },
+      { sede: "Polo Iota", attesaMedia: "6.3 min", comfortAcustico: "96%", preferenzaRender: "71%", stile: "Essenziale a tappe" },
+      { sede: "Polo Omega", attesaMedia: "4.5 min", comfortAcustico: "98%", preferenzaRender: "82%", stile: "Essenziale su misura" }
     ]
   },
 
@@ -830,8 +830,8 @@ const DATI_COCKPIT = {
     },
 
     registroPayloadCloud: [
-      { ora: "13:34:50", tipo: "Telemetria Acustica", nodo: "Treviso Node", payloadTrasmesso: "{\"node\":\"TRE_01\",\"freq_rms\":[49.8, 50.1, 49.9],\"db_a\":51.2,\"hash\":\"8f3c...b12a\"}", note: "Zero dati anagrafici. Solo serie numeriche fisiche." },
-      { ora: "13:32:15", tipo: "Conferma Ciclo Autoclave", nodo: "Mestre Node", payloadTrasmesso: "{\"node\":\"MES_02\",\"cycle_id\":\"C_9811\",\"temp_peak\":134.4,\"bar_peak\":2.18,\"status\":\"OK\"}", note: "Crittografia AES-256 GCM end-to-end verso il vault TrinAI." },
+      { ora: "13:34:50", tipo: "Telemetria Acustica", nodo: "Polo Alfa Node", payloadTrasmesso: "{\"node\":\"TRE_01\",\"freq_rms\":[49.8, 50.1, 49.9],\"db_a\":51.2,\"hash\":\"8f3c...b12a\"}", note: "Zero dati anagrafici. Solo serie numeriche fisiche." },
+      { ora: "13:32:15", tipo: "Conferma Ciclo Autoclave", nodo: "Polo Epsilon Node", payloadTrasmesso: "{\"node\":\"MES_02\",\"cycle_id\":\"C_9811\",\"temp_peak\":134.4,\"bar_peak\":2.18,\"status\":\"OK\"}", note: "Crittografia AES-256 GCM end-to-end verso il vault TrinAI." },
       { ora: "13:28:40", tipo: "Aggiornamento Scorte Impianti", nodo: "Magazzino Centrale", payloadTrasmesso: "{\"brand\":\"STR_BLX\",\"qty_delta\":-1,\"location_code\":\"WH_TRE\",\"lot_hash\":\"3d91...99e2\"}", note: "Nessun riferimento a identità paziente né a cartella clinica." },
       { ora: "13:20:05", tipo: "Vettore Pesi Gradiente Sonno", nodo: "All-Nodes Edge", payloadTrasmesso: "{\"weights_delta\":[0.0012, -0.0004, 0.0021],\"loss\":0.0042,\"epoch\":412}", note: "Federated Learning locale: i dati grezzi non lasciano mai la sede." }
     ],
@@ -855,40 +855,40 @@ const DATI_COCKPIT = {
       storageNvmeUsato: "28.4% (1.4 TB su 5.0 TB ridondati RAID 10)",
       uptimeSistema: "99.998% (attivo da 184 giorni continui)",
       latenzaReteNodiLocali: "0.8 ms",
-      canaleLondraLatenza: "24.2 ms (VPN WireGuard cifrata ChaCha20-Poly1305)"
+      canaleOmegaLatenza: "24.2 ms (VPN WireGuard cifrata ChaCha20-Poly1305)"
     }
   },
 
   // DOMANDE E RISPOSTE PER IL COMPAGNO DIREZIONALE
   chat: {
     domandeSuggerite: [
-      "Come sta andando oggi la saturazione a Conegliano e a Treviso?",
+      "Come sta andando oggi la saturazione a Polo Gamma e a Polo Alfa?",
       "Ci sono forniture o impianti bloccati?",
       "Qual è la proiezione di incasso e chiusura del mese?",
       "Quali autoclavi richiedono manutenzione o attenzione preventiva?",
-      "Mostrami la situazione del comfort e i tempi di attesa a Venezia"
+      "Mostrami la situazione del comfort e i tempi di attesa a Polo Delta"
     ],
 
     rispostePredefinite: {
       saturazione: {
-        keywords: ["saturazione", "conegliano", "treviso", "poltrone", "occupazione"],
-        testo: "Oggi a **Treviso** la saturazione delle 6 sale è all'**88.0%**: 4 sale sono attualmente impegnate in sedute complesse (tra cui la chirurgia All-on-4 in Sala 1 del Direttore Clinico per la paziente Caso Clinico A1), 1 in sanificazione rapida e 1 pronta per le prime visite delle 14:00. A **Conegliano** registriamo una saturazione dell'**82.0%** su 5 sale, con la Sala 1 impegnata in chirurgia guidata dal Dott. Pietro Cantice. L'andamento complessivo del gruppo è all'**84.6%**, in perfetto equilibrio con la capacità operativa pianificata."
+        keywords: ["saturazione", "nodo_gamma", "nodo_alfa", "poltrone", "occupazione"],
+        testo: "Oggi a **Polo Alfa** la saturazione delle 6 sale è all'**88.0%**: 4 sale sono attualmente impegnate in sedute complesse (tra cui la chirurgia All-on-4 in Sala 1 del Direttore Clinico per la paziente Caso Clinico A1), 1 in sanificazione rapida e 1 pronta per le prime visite delle 14:00. A **Polo Gamma** registriamo una saturazione dell'**82.0%** su 5 sale, con la Sala 1 impegnata in chirurgia guidata dal Dott. Pietro Cantice. L'andamento complessivo del gruppo è all'**84.6%**, in perfetto equilibrio con la capacità operativa pianificata."
       },
       forniture: {
         keywords: ["forniture", "impianti", "bloccati", "scorte", "magazzino", "straumann", "nobel"],
-        testo: "Non abbiamo ordini bloccati con i produttori primari, ma è attiva una segnalazione di **media priorità a Treviso**: in Sala 1 il lobo degli Occhi ha riconosciuto l'apertura di un impianto **Straumann BLX 4.5x10mm** mentre a scheda gestionale era associato un BLX 4.0. Ti ho predisposto un allarme con un clic per allineare subito il passaporto implantare e aggiornare la giacenza. A livello di gruppo abbiamo **1.240 impianti a magazzino**: Straumann (512 pezzi, giacenza ottima), Nobel Biocare (388 pezzi) e Astra Tech (215 pezzi). Abbiamo invece 125 pezzi su Zimmer Biomet, con riordino automatico già programmato."
+        testo: "Non abbiamo ordini bloccati con i produttori primari, ma è attiva una segnalazione di **media priorità a Polo Alfa**: in Sala 1 il lobo degli Occhi ha riconosciuto l'apertura di un impianto **Straumann BLX 4.5x10mm** mentre a scheda gestionale era associato un BLX 4.0. Ti ho predisposto un allarme con un clic per allineare subito il passaporto implantare e aggiornare la giacenza. A livello di gruppo abbiamo **1.240 impianti a magazzino**: Straumann (512 pezzi, giacenza ottima), Nobel Biocare (388 pezzi) e Astra Tech (215 pezzi). Abbiamo invece 125 pezzi su Zimmer Biomet, con riordino automatico già programmato."
       },
       proiezione: {
         keywords: ["proiezione", "incasso", "incassi", "chiusura", "mese", "fatturato", "preventivi"],
-        testo: "Gli incassi registrati oggi alle 13:35 ammontano a **68.400 €**. Nel mese corrente abbiamo raggiunto **892.000 €** incassati a fronte di 1.085.000 € di preventivi accettati (tasso di accettazione eccellente al **76.4%**). La proiezione statistica elaborata dai modelli previsionali indica una chiusura del mese a **1.240.000 €**, superando il target concordato con la tua direzione (1.160.000 €) del **+6.9%**. I motori principali di questa settimana sono le riabilitazioni All-on-4 a Treviso e Mestre e l'ottimo afflusso della clinica di Venezia."
+        testo: "Gli incassi registrati oggi alle 13:35 ammontano a **68.400 €**. Nel mese corrente abbiamo raggiunto **892.000 €** incassati a fronte di 1.085.000 € di preventivi accettati (tasso di accettazione eccellente al **76.4%**). La proiezione statistica elaborata dai modelli previsionali indica una chiusura del mese a **1.240.000 €**, superando il target concordato con la tua direzione (1.160.000 €) del **+6.9%**. I motori principali di questa settimana sono le riabilitazioni All-on-4 a Polo Alfa e Polo Epsilon e l'ottimo afflusso della clinica di Polo Delta."
       },
       autoclavi: {
         keywords: ["autoclavi", "manutenzione", "sterilizzazione", "macchine", "melag"],
-        testo: "Sul gruppo ci sono 14 autoclavi operative: 13 lavorano in perfetta conformità (32 cicli completati stamattina con parametri di pressione e temperatura al 100%). L'unica criticità riguarda **l'Autoclave 2 di Conegliano (W&H Lisa Mini)**: durante il pre-vuoto frazionato abbiamo rilevato una caduta di vuoto di 0.19 bar con una confidenza del 94.2%. Ti consiglio di approvare l'allarme nella vista *Allarmi e decisioni* per deviare il kit delle 14:30 sulla Melag 44B+ (Sala Sterilizzazione 1) e chiamare l'assistenza Melag prima dell'inizio delle sedute di domani."
+        testo: "Sul gruppo ci sono 14 autoclavi operative: 13 lavorano in perfetta conformità (32 cicli completati stamattina con parametri di pressione e temperatura al 100%). L'unica criticità riguarda **l'Autoclave 2 di Polo Gamma (W&H Lisa Mini)**: durante il pre-vuoto frazionato abbiamo rilevato una caduta di vuoto di 0.19 bar con una confidenza del 94.2%. Ti consiglio di approvare l'allarme nella vista *Allarmi e decisioni* per deviare il kit delle 14:30 sulla Melag 44B+ (Sala Sterilizzazione 1) e chiamare l'assistenza Melag prima dell'inizio delle sedute di domani."
       },
       comfort: {
-        keywords: ["comfort", "venezia", "attesa", "tempi", "pazienti", "cuore"],
-        testo: "A **Venezia (San Marco 5254)** la situazione per i pazienti è eccellente: il tempo medio di attesa prima della visita è di appena **4.9 minuti** (il più basso di tutto il gruppo). L'indice di comfort acustico percepito è del **99%**, grazie all'insonorizzazione dei locali e all'isolamento antivibrante della sala macchine. Dai rilievi del lobo del Cuore emerge inoltre che il 78% dei pazienti veneziani preferisce visualizzare il preventivo tramite render 3D e simulazione estetica del sorriso rispetto agli schemi radiografici puri."
+        keywords: ["comfort", "nodo_delta", "attesa", "tempi", "pazienti", "cuore"],
+        testo: "A **Polo Delta (San Marco 5254)** la situazione per i pazienti è eccellente: il tempo medio di attesa prima della visita è di appena **4.9 minuti** (il più basso di tutto il gruppo). L'indice di comfort acustico percepito è del **99%**, grazie all'insonorizzazione dei locali e all'isolamento antivibrante della sala macchine. Dai rilievi del lobo del Cuore emerge inoltre che il 78% dei pazienti nodo_deltani preferisce visualizzare il preventivo tramite render 3D e simulazione estetica del sorriso rispetto agli schemi radiografici puri."
       }
     }
   }
