@@ -1494,3 +1494,6 @@ video.hero-media { animation: none; object-position: 50% 20%; }
     transform: translate3d(calc(84% + var(--dx) * 0.55), 14px, -240px) rotateY(calc(-32deg - var(--dxn) * 0.1deg)) scale(0.82);
   }
 }
+
+/* pulsanti della pagina iniziale: solo testo, centrato */
+.gate-btn { justify-content: center; text-align: center; }
