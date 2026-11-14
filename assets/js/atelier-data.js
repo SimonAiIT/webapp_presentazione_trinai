@@ -35,6 +35,7 @@ window.TRINAI_DATA = {
       domandaGuida: "Perché con noi non perdete settimane a inserire dati a mano per iniziare a lavorare",
       blueprintType: "video_invito",
       video: "assets/video/invito_prequel1.mp4",
+      videos: ["assets/video/invito_prequel1.mp4", "assets/video/s15.mp4", "assets/video/s14.mp4", "assets/video/s09.mp4"],
       img: "assets/img/hero_trinai_luxury.jpg",
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
@@ -115,6 +116,7 @@ window.TRINAI_DATA = {
       voce: "nicola",
       voceNome: "Nicola · Voce Narrante Atelier",
       video: "assets/video/atto_01.mp4",
+      videos: ["assets/video/atto_01.mp4", "assets/video/s13.mp4", "assets/video/s12.mp4", "assets/video/s11.mp4"],
       audio: "assets/audio/act_01.mp3",
       kpi: [
         { valore: "Dati Fuori Casa", label: "Su computer altrui, sotto altre leggi" },
@@ -140,6 +142,7 @@ window.TRINAI_DATA = {
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
       video: "assets/video/atto_02.mp4",
+      videos: ["assets/video/atto_02.mp4", "assets/video/s03.mp4", "assets/video/s06.mp4", "assets/video/s09.mp4"],
       audio: "assets/audio/act_02.mp3",
       kpi: [
         { valore: "Un Istante", label: "Due Millisecondi per Decidere" },
@@ -217,6 +220,7 @@ window.TRINAI_DATA = {
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
       video: "assets/video/atto_03.mp4",
+      videos: ["assets/video/atto_03.mp4", "assets/video/s12.mp4", "assets/video/s13.mp4", "assets/video/s14.mp4"],
       audio: "assets/audio/act_03.mp3",
       kpi: [
         { valore: "100% in Sede", label: "Nessun Dato Mandato Fuori" },
@@ -294,6 +298,7 @@ window.TRINAI_DATA = {
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
       video: "assets/video/atto_04.mp4",
+      videos: ["assets/video/atto_04.mp4", "assets/video/s04.mp4", "assets/video/s11.mp4", "assets/video/s03.mp4"],
       audio: "assets/audio/act_04.mp3",
       demoLink: {
         url: "arkangel_viewer/index.html",
@@ -375,6 +380,7 @@ window.TRINAI_DATA = {
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
       video: "assets/video/atto_05.mp4",
+      videos: ["assets/video/atto_05.mp4", "assets/video/s04.mp4", "assets/video/s05.mp4", "assets/video/s01.mp4"],
       audio: "assets/audio/act_05.mp3",
       kpi: [
         { valore: "4 Passi", label: "Metodo Chiaro e Collaudato" },
@@ -452,6 +458,7 @@ window.TRINAI_DATA = {
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
       video: "assets/video/atto_06.mp4",
+      videos: ["assets/video/atto_06.mp4", "assets/video/s10.mp4", "assets/video/s02.mp4", "assets/video/s01.mp4"],
       audio: "assets/audio/act_06.mp3",
       kpi: [
         { valore: "150 Casi Reali", label: "Per Scoprire i Punti di Forza" },
@@ -529,6 +536,7 @@ window.TRINAI_DATA = {
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
       video: "assets/video/atto_07.mp4",
+      videos: ["assets/video/atto_07.mp4", "assets/video/s10.mp4", "assets/video/s09.mp4", "assets/video/s15.mp4"],
       audio: "assets/audio/act_07.mp3",
       kpi: [
         { valore: "Master II Livello", label: "Cattolica e San Raffaele" },
@@ -606,6 +614,7 @@ window.TRINAI_DATA = {
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
       video: "assets/video/atto_08.mp4",
+      videos: ["assets/video/atto_08.mp4", "assets/video/s05.mp4", "assets/video/s08.mp4", "assets/video/s06.mp4"],
       audio: "assets/audio/act_08.mp3",
       demoLink: {
         url: "real_cockpit/index.html",
@@ -687,9 +696,10 @@ window.TRINAI_DATA = {
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
       video: "assets/video/atto_09.mp4",
+      videos: ["assets/video/atto_09.mp4", "assets/video/s08.mp4", "assets/video/s07.mp4", "assets/video/s09.mp4"],
       audio: "assets/audio/act_09.mp3",
       kpi: [
-        { valore: "Fino al -60,1%", label: "Risparmio Reale con gli Incentivi" },
+        { valore: "Fino al -60%", label: "Risparmio Reale con gli Incentivi" },
         { valore: "Ricerca Bandi", label: "Troviamo i Fondi Adatti a Voi" },
         { valore: "Formazione Gratis", label: "Coperta dai Fondi Aziendali" },
         { valore: "Carte in Regola", label: "Tutela Completa per Ogni Controllo" }
@@ -753,22 +763,35 @@ window.TRINAI_DATA = {
     {
       id: "atto-10",
       codice: "10",
-      titolo: "La Carta dei Servizi Sedici Schede, Scegliete Voi",
+      titolo: "La Carta dei Servizi Tutto Quello che Facciamo per Voi",
       titoloLuce: "La Carta dei Servizi",
-      titoloOro: "Sedici Schede, Scegliete Voi",
-      sottotitolo: "Sedici schede componibili, dal progetto all'assistenza",
-      domandaGuida: "Come si compone su misura il proprio percorso, una scheda alla volta",
+      titoloOro: "Tutto Quello che Facciamo per Voi",
+      sottotitolo: "Sedici servizi, dal primo sopralluogo all'assistenza",
+      domandaGuida: "Che cosa trovate dentro l'Atelier, dal primo sopralluogo all'assistenza",
       blueprintType: "carta",
       img: "assets/img/slide10_carta.jpg",
       voce: "nicola",
       voceNome: "Nicola · Voce Narrante Atelier",
       video: "assets/video/atto_10.mp4",
+      videos: ["assets/video/atto_10.mp4", "assets/video/s15.mp4", "assets/video/s02.mp4", "assets/video/s14.mp4"],
       audio: "assets/audio/act_10.mp3",
       kpi: [
-        { valore: "Schede 1–4", label: "Dal progetto all'avvio in sede" },
-        { valore: "Schede 5–8", label: "Servizi, immagine e conti" },
-        { valore: "Schede 9–12", label: "Relazioni, eventi e partner" },
-        { valore: "Schede 13–16", label: "Formazione, regole, fondi, assistenza" }
+        { valore: "Progettazione", label: "Ogni sede, un intervento su misura" },
+        { valore: "Consulenza", label: "Dodici mesi di supervisione" },
+        { valore: "I computer", label: "Già pronti per la vostra struttura" },
+        { valore: "Installazione", label: "Collaudo e avvio in sede" },
+        { valore: "Servizi intelligenti", label: "Con account intestati a voi" },
+        { valore: "Immagine digitale", label: "Per farvi trovare da nuovi clienti" },
+        { valore: "Presenza online", label: "Analisi e miglioramenti" },
+        { valore: "Controllo dei conti", label: "Misura e previsione dei risultati" },
+        { valore: "Prova sul campo", label: "Quanto rassicura la comunicazione visiva" },
+        { valore: "Il territorio", label: "Relazioni che fanno crescere" },
+        { valore: "Alleanze", label: "Partnership e sponsorizzazioni" },
+        { valore: "Due eventi", label: "Riservati a un gruppo ristretto" },
+        { valore: "Formazione", label: "Attestato europeo sull'intelligenza artificiale" },
+        { valore: "In regola", label: "Autorizzazioni e conformità" },
+        { valore: "Finanziamenti", label: "Li cerchiamo e li gestiamo per voi" },
+        { valore: "Assistenza", label: "Anche dopo l'installazione" }
       ],
       narrazioneBreve: "",
       doveSiApplica: [],

@@ -95,18 +95,30 @@
       "Preparando le relazioni tecniche e le perizie di interconnessione ed efficienza energetica, vi permettiamo di accedere agli incentivi pubblici per l'innovazione, riducendo il costo netto reale fino a oltre il sessanta per cento. Il sistema misura da solo i dati necessari, e questo produce tutta la documentazione richiesta.",
       "Analizziamo la vostra azienda e la vostra Partita Iva per individuare tutti i bandi regionali, camerali, nazionali ed europei a cui avete diritto. E usiamo i fondi per la formazione a cui la vostra azienda è già iscritta per finanziare la formazione e la certificazione europea del personale.",
       "Vi consegniamo il fascicolo completo di conformità: la valutazione d'impatto sulla protezione dei dati, il registro immutabile e tutte le informative pronte per le autorità. Tutto in regola con le leggi europee su privacy e intelligenza artificiale, chiavi in mano, per qualsiasi verifica: nessuna sorpresa.",
-      "L'intera offerta è divisa in sedici schede chiare, la nostra Carta dei Servizi. Attivate solo ciò che vi serve oggi, e aggiungete il resto al vostro ritmo, un passo alla volta. Siete voi a comporre il vostro abito."
+      "L'intera offerta è raccolta nella nostra Carta dei Servizi, e ve la mostro subito."
     ],
-    "chiusura": "Il costo scende e le carte sono in regola. Vediamo ora, scheda per scheda, tutto quello che possiamo fare per voi."
+    "chiusura": "Il costo scende e le carte sono in regola. Vediamo ora tutto quello che facciamo per voi."
   },
   "10": {
-    "intro": "Ora la parte più concreta: la Carta dei Servizi. Sedici schede, come i pezzi di un abito su misura. Le attivate solo quando vi servono, e partite da dove volete voi.",
+    "intro": "Ecco tutto quello che facciamo per voi, una cosa alla volta.",
     "punti": [
-      "Si parte dal progetto. La scheda uno, progettazione, per conoscere ogni sede e costruire l'intervento su misura. La scheda due, consulenza e supervisione per dodici mesi, per dare continuità al sistema e al governo dell'azienda. La scheda tre, la fornitura dei computer, già configurati e adatti alla vostra struttura. E la scheda quattro, installazione, collaudo e avvio in sede, con la squadra addestrata.",
-      "Poi c'è il funzionamento. La scheda cinque, i servizi di intelligenza artificiale esterni, con account intestati a voi. La scheda sei, comunicazione digitale e immagine, per curare la vostra presenza e conquistare nuovi clienti. La scheda sette, l'analisi della vostra presenza online. E la scheda otto, controllo di gestione, per misurare l'andamento economico e prevedere i risultati.",
-      "Poi le relazioni. La scheda nove, una prova sul campo per misurare quanto la comunicazione visiva rassicura chi vi ascolta. La scheda dieci, le relazioni con il territorio. La scheda undici, partnership e sponsorizzazioni. E la scheda dodici, due eventi riservati a un gruppo ristretto, per restare aggiornati.",
-      "Infine la tutela. La scheda tredici, formazione e certificazione sull'intelligenza artificiale, come richiede la legge europea. La scheda quattordici, autorizzazioni e conformità: il fascicolo che vi mette in regola. La scheda quindici, ricerca e gestione dei finanziamenti. E la scheda sedici, assistenza dopo l'installazione."
+      "Studiamo ogni vostra sede e progettiamo l'intervento su misura.",
+      "Per dodici mesi vi affianchiamo e supervisioniamo il sistema e il governo dell'azienda.",
+      "Vi consegniamo i computer già configurati e adatti alla vostra struttura.",
+      "Installiamo, collaudiamo e avviamo tutto in sede, formando la squadra.",
+      "I servizi di intelligenza artificiale esterni sono attivati con account intestati a voi.",
+      "Curiamo la vostra immagine digitale, per farvi conoscere e trovare nuovi clienti.",
+      "Analizziamo la vostra presenza online e la miglioriamo.",
+      "Misuriamo l'andamento economico e prevediamo i risultati.",
+      "Verifichiamo sul campo quanto la comunicazione visiva rassicura chi vi ascolta.",
+      "Sviluppiamo le relazioni con il territorio.",
+      "Costruiamo partnership e sponsorizzazioni che portano valore.",
+      "Organizziamo due eventi riservati a un gruppo ristretto, per restare aggiornati.",
+      "Formiamo il personale e rilasciamo l'attestato europeo sull'intelligenza artificiale.",
+      "Prepariamo il fascicolo che vi mette in regola con autorizzazioni e conformità.",
+      "Cerchiamo e gestiamo i finanziamenti per l'investimento.",
+      "E dopo l'installazione restiamo al vostro fianco con l'assistenza."
     ],
-    "chiusura": "Sedici schede, e siete voi a scegliere da dove cominciare. Nessun agente speciale veste di serie. Grazie per essere stati nostri ospiti all'Atelier di TrinAI."
+    "chiusura": "Questo è l'Atelier. Nessun agente speciale veste di serie. Grazie per essere stati nostri ospiti all'Atelier di TrinAI."
   }
 }

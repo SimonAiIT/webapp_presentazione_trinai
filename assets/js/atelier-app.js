@@ -477,7 +477,10 @@
 
   function getHeroVisualHtml(st) {
     if (st.video) {
-      return `<video class="hero-media act-video-el" src="${st.video}" poster="${st.img}" muted loop playsinline preload="none"></video>`;
+      // piu clip per atto: si alternano in sequenza (senza loop sulla singola clip)
+      const elenco = st.videos && st.videos.length ? st.videos : [st.video];
+      const loop = elenco.length > 1 ? "" : "loop";
+      return `<video class="hero-media act-video-el" src="${elenco[0]}" data-i="0" poster="${st.img}" muted ${loop} playsinline preload="none"></video>`;
     }
     return `<img class="hero-media" src="${st.img}" alt="" loading="lazy" onerror="this.style.display='none'">`;
   }
@@ -614,6 +617,15 @@
       }
 
       bindPointsCarousel(card);
+      const heroVid = card.querySelector("video.act-video-el");
+      if (heroVid && st.videos && st.videos.length > 1) {
+        heroVid.addEventListener("ended", () => {
+          const i = ((parseInt(heroVid.dataset.i, 10) || 0) + 1) % st.videos.length;
+          heroVid.dataset.i = String(i);
+          heroVid.src = st.videos[i];
+          heroVid.play().catch(() => {});
+        });
+      }
       carouselTrack.appendChild(card);
     });
     update3DPositions(false);
