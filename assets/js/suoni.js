@@ -35,7 +35,7 @@
 
   const stato = {
     attivo: true,
-    volumeFondo: 25,
+    volumeFondo: 15,
     volumeEventi: 50
   };
 

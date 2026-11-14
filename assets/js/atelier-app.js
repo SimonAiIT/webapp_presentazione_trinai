@@ -414,53 +414,106 @@
         ? `<div class="signature-banner">${DATA.brand.chiusura}</div>`
         : "";
 
+    const punti = st.kpi || [];
+    const puntiHtml = punti
+      .map(
+        (k, i) => `<div class="vc-item" data-vc="${i}">
+                     <div class="vc-val">${k.valore}</div>
+                     <div class="vc-lbl">${k.label}</div>
+                   </div>`
+      )
+      .join("");
+
     return `
-      <div class="card-3d-inner">
-        <header class="act-header-bar">
-          <div class="station-kicker-row">
-            <span class="station-kicker">Atto ${st.codice} di 08 · Sartoria Sovrana</span>
-            <span class="card-3d-hint">Carosello 3D · Scorri o clicca ai lati ↔</span>
+      <div class="card-3d-inner card-presentazione">
+        <section class="hero-emotion">
+          ${getHeroVisualHtml(st)}
+          <div class="hero-veil"></div>
+          <div class="hero-text">
+            <div class="hero-atto">Atto ${st.codice}</div>
+            <h1 class="station-title">
+              ${st.titoloLuce || st.titolo}
+              <span class="gold-span">${st.titoloOro || ""}</span>
+            </h1>
+            <p class="hero-question">${st.domandaGuida}</p>
           </div>
-          <h1 class="station-title">
-            ${st.titoloLuce || st.titolo}
-            <span class="gold-span">${st.titoloOro || ""}</span>
-          </h1>
-          <p class="station-sub">${st.sottotitolo}</p>
-        </header>
-
-        ${getBlueprintVisualHtml(st)}
-
-        <section class="narrative-sphere-card">
-          <div class="narrative-emblem-row">
-            <div class="narrative-seal">${st.codice}</div>
-            <h2 class="guiding-question">${st.domandaGuida}</h2>
-          </div>
-          <p class="narrative-prose">${st.narrazioneBreve}</p>
         </section>
 
-        <div class="kpi-grid">${kpiHtml}</div>
+        <section class="vc-stage" aria-label="Punti chiave dell'atto">
+          <div class="vc-ring">${puntiHtml}</div>
+          <div class="vc-dots"></div>
+        </section>
 
-        <div class="section-heading">Dove e Come Si Applica in Parole Semplici</div>
-        <div class="usecases-grid">${useCasesHtml}</div>
-
-        ${simHtml}
         ${demoHtml}
-
-        <div class="section-heading">Approfondimenti Espandibili</div>
-        <div class="drawers-section">${drawersHtml}</div>
-
-        <div class="section-heading">Moduli della Carta dei Servizi</div>
-        <div class="cards-grid">${cardsHtml}</div>
-
-        <aside class="institutional-seal-card">
-          <strong>${DATA.brand.ragioneSociale} · ${DATA.brand.qualifica}</strong>
-          <span>${DATA.brand.estremiLegali}</span>
-          <span>${DATA.brand.collaborazioniAccademiche}</span>
-        </aside>
-
         ${closingHtml}
       </div>
     `;
+  }
+
+  function getHeroVisualHtml(st) {
+    if (st.blueprintType === "video_invito" && st.video) {
+      return `<video class="hero-media act-video-el" src="${st.video}" poster="${st.img}" autoplay muted loop playsinline></video>`;
+    }
+    return `<img class="hero-media" src="${st.img}" alt="" loading="lazy" onerror="this.style.display='none'">`;
+  }
+
+  // Carosello verticale 3D dei punti chiave: sincronizzato con la voce
+  const vcState = { idx: 0, lockUntil: 0 };
+
+  function setPoint(idx, manual) {
+    const card = carouselTrack ? carouselTrack.querySelector('.card-3d-slide[data-pos="0"]') : null;
+    if (!card) return;
+    const items = card.querySelectorAll(".vc-item");
+    const n = items.length;
+    if (!n) return;
+    idx = Math.max(0, Math.min(n - 1, idx));
+    if (manual) vcState.lockUntil = Date.now() + 6000;
+    vcState.idx = idx;
+    items.forEach((el, i) => {
+      const o = i - idx;
+      el.style.setProperty("--o", o);
+      el.style.setProperty("--a", Math.abs(o));
+      el.classList.toggle("on", o === 0);
+    });
+    const dots = card.querySelector(".vc-dots");
+    if (dots) {
+      if (dots.childElementCount !== n) dots.innerHTML = "<i></i>".repeat(n);
+      Array.from(dots.children).forEach((d, i) => d.classList.toggle("on", i === idx));
+    }
+  }
+
+  const INTRO_FRAC = 0.22; // la prima parte e emozionale: i punti partono dopo
+  function syncPointsToVoice(t, dur) {
+    if (!dur || Date.now() < vcState.lockUntil) return;
+    const card = carouselTrack ? carouselTrack.querySelector('.card-3d-slide[data-pos="0"]') : null;
+    if (!card) return;
+    const n = card.querySelectorAll(".vc-item").length;
+    if (!n) return;
+    const f = t / dur;
+    const idx = f < INTRO_FRAC ? 0 : Math.floor(((f - INTRO_FRAC) / (1 - INTRO_FRAC)) * n);
+    if (idx !== vcState.idx) setPoint(idx, false);
+  }
+
+  function bindPointsCarousel(card) {
+    const ring = card.querySelector(".vc-ring");
+    if (!ring) return;
+    let y0 = null;
+    ring.addEventListener("touchstart", (e) => { y0 = e.touches[0].clientY; }, { passive: true });
+    ring.addEventListener("touchend", (e) => {
+      if (y0 === null) return;
+      const dy = e.changedTouches[0].clientY - y0;
+      y0 = null;
+      if (Math.abs(dy) > 30) {
+        e.stopPropagation();
+        setPoint(vcState.idx + (dy < 0 ? 1 : -1), true);
+      }
+    });
+    ring.querySelectorAll(".vc-item").forEach((el, i) => {
+      el.addEventListener("click", (e) => {
+        e.stopPropagation();
+        setPoint(i, true);
+      });
+    });
   }
 
   function renderCarousel3D() {
@@ -521,6 +574,7 @@
         });
       }
 
+      bindPointsCarousel(card);
       carouselTrack.appendChild(card);
     });
     update3DPositions(false);
@@ -530,7 +584,7 @@
     const total = DATA.stations.length;
     const st = DATA.stations[currentStationIdx];
     if (topbarCount && st) {
-      topbarCount.textContent = `ATTO ${st.codice} / 08`;
+      topbarCount.textContent = `Atto ${st.codice} di 08`;
     }
 
     const prevIdx = (currentStationIdx - 1 + total) % total;
@@ -554,6 +608,9 @@
       }
     });
 
+    vcState.idx = 0;
+    vcState.lockUntil = 0;
+    setPoint(0, false);
     renderHamburgerMenu();
     renderHudDots();
 
@@ -561,6 +618,8 @@
       window.TRINAI_AUDIO_HUD.playStation(st, true);
     }
   }
+
+  if (window.TRINAI_AUDIO_HUD) window.TRINAI_AUDIO_HUD.setOnTime(syncPointsToVoice);
 
   function goToStation(idx, autoPlay = true) {
     const total = DATA.stations.length;
@@ -705,9 +764,32 @@
   if (btnPlay) {
     btnPlay.addEventListener("click", () => {
       playUiSound("click");
-      if (window.TRINAI_AUDIO_HUD) window.TRINAI_AUDIO_HUD.togglePlay();
+      const hud = window.TRINAI_AUDIO_HUD;
+      if (!hud) return;
+      if (hud.getState() === "ended") {
+        goToStation(currentStationIdx + 1, true);
+      } else {
+        hud.togglePlay();
+      }
     });
   }
+
+  // Header che si nasconde scorrendo verso il basso e ricompare risalendo
+  const topbarEl = document.querySelector(".topbar");
+  let lastScrollY = 0;
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!topbarEl) return;
+      const y = window.scrollY || 0;
+      const goingDown = y > lastScrollY + 6;
+      const goingUp = y < lastScrollY - 6;
+      if (y < 60 || goingUp) topbarEl.classList.remove("topbar-hidden");
+      else if (goingDown) topbarEl.classList.add("topbar-hidden");
+      lastScrollY = y;
+    },
+    { passive: true }
+  );
 
   if (btnThemeToggle) {
     btnThemeToggle.addEventListener("click", () => {

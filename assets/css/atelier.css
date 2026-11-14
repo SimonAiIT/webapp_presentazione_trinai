@@ -1160,3 +1160,219 @@ body {
   border: none;
   background: #06070a;
 }
+
+/* =========================================================
+   ATELIER LEGGERO: header sottile, footer a pulsante unico,
+   testi piu grandi su telefono, dark meno carico di etichette
+   ========================================================= */
+:root {
+  --text-muted: #d5deea;
+  --text-dim: #aab6c7;
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-gold: rgba(212, 175, 55, 0.26);
+}
+
+/* HEADER */
+.topbar {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(to bottom, rgba(6, 7, 10, 0.88), rgba(6, 7, 10, 0));
+  backdrop-filter: none;
+  border-bottom: none;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.topbar.topbar-hidden { transform: translateY(-100%); }
+.topbar-brand img { height: 20px; }
+.topbar-station-count {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  color: var(--text-dim);
+}
+.hamburger-btn {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: none;
+  border-radius: 50%;
+}
+.ham-lines { width: 18px; gap: 4px; }
+
+/* FOOTER A PULSANTE UNICO */
+.audio-hud {
+  background: linear-gradient(to top, rgba(6, 7, 10, 0.97) 60%, rgba(6, 7, 10, 0));
+  backdrop-filter: none;
+  border-top: none;
+  padding-top: 0.4rem;
+}
+.hud-subtitle-dock {
+  background: none;
+  border-bottom: none;
+  min-height: 0;
+  padding: 0.2rem 1.1rem 0.5rem;
+}
+#hud-subtitle-text {
+  font-size: 1rem;
+  line-height: 1.45;
+  color: var(--text-main);
+}
+.hud-controls-row {
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0 1rem 0.8rem;
+}
+.hud-dots { display: flex; }
+.hud-dot { width: 6px; height: 6px; }
+.hud-dot.active { width: 18px; }
+.hud-main-btn {
+  position: relative;
+  overflow: hidden;
+  width: min(100%, 360px);
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-gold);
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.hud-main-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0%;
+  background: rgba(212, 175, 55, 0.28);
+  transition: width 0.15s linear;
+}
+.hud-main-icon, .hud-main-label { position: relative; }
+.hud-main-icon { font-size: 0.9rem; color: var(--gold-bright); }
+.hud-main-btn[data-state="paused"], .hud-main-btn[data-state="ended"] {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #06070a;
+}
+.hud-main-btn[data-state="paused"] .hud-main-icon,
+.hud-main-btn[data-state="ended"] .hud-main-icon { color: #06070a; }
+#app-shell.active { padding-bottom: 9.5rem; }
+
+/* MENO ETICHETTE: via i bordi dorati e le pillole */
+.card-3d-slide { border-color: var(--border-subtle); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6); }
+.card-3d-hint { display: none; }
+.card-badge, .drawer-act-num {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gold-bright);
+}
+.station-kicker, .section-heading, .sim-title, .drawer-kicker {
+  font-family: var(--font-sans);
+  text-transform: none;
+  letter-spacing: 0.01em;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.usecase-card, .service-card, .kpi-box, .drawer-item, .institutional-seal-card {
+  border-color: var(--border-subtle);
+  background: rgba(255, 255, 255, 0.025);
+}
+.narrative-sphere-card { border-color: var(--border-subtle); }
+.visual-stage-box { border-color: var(--border-subtle); }
+.demo-cta { background: rgba(212, 175, 55, 0.14); }
+
+/* TESTI PIU GRANDI SU TELEFONO */
+@media (max-width: 639px) {
+  html { font-size: 17.5px; }
+  .station-sub, .narrative-prose { font-size: 1rem; }
+  .narrative-prose { line-height: 1.7; }
+  .guiding-question { font-size: 1.1rem; }
+  .usecase-desc, .service-card p, .drawer-body, .sim-readout-detail { font-size: 0.92rem; }
+  .kpi-lbl, .institutional-seal-card { font-size: 0.82rem; }
+  .blueprint-svg-wrap { overflow-x: auto; justify-content: flex-start; -webkit-overflow-scrolling: touch; }
+  .blueprint-svg-wrap svg { min-width: 700px; }
+}
+
+/* =========================================================
+   PRESENTAZIONE: parte emozionale + punti chiave in carosello verticale 3D
+   (i testi li legge la voce, a schermo restano solo parole chiave)
+   ========================================================= */
+.hud-subtitle-dock { display: none; }
+#app-shell.active { padding-bottom: 6.5rem; }
+.card-presentazione { padding: 0; gap: 0; }
+.hero-emotion {
+  position: relative;
+  min-height: 52vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  border-radius: 22px 22px 0 0;
+  background: radial-gradient(circle at 50% 25%, rgba(212, 175, 55, 0.22), #0a0d14 70%);
+}
+.hero-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: heroDrift 24s ease-in-out infinite alternate;
+}
+@keyframes heroDrift { from { transform: scale(1.02); } to { transform: scale(1.14) translate(-1.5%, -1%); } }
+.hero-veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--bg-card) 4%, rgba(6, 7, 10, 0.55) 48%, rgba(6, 7, 10, 0.1));
+}
+.hero-text { position: relative; padding: 1.4rem 1.3rem 1.1rem; }
+.hero-atto { font-size: 0.85rem; font-weight: 600; color: var(--gold-bright); margin-bottom: 0.3rem; }
+.hero-text .station-title { font-size: clamp(1.7rem, 7vw, 2.5rem); }
+.hero-question { margin-top: 0.7rem; font-size: 1.05rem; color: var(--text-muted); line-height: 1.5; }
+
+.vc-stage { padding: 0.4rem 1rem 1.4rem; }
+.vc-ring {
+  position: relative;
+  height: 230px;
+  perspective: 800px;
+  overflow: hidden;
+  touch-action: pan-x;
+}
+.vc-item {
+  position: absolute;
+  left: 0; right: 0; top: 50%;
+  height: 92px;
+  margin-top: -46px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  transform: translateY(calc(var(--o, 0) * 74%)) rotateX(calc(var(--o, 0) * -46deg)) scale(calc(1 - var(--a, 0) * 0.14));
+  opacity: calc(1 - var(--a, 0) * 0.42);
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease, background 0.5s ease, border-color 0.5s ease;
+  cursor: pointer;
+}
+.vc-item.on {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: var(--border-gold);
+  box-shadow: 0 0 34px rgba(212, 175, 55, 0.14);
+}
+.vc-val { font-family: var(--font-serif); font-size: 1.45rem; font-weight: 700; color: var(--gold-bright); line-height: 1.2; }
+.vc-lbl { font-size: 0.95rem; color: var(--text-muted); margin-top: 0.15rem; }
+.vc-dots { display: flex; justify-content: center; gap: 0.4rem; margin-top: 0.6rem; }
+.vc-dots i { width: 6px; height: 6px; border-radius: 50%; background: rgba(255, 255, 255, 0.2); transition: all 0.3s ease; }
+.vc-dots i.on { width: 18px; border-radius: 999px; background: var(--gold-bright); }
+.card-presentazione .demo-cta { width: calc(100% - 2rem); margin: 0 1rem 1.2rem; }
+.card-presentazione .signature-banner { margin: 0 1rem 1.2rem; }

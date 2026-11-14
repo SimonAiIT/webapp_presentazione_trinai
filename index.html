@@ -81,17 +81,15 @@
     <header class="topbar">
       <div class="topbar-brand">
         <img src="assets/img/trinai_scritta_bianca.png" alt="TrinAI">
-        <span id="topbar-station-count" class="topbar-station-count">ATTO 00 / 08</span>
+        <span id="topbar-station-count" class="topbar-station-count">Atto 00 di 08</span>
       </div>
       <div class="topbar-actions">
-        <button id="btn-theme-toggle" class="icon-btn active" type="button">Musica ON</button>
         <button id="btn-hamburger" class="hamburger-btn" type="button" aria-label="Apri indice degli atti" aria-expanded="false">
           <span class="ham-lines">
             <span></span>
             <span></span>
             <span></span>
           </span>
-          <span class="ham-label">Indice</span>
         </button>
       </div>
     </header>
@@ -122,6 +120,7 @@
       </div>
 
       <div class="drawer-footer">
+        <button id="btn-theme-toggle" class="icon-btn active" type="button">Musica ON</button>
         <button id="btn-sound-toggle" class="icon-btn active" type="button">Suoni Interfaccia ON</button>
         <p class="drawer-legal">Trinacria Artificial Intelligence S.r.l. · Start-up Innovativa · REA PA 452478</p>
       </div>
@@ -135,24 +134,15 @@
     <!-- HUD AUDIO E SOTTOTITOLI INTEGRATI A FONDO PAGINA ZERO OVERLAP -->
     <footer class="audio-hud">
       <div id="hud-subtitle-wrap" class="hud-subtitle-dock">
-        <div id="hud-subtitle-text" class="visible">Scorri le card in 3D o tocca Ascolta Atto per la narrazione</div>
-      </div>
-      <div class="hud-progress-track">
-        <div id="hud-audio-progress"></div>
+        <div id="hud-subtitle-text" class="visible">Scorri le card o tocca Ascolta per la narrazione</div>
       </div>
       <div class="hud-controls-row">
-        <div id="hud-speaker-badge" class="hud-speaker-badge" data-voice="elsa">
-          <span id="hud-voice-wave" class="voice-orb"></span>
-          <span id="hud-speaker-name" class="speaker-label">Elsa · Voce Narrante Atelier</span>
-        </div>
-
-        <div class="hud-dots" id="hud-dots" aria-label="Indicatore Card 3D"></div>
-
-        <div class="hud-nav-group">
-          <button id="hud-prev-btn" class="hud-btn" type="button" aria-label="Card precedente">←</button>
-          <button id="hud-play-btn" class="hud-btn hud-btn-primary" type="button" aria-label="Pausa o riprendi">Ascolta Atto</button>
-          <button id="hud-next-btn" class="hud-btn" type="button" aria-label="Card successiva">→</button>
-        </div>
+        <div class="hud-dots" id="hud-dots" aria-label="Indicatore atti"></div>
+        <button id="hud-play-btn" class="hud-main-btn" type="button" data-state="paused" aria-label="Avvia narrazione">
+          <span id="hud-audio-progress" class="hud-main-fill"></span>
+          <span id="hud-main-icon" class="hud-main-icon">▶</span>
+          <span id="hud-main-label" class="hud-main-label">Ascolta</span>
+        </button>
       </div>
     </footer>
   </div>

@@ -16,13 +16,15 @@
   themeEl.loop = true;
   themeEl.preload = "auto";
   themeEl.playsInline = true;
-  themeEl.volume = 0.08;
+  themeEl.volume = 0.05;
 
   let subtitlesMap = {};
   let currentSubKey = null;
   let isPlaying = false;
   let isThemeEnabled = true;
   let onEndedCallback = null;
+  let hasEnded = false;
+  let onTimeCallback = null;
 
   async function loadSubtitles() {
     try {
@@ -38,7 +40,7 @@
       themeEl.pause();
       return;
     }
-    themeEl.volume = speaking ? 0.06 : 0.18;
+    themeEl.volume = speaking ? 0.03 : 0.09;
     if (themeEl.paused) {
       themeEl.play().catch(() => {});
     }
@@ -59,15 +61,18 @@
 
   function updatePlayButtonUI() {
     const btn = document.getElementById("hud-play-btn");
-    const wave = document.getElementById("hud-voice-wave");
+    const icon = document.getElementById("hud-main-icon");
+    const label = document.getElementById("hud-main-label");
+    const state = isPlaying ? "playing" : hasEnded ? "ended" : "paused";
     if (btn) {
-      btn.setAttribute("aria-label", isPlaying ? "Pausa narrazione" : "Avvia narrazione");
-      btn.dataset.state = isPlaying ? "playing" : "paused";
-      btn.textContent = isPlaying ? "Pausa Voce" : "Ascolta Atto";
+      btn.dataset.state = state;
+      btn.setAttribute(
+        "aria-label",
+        state === "playing" ? "Pausa narrazione" : state === "ended" ? "Vai all'atto successivo" : "Avvia narrazione"
+      );
     }
-    if (wave) {
-      wave.classList.toggle("active", isPlaying);
-    }
+    if (icon) icon.textContent = state === "playing" ? "❚❚" : state === "ended" ? "→" : "▶";
+    if (label) label.textContent = state === "playing" ? "Pausa" : state === "ended" ? "Avanti" : "Ascolta";
   }
 
   function updateProgressUI() {
@@ -80,10 +85,12 @@
   voiceEl.addEventListener("timeupdate", () => {
     updateProgressUI();
     updateSubtitleUI(voiceEl.currentTime);
+    if (onTimeCallback) onTimeCallback(voiceEl.currentTime, voiceEl.duration);
   });
 
   voiceEl.addEventListener("ended", () => {
     isPlaying = false;
+    hasEnded = true;
     duckTheme(false);
     updatePlayButtonUI();
     if (typeof onEndedCallback === "function") {
@@ -99,6 +106,7 @@
 
   voiceEl.addEventListener("play", () => {
     isPlaying = true;
+    hasEnded = false;
     duckTheme(true);
     updatePlayButtonUI();
   });
@@ -106,6 +114,7 @@
   function playStation(station, autoPlay = true) {
     if (!station) return;
     currentSubKey = "stazione_" + station.codice;
+    hasEnded = false;
 
     const speakerBadge = document.getElementById("hud-speaker-badge");
     const speakerName = document.getElementById("hud-speaker-name");
@@ -168,6 +177,14 @@
     updatePlayButtonUI();
   }
 
+  function getState() {
+    return isPlaying ? "playing" : hasEnded ? "ended" : "paused";
+  }
+
+  function setOnTime(cb) {
+    onTimeCallback = cb;
+  }
+
   function setOnEnded(cb) {
     onEndedCallback = cb;
   }
@@ -180,6 +197,8 @@
     toggleTheme,
     startSoundtrack,
     stop,
+    getState,
+    setOnTime,
     setOnEnded
   };
 })();
