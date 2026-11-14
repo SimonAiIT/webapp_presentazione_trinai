@@ -1376,3 +1376,17 @@ body {
 .vc-dots i.on { width: 18px; border-radius: 999px; background: var(--gold-bright); }
 .card-presentazione .demo-cta { width: calc(100% - 2rem); margin: 0 1rem 1.2rem; }
 .card-presentazione .signature-banner { margin: 0 1rem 1.2rem; }
+
+/* HEADER MINIMO: solo logo e tre linee, niente etichette ne pulsantoni */
+.topbar { padding: 0.55rem 0.9rem; }
+.topbar-brand img { height: 18px; opacity: 0.9; }
+.topbar-station-count { display: none; }
+.hamburger-btn {
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  border-radius: 8px;
+}
+.ham-lines { width: 20px; gap: 5px; }
+.ham-lines span { height: 1.5px; background: var(--text-muted); }
