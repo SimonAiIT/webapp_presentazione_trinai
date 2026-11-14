@@ -17,6 +17,7 @@ AUDIO = os.path.join(ROOT, "assets", "audio")
 FF = r"D:\Strumenti\ffmpeg.exe"
 VOCE = "im_nicola"
 SR = 24000
+VELOCITA_FINALE = 1.15   # accelerazione di tutta la traccia a fine lavorazione (max 1.2)
 
 k = Kokoro(r"D:\Modelli\kokoro\kokoro-v1.0.onnx", r"D:\Modelli\kokoro\voices-v1.0.bin")
 
@@ -28,10 +29,6 @@ def silenzio(sec):
 def spezza(frase):
     """Divide dopo i due punti (etichetta del punto) e le frasi molto lunghe alla virgola centrale."""
     blocchi = []
-    m = re.match(r"^([^:]{3,40}):\s+(.*)$", frase)
-    if m:
-        blocchi.append((m.group(1) + ".", "etichetta"))
-        frase = m.group(2)
     parole = frase.split()
     if len(parole) > 24 and "," in frase:
         virgole = [i for i, c in enumerate(frase) if c == ","]
@@ -50,9 +47,7 @@ def parla(testo, ruolo, pos_par, tot_par, idx_fr, tot_fr):
     speed, pausa = 0.94, 0.42
     # ondulazione leggera e ripetibile, contro la monotonia
     speed += ((idx_fr * 7 + pos_par * 3) % 5 - 2) * 0.012
-    if ruolo == "etichetta":
-        speed, pausa = 0.82, 0.62           # "Primo punto." scandito, con respiro
-    elif ruolo == "testa":
+    if ruolo == "testa":
         pausa = 0.2
     elif testo.endswith("?"):
         speed, pausa = 0.90, 0.7
@@ -63,7 +58,7 @@ def parla(testo, ruolo, pos_par, tot_par, idx_fr, tot_fr):
     if idx_fr == 0 and pos_par == 0:
         speed = min(speed, 0.88)            # apertura piu lenta
     if idx_fr == tot_fr - 1:
-        speed, pausa = min(speed, 0.88), 0.6  # ultima frase del paragrafo: si chiude
+        pausa = 0.6                          # ultima frase del paragrafo: nessun rallentamento
     s, _ = k.create(testo, voice=VOCE, speed=speed, lang="it")
     return s, pausa
 
@@ -97,11 +92,14 @@ def genera(codice, dati, tutti_i_punti):
     mp3 = os.path.join(AUDIO, f"act_{codice}.mp3")
     sf.write(wav, totale, SR)
     subprocess.run([FF, "-y", "-loglevel", "error", "-i", wav, "-af",
-                    "highpass=f=70,equalizer=f=220:t=q:w=1:g=1.8,equalizer=f=3200:t=q:w=1:g=1.2,"
+                    f"atempo={VELOCITA_FINALE},highpass=f=70,equalizer=f=220:t=q:w=1:g=1.8,equalizer=f=3200:t=q:w=1:g=1.2,"
                     "loudnorm=I=-16:TP=-1.5:LRA=11", "-ar", "24000", "-b:a", "96k", mp3], check=True)
     os.remove(wav)
-    tutti_i_punti["stazione_" + codice] = {"durata": round(len(totale) / SR, 2), "inizi": inizi}
-    print(codice, "durata", round(len(totale) / SR, 1), "s, punti", inizi, flush=True)
+    tutti_i_punti["stazione_" + codice] = {
+        "durata": round(len(totale) / SR / VELOCITA_FINALE, 2),
+        "inizi": [round(x / VELOCITA_FINALE, 2) for x in inizi],
+    }
+    print(codice, "durata", tutti_i_punti["stazione_" + codice], flush=True)
 
 
 if __name__ == "__main__":
