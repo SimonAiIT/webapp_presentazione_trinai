@@ -1,6 +1,7 @@
 #!/bin/bash
 # Genera le immagini di apertura degli atti con Z-Image Turbo (stable-diffusion.cpp) e le salva in assets/img/*.jpg
 # Uso: bash tools/genera_immagini.sh
+SOLO="$*"
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SD=/d/Strumenti/sd_cpp/sd-cli.exe
 M=/d/Modelli/immagini
@@ -9,6 +10,8 @@ STILE="cinematic dark luxury photograph, deep black background, warm gold highli
 
 gen() {
   nome="$1"; prompt="$2"
+  # con argomenti (nomi) genera solo quelle immagini
+  if [ -n "$SOLO" ] && [[ " $SOLO " != *" $nome "* ]]; then return; fi
   "$SD" --diffusion-model $M/z_image_turbo-Q4_K.gguf --llm $M/Qwen3-4B-Instruct-2507-Q4_K_M.gguf --vae $M/ae.safetensors \
     -p "$prompt, $STILE" --cfg-scale 1.0 --steps 8 -W 768 -H 1024 --offload-to-cpu --diffusion-fa -o "/tmp/_hero_$nome.png" >/dev/null 2>&1
   /d/Strumenti/ffmpeg.exe -y -loglevel error -i "/tmp/_hero_$nome.png" -q:v 3 "$OUT/$nome.jpg" && rm "/tmp/_hero_$nome.png"
@@ -23,4 +26,5 @@ gen slide5_sterilization "a neatly arranged gold and steel instrument tray in a 
 gen slide7_training "a round table with warm light and five empty elegant chairs around it, a golden tailor's measuring tape coiled on the table"
 gen slide8_care "an old university library with arched windows and golden light, an open book and a small brass compass on a wooden desk"
 gen slide6_marketing "a golden hourglass with golden coins falling like sand on dark marble, a faint line of light rising like a chart behind it"
+gen slide1_problema "a dark ornate vault door left slightly ajar with golden light spilling out, a single glowing golden cable leading away across a dark ocean toward distant city lights, tense atmosphere"
 echo "tutte fatte"

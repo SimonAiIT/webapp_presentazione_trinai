@@ -105,6 +105,30 @@ window.TRINAI_DATA = {
     {
       id: "atto-01",
       codice: "01",
+      titolo: "Il Problema che Nessuno Vi Racconta",
+      titoloLuce: "Il Problema che",
+      titoloOro: "Nessuno Vi Racconta",
+      sottotitolo: "Dove finiscono i dati mandati ai servizi cloud e l'opportunità di agenti e modelli locali dentro la vostra sede",
+      domandaGuida: "A chi state affidando i vostri dati, e come potete tenerli in casa usando agenti e modelli locali",
+      blueprintType: "problema",
+      img: "assets/img/slide1_problema.jpg",
+      voce: "nicola",
+      voceNome: "Nicola · Voce Narrante Atelier",
+      audio: "assets/audio/act_01.mp3",
+      kpi: [
+        { valore: "Dati Fuori", label: "Su Server di Altri, Sotto Leggi Altrui" },
+        { valore: "Privacy", label: "GDPR e AI Act: il Dato Resta Vostro" },
+        { valore: "2 Costruttori", label: "Agenti a Riga di Comando nel Vostro Server" },
+        { valore: "Modelli Locali", label: "I Dati Non Escono dalla Sede" }
+      ],
+      narrazioneBreve: "",
+      doveSiApplica: [],
+      cassetti: [],
+      schede: []
+    },
+    {
+      id: "atto-02",
+      codice: "02",
       titolo: "Chi è Victor e Perché Decide Due Volte",
       titoloLuce: "Chi è Victor e Come Funziona",
       titoloOro: "Il Doppio Cervello Sovrano",
@@ -114,7 +138,7 @@ window.TRINAI_DATA = {
       img: "assets/img/slide4_intelligence.jpg",
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
-      audio: "assets/audio/act_01.mp3",
+      audio: "assets/audio/act_02.mp3",
       kpi: [
         { valore: "1,97 ms", label: "Primo Cervello · Decisione Istantanea" },
         { valore: "2 Righe", label: "Secondo Cervello · Spiegazione Chiara" },
@@ -179,8 +203,8 @@ window.TRINAI_DATA = {
     },
 
     {
-      id: "atto-02",
-      codice: "02",
+      id: "atto-03",
+      codice: "03",
       titolo: "Perché l'Architettura Resta Sovrana",
       titoloLuce: "Sovranità Fisica e",
       titoloOro: "Intelligenza Diffusa",
@@ -190,7 +214,7 @@ window.TRINAI_DATA = {
       img: "assets/img/slide3_architecture.jpg",
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
-      audio: "assets/audio/act_02.mp3",
+      audio: "assets/audio/act_03.mp3",
       kpi: [
         { valore: "100% Locale", label: "Dati Sensibili Chiusi in Sede" },
         { valore: "Isola Attiva", label: "Lavora Anche Senza Internet" },
@@ -255,8 +279,8 @@ window.TRINAI_DATA = {
     },
 
     {
-      id: "atto-03",
-      codice: "03",
+      id: "atto-04",
+      codice: "04",
       titolo: "Il Computer Use sui Vostri Programmi Attuali",
       titoloLuce: "Lavora sui Vostri Programmi",
       titoloOro: "Senza Toccare il Mouse",
@@ -266,7 +290,7 @@ window.TRINAI_DATA = {
       img: "assets/img/slide2_daemon.jpg",
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
-      audio: "assets/audio/act_03.mp3",
+      audio: "assets/audio/act_04.mp3",
       demoLink: {
         url: "arkangel_viewer/index.html",
         label: "Apri Laboratorio Visivo 3D e Geometria"
@@ -335,8 +359,8 @@ window.TRINAI_DATA = {
     },
 
     {
-      id: "atto-04",
-      codice: "04",
+      id: "atto-05",
+      codice: "05",
       titolo: "Dal Nostro Laboratorio alla Vostra Sede in Due Giorni",
       titoloLuce: "Pre-Addestramento in Lab e",
       titoloOro: "Deploy in Due Giorni",
@@ -346,7 +370,7 @@ window.TRINAI_DATA = {
       img: "assets/img/slide5_sterilization.jpg",
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
-      audio: "assets/audio/act_04.mp3",
+      audio: "assets/audio/act_05.mp3",
       kpi: [
         { valore: "4 Fasi", label: "Protocollo Sartoriale Collaudato" },
         { valore: "In Lab", label: "Addestramento Fuori dalla Vostra Sede" },
@@ -411,8 +435,8 @@ window.TRINAI_DATA = {
     },
 
     {
-      id: "atto-05",
-      codice: "05",
+      id: "atto-06",
+      codice: "06",
       titolo: "Le Persone al Centro e le Centocinquanta Soft Skill",
       titoloLuce: "L'Orchestra Umana e le",
       titoloOro: "Centocinquanta Soft Skill",
@@ -422,7 +446,7 @@ window.TRINAI_DATA = {
       img: "assets/img/slide7_training.jpg",
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
-      audio: "assets/audio/act_05.mp3",
+      audio: "assets/audio/act_06.mp3",
       kpi: [
         { valore: "150 Scenari", label: "Mappatura Attitudini e Ruoli" },
         { valore: "30·60·90 gg", label: "Piano Graduale di Delega" },
@@ -487,8 +511,8 @@ window.TRINAI_DATA = {
     },
 
     {
-      id: "atto-06",
-      codice: "06",
+      id: "atto-07",
+      codice: "07",
       titolo: "L'Accademia, i Master e il Metodo Adattivo",
       titoloLuce: "Master Universitari, Postgraduate",
       titoloOro: "E Metodo Un Passo alla Volta",
@@ -498,7 +522,7 @@ window.TRINAI_DATA = {
       img: "assets/img/slide8_care.jpg",
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
-      audio: "assets/audio/act_06.mp3",
+      audio: "assets/audio/act_07.mp3",
       kpi: [
         { valore: "II Livello", label: "Master Universitari Ufficiali" },
         { valore: "Postgraduate", label: "Corsi Executive Decision Intelligence" },
@@ -563,8 +587,8 @@ window.TRINAI_DATA = {
     },
 
     {
-      id: "atto-07",
-      codice: "07",
+      id: "atto-08",
+      codice: "08",
       titolo: "Il Valore di Ogni Minuto, il ROI e il Mercato",
       titoloLuce: "Il Valore del Minuto,",
       titoloOro: "Il Ritorno Economico e il Mercato",
@@ -574,7 +598,7 @@ window.TRINAI_DATA = {
       img: "assets/img/slide6_marketing.jpg",
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
-      audio: "assets/audio/act_07.mp3",
+      audio: "assets/audio/act_08.mp3",
       demoLink: {
         url: "real_cockpit/index.html",
         label: "Apri Plancia Direzionale Multi-Sede Live"
@@ -643,8 +667,8 @@ window.TRINAI_DATA = {
     },
 
     {
-      id: "atto-08",
-      codice: "08",
+      id: "atto-09",
+      codice: "09",
       titolo: "Ricerca Fondi, Scudo Europeo e Carta Servizi",
       titoloLuce: "Ricerca Fondi, Scudo Legale",
       titoloOro: "E Carta dei Servizi Sartoriale",
@@ -654,7 +678,7 @@ window.TRINAI_DATA = {
       img: "assets/img/hero_trinai_luxury.jpg",
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
-      audio: "assets/audio/act_08.mp3",
+      audio: "assets/audio/act_09.mp3",
       kpi: [
         { valore: "-60,1%", label: "Abbattimento Netto con Incentivi" },
         { valore: "Scouting", label: "Ricerca Attiva Bandi e Fondi" },

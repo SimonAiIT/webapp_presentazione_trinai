@@ -10,6 +10,16 @@
     "chiusura": "Questo è l'inizio. Ora lasciate che vi presenti, atto dopo atto, il nostro abito su misura. Quando siete pronti, toccate Avanti."
   },
   "01": {
+    "intro": "Prima di parlarvi della soluzione, parliamo del problema. Ogni giorno, in tanti studi e in tante aziende, dati riservati partono verso servizi in cloud, senza che nessuno ci pensi due volte.",
+    "punti": [
+      "Un file caricato su un servizio esterno esce dal vostro router, attraversa l'oceano e finisce sul computer di qualcun altro, sotto leggi che non sono le vostre. Eppure di quei dati rispondete voi, in prima persona.",
+      "Il GDPR e l'AI Act europeo lo dicono chiaramente: il dato riservato non deve uscire dal vostro controllo. La vera sicurezza ha un nome solo: tenerlo fisicamente dentro le vostre mura.",
+      "Ma c'è un'opportunità. Due grandi costruttori di intelligenza artificiale hanno portato i loro assistenti a riga di comando: veri agenti operativi, che possono lavorare dentro il vostro server. Costruiscono e mantengono l'impianto sul posto.",
+      "E i dati? Restano ai piccoli modelli locali, chiusi nella vostra sede. Gli agenti costruiscono e curano, i modelli locali lavorano sui dati, e la decisione finale resta sempre a voi."
+    ],
+    "chiusura": "Questo è il punto di partenza. Vediamo come lo abbiamo realizzato."
+  },
+  "02": {
     "intro": "Pensate al vostro collaboratore migliore. Quello che non dorme, non dimentica, non si lascia prendere dalla fretta e, soprattutto, non inventa. Ecco: si chiama Victor. Non è uno di quei programmi che chiacchierano su internet e, quando non sanno una cosa, la inventano con grande sicurezza. Victor è un direttore operativo silenzioso, che vive dentro la vostra azienda e lavora per voi. Senza svelare le formule con cui lo abbiamo forgiato, vi racconto come ragiona.",
     "punti": [
       "Il primo cervello è l'istinto matematico. In meno di due millisecondi Victor legge insieme i numeri del bilancio, l'andamento del tempo, le forme tridimensionali e perfino il rumore dei macchinari, e individua subito un problema o un'opportunità. Non è un'opinione: è pura matematica verificabile, fatta secondo le regole della vostra azienda.",
@@ -19,7 +29,7 @@
     ],
     "chiusura": "Ora che sapete chi è Victor, passiamo al luogo in cui vive. Toccate Avanti."
   },
-  "02": {
+  "03": {
     "intro": "Quando affidate i dati dei vostri clienti, dei vostri pazienti o dei vostri progetti a un servizio in cloud, state consegnando il cuore della vostra azienda a un server che non vedete e non controllate. Noi abbiamo scelto la strada opposta. Un'intelligenza sovrana, che resta vostra, divisa su due piani fisicamente separati. E vi assicuro una cosa: dormirete meglio.",
     "punti": [
       "Dentro i vostri uffici installiamo postazioni compatte da trentadue gigabyte e un Nodo Sovrano di Sede da centoventotto gigabyte. Qui restano chiusi a chiave i nomi, le immagini, le voci, le cartelle cliniche, le formule industriali, i contratti riservati. Non viaggiano mai su internet: restano nella cassaforte elettronica della vostra sede.",
@@ -29,7 +39,7 @@
     ],
     "chiusura": "Un'architettura sovrana, dunque. Adesso vediamo come lavora sui programmi che usate già. Toccate Avanti."
   },
-  "03": {
+  "04": {
     "intro": "Il più grande ostacolo all'innovazione non è la tecnologia. È la paura. La paura di dover buttare via il proprio gestionale storico, quello che conoscete a memoria, e ricominciare da capo. Con noi questa paura non serve. Non cambiate nemmeno un'abitudine. Tenete i vostri programmi di sempre: siamo noi ad adattarci a voi, e non il contrario.",
     "punti": [
       "Abbiamo creato un motore leggerissimo, scritto in linguaggio Rust, che comunica direttamente con la struttura interna dei programmi Windows. Lavora dietro le quinte, senza appesantire il computer. Gira fluidamente anche su macchine normali, quelle che avete già in studio, in laboratorio, in segreteria.",
@@ -39,7 +49,7 @@
     ],
     "chiusura": "Nessun trauma, nessun cambio di gestionale. Ora vi spiego come arriviamo da voi in due soli giorni. Toccate Avanti."
   },
-  "04": {
+  "05": {
     "intro": "Chi fa impresa non può permettersi cantieri informatici che bloccano gli uffici o le sale per settimane. Ogni giorno di fermo è un giorno in cui qualcuno aspetta, e non ha tempo da perdere. Per questo abbiamo spostato tutta la complessità in un posto solo: i nostri laboratori. A voi arriva un sistema già pronto. Vi spiego come, in quattro fasi.",
     "punti": [
       "Un protocollo sartoriale, in quattro fasi. La prima è l'audit: analizziamo come respira la vostra struttura, mappiamo i flussi di lavoro ed estraiamo in modo cifrato lo storico operativo. Nessun disturbo, nessun fermo. È come prendere le misure al sarto: serve a fare un abito che calzi davvero.",
@@ -49,7 +59,7 @@
     ],
     "chiusura": "Dal laboratorio alla vostra sede, in due giorni. Passiamo ora a ciò che conta più di ogni macchina: le persone. Toccate Avanti."
   },
-  "05": {
+  "06": {
     "intro": "Anche la tecnologia più potente del mondo serve a poco se le persone che lavorano con voi sono confuse, sovraccariche o messe nel ruolo sbagliato. Lo sappiamo, perché tra i nostri soci ci sono esperti di risorse umane. E la nostra regola è semplice, e non la tradiamo mai: si misura il processo e si supporta il ruolo. Non si giudica mai la persona.",
     "punti": [
       "Nessun test astratto, nessun questionario invasivo. Proponiamo centocinquanta situazioni concrete di lavoro quotidiano: un imprevisto, un cliente ansioso, una scadenza urgente. Osservando come ciascuno reagisce, emergono le inclinazioni naturali. Scoprite chi è portato per l'accoglienza, chi per l'organizzazione di precisione, chi per la chiusura degli accordi.",
@@ -59,7 +69,7 @@
     ],
     "chiusura": "Le persone al centro, sempre. Ora vi porto dove tutto questo si insegna: l'Accademia. Toccate Avanti."
   },
-  "06": {
+  "07": {
     "intro": "TrinAI non nasce in un garage di programmatori isolati dal mondo. Nasce sui banchi dell'alta formazione. E questo cambia tutto, perché sappiamo spiegare le cose, prima ancora di costruirle. Ci sono due luoghi, e vi racconto come si parlano: l'aula e l'azienda.",
     "punti": [
       "Come attestato nel Registro delle Imprese, collaboriamo ufficialmente con l'Università Cattolica del Sacro Cuore e con l'Università Vita-Salute San Raffaele, per il Master di secondo livello sulla gestione delle strutture sanitarie. Qui trasmettiamo i fondamenti scientifici del controllo di gestione, della leadership etica e dell'intelligenza decisionale.",
@@ -69,7 +79,7 @@
     ],
     "chiusura": "Il metodo insegnato all'università, cucito nei vostri computer. Ora parliamo di numeri. Toccate Avanti."
   },
-  "07": {
+  "08": {
     "intro": "Molti imprenditori lavorano dodici ore al giorno, e scoprono solo a fine anno, dal commercialista, se hanno davvero guadagnato e dove hanno perso margine. Non deve andare così. Nella nostra architettura i conti non li fa un modello linguistico che tira a indovinare. Li fanno formule matematiche. Il valore di ogni minuto, finalmente, sotto i vostri occhi.",
     "punti": [
       "Abbiamo separato rigidamente il calcolo dalla parola. Ventisei indicatori del controllo di gestione vengono calcolati da programmi matematici esatti al centesimo. Victor riceve soltanto il risultato certificato, per spiegarvelo in modo semplice. Sapete in ogni istante quanto costa un minuto di una sala o di una linea, e quali prestazioni generano utile vero.",
@@ -79,7 +89,7 @@
     ],
     "chiusura": "Il valore di ogni minuto, al centesimo. L'ultimo atto: come finanziare tutto questo, e proteggerlo. Toccate Avanti."
   },
-  "08": {
+  "09": {
     "intro": "Un vero partner strategico non si limita a installare le macchine. Vi aiuta anche a finanziarle, e a proteggerle davanti alla legge. Perché innovare non deve pesare sul bilancio, né togliere il sonno. Questo è l'ultimo atto, e forse il più rassicurante: vi spiego come si abbassa il costo, e come si resta tranquilli.",
     "punti": [
       "Preparando le relazioni tecniche e le perizie di interconnessione ed efficienza energetica, vi permettiamo di accedere agli incentivi di Transizione cinque punto zero, Industria quattro punto zero e Nuova Sabatini, riducendo il costo netto reale fino a oltre il sessanta per cento. I nostri nodi misurano nativamente l'interconnessione, e questo produce tutta la documentazione richiesta.",
