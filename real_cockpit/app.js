@@ -120,7 +120,7 @@
       STATO.nomiInChiaro = !STATO.nomiInChiaro;
       if (STATO.nomiInChiaro) {
         btn.classList.add('active');
-        label.textContent = 'Direzione (Nomi in chiaro)';
+        label.textContent = 'Vista Direzione · Nomi Visibili';
       } else {
         btn.classList.remove('active');
         label.textContent = 'Modalità Riservata (PZ_)';

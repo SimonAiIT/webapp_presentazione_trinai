@@ -843,7 +843,7 @@
       if (!window.TRINAI_AUDIO_HUD) return;
       const on = window.TRINAI_AUDIO_HUD.toggleTheme();
       btnThemeToggle.classList.toggle("active", on);
-      btnThemeToggle.textContent = on ? "Musica ON" : "Musica OFF";
+      btnThemeToggle.textContent = on ? "Sottofondo musicale: acceso" : "Sottofondo musicale: spento";
     });
   }
 
@@ -856,7 +856,7 @@
         on ? s.avviaFondo() : s.fermaFondo();
       } catch (e) {}
       btnSoundToggle.classList.toggle("active", on);
-      btnSoundToggle.textContent = on ? "Suoni Interfaccia ON" : "Suoni Interfaccia OFF";
+      btnSoundToggle.textContent = on ? "Suoni al tocco: attivi" : "Suoni al tocco: spenti";
     });
   }
 
