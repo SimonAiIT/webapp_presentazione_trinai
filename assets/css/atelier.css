@@ -1390,3 +1390,30 @@ body {
 }
 .ham-lines { width: 20px; gap: 5px; }
 .ham-lines span { height: 1.5px; background: var(--text-muted); }
+
+/* MOBILE: scena piu bassa, carosello dei punti piu in alto */
+@media (max-width: 639px) {
+  .hero-emotion { min-height: 36vh; }
+  .hero-text { padding: 1rem 1.1rem 0.8rem; }
+  .hero-text .station-title { font-size: clamp(1.45rem, 6.2vw, 2rem); }
+  .hero-question { font-size: 0.95rem; margin-top: 0.45rem; }
+  .vc-stage { padding-top: 0.2rem; }
+}
+
+/* TITOLO: riga bianca e riga oro nettamente separate, senza mescolare i colori a meta frase */
+.hero-text .station-title {
+  font-size: clamp(1.25rem, 5.2vw, 1.7rem);
+  line-height: 1.2;
+  color: var(--text-main);
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.7);
+}
+.hero-text .station-title .gold-span {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 1.22em;
+  color: var(--gold-bright);
+}
+.hero-question { color: var(--text-muted); text-shadow: 0 1px 12px rgba(0, 0, 0, 0.8); }
+@media (max-width: 639px) {
+  .hero-text .station-title { font-size: clamp(1.15rem, 4.9vw, 1.5rem); }
+}

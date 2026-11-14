@@ -17,7 +17,7 @@ AUDIO = os.path.join(ROOT, "assets", "audio")
 FF = r"D:\Strumenti\ffmpeg.exe"
 VOCE = "im_nicola"
 SR = 24000
-VELOCITA_FINALE = 1.15   # accelerazione di tutta la traccia a fine lavorazione (max 1.2)
+VELOCITA_FINALE = 1.2   # accelerazione di tutta la traccia a fine lavorazione (max 1.2)
 
 k = Kokoro(r"D:\Modelli\kokoro\kokoro-v1.0.onnx", r"D:\Modelli\kokoro\voices-v1.0.bin")
 
@@ -44,21 +44,21 @@ def spezza(frase):
 def parla(testo, ruolo, pos_par, tot_par, idx_fr, tot_fr):
     """Sintetizza una frase con ritmo variabile. Ritorna audio + pausa che segue."""
     parole = len(testo.split())
-    speed, pausa = 0.94, 0.42
+    speed, pausa = 0.94, 0.3
     # ondulazione leggera e ripetibile, contro la monotonia
     speed += ((idx_fr * 7 + pos_par * 3) % 5 - 2) * 0.012
     if ruolo == "testa":
-        pausa = 0.2
+        pausa = 0.1
     elif testo.endswith("?"):
-        speed, pausa = 0.90, 0.7
+        speed, pausa = 0.90, 0.5
     elif parole <= 6:
-        speed, pausa = 0.84, 0.66           # frase breve = enfasi
+        speed, pausa = 0.86, 0.45           # frase breve = enfasi
     elif testo.endswith("!"):
-        speed, pausa = 0.9, 0.6
+        speed, pausa = 0.9, 0.45
     if idx_fr == 0 and pos_par == 0:
         speed = min(speed, 0.88)            # apertura piu lenta
     if idx_fr == tot_fr - 1:
-        pausa = 0.6                          # ultima frase del paragrafo: nessun rallentamento
+        pausa = 0.4                          # ultima frase del paragrafo: nessun rallentamento
     s, _ = k.create(testo, voice=VOCE, speed=speed, lang="it")
     return s, pausa
 
@@ -76,8 +76,8 @@ def paragrafo(testo, pos_par):
 
 def genera(codice, dati, tutti_i_punti):
     segmenti = [dati["intro"]] + dati["punti"] + [dati["chiusura"]]
-    audio = [silenzio(0.5)]
-    t = 0.5
+    audio = [silenzio(0.3)]
+    t = 0.3
     inizi = []
     for pos, seg in enumerate(segmenti):
         a = paragrafo(seg, pos)
@@ -85,8 +85,8 @@ def genera(codice, dati, tutti_i_punti):
         if 1 <= pos <= len(dati["punti"]):
             inizi.append(round(t, 2))
         audio.append(a)
-        audio.append(silenzio(0.9))
-        t += len(a) / SR + 0.9
+        audio.append(silenzio(0.55))
+        t += len(a) / SR + 0.55
     totale = np.concatenate(audio)
     wav = os.path.join(AUDIO, f"_tmp_act_{codice}.wav")
     mp3 = os.path.join(AUDIO, f"act_{codice}.mp3")

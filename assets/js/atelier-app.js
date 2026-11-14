@@ -455,7 +455,6 @@
           ${getHeroVisualHtml(st)}
           <div class="hero-veil"></div>
           <div class="hero-text">
-            <div class="hero-atto">Atto ${st.codice}</div>
             <h1 class="station-title">
               ${st.titoloLuce || st.titolo}
               <span class="gold-span">${st.titoloOro || ""}</span>
