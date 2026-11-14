@@ -539,7 +539,7 @@ window.TRINAI_DATA = {
       videos: ["assets/video/atto_07.mp4", "assets/video/s10.mp4", "assets/video/s09.mp4", "assets/video/s15.mp4"],
       audio: "assets/audio/act_07.mp3",
       kpi: [
-        { valore: "Invitati come relatori", label: "Master, Confindustria, Unidi, Expodental" },
+        { valore: "Ci incontriamo", label: "Master, Confindustria, Unidi, Expodental" },
         { valore: "Alta Direzione", label: "Percorsi per Imprenditori e Titolari" },
         { valore: "Un Passo per Volta", label: "Spiegazioni Chiare Senza Spaventare" },
         { valore: "Basta Così", label: "Fermarsi Quando il Cliente Dice Sì" }
