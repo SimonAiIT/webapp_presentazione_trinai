@@ -71,6 +71,7 @@
         state === "playing" ? "Pausa narrazione" : state === "ended" ? "Vai all'atto successivo" : "Avvia narrazione"
       );
     }
+    disegnaPulsanteDestro();
     if (icon) icon.textContent = state === "playing" ? "❚❚" : state === "ended" ? "→" : "▶";
     if (label) label.textContent = state === "playing" ? "Metti in pausa" : state === "ended" ? "Avanti" : "Ascolta il racconto";
   }
@@ -185,6 +186,48 @@
     updatePlayButtonUI();
   }
 
+  const CHIAVE_VELOCITA = "trinai_atelier_velocita";
+  const VELOCITA = [1, 1.25, 1.5];
+  const SVG_AVANTI =
+    '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7l5 5-5 5"/><path d="M13 7l5 5-5 5"/></svg>';
+  // Pulsante destro: in pausa porta avanti, in riproduzione cambia la velocita
+  function disegnaPulsanteDestro() {
+    const btn = document.getElementById("hud-speed-btn");
+    if (!btn) return;
+    if (isPlaying) {
+      btn.textContent = String(voiceEl.defaultPlaybackRate || 1).replace(".", ",") + "×";
+      btn.setAttribute("aria-label", "Cambia la velocità della voce");
+    } else {
+      btn.innerHTML = SVG_AVANTI;
+      btn.setAttribute("aria-label", "Vai avanti");
+    }
+  }
+  function applicaVelocita(r) {
+    voiceEl.defaultPlaybackRate = r;
+    voiceEl.playbackRate = r;
+    disegnaPulsanteDestro();
+  }
+  function cambiaVelocita() {
+    let attuale = voiceEl.defaultPlaybackRate || 1;
+    let i = VELOCITA.indexOf(attuale);
+    const prossima = VELOCITA[(i + 1) % VELOCITA.length];
+    applicaVelocita(prossima);
+    try { localStorage.setItem(CHIAVE_VELOCITA, String(prossima)); } catch (e) {}
+    return prossima;
+  }
+  function ripristinaVelocita() {
+    let r = 1;
+    try { r = parseFloat(localStorage.getItem(CHIAVE_VELOCITA)) || 1; } catch (e) {}
+    if (VELOCITA.indexOf(r) < 0) r = 1;
+    applicaVelocita(r);
+  }
+
+  function riparti() {
+    voiceEl.currentTime = 0;
+    hasEnded = false;
+    voiceEl.play().catch(() => {});
+  }
+
   function getTime() {
     return voiceEl.currentTime || 0;
   }
@@ -202,6 +245,8 @@
   }
 
   loadSubtitles();
+  document.addEventListener("DOMContentLoaded", () => ripristinaVelocita());
+  if (document.readyState !== "loading") ripristinaVelocita();
 
   window.TRINAI_AUDIO_HUD = {
     playStation,
@@ -211,6 +256,9 @@
     stop,
     getState,
     getTime,
+    cambiaVelocita,
+    ripristinaVelocita,
+    riparti,
     setOnTime,
     setOnEnded
   };

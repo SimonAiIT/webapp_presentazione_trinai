@@ -137,11 +137,17 @@
       </div>
       <div class="hud-controls-row">
         <div class="hud-dots" id="hud-dots" aria-label="Indicatore atti"></div>
-        <button id="hud-play-btn" class="hud-main-btn" type="button" data-state="paused" aria-label="Avvia narrazione">
+        <div class="hud-bar">
+          <button id="hud-back-btn" class="hud-mini glass" type="button" aria-label="Indietro">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 7l-5 5 5 5"/><path d="M18 7l-5 5 5 5"/></svg>
+          </button>
+          <button id="hud-play-btn" class="hud-main-btn" type="button" data-state="paused" aria-label="Avvia narrazione">
           <span id="hud-audio-progress" class="hud-main-fill"></span>
           <span id="hud-main-icon" class="hud-main-icon">▶</span>
           <span id="hud-main-label" class="hud-main-label">Ascolta il racconto</span>
         </button>
+          <button id="hud-speed-btn" class="hud-mini glass" type="button" aria-label="Velocità della voce">1×</button>
+        </div>
       </div>
     </footer>
   </div>

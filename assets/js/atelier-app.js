@@ -820,6 +820,28 @@
     });
   }
 
+  const btnBack = document.getElementById("hud-back-btn");
+  const btnSpeed = document.getElementById("hud-speed-btn");
+  if (btnBack) {
+    btnBack.addEventListener("click", () => {
+      playUiSound("click");
+      const hud = window.TRINAI_AUDIO_HUD;
+      // oltre i primi secondi riparte l'atto, altrimenti torna a quello precedente
+      if (hud && hud.getTime() > 3) hud.riparti();
+      else goToStation(currentStationIdx - 1, true);
+    });
+  }
+  if (btnSpeed) {
+    btnSpeed.addEventListener("click", () => {
+      playUiSound("click");
+      const hud = window.TRINAI_AUDIO_HUD;
+      if (!hud) return;
+      // in riproduzione velocizza, in pausa va all'atto successivo
+      if (hud.getState() === "playing") hud.cambiaVelocita();
+      else goToStation(currentStationIdx + 1, true);
+    });
+  }
+
   // Header che si nasconde scorrendo verso il basso e ricompare risalendo
   const topbarEl = document.querySelector(".topbar");
   let lastScrollY = 0;
