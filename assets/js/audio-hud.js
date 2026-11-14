@@ -259,6 +259,13 @@
     applicaMute();
   }
 
+  function seek(sec) {
+    if (isFinite(sec)) voiceEl.currentTime = Math.max(0, sec);
+  }
+  function getDuration() {
+    return voiceEl.duration || 0;
+  }
+
   function getTime() {
     return voiceEl.currentTime || 0;
   }
@@ -287,6 +294,8 @@
     stop,
     getState,
     getTime,
+    getDuration,
+    seek,
     toggleMute,
     isMuted,
     cambiaVelocita,

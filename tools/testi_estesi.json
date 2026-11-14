@@ -1,11 +1,11 @@
 {
   "00": {
-    "intro": "I posti che contano non hanno insegne sulla porta. Hanno un invito. E questo è il vostro. Benvenuti nell'Atelier di Trinacria Artificial Intelligence. Fermatevi un momento e immaginate una bottega di sartoria di quelle di una volta: nessun abito appeso in vetrina, nessun cartellino con il prezzo. Qui si entra, si viene ascoltati, si prendono le misure. Noi facciamo lo stesso, ma con l'intelligenza artificiale. Non vi vendiamo un programma uguale per tutti: vi cuciamo addosso un sistema che porta il vostro nome. Seguitemi, vi mostro come nasce.",
+    "intro": "I posti che contano non hanno insegne sulla porta. Hanno un invito. Benvenuti nell'Atelier TrinAI. Qui dentro non troverete venditori di programmi preconfezionati.",
     "punti": [
-      "Tutto parte dalla vostra Partita Iva. Il nostro sistema consulta i registri ufficiali delle Camere di Commercio, riconosce attività, sedi e responsabili, e in cinque minuti costruisce la base digitale della vostra impresa. Niente settimane perse a compilare moduli, niente inserimenti manuali ripetuti. Voi avete già fatto la parte difficile: avete fatto impresa. Il resto lo leggiamo noi.",
-      "Invece di pagare dieci abbonamenti diversi che non si parlano tra loro, ricevete subito sei reparti già collegati: relazioni con i clienti, segreteria su tutti i canali, documenti e contratti, sale e operatività, risorse umane e sicurezza, controllo di gestione. Un solo nucleo, una sola intelligenza che conosce l'intera azienda. Al primo avvio è già tutto pronto a dialogare.",
-      "Trinacria Artificial Intelligence è una start-up innovativa riconosciuta ufficialmente, e tra i suoi soci lavorano sette specialisti: medici specialisti, esperti di risorse umane, architetti di intelligenza artificiale, ingegneri civili e industriali. Non una software house chiusa tra quattro monitor, ma un tavolo dove sedersi insieme, ciascuno con il suo mestiere.",
-      "Collaboriamo ufficialmente con l'Università Cattolica del Sacro Cuore e con l'Università Vita-Salute San Raffaele. Quello che costruiamo nasce dalla ricerca e dall'insegnamento, non da una moda del momento. Ed è per questo che possiamo permetterci di dirvi, con serenità, che ogni cosa che vedrete in questo viaggio ha un fondamento solido."
+      "Chi guida uno studio, un laboratorio o un'azienda sa quanto è frustrante comprare un programma nuovo e passare mesi a caricare dati a mano. Con noi questo non esiste. Ci basta il codice della vostra attività per leggere i registri ufficiali. In soli cinque minuti costruiamo la casa digitale della vostra impresa.",
+      "Sei aree di lavoro si accendono insieme, già pronte a parlarsi tra loro. Dalla segreteria alla produzione, dalle persone fino al controllo dei conti. Niente dieci abbonamenti che non si capiscono.",
+      "Siamo una realtà nata dall'incontro tra medici, ingegneri, architetti digitali ed esperti del lavoro umano. Sette soci, ognuno con il suo mestiere, seduti allo stesso tavolo.",
+      "E il nostro metodo nasce nelle aule. Collaboriamo ufficialmente con l'Università Cattolica del Sacro Cuore e con l'Università Vita-Salute San Raffaele."
     ],
     "chiusura": "Questo è l'inizio. Ora lasciate che vi presenti, tappa dopo tappa, il nostro abito su misura."
   },
@@ -20,82 +20,82 @@
     "chiusura": "Questo è il punto di partenza. Vediamo come lo abbiamo realizzato."
   },
   "02": {
-    "intro": "Pensate al vostro collaboratore migliore. Quello che non dorme, non dimentica, non si lascia prendere dalla fretta e, soprattutto, non inventa. Ecco: si chiama Viktor. Non è uno di quei programmi che chiacchierano su internet e, quando non sanno una cosa, la inventano con grande sicurezza. Viktor è un direttore operativo silenzioso, che vive dentro la vostra azienda e lavora per voi. Noi siamo gli inventori del protocollo dell'innesto a freddo dei modelli e dell'innesto dei lobi di fondazione, ed è da lì che nasce. Vi racconto come ragiona.",
+    "intro": "Pensate al vostro collaboratore migliore. Quello che non dorme e non si distrae mai. Soprattutto, quello che non inventa. Si chiama Viktor. Non è uno di quei programmi che chiacchierano su internet e tirano a indovinare. È un direttore operativo silenzioso, che lavora al vostro fianco. Noi siamo gli inventori del protocollo dell'innesto a freddo dei modelli e dell'innesto dei lobi di fondazione, ed è da lì che nasce.",
     "punti": [
-      "Il primo passo è l'istinto matematico. In un istante, meno di due millesimi di secondo, Viktor legge insieme i numeri del bilancio, l'andamento del tempo, le forme tridimensionali e perfino il rumore dei macchinari, e individua subito un problema o un'opportunità. Non è un'opinione: è pura matematica verificabile, fatta secondo le regole della vostra azienda.",
-      "Il secondo passo entra in scena solo quando la decisione è già presa e messa al sicuro. Vi parla, o vi scrive, due sole righe chiarissime per spiegarvi il perché. Niente romanzi, niente giri di parole. E soprattutto con un divieto assoluto: non può alterare né inventare un solo numero. Spiega i fatti, non li racconta a modo suo.",
-      "Mentre le intelligenze comuni leggono soltanto parole, Viktor percepisce cinque mondi nello stesso momento: le tabelle dei numeri aziendali, le serie storiche nel tempo, la geometria tridimensionale degli oggetti, il suono delle macchine e della voce, e le immagini del piano di lavoro. Vede il lavoro come lo vedete voi, con tutti i sensi insieme.",
-      "Viktor vive dentro la vostra sede, senza mandare nulla su internet. Non manda i vostri dati in giro per il mondo. E quando deve lavorare in una clinica, in un laboratorio, in un cantiere o in una tenuta agricola, gli innestiamo una scheda di specializzazione su misura, senza ripartire da zero. Il cuore resta puro e leggero, il mestiere glielo diamo noi, su misura."
+      "Il primo cervello è puro istinto matematico. In meno di due millesimi di secondo incrocia tutti i segnali. Capisce subito se una sala perde margine, se un macchinario si sta usurando o se un cliente si allontana.",
+      "Solo quando il calcolo è certo entra in gioco il secondo cervello. Vi scrive due sole righe, limpide ed educate, per dirvi cosa fare e perché.",
+      "Viktor vede gli oggetti di lavoro, misura le forme nello spazio, legge l'andamento del tempo e incrocia i conti. Ascolta persino il rumore delle vostre attrezzature.",
+      "Non può inventare nemmeno una virgola. E custodisce ogni segreto dentro le vostre mura."
     ],
     "chiusura": "Ora che sapete chi è Viktor, passiamo al luogo in cui vive."
   },
   "03": {
-    "intro": "Quando affidate i dati dei vostri clienti, dei vostri pazienti o dei vostri progetti a un servizio su internet, state consegnando il cuore della vostra azienda a un server che non vedete e non controllate. Noi abbiamo scelto la strada opposta. Un'intelligenza sovrana, che resta vostra, divisa su due piani fisicamente separati. E vi assicuro una cosa: dormirete meglio.",
+    "intro": "Pensateci un istante. Quando caricate i dati dei vostri pazienti o dei vostri clienti su un servizio esterno, consegnate il valore della vostra azienda nelle mani di qualcun altro. Noi abbiamo scelto la strada opposta. La vostra intelligenza deve abitare a casa vostra.",
     "punti": [
-      "Dentro i vostri uffici installiamo piccoli computer compatti e una cassaforte digitale di sede. Qui restano chiusi a chiave i nomi, le immagini, le voci, le cartelle cliniche, le formule industriali, i contratti riservati. Non viaggiano mai su internet: restano nella cassaforte elettronica della vostra sede.",
-      "Se un giorno cade la linea internet, per un guasto sulla fibra del quartiere, per un blocco qualunque, le vostre postazioni non si fermano. Ogni punto di lavoro ha il proprio motore autonomo e cifrato, che risponde subito all'operatore anche senza connessione. Le sale, i banchi di lavoro, i mezzi in campagna continuano a operare. Al ritorno della rete, i dati si riallineano da soli.",
-      "L'archivio è a prova di manomissione. Una volta salvato un documento o un registro clinico, nessuno dall'esterno può alterarlo o criptarlo. Neanche un virus. Il nodo centrale è protetto anche da un gruppo di continuità. È la memoria dell'azienda, messa al riparo da ogni riscrittura.",
-      "Se avete due, cinque o venti sedi, la direzione riceve soltanto totali, mai nomi: numeri complessivi su gruppi di almeno cinque casi, quindi anonimi. Confrontate margini, costi e rendimento in tempo reale, senza esporre un solo dato personale. Governate un gruppo intero, a rischio zero."
+      "Dividiamo il sistema su due livelli fisicamente separati. Il primo vive dentro le vostre stanze. Ogni sala ha il suo piccolo computer autonomo, collegato alla cassaforte centrale della sede. Nomi, immagini, documenti e segreti restano chiusi lì dentro.",
+      "E se un guasto esterno taglia la linea internet di tutto il quartiere? Voi non vi accorgete di nulla. Le vostre sale continuano a lavorare senza perdere nemmeno un minuto.",
+      "L'archivio è incancellabile. Una volta salvato un documento, nessuno può alterarlo. Nemmeno un virus.",
+      "Se poi guidate più sedi, il secondo livello invia alla direzione solo i totali anonimi. Così governate l'intero gruppo in tempo reale, con riservatezza assoluta."
     ],
     "chiusura": "Un'architettura sovrana, dunque. Adesso vediamo come lavora sui programmi che usate già."
   },
   "04": {
-    "intro": "Il più grande ostacolo all'innovazione non è la tecnologia. È la paura. La paura di dover buttare via il proprio gestionale storico, quello che conoscete a memoria, e ricominciare da capo. Con noi questa paura non serve. Non cambiate nemmeno un'abitudine. Tenete i vostri programmi di sempre: siamo noi ad adattarci a voi, e non il contrario.",
+    "intro": "Diciamoci la verità. Nessuno ha voglia di buttare via il proprio programma storico e far ricominciare da zero tutta la squadra. La buona notizia è che con noi non cambiate nemmeno un'abitudine.",
     "punti": [
-      "Abbiamo creato un motore leggerissimo, che lavora direttamente dentro i programmi del vostro computer. Lavora dietro le quinte, senza appesantire il computer. Gira fluidamente anche su macchine normali, quelle che avete già in studio, in laboratorio, in segreteria.",
-      "I vecchi sistemi automatici muovevano la freccia sullo schermo e vi impedivano di lavorare. Il nostro assistente no. Non vi ruba mai il mouse, non clicca mai a caso. Mentre voi scrivete o parlate al telefono, lui prepara le schermate dietro le quinte. Prima di compilare qualsiasi campo verifica l'identità esatta del pulsante: se una finestra cambia all'improvviso, si ferma da solo.",
-      "La regola aurea è semplice: lui prepara, voi autorizzate. L'assistente compila fatture, richiami, schede tecniche e ordini, e si ferma sempre un istante prima dell'invio. Vi mostra l'anteprima pronta, e con un semplice clic decidete voi. Si elimina quasi tutta la fatica di compilazione, ma l'ultima parola resta sempre a voi.",
-      "Non servono programmatori per insegnargli una procedura nuova: chiedetegli di guardarvi lavorare ed eseguite il compito un paio di volte. Di notte il sistema ripassa ciò che ha imparato, si mette alla prova su casi di prova e, se qualcosa non è perfetto, torna da solo alla versione sicura del giorno prima."
+      "Abbiamo costruito un assistente invisibile, che impara a usare i programmi che avete già sul computer.",
+      "Avete presente quei vecchi automatismi che muovono da soli la freccia sullo schermo? Dimenticateli. Il nostro assistente lavora dietro le quinte, e il mouse resta sempre nelle vostre mani.",
+      "Non rallenta il computer. Nei primi giorni vi osserva lavorare e impara le vostre mosse. Poi prepara il lavoro più noioso: compila schede, trasferisce dati, prepara fatture, ordini e richiami.",
+      "Ma non invia mai nulla da solo. Si ferma sempre un passo prima e vi mostra il lavoro pronto. A voi resta il piacere di controllare e confermare con un tocco."
     ],
     "chiusura": "Nessun trauma, nessun cambio di gestionale. Ora vi spiego come arriviamo da voi in due soli giorni."
   },
   "05": {
-    "intro": "Chi fa impresa non può permettersi cantieri informatici che bloccano gli uffici o le sale per settimane. Ogni giorno di fermo è un giorno in cui qualcuno aspetta, e non ha tempo da perdere. Per questo abbiamo spostato tutta la complessità in un posto solo: i nostri laboratori. A voi arriva un sistema già pronto. Vi spiego come, in quattro fasi.",
+    "intro": "Chi manda avanti uno studio o un'azienda non può permettersi tecnici tra i piedi per settimane, o sale bloccate. Come un grande sarto, il lavoro lungo lo facciamo nel nostro laboratorio, non a casa vostra.",
     "punti": [
-      "Un protocollo sartoriale, in quattro fasi. La prima è l'ascolto: analizziamo come respira la vostra struttura, mappiamo i flussi di lavoro ed estraiamo in modo cifrato lo storico operativo. Nessun disturbo, nessun fermo. È come prendere le misure al sarto: serve a fare un abito che calzi davvero.",
-      "Nei laboratori TrinAI prepariamo Viktor sulla vostra storia reale e cuciniamo l'abito su misura. Poi eseguiamo il collaudo completo, simulando le vostre giornate di lavoro e le condizioni esatte della vostra rete. Nessun esperimento sulla vostra pelle: il lavoro pesante avviene fuori dalla vostra sede.",
-      "Solo quando tutto è perfetto veniamo da voi, con le macchine già addestrate e collaudate. In due giorni lavorativi, salvo imprevisti, posiamo i nodi, li colleghiamo e formiamo la squadra sulle sue vere mansioni quotidiane. Non interrompete mai le visite, la produzione o le vendite. Si lavora a porte aperte.",
-      "Attiviamo anche una piccola lente, puntata soltanto sul piano di lavoro: riconosce strumenti e materiali, aggiorna il magazzino e tiene traccia dei lotti. Non inquadra mai le persone, nel pieno rispetto della privacy dei lavoratori. La tracciabilità dei materiali, senza mai riprendere un volto."
+      "Il nostro metodo ha quattro passi semplici. Prima ascoltiamo come lavorate e raccogliamo in sicurezza la vostra storia operativa.",
+      "Poi portiamo questi dati nei nostri laboratori e insegniamo a Viktor il vostro mestiere, cucendo il sistema sulle vostre abitudini reali. Quindi facciamo una prova generale completa, finché ogni dettaglio gira alla perfezione.",
+      "Infine veniamo nella vostra sede con le macchine già pronte. In soli due giorni lavorativi, salvo imprevisti, colleghiamo tutto e formiamo la vostra squadra, senza mai fermare il vostro lavoro.",
+      "E sui banchi operativi installiamo un occhio discreto, che guarda solo il vassoio degli strumenti. Aggiorna il magazzino e controlla le sterilizzazioni da solo, senza mai inquadrare il volto di nessuna persona."
     ],
     "chiusura": "Dal laboratorio alla vostra sede, in due giorni. Passiamo ora a ciò che conta più di ogni macchina: le persone."
   },
   "06": {
-    "intro": "Anche la tecnologia più potente del mondo serve a poco se le persone che lavorano con voi sono confuse, sovraccariche o messe nel ruolo sbagliato. Lo sappiamo, perché tra i nostri soci ci sono esperti di risorse umane. E la nostra regola è semplice, e non la tradiamo mai: si misura il processo e si supporta il ruolo. Non si giudica mai la persona.",
+    "intro": "Quante volte vi siete detti: faccio prima a farlo io che a spiegarlo? È la trappola in cui cadono quasi tutti i titolari. La tecnologia più avanzata serve a poco, se il peso di ogni decisione resta sempre sulle vostre spalle.",
     "punti": [
-      "Nessun test astratto, nessun questionario invasivo. Proponiamo centocinquanta situazioni concrete di lavoro quotidiano: un imprevisto, un cliente ansioso, una scadenza urgente. Osservando come ciascuno reagisce, emergono le inclinazioni naturali. Scoprite chi è portato per l'accoglienza, chi per l'organizzazione di precisione, chi per la chiusura degli accordi.",
-      "Spesso la delega fallisce perché il fondatore dà per scontati passaggi che la squadra non ha ancora assimilato. La nostra matrice incrocia il vostro stile di guida con i punti di forza dei collaboratori e costruisce un ponte graduale di novanta giorni. Così restituite ore preziose alla direzione, senza perdere il controllo della qualità.",
-      "Il sistema non mette mai in competizione i colleghi. Non ci sono classifiche e non c'è nessun punteggio da esibire. Offre invece suggerimenti riservati e costruttivi, per migliorare l'ascolto, l'empatia e la chiarezza di ogni conversazione. Si elimina il doppio lavoro e si chiarisce chi fa che cosa, con quale tono e con quali strumenti.",
-      "Ogni collaboratore riceve tre minuti di formazione pratica a settimana, direttamente sul proprio telefono, e ottiene l'attestato europeo previsto dalla legge. Un obbligo di legge trasformato in un piccolo allenamento gentile, che si può fare tra un caffè e l'altro."
+      "Attraverso centocinquanta esempi di vita lavorativa quotidiana, mettiamo a confronto il vostro modo di guidare con il talento naturale di chi lavora con voi. Scoprite subito chi ha il dono dell'accoglienza, chi eccelle nella precisione e chi sa portare a termine gli accordi.",
+      "Da qui nasce un piano pratico di novanta giorni, che vi insegna a delegare un passo alla volta. Vi restituisce ore preziose di libertà.",
+      "Partiamo da un principio sacro. Non si giudica mai la persona e non si fanno classifiche tra colleghi. Si aiuta ogni collaboratore a brillare nel ruolo giusto.",
+      "E ogni settimana la squadra riceve tre minuti di consigli pratici sul telefono. Così ottiene anche l'attestato europeo previsto dalla legge."
     ],
     "chiusura": "Le persone al centro, sempre. Ora vi porto dove tutto questo si insegna: l'Accademia."
   },
   "07": {
-    "intro": "TrinAI non nasce in un garage di programmatori isolati dal mondo. Nasce sui banchi dell'alta formazione. E questo cambia tutto, perché sappiamo spiegare le cose, prima ancora di costruirle. Ci sono due luoghi, e vi racconto come si parlano: l'aula e l'azienda.",
+    "intro": "C'è un motivo se il nostro approccio è così diverso da tutto il resto. TrinAI non nasce in uno scantinato di informatici chiusi nel loro mondo. Nasce nelle aule dell'alta formazione universitaria.",
     "punti": [
-      "Collaboriamo ufficialmente con l'Università Cattolica del Sacro Cuore e con l'Università Vita-Salute San Raffaele, per il Master di secondo livello sulla gestione delle strutture sanitarie. Qui trasmettiamo i fondamenti scientifici del controllo di gestione, della leadership etica e dell'intelligenza decisionale.",
-      "Ci sono poi i corsi di alta direzione, dedicati a imprenditori e titolari, sulle decisioni guidate dai dati. Insegniamo a imprenditori e direttori come governare i numeri, come guidare le persone e come comunicare con il cliente o con il paziente. È il metodo, spiegato in aula: lo strumento è poi l'Atelier, che lo porta nella pratica del lunedì mattina.",
-      "Nessuna pressione commerciale aggressiva. Il sistema adatta le parole e le immagini a chi avete di fronte: usa tavole progettuali rassicuranti al posto di immagini crude, e presenta i costi per singola fase, evitando lo spavento di una cifra unica iniziale. Ogni persona decide a modo suo, e merita di essere accompagnata, mai forzata.",
-      "Quando il cliente o il paziente si sente compreso e accetta la prima tappa, aggiungere altri dettagli tecnici rischia solo di far nascere dubbi. Il sistema segnala quando fermarsi, e lascia sempre alla persona il pulsante Basta Così. L'arte di fermarsi nel momento esatto del sì: è una forma di rispetto."
+      "Collaboriamo ufficialmente con l'Università Cattolica del Sacro Cuore e con l'Università Vita-Salute San Raffaele, nel Master di secondo livello sulla gestione delle strutture sanitarie.",
+      "Insegniamo anche nei corsi di alta direzione per titolari e manager. Spieghiamo come si governa un'impresa con i numeri veri, come si guida la squadra e come si parla al paziente o al cliente.",
+      "Perché le persone non dicono di no per il prezzo. Dicono di no quando si spaventano o si sentono spinte. Nell'Atelier abbiamo trasformato questo insegnamento in uno strumento vivo. Presenta i preventivi una tappa alla volta, per non spaventare con cifre enormi.",
+      "E avvisa i vostri collaboratori nel momento esatto in cui fermarsi. Perché quando una persona si sente capita e protetta, dice di sì con fiducia."
     ],
     "chiusura": "Il metodo insegnato all'università, cucito nei vostri computer. Ora parliamo di numeri."
   },
   "08": {
-    "intro": "Molti imprenditori lavorano dodici ore al giorno, e scoprono solo a fine anno, dal commercialista, se hanno davvero guadagnato e dove hanno perso margine. Non deve andare così. Nella nostra architettura i conti non li fa un modello linguistico che tira a indovinare. Li fanno formule matematiche. Il valore di ogni minuto, finalmente, sotto i vostri occhi.",
+    "intro": "Molti titolari lavorano dodici ore al giorno e vedono l'agenda piena, ma scoprono solo a fine anno, dal commercialista, quanto è rimasto davvero in tasca. Guidare così è come viaggiare di notte a fari spenti. Con noi accendete il cruscotto della vostra attività.",
     "punti": [
-      "Abbiamo separato rigidamente il calcolo dalla parola. Ventisei indicatori del controllo di gestione vengono calcolati da programmi matematici esatti al centesimo. Viktor riceve soltanto il risultato certificato, per spiegarvelo in modo semplice. Sapete in ogni istante quanto costa un minuto di una sala o di una linea, e quali prestazioni generano utile vero.",
-      "Nessun numero è inventato dall'intelligenza artificiale. Margine per ora lavorata, saturazione degli spazi, previsione di cassa per i prossimi tre mesi: una bussola semplice, costruita sui vostri dati veri. I conti tornano sempre, perché il calcolo non ha opinioni.",
-      "Dentro ogni archivio aziendale c'è un tesoro nascosto: preventivi non conclusi, richiami periodici dimenticati, clienti che non si sentono da un anno. Il sistema li ritrova e prepara per la segreteria il contatto giusto, al momento giusto, con estremo garbo. Riattivarne anche solo una piccola parte può ripagare l'investimento in pochi mesi.",
-      "Niente sondaggi astratti: leggiamo gli indicatori economici ufficiali della vostra provincia, i bilanci e i dati camerali pubblici del vostro bacino, e vi mostriamo come si muovono i concorrenti. Vi aiutiamo a capire dove crescere e quali servizi valorizzare, nel pieno rispetto delle regole deontologiche."
+      "I conti non vengono mai affidati a un'intelligenza che tira a indovinare. Sono calcolati al centesimo su ventisei voci fondamentali.",
+      "Sapete in ogni momento quanto vi costa tenere aperta una sala per un minuto. Quali lavori generano un guadagno vero e quali vi fanno lavorare in perdita senza accorgervene.",
+      "In ogni archivio c'è una miniera d'oro dimenticata: clienti che hanno ricevuto un preventivo e sono spariti, lavori rimasti a metà. Il sistema li ritrova uno per uno e prepara messaggi pieni di tatto per riallacciare il rapporto.",
+      "E intanto guarda i dati ufficiali del vostro territorio, per dirvi esattamente come vi posizionate rispetto al mercato."
     ],
     "chiusura": "Il valore di ogni minuto, al centesimo. L'ultima tappa: come finanziare tutto questo, e proteggerlo."
   },
   "09": {
-    "intro": "Un vero partner strategico non si limita a installare le macchine. Vi aiuta anche a finanziarle, e a proteggerle davanti alla legge. Perché innovare non deve pesare sul bilancio, né togliere il sonno. Questo è l'ultimo atto, e forse il più rassicurante: vi spiego come si abbassa il costo, e come si resta tranquilli.",
+    "intro": "Arrivati fin qui, resta una sola domanda. Come si trasforma tutto questo in un investimento leggero, protetto e ripagato nel tempo? Anche su questo non vi lasciamo soli.",
     "punti": [
-      "Preparando le relazioni tecniche e le perizie di interconnessione ed efficienza energetica, vi permettiamo di accedere agli incentivi pubblici per l'innovazione, riducendo il costo netto reale fino a oltre il sessanta per cento. Il sistema misura da solo i dati necessari, e questo produce tutta la documentazione richiesta.",
-      "Analizziamo la vostra azienda e la vostra Partita Iva per individuare tutti i bandi regionali, camerali, nazionali ed europei a cui avete diritto. E usiamo i fondi per la formazione a cui la vostra azienda è già iscritta per finanziare la formazione e la certificazione europea del personale.",
-      "Vi consegniamo il fascicolo completo di conformità: la valutazione d'impatto sulla protezione dei dati, il registro immutabile e tutte le informative pronte per le autorità. Tutto in regola con le leggi europee su privacy e intelligenza artificiale, chiavi in mano, per qualsiasi verifica: nessuna sorpresa.",
-      "L'intera offerta è raccolta nella nostra Carta dei Servizi, e ve la mostro subito."
+      "Prepariamo noi tutte le perizie tecniche per farvi accedere agli incentivi statali sull'innovazione e sul risparmio energetico. Arriviamo a tagliare oltre il sessanta per cento della spesa reale.",
+      "Il nostro gruppo dedicato alla finanza agevolata studia la vostra posizione e cerca per voi tutti i bandi regionali, delle Camere di Commercio, nazionali ed europei a cui potete attingere.",
+      "Compresi i fondi aziendali che permettono di pagare per intero la formazione della vostra squadra.",
+      "Insieme alle macchine vi consegniamo l'intero fascicolo di tutela legale europea su riservatezza dei dati e intelligenza artificiale. Così siete al riparo davanti a qualsiasi controllo."
     ],
     "chiusura": "Il costo scende e le carte sono in regola. Vediamo ora tutto quello che facciamo per voi."
   },

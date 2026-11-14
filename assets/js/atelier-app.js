@@ -671,6 +671,18 @@
 
   if (window.TRINAI_AUDIO_HUD) window.TRINAI_AUDIO_HUD.setOnTime(syncPointsToVoice);
 
+  // Avanti automatico: finita la voce di una tappa, si passa alla successiva dopo una breve pausa
+  if (window.TRINAI_AUDIO_HUD) {
+    window.TRINAI_AUDIO_HUD.setOnEnded(() => {
+      const idx = currentStationIdx;
+      setTimeout(() => {
+        if (currentStationIdx !== idx) return; // nel frattempo si e gia cambiato tappa
+        if (idx >= DATA.stations.length - 1) return; // ultima tappa: ci si ferma
+        goToStation(idx + 1, true);
+      }, 900);
+    });
+  }
+
   function goToStation(idx, autoPlay = true) {
     const total = DATA.stations.length;
     currentStationIdx = (idx + total) % total;
