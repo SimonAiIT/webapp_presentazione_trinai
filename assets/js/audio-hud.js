@@ -16,7 +16,7 @@
   themeEl.loop = true;
   themeEl.preload = "auto";
   themeEl.playsInline = true;
-  themeEl.volume = 0.04;
+  themeEl.volume = 0.02;
 
   let subtitlesMap = {};
   let currentSubKey = null;
@@ -40,7 +40,7 @@
       themeEl.pause();
       return;
     }
-    themeEl.volume = speaking ? 0.022 : 0.065;
+    themeEl.volume = speaking ? 0.01 : 0.03;
     if (themeEl.paused) {
       themeEl.play().catch(() => {});
     }
