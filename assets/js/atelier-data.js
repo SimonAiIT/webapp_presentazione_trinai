@@ -114,6 +114,7 @@ window.TRINAI_DATA = {
       img: "assets/img/slide1_problema.jpg",
       voce: "nicola",
       voceNome: "Nicola · Voce Narrante Atelier",
+      video: "assets/video/atto_01.mp4",
       audio: "assets/audio/act_01.mp3",
       kpi: [
         { valore: "Dati Fuori Casa", label: "Su computer altrui, sotto altre leggi" },
@@ -138,6 +139,7 @@ window.TRINAI_DATA = {
       img: "assets/img/slide4_intelligence.jpg",
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
+      video: "assets/video/atto_02.mp4",
       audio: "assets/audio/act_02.mp3",
       kpi: [
         { valore: "Un Istante", label: "Due Millisecondi per Decidere" },
@@ -214,6 +216,7 @@ window.TRINAI_DATA = {
       img: "assets/img/slide3_architecture.jpg",
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
+      video: "assets/video/atto_03.mp4",
       audio: "assets/audio/act_03.mp3",
       kpi: [
         { valore: "100% in Sede", label: "Nessun Dato Mandato Fuori" },
@@ -290,6 +293,7 @@ window.TRINAI_DATA = {
       img: "assets/img/slide2_daemon.jpg",
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
+      video: "assets/video/atto_04.mp4",
       audio: "assets/audio/act_04.mp3",
       demoLink: {
         url: "arkangel_viewer/index.html",
@@ -370,6 +374,7 @@ window.TRINAI_DATA = {
       img: "assets/img/slide5_sterilization.jpg",
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
+      video: "assets/video/atto_05.mp4",
       audio: "assets/audio/act_05.mp3",
       kpi: [
         { valore: "4 Passi", label: "Metodo Chiaro e Collaudato" },
@@ -446,6 +451,7 @@ window.TRINAI_DATA = {
       img: "assets/img/slide7_training.jpg",
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
+      video: "assets/video/atto_06.mp4",
       audio: "assets/audio/act_06.mp3",
       kpi: [
         { valore: "150 Casi Reali", label: "Per Scoprire i Punti di Forza" },
@@ -522,6 +528,7 @@ window.TRINAI_DATA = {
       img: "assets/img/slide8_care.jpg",
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
+      video: "assets/video/atto_07.mp4",
       audio: "assets/audio/act_07.mp3",
       kpi: [
         { valore: "Master II Livello", label: "Cattolica e San Raffaele" },
@@ -598,6 +605,7 @@ window.TRINAI_DATA = {
       img: "assets/img/slide6_marketing.jpg",
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
+      video: "assets/video/atto_08.mp4",
       audio: "assets/audio/act_08.mp3",
       demoLink: {
         url: "real_cockpit/index.html",
@@ -678,6 +686,7 @@ window.TRINAI_DATA = {
       img: "assets/img/hero_trinai_luxury.jpg",
       voce: "elsa",
       voceNome: "Elsa · Voce Narrante Atelier",
+      video: "assets/video/atto_09.mp4",
       audio: "assets/audio/act_09.mp3",
       kpi: [
         { valore: "Fino al -60,1%", label: "Risparmio Reale con gli Incentivi" },
@@ -753,6 +762,7 @@ window.TRINAI_DATA = {
       img: "assets/img/slide10_carta.jpg",
       voce: "nicola",
       voceNome: "Nicola · Voce Narrante Atelier",
+      video: "assets/video/atto_10.mp4",
       audio: "assets/audio/act_10.mp3",
       kpi: [
         { valore: "Schede 1–4", label: "Dal progetto all'avvio in sede" },

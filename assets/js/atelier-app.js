@@ -475,8 +475,8 @@
   }
 
   function getHeroVisualHtml(st) {
-    if (st.blueprintType === "video_invito" && st.video) {
-      return `<video class="hero-media act-video-el" src="${st.video}" poster="${st.img}" autoplay muted loop playsinline></video>`;
+    if (st.video) {
+      return `<video class="hero-media act-video-el" src="${st.video}" poster="${st.img}" muted loop playsinline preload="none"></video>`;
     }
     return `<img class="hero-media" src="${st.img}" alt="" loading="lazy" onerror="this.style.display='none'">`;
   }

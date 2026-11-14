@@ -1462,3 +1462,6 @@ body {
 .hud-main-btn[data-state="ended"] .hud-main-icon { color: var(--gold-bright); }
 .vc-item { background: rgba(255, 255, 255, 0.05); }
 .vc-item.on { background: rgba(212, 175, 55, 0.14); border-color: rgba(245, 215, 110, 0.4); }
+
+/* video di apertura: nessuno zoom aggiuntivo, il movimento e gia nel filmato */
+video.hero-media { animation: none; object-position: 50% 20%; }
