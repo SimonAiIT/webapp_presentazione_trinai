@@ -1526,3 +1526,19 @@ video.hero-media { animation: none; object-position: 50% 20%; }
 .drawer-lab-btn { color: #e8f6ff; border-color: rgba(120, 200, 255, 0.35); }
 .gate-btn:active, .drawer-lab-btn:active, .drawer-act-btn:active, .icon-btn:active { transform: scale(0.98); }
 .icon-btn { white-space: nowrap; }
+
+/* TASTO MUTE accanto all'hamburger */
+.topbar-icon-btn {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+.topbar-icon-btn[aria-pressed="true"] { color: var(--gold-bright); }
+.topbar-icon-btn:active { transform: scale(0.94); }
