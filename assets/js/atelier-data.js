@@ -17,7 +17,7 @@ window.TRINAI_DATA = {
     sigla: "TrinAi S.r.l.",
     qualifica: "Start-up Innovativa ad Alto Valore Tecnologico iscritta nella Sezione Speciale del Registro Imprese D.L. 179/2012 art. 25",
     estremiLegali: "REA PA 452478 · C.F. e P.IVA 07335120825 · Sede Via Giuseppe De Spuches 11 Palermo · PEC trinai@pec.it",
-    collaborazioniAccademiche: "Invitati al Master dell'Università Cattolica del Sacro Cuore e dell'Università Vita-Salute San Raffaele. Invitati da Confindustria a presentare il progetto.",
+    collaborazioniAccademiche: "Invitati come relatori ai principali eventi del settore: Master dell'Università Cattolica del Sacro Cuore e dell'Università Vita-Salute San Raffaele, Confindustria, Unidi ed Expodental. Calendari esclusivi su richiesta.",
     sottotitolo: "Il Primo Laboratorio Sartoriale Italiano di Intelligenza Artificiale Sovrana",
     chiusura: "Nessun agente speciale veste di serie.",
     gateVideo: "assets/video/invito_prequel1.mp4",
@@ -44,7 +44,7 @@ window.TRINAI_DATA = {
         { valore: "5 Minuti", label: "Per Creare la Vostra Base" },
         { valore: "6 Aree", label: "Pronte fin dal Primo Giorno" },
         { valore: "7 Specialisti", label: "Soci tra Medici, Ingegneri e Formatori" },
-        { valore: "Invitati", label: "Al Master universitario e da Confindustria" }
+        { valore: "Relatori", label: "Invitati ai principali eventi del settore" }
       ],
       narrazioneBreve: "I posti che contano non hanno insegne sulla porta, hanno un invito. Benvenuti nell'Atelier di Trinacria Artificial Intelligence, Start-up Innovativa ad alto valore tecnologico iscritta nella Sezione Speciale del Registro delle Imprese. Non siamo una software house tradizionale: nella nostra compagine lavorano fianco a fianco medici specialisti, esperti di risorse umane, architetti di intelligenza artificiale e ingegneri industriali. Quando entrate nell'Atelier non comprate un programma vuoto da compilare per mesi. La nostra Architettura di Fondazione parte dalla vostra Partita IVA, legge i registri ufficiali delle Camere di Commercio e in cinque minuti genera l'ossatura digitale completa della vostra azienda, attivando sei reparti operativi già pronti a dialogare tra loro.",
       doveSiApplica: [
@@ -539,7 +539,7 @@ window.TRINAI_DATA = {
       videos: ["assets/video/atto_07.mp4", "assets/video/s10.mp4", "assets/video/s09.mp4", "assets/video/s15.mp4"],
       audio: "assets/audio/act_07.mp3",
       kpi: [
-        { valore: "Invitati al Master", label: "Cattolica, San Raffaele e Confindustria" },
+        { valore: "Invitati come relatori", label: "Master, Confindustria, Unidi, Expodental" },
         { valore: "Alta Direzione", label: "Percorsi per Imprenditori e Titolari" },
         { valore: "Un Passo per Volta", label: "Spiegazioni Chiare Senza Spaventare" },
         { valore: "Basta Così", label: "Fermarsi Quando il Cliente Dice Sì" }
