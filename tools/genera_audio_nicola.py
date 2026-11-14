@@ -69,19 +69,37 @@ def paragrafo(testo, pos_par):
     return s
 
 
+def comprimi_pause(a, codice, pos):
+    """Taglia il silenzio a inizio/fine e accorcia ogni pausa lunga dentro il paragrafo (resta ~0,12 s)."""
+    src = os.path.join(AUDIO, f"_seg_{codice}_{pos}.wav")
+    dst = os.path.join(AUDIO, f"_seg_{codice}_{pos}_ok.wav")
+    sf.write(src, a, SR)
+    subprocess.run([FF, "-y", "-loglevel", "error", "-i", src, "-af",
+                    "silenceremove=start_periods=1:start_silence=0.04:start_threshold=-42dB:"
+                    "stop_periods=-1:stop_silence=0.12:stop_duration=0.18:stop_threshold=-42dB",
+                    "-ar", str(SR), "-ac", "1", dst], check=True)
+    out, _ = sf.read(dst, dtype="float32")
+    os.remove(src)
+    os.remove(dst)
+    return out
+
+
+PAUSA_TRA_PARAGRAFI = 0.4
+
+
 def genera(codice, dati, tutti_i_punti):
     segmenti = [dati["intro"]] + dati["punti"] + [dati["chiusura"]]
-    audio = [silenzio(0.3)]
-    t = 0.3
+    audio = [silenzio(0.2)]
+    t = 0.2
     inizi = []
     for pos, seg in enumerate(segmenti):
-        a = paragrafo(seg, pos)
-        # i punti chiave cominciano qui (indice 1..n-1 sono i punti)
+        a = comprimi_pause(paragrafo(seg, pos), codice, pos)
+        # i punti chiave cominciano qui, calcolati sull'audio gia ripulito
         if 1 <= pos <= len(dati["punti"]):
             inizi.append(round(t, 2))
         audio.append(a)
-        audio.append(silenzio(0.55))
-        t += len(a) / SR + 0.55
+        audio.append(silenzio(PAUSA_TRA_PARAGRAFI))
+        t += len(a) / SR + PAUSA_TRA_PARAGRAFI
     totale = np.concatenate(audio)
     wav = os.path.join(AUDIO, f"_tmp_act_{codice}.wav")
     mp3 = os.path.join(AUDIO, f"act_{codice}.mp3")
