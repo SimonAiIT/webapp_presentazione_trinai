@@ -9,6 +9,31 @@
 
   const DATA = window.TRINAI_DATA;
   let currentStationIdx = 0;
+  let resumeAt = 0; // secondi da cui riprendere la voce, una sola volta
+
+  // Progresso salvato su questo dispositivo (localStorage): atto e punto della voce
+  const CHIAVE_PROGRESSO = "trinai_atelier_progresso";
+  function leggiProgresso() {
+    try {
+      const v = JSON.parse(localStorage.getItem(CHIAVE_PROGRESSO) || "null");
+      if (v && Number.isInteger(v.idx) && v.idx >= 0 && v.idx < DATA.stations.length) return v;
+    } catch (e) {}
+    return null;
+  }
+  let ultimoSalvataggio = 0;
+  function salvaProgresso(force) {
+    if (!appShell || !appShell.classList.contains("active")) return;
+    const now = Date.now();
+    if (!force && now - ultimoSalvataggio < 2000) return;
+    ultimoSalvataggio = now;
+    const hud = window.TRINAI_AUDIO_HUD;
+    try {
+      localStorage.setItem(
+        CHIAVE_PROGRESSO,
+        JSON.stringify({ idx: currentStationIdx, t: hud ? Math.floor(hud.getTime()) : 0 })
+      );
+    } catch (e) {}
+  }
   let touchStartX = 0;
   let touchStartY = 0;
 
@@ -490,6 +515,7 @@
     .catch(() => {});
 
   function syncPointsToVoice(t, dur) {
+    salvaProgresso(false);
     if (!dur || Date.now() < vcState.lockUntil) return;
     const card = carouselTrack ? carouselTrack.querySelector('.card-3d-slide[data-pos="0"]') : null;
     if (!card) return;
@@ -627,8 +653,8 @@
     renderHamburgerMenu();
     renderHudDots();
 
-    if (triggerAudio && window.TRINAI_AUDIO_HUD && st) {
-      window.TRINAI_AUDIO_HUD.playStation(st, true);
+    if (window.TRINAI_AUDIO_HUD && st) {
+      window.TRINAI_AUDIO_HUD.playStation(st, triggerAudio, resumeAt);
     }
   }
 
@@ -637,7 +663,9 @@
   function goToStation(idx, autoPlay = true) {
     const total = DATA.stations.length;
     currentStationIdx = (idx + total) % total;
+    resumeAt = 0;
     update3DPositions(autoPlay);
+    salvaProgresso(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
@@ -662,8 +690,14 @@
     if (window.TRINAI_AUDIO_HUD && startAudio) {
       window.TRINAI_AUDIO_HUD.startSoundtrack();
     }
+    const salvato = leggiProgresso();
+    if (salvato) {
+      currentStationIdx = salvato.idx;
+      resumeAt = salvato.t || 0;
+    }
     renderCarousel3D();
     update3DPositions(startAudio);
+    resumeAt = 0;
     initThreeBackground();
   }
 
@@ -872,6 +906,11 @@
     },
     { passive: true }
   );
+
+  window.addEventListener("pagehide", () => salvaProgresso(true));
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") salvaProgresso(true);
+  });
 
   // Controllo Magic Link (?k=...) o sessione esistente
   (async function initBoot() {

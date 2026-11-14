@@ -111,7 +111,7 @@
     updatePlayButtonUI();
   });
 
-  function playStation(station, autoPlay = true) {
+  function playStation(station, autoPlay = true, startAt = 0) {
     if (!station) return;
     currentSubKey = "stazione_" + station.codice;
     hasEnded = false;
@@ -134,6 +134,14 @@
     }
 
     voiceEl.src = station.audio;
+    if (startAt > 0) {
+      const seek = () => {
+        voiceEl.removeEventListener("loadedmetadata", seek);
+        const d = voiceEl.duration;
+        voiceEl.currentTime = d && startAt < d - 4 ? startAt : 0;
+      };
+      voiceEl.addEventListener("loadedmetadata", seek);
+    }
     if (autoPlay) {
       voiceEl.play().catch(() => {
         isPlaying = false;
@@ -177,6 +185,10 @@
     updatePlayButtonUI();
   }
 
+  function getTime() {
+    return voiceEl.currentTime || 0;
+  }
+
   function getState() {
     return isPlaying ? "playing" : hasEnded ? "ended" : "paused";
   }
@@ -198,6 +210,7 @@
     startSoundtrack,
     stop,
     getState,
+    getTime,
     setOnTime,
     setOnEnded
   };
