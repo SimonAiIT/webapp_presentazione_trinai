@@ -1,19 +1,17 @@
 ﻿/**
- * TRINAI ATELIER // SECURITY LOCK & WATERMARK
- * - Verifica codice via SHA-256 (per anteprima statica GitHub Pages)
- * - Bypass automatico se validato a monte da Cloudflare Edge Worker (atelier.trinai.it)
- * - Watermark dinamico + deterrente anti-copia UI + listener Ably (solo subscribe)
+ * TRINAI ATELIER // SECURITY LOCK, MAGIC PASS & WATERMARK
+ * - Verifica codice via SHA-256 + supporto Magic Link (?k=...) e Black Card Pass a tocco singolo
+ * - Filigrana dinamica non invasiva + deterrente anti-copia UI + listener Ably
  */
 (function () {
   "use strict";
 
-  // Hash SHA-256 dei codici di anteprima (mai password in chiaro nel sorgente)
   const ALLOWED_HASHES = {
     "e8e35d09f3f6bde23a0a092b44a79ddd9fd73d1e76900a88127256a48999ae1f": { role: "MASTER", label: "DIREZIONE TRINAI" },
-    "80bb41008ab9cb80e34ee654b02e4c3fa8f418c0c4565abe0e25f30242057655": { role: "OSPITE", label: "ACCESSO OSPITE" }
+    "80bb41008ab9cb80e34ee654b02e4c3fa8f418c0c4565abe0e25f30242057655": { role: "OSPITE", label: "OSPITE RISERVATO" }
   };
 
-  const SESSION_KEY = "trinai_atelier_session";
+  const SESSION_KEY = "trinai_atelier_session_v2";
 
   async function sha256Hex(str) {
     const buf = new TextEncoder().encode(str.trim().toUpperCase());
@@ -59,9 +57,9 @@
       hour: "2-digit",
       minute: "2-digit"
     });
-    const text = `TRINAI ATELIER Â· ${session.label} Â· ${session.sig} Â· ${stamp}`;
+    const text = `TRINAI S.R.L. START-UP INNOVATIVA · ${session.label} · ${session.sig} · ${stamp}`;
     wm.innerHTML = "";
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 5; i++) {
       const span = document.createElement("span");
       span.textContent = text;
       wm.appendChild(span);
@@ -83,13 +81,12 @@
         ((e.ctrlKey || e.metaKey) && e.shiftKey && (k === "i" || k === "j" || k === "c"))
       ) {
         e.preventDefault();
-        try { window.suoniCAOS && window.suoniCAOS.riproduci("lavoro_errore"); } catch (e) {}
+        try { window.suoniCAOS && window.suoniCAOS.riproduci("lavoro_errore"); } catch (err) {}
       }
     });
   }
 
   function initAblyKillSwitch(session) {
-    // Richiede chiave Ably con sola capability SUBSCRIBE (mai Root Key nel client)
     const subKey = window.TRINAI_ABLY_SUB_KEY;
     if (!subKey || typeof Ably === "undefined") return;
     try {
@@ -99,7 +96,7 @@
         const target = msg.data && msg.data.sig;
         if (!target || target === "ALL" || target === session.sig) {
           clearSession();
-          try { window.suoniCAOS && window.suoniCAOS.riproduci("lavoro_errore"); } catch (e) {}
+          try { window.suoniCAOS && window.suoniCAOS.riproduci("lavoro_errore"); } catch (err) {}
           window.location.reload();
         }
       });
@@ -121,16 +118,27 @@
     return session;
   }
 
+  function createGuestPassSession() {
+    const session = {
+      role: "VIP_PASS",
+      label: "INVITO BLACK CARD",
+      sig: "BC" + Math.random().toString(16).slice(2, 8).toUpperCase(),
+      ts: Date.now()
+    };
+    saveSession(session);
+    return session;
+  }
+
   function activateLock(session) {
     renderWatermark(session);
     enableAntiCopy();
     initAblyKillSwitch(session);
   }
 
-  // Esposizione API globale
   window.TRINAI_LOCK = {
     getSession,
     verifyCode,
+    createGuestPassSession,
     activateLock,
     clearSession
   };

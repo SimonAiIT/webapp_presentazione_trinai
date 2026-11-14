@@ -1,19 +1,27 @@
 ﻿/**
- * TRINAI ATELIER // AUDIO HUD & SOTTOTITOLI SINCRONIZZATI
- * Gestisce la voce narrante alternata Diego / Elsa, i sottotitoli live
- * e il sound design procedurale di suoni.js senza interrompersi su mobile.
+ * TRINAI ATELIER // AUDIO HUD, COLONNA SONORA LYRIA CON DUCKING & SOTTOTITOLI DOCKED
+ * - Voce narrante femminile unificata Elsa masterizzata in studio
+ * - Sottotitoli ancorati dentro la plancia inferiore per zero sovrapposizioni su mobile
+ * - Colonna sonora cinematografica Lyria con abbassamento automatico del volume durante il parlato
  */
 (function () {
   "use strict";
 
-  const audioEl = new Audio();
-  audioEl.preload = "auto";
-  audioEl.playsInline = true;
+  const voiceEl = new Audio();
+  voiceEl.preload = "auto";
+  voiceEl.playsInline = true;
+
+  const themeEl = new Audio();
+  themeEl.src = "assets/audio/theme.mp3";
+  themeEl.loop = true;
+  themeEl.preload = "auto";
+  themeEl.playsInline = true;
+  themeEl.volume = 0.08;
 
   let subtitlesMap = {};
-  let currentStationId = null;
   let currentSubKey = null;
   let isPlaying = false;
+  let isThemeEnabled = true;
   let onEndedCallback = null;
 
   async function loadSubtitles() {
@@ -25,15 +33,26 @@
     } catch {}
   }
 
+  function duckTheme(speaking) {
+    if (!isThemeEnabled) {
+      themeEl.pause();
+      return;
+    }
+    themeEl.volume = speaking ? 0.06 : 0.18;
+    if (themeEl.paused) {
+      themeEl.play().catch(() => {});
+    }
+  }
+
   function updateSubtitleUI(timeSec) {
     const subBox = document.getElementById("hud-subtitle-text");
     if (!subBox) return;
     const cues = subtitlesMap[currentSubKey] || [];
-    const active = cues.find((c) => timeSec >= c.start && timeSec <= c.end + 0.35);
+    const active = cues.find((c) => timeSec >= c.start && timeSec <= c.end + 0.4);
     if (active) {
       subBox.textContent = active.text;
       subBox.classList.add("visible");
-    } else if (!isPlaying) {
+    } else if (!isPlaying && !subBox.textContent) {
       subBox.classList.remove("visible");
     }
   }
@@ -44,7 +63,7 @@
     if (btn) {
       btn.setAttribute("aria-label", isPlaying ? "Pausa narrazione" : "Avvia narrazione");
       btn.dataset.state = isPlaying ? "playing" : "paused";
-      btn.textContent = isPlaying ? "Pausa" : "Play";
+      btn.textContent = isPlaying ? "Pausa Voce" : "Ascolta Atto";
     }
     if (wave) {
       wave.classList.toggle("active", isPlaying);
@@ -53,73 +72,99 @@
 
   function updateProgressUI() {
     const fill = document.getElementById("hud-audio-progress");
-    if (!fill || !audioEl.duration || isNaN(audioEl.duration)) return;
-    const pct = Math.min(100, (audioEl.currentTime / audioEl.duration) * 100);
+    if (!fill || !voiceEl.duration || isNaN(voiceEl.duration)) return;
+    const pct = Math.min(100, (voiceEl.currentTime / voiceEl.duration) * 100);
     fill.style.width = pct.toFixed(1) + "%";
   }
 
-  audioEl.addEventListener("timeupdate", () => {
+  voiceEl.addEventListener("timeupdate", () => {
     updateProgressUI();
-    updateSubtitleUI(audioEl.currentTime);
+    updateSubtitleUI(voiceEl.currentTime);
   });
 
-  audioEl.addEventListener("ended", () => {
+  voiceEl.addEventListener("ended", () => {
     isPlaying = false;
+    duckTheme(false);
     updatePlayButtonUI();
     if (typeof onEndedCallback === "function") {
       onEndedCallback();
     }
   });
 
-  audioEl.addEventListener("pause", () => {
+  voiceEl.addEventListener("pause", () => {
     isPlaying = false;
+    duckTheme(false);
     updatePlayButtonUI();
   });
 
-  audioEl.addEventListener("play", () => {
+  voiceEl.addEventListener("play", () => {
     isPlaying = true;
+    duckTheme(true);
     updatePlayButtonUI();
   });
 
   function playStation(station, autoPlay = true) {
     if (!station) return;
-    currentStationId = station.id;
     currentSubKey = "stazione_" + station.codice;
 
     const speakerBadge = document.getElementById("hud-speaker-badge");
     const speakerName = document.getElementById("hud-speaker-name");
     if (speakerBadge && speakerName) {
-      speakerBadge.dataset.voice = station.voce;
-      speakerName.textContent = station.voceNome;
+      speakerBadge.dataset.voice = station.voce || "elsa";
+      speakerName.textContent = station.voceNome || "Elsa · Voce Atelier";
     }
 
     const fill = document.getElementById("hud-audio-progress");
     if (fill) fill.style.width = "0%";
 
     const subBox = document.getElementById("hud-subtitle-text");
-    if (subBox) subBox.textContent = "";
+    if (subBox) {
+      const cues = subtitlesMap[currentSubKey] || [];
+      subBox.textContent = cues[0] ? cues[0].text : station.sottotitolo;
+      subBox.classList.add("visible");
+    }
 
-    audioEl.src = station.audio;
+    voiceEl.src = station.audio;
     if (autoPlay) {
-      audioEl.play().catch(() => {
+      voiceEl.play().catch(() => {
         isPlaying = false;
         updatePlayButtonUI();
       });
+    } else {
+      isPlaying = false;
+      updatePlayButtonUI();
     }
   }
 
   function togglePlay() {
     if (isPlaying) {
-      audioEl.pause();
+      voiceEl.pause();
     } else {
-      audioEl.play().catch(() => {});
+      voiceEl.play().catch(() => {});
+    }
+  }
+
+  function toggleTheme() {
+    isThemeEnabled = !isThemeEnabled;
+    if (!isThemeEnabled) {
+      themeEl.pause();
+    } else {
+      duckTheme(isPlaying);
+    }
+    return isThemeEnabled;
+  }
+
+  function startSoundtrack() {
+    if (isThemeEnabled) {
+      duckTheme(isPlaying);
     }
   }
 
   function stop() {
-    audioEl.pause();
-    audioEl.currentTime = 0;
+    voiceEl.pause();
+    voiceEl.currentTime = 0;
     isPlaying = false;
+    duckTheme(false);
     updatePlayButtonUI();
   }
 
@@ -132,6 +177,8 @@
   window.TRINAI_AUDIO_HUD = {
     playStation,
     togglePlay,
+    toggleTheme,
+    startSoundtrack,
     stop,
     setOnEnded
   };

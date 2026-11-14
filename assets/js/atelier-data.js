@@ -1,337 +1,712 @@
 ﻿/**
- * TRINAI ATELIER // DATI AGNOSTICI E VERTICALI
- * Estratti canonici da Carta dei Servizi TrinAI S.r.l. e Manifest Verticali
- * Regole editoriali: zero TheWALL, zero duepunti e zero parentesi nelle etichette visibili.
+ * TRINAI ATELIER // MANIFESTO INTERATTIVO E CARTA DEI SERVIZI
+ * Trinacria Artificial Intelligence S.r.l. - Start-up Innovativa ad Alto Valore Tecnologico
+ * Regole editoriali attive:
+ * - Zero riferimenti a clienti reali o citta reali
+ * - Arcada con la C, mai TheWALL, mai SiTeBoS sostituito da Architettura di Fondazione
+ * - Metodo di Comunicazione Adattiva integrato senza nominare direttamente il Professore
+ * - Zero due punti e zero parentesi nei titoli e nelle etichette visibili
+ * - Voce narrante femminile unificata Elsa su tutti i nove atti
  */
-
 window.TRINAI_DATA = {
   brand: {
-    formula: "Victor + Harness + Monolito Hardware = Agente Speciale",
+    nome: "TrinAI Atelier",
+    ragioneSociale: "Trinacria Artificial Intelligence S.r.l.",
+    sigla: "TrinAi S.r.l.",
+    qualifica: "Start-up Innovativa iscritta nella Sezione Speciale del Registro Imprese D.L. 179/2012 art. 25",
+    estremiLegali: "REA PA 452478 · C.F. e P.IVA 07335120825 · Sede Via Giuseppe De Spuches 11 Palermo · PEC trinai@pec.it",
+    collaborazioniAccademiche: "Collaborazione attiva iscritta al Registro Imprese con Universita Cattolica del Sacro Cuore e Universita Vita-Salute San Raffaele per Master di II Livello sulla Gestione delle Strutture Sanitarie",
+    sottotitolo: "Sartoria Computazionale e Intelligenza Diffusa Sovrana",
     chiusura: "Nessun agente speciale veste di serie.",
-    sla: [
-      { label: "Residenza Dati", value: "100% Unione Europea" },
-      { label: "Privacy Operativa", value: "Zero-PII verso AI terze" },
-      { label: "Disponibilità", value: "99,8% mensile garantito" },
-      { label: "Crittografia", value: "TLS 1.3 · AES-256 · HMAC-SHA256" }
-    ]
+    gateVideo: "assets/video/gate.mp4",
+    themeAudio: "assets/audio/theme.mp3"
   },
 
   verticals: {
     trasversale: {
       id: "trasversale",
       nome: "Atelier Trasversale",
-      tag: "TrinAI S.r.l. · Startup Innovativa",
+      claim: "Sistemi operativi su misura per chi governa strutture complesse",
       colore: "#d4af37",
-      riassunto: "Ingegneria dei sistemi cibernetici, digital twin operativi, intelligence camerale e app sovrane su misura.",
       kpi: [
-        { valore: "6", label: "Pilastri di Servizio" },
-        { valore: "100% UE", label: "Sovranità Dati" },
-        { valore: "0-60s", label: "Onboarding Cold-Start" }
+        { valore: "1.97 ms", label: "Decisione Reattiva Sistema 1" },
+        { valore: "0 GB", label: "Impatto VRAM Demone Rust" },
+        { valore: "100%", label: "Sovranita Dati sul Nodo Locale" },
+        { valore: "60.1%", label: "Vantaggio Netto Transizione 5.0" }
       ],
       moduli: [
-        { titolo: "Piattaforma Sovrana SiTeBoS", desc: "Business Operating System comportamentale con 6 moduli nativi per processi, finanza e sicurezza D.Lgs 81." },
-        { titolo: "Intelligence OpenAPI CCIAA", desc: "Connettori ufficiali Registro Imprese, scoring rischio credito, market radar territoriale ed ETL." },
-        { titolo: "Custom App Telegram e Mongo", desc: "WebApp a barriera zero con firma crittografica HMAC-SHA256 per squadre sul campo." },
-        { titolo: "Consulenza EU AI Act", desc: "Classificazione rischio, dossier FRIA e DPIA, perizie Industria 4.0 e Transizione 5.0." }
+        {
+          titolo: "Architettura di Fondazione in 60 Secondi",
+          desc: "Inizializzazione genetica dell'impresa da registri camerali ufficiali con sei reparti operativi pronti al primo accesso."
+        },
+        {
+          titolo: "Automa Dual-Process Victor",
+          desc: "Riflesso istantaneo in meno di due millisecondi abbinato a una corteccia esplicativa vincolata ai soli fatti verificati."
+        },
+        {
+          titolo: "Demone Semantico in Rust",
+          desc: "Controllo nativo dell'albero di accessibilita sui software preesistenti senza sottrarre mouse o memoria grafica."
+        },
+        {
+          titolo: "Compagine Multidisciplinare Certificata",
+          desc: "Sette soci persone fisiche tra clinici specialisti, esperti HR, architetti cloud AI e ingegneri industriali e della sicurezza."
+        }
       ]
     },
     arcada: {
       id: "arcada",
       nome: "Arcada · Clinico",
-      tag: "Agente Speciale per Studi e Cliniche",
+      claim: "L'intelligenza clinica, extraclinica e relazionale per poliambulatori d'eccellenza",
       colore: "#38bdf8",
-      riassunto: "AgentOS sovrano su rete locale per studi odontoiatrici e poliambulatori senza inviare dati clinici all'esterno.",
       kpi: [
-        { valore: "26 Voci", label: "Controlling CLC" },
-        { valore: "3 Fasi", label: "Comunicazione Riunito" },
-        { valore: "0 Byte", label: "Dati Clinici in Cloud" }
+        { valore: "26 Voci", label: "Controllo di Gestione Deterministico" },
+        { valore: "150", label: "Scenari Soft Skill e Delega" },
+        { valore: "Zero Cloud", label: "Dati Sensibili sul Nodo Clinica" },
+        { valore: "k >= 5", label: "Soglia Anonimizzazione Aggregati" }
       ],
       moduli: [
-        { titolo: "Segreteria Deterministica", desc: "Richiami e conferme su WhatsApp e Telegram governati da regole certe senza allucinazioni." },
-        { titolo: "Controllo di Gestione CLC", desc: "Ventisei voci calcolate da script deterministici su margine orario, saturazione e incassi." },
-        { titolo: "Preventivatore Vivo A4", desc: "Tre opzioni chiare al riunito con simulatore rate e pulsante di controllo per il paziente." },
-        { titolo: "Consiglio Direzionale e STL", desc: "Valutazione casi 3D a otto viste e supporto decisionale locale per il direttore clinico." }
+        {
+          titolo: "Governo del Minuto di Poltrona",
+          desc: "Calcolo deterministico via script del costo orario per singola sala, saturazione reale e recupero dei richiami dormienti."
+        },
+        {
+          titolo: "Comunicazione Adattiva Un Passo alla Volta",
+          desc: "Presentazione terapeutica calibrata sul profilo percettivo del paziente con tavole schematiche che azzerano l'ansia."
+        },
+        {
+          titolo: "Vassoio Ottico e Tracciabilita Lotti",
+          desc: "Telecamera ad angolo stretto sul solo vassoio per riconoscere materiali e kit senza mai inquadrare volti."
+        },
+        {
+          titolo: "Dossier DPIA FRIA e AI Act Articolo 4",
+          desc: "Blindatura legale per dati sanitari particolari e alfabetizzazione certificata dell'intera equipe di studio."
+        }
       ]
     },
     sinter: {
       id: "sinter",
       nome: "Sinter · Laboratorio",
-      tag: "Agente Speciale per Laboratori CAD CAM",
-      colore: "#a78bfa",
-      riassunto: "AgentOS per laboratori odontotecnici, centri di fresaggio e tracciabilità dispositivi medici su misura.",
+      claim: "Geometria 3D, fonendoscopio meccanico e continuita predittiva per laboratori e manifattura",
+      colore: "#f59e0b",
       kpi: [
-        { valore: "17", label: "Lavorazioni Standard" },
-        { valore: "MDR", label: "Conformità UE 2017/745" },
-        { valore: "LAN", label: "Ponte Diretto Arcada" }
+        { valore: "5 Lobi", label: "Sensori Multi-Modali Innati" },
+        { valore: "5 sec", label: "Finestra Acustica Mandrini" },
+        { valore: "WORM", label: "Archivio Immutabile Certificato" },
+        { valore: "A/B Safe", label: "Ritorno Automatico Notturno" }
       ],
       moduli: [
-        { titolo: "Commesse e Modelli 3D STL", desc: "Ricezione file STL con segmentazione MeshSegNet locale su GPU dedicata." },
-        { titolo: "Listino Interattivo Tecnico", desc: "Diciassette lavorazioni standardizzate con tempi ciclo e distinta materiali." },
-        { titolo: "Tracciabilità Lotti MDR", desc: "Schede lotto e certificazione materiali conformi al regolamento europeo 2017/745." },
-        { titolo: "Ponte Bidirezionale LAN", desc: "Sincronizzazione protetta con gli studi clinici su stato lavorazione e consegne." }
+        {
+          titolo: "Fonendoscopio Meccanico su Fresatrici",
+          desc: "Ascolto vibrazionale e bio-acustico continuo per intercettare derive di cuscinetti e mandrini prima del fermo macchina."
+        },
+        {
+          titolo: "Lobo Geometrico 3D Nativo",
+          desc: "Ispezione istantanea di mesh, spessori, sottosquadri e margini protesici direttamente nello spazio dei pesi."
+        },
+        {
+          titolo: "Tracciabilita Ciclo di Sinterizzazione",
+          desc: "Associazione automatica tra lotto di materiale, curva termica del forno e passaporto di conformita del dispositivo."
+        },
+        {
+          titolo: "Apprendistato sulle Interfacce CAD CAM",
+          desc: "Il demone semantico apprende le sequenze ripetitive dei tecnici e prepara le code di lavorazione in autonomia."
+        }
       ]
     },
     vinea: {
       id: "vinea",
       nome: "Vinea · Agritech",
-      tag: "Agente Speciale per Viticoltura di Precisione",
+      claim: "Visione spettrale, telemetria autonoma in campo e difesa predittiva della filiera",
       colore: "#34d399",
-      riassunto: "Stazione mobile e controllo filiera per cantine e aziende agricole con guida autonoma e zero cloud terzi.",
       kpi: [
-        { valore: "RTK", label: "Guida GNSS e LiDAR" },
-        { valore: "254nm", label: "Trattamento UV-C" },
-        { valore: "QR", label: "Scheda Lotto Cantina" }
+        { valore: "100% Isola", label: "Operativita Senza Connessione" },
+        { valore: "Bio-Acustica", label: "Rilevazione Precoce Vettori" },
+        { valore: "Serie Storiche", label: "Previsione Stress Idrico" },
+        { valore: "5.0 Ready", label: "Credito Imposta Transizione" }
       ],
       moduli: [
-        { titolo: "Mezzo Cingolato Autonomo", desc: "Autopilota ArduPilot Rover con sterzo differenziale, GNSS RTK e LiDAR interfila." },
-        { titolo: "Monitoraggio per Pianta", desc: "Mappa filare, stima grappoli, vigore chioma e visione locale senza connessione." },
-        { titolo: "UV-C e Spruzzo Mirato", desc: "Monoblocco UV-C notturno anti-oidio e trattamento localizzato con arresto di sicurezza." },
-        { titolo: "Quaderno di Campagna", desc: "Registrazione automatica a regole da note vocali Whisper e scheda lotto QR per la cantina." }
+        {
+          titolo: "Sentinella Bio-Acustica e Visiva",
+          desc: "Riconoscimento precoce di patogeni e insetti vettori su foglia e trappola ottica prima della diffusione nel filare."
+        },
+        {
+          titolo: "Autonomia Totale in Assenza di Rete",
+          desc: "I nodi periferici elaborano in locale in mezzo al campo e sincronizzano i soli bollettini firmati al rientro."
+        },
+        {
+          titolo: "Bilancio Idrico e Fenologico Predittivo",
+          desc: "Incrocio tra serie storiche microclimatiche e risposta della pianta per ridurre gli sprechi di risorse ed energia."
+        },
+        {
+          titolo: "Passaporto Digitale di Filiera",
+          desc: "Registro immutabile dei trattamenti e delle rese per certificare la qualita verso consorzi e mercati esteri."
+        }
       ]
     }
   },
 
   stations: [
     {
-      id: "briefing",
+      id: "atto-00",
       codice: "00",
-      titolo: "L'Atelier e la Formula",
-      sottotitolo: "Architettura Sovrana su Misura",
-      voce: "diego",
-      voceNome: "Diego",
-      audio: "assets/audio/stazione_00.mp3",
-      img: "assets/img/regia_sala.jpg",
-      narrazione: "Benvenuto nell'Atelier TrinAI. Non vendiamo software preconfezionati a canone. Progettiamo Agenti Speciali unendo il pattern neurale Victor, il guscio di sicurezza locale Harness e un Monolito Hardware dedicato. Ogni dato sensibile resta dentro la tua sede.",
-      sottotitoli: [
-        { start: 0.0, end: 2.3, text: "Benvenuto nell'Atelier TrinAI." },
-        { start: 2.3, end: 5.5, text: "Non vendiamo software preconfezionati a canone." },
-        { start: 5.5, end: 11.4, text: "Progettiamo Agenti Speciali unendo Victor, il guscio Harness e un Monolito Hardware dedicato." },
-        { start: 11.4, end: 15.2, text: "Ogni dato sensibile resta dentro la tua sede." }
+      titolo: "L'Invito e l'Architettura di Fondazione",
+      titoloLuce: "L'Invito Riservato e il",
+      titoloOro: "Nucleo di Fondazione",
+      sottotitolo: "Start-up Innovativa ad Alto Valore Tecnologico iscritta nella Sezione Speciale del Registro Imprese",
+      domandaGuida: "Perche i veri sistemi di comando non si acquistano a catalogo ma si cuciono addosso alla struttura",
+      voce: "elsa",
+      voceNome: "Elsa · Voce Atelier",
+      audio: "assets/audio/act_00.mp3",
+      video: "assets/video/act_00.mp4",
+      img: "assets/img/hero_trinai_luxury.png",
+      narrazioneBreve: "I luoghi che contano non hanno insegne sulla porta, hanno un invito. Benvenuti nell'Atelier di Trinacria Artificial Intelligence, Start-up Innovativa iscritta nella Sezione Speciale del Registro delle Imprese e partner accademico per i Master di Secondo Livello sulla gestione delle strutture sanitarie. Qui non vendiamo abbonamenti in serie. In sessanta secondi la nostra Architettura di Fondazione legge il DNA ufficiale della vostra impresa e accende sei reparti operativi cuciti sulle vostre reali procedure.",
+      perVerticale: {
+        trasversale: "Trinacria Artificial Intelligence S.r.l. unisce nella propria compagine societaria specialisti clinici, esperti in risorse umane, architetti cloud AI e ingegneri industriali. L'Architettura di Fondazione genera in 60 secondi l'ecosistema digitale dell'azienda partendo dai registri ufficiali.",
+        arcada: "In Arcada l'Architettura di Fondazione configura istantaneamente la struttura del poliambulatorio, le poltrone, i ruoli dell'equipe, i protocolli di accoglienza e la plancia direzionale senza settimane di data-entry manuale.",
+        sinter: "In Sinter l'Architettura di Fondazione mappa reparti di fresaggio, forni di sinterizzazione, commesse odontotecniche, magazzino lotti e flussi di consegna tra laboratorio e studi.",
+        vinea: "In Vinea l'Architettura di Fondazione censisce particelle catastali, cultivar, stazioni di rilevamento, mezzi agricoli e quaderno di campagna digitale in un unico ambiente sovrano."
+      },
+      cassetti: [
+        {
+          titolo: "Identita Istituzionale e Start-up Innovativa",
+          testo: "Trinacria Artificial Intelligence S.r.l., sigla TrinAi S.r.l., e iscritta nella Sezione Speciale del Registro delle Imprese di Palermo ed Enna in qualita di Start-up Innovativa ai sensi del Decreto Legge 179 del 2012 articolo 25. Collabora ufficialmente con l'Universita Cattolica del Sacro Cuore e con l'Universita Vita-Salute San Raffaele nell'ambito del Master di Secondo Livello sulla Gestione delle Strutture Sanitarie."
+        },
+        {
+          titolo: "Genesi Automatica in 60 Secondi",
+          testo: "Inserendo la sola Partita IVA o ragione sociale, l'Architettura di Fondazione interroga i registri camerali ufficiali, ricostruisce codici ATECO, sedi, assetti e dimensione operativa e istanzia immediatamente sei ambienti integrati pronti all'uso."
+        },
+        {
+          titolo: "Sei Reparti Nativi Senza Canoni Frammentati",
+          testo: "Un'unica spina dorsale governa Anagrafica e Relazioni, Comunicazione Multicanale, Documenti e Contratti, Operativita e Cantiere o Sala, Risorse Umane e Sicurezza, Amministrazione e Controllo di Gestione."
+        }
       ],
       schede: [
-        { badge: "Pilastro 01", titolo: "Sovranità Digitale 100% UE", testo: "Gateway Zero-PII prima di qualsiasi inferenza e cluster esclusivamente europei." },
-        { badge: "Pilastro 02", titolo: "Interfacce a Frizione Zero", testo: "Operatività sul campo tramite cruscotti sintetici e Telegram MiniApp crittografate." },
-        { badge: "Pilastro 03", titolo: "Controllo Predittivo", testo: "Trasformiamo l'azienda in un sistema cibernetico che previene errori e fermi." },
-        { badge: "Pilastro 04", titolo: "Competenza AI Literacy", testo: "Formazione certificata Articolo 4 EU AI Act integrata nel percorso." }
+        {
+          badge: "FONDAZIONE 01",
+          titolo: "Inizializzazione Genetica da Registri Ufficiali",
+          testo: "Configurazione istantanea dell'impresa in sessanta secondi tramite interrogazione certificata dei dati camerali e settoriali."
+        },
+        {
+          badge: "FONDAZIONE 02",
+          titolo: "Sei Moduli Operativi Nativi",
+          testo: "Relazioni clienti, segreteria multicanale, documenti, sale operative, risorse umane e controllo finanziario in un solo nucleo."
+        },
+        {
+          badge: "ISTITUZIONALE",
+          titolo: "Compagine Multidisciplinare e Accademia",
+          testo: "Sette soci persone fisiche tra odontoiatri specialisti, formatori HR, architetti AI e ingegneri, con collaborazioni universitarie registrate."
+        }
       ],
-      perVerticale: {
-        trasversale: "Sei pilastri operativi dalla Carta dei Servizi per PMI, studi professionali e gruppi multi-sede.",
-        arcada: "Configurazione Arcada per cliniche e studi odontoiatrici con separazione totale tra dati clinici e rete esterna.",
-        sinter: "Configurazione Sinter per laboratori odontotecnici con gestione file STL e tracciabilità MDR.",
-        vinea: "Configurazione Vinea per cantine e filiere agricole con stazione locale e mezzi autonomi."
+      simulatore: {
+        tipo: "onboarding",
+        titolo: "Simulatore Genesi Architettura di Fondazione",
+        opzioni: [
+          { label: "Poliambulatorio Multispecialistico", tempo: "54 secondi", reparti: "6 Reparti Attivi · 26 Indici CLC · Protocollo Privacy Sanitaria" },
+          { label: "Laboratorio Odontotecnico Avanzato", tempo: "49 secondi", reparti: "6 Reparti Attivi · Tracciabilita Lotti · Telemetria Mandrini" },
+          { label: "Holding o Rete Territoriale", tempo: "58 secondi", reparti: "Nodo Centrale + Nodi Sede · Aggregazione Anonima k >= 5" }
+        ]
       }
     },
+
     {
-      id: "regia",
+      id: "atto-01",
       codice: "01",
-      titolo: "La Sala di Regia",
-      sottotitolo: "Monolito Hardware e Collaudo",
-      voce: "diego",
-      voceNome: "Diego",
-      audio: "assets/audio/stazione_01.mp3",
-      img: "assets/img/casa_presidio.jpg",
-      narrazione: "Ogni installazione nasce da un audit preliminare e da una sala di regia locale. Il Monolito Hardware viene configurato, collaudato presso i nostri laboratori e consegnato pronto per operare anche senza connessione internet.",
-      sottotitoli: [
-        { start: 0.0, end: 4.8, text: "Ogni installazione nasce da un audit preliminare e da una sala di regia locale." },
-        { start: 4.8, end: 10.6, text: "Il Monolito Hardware viene configurato e collaudato nei nostri laboratori prima della consegna." },
-        { start: 10.6, end: 14.5, text: "Progettato per continuare a funzionare anche senza collegamento esterno." }
+      titolo: "La Genesi di Victor e i Due Cervelli",
+      titoloLuce: "Victor Automa Cibernetico",
+      titoloOro: "A Doppio Cervello",
+      sottotitolo: "Istinto reattivo in 1.97 millisecondi e corteccia esplicativa vincolata alla verita dei dati",
+      domandaGuida: "Perche un modello generico che chiacchiera non puo governare un processo clinico o industriale",
+      voce: "elsa",
+      voceNome: "Elsa · Voce Atelier",
+      audio: "assets/audio/act_01.mp3",
+      video: "assets/video/act_01.mp4",
+      img: "assets/img/slide4_intelligence.png",
+      narrazioneBreve: "I modelli linguistici tradizionali parlano molto ma non hanno riflessi ne memoria operativa. Victor nasce con un'architettura radicalmente diversa, ispirata alla neurobiologia umana. Il Sistema Uno decide in un virgola novantasette millisecondi leggendo segnali nello spazio, nel tempo e nel suono. Il Sistema Due interviene solo per spiegare il perche in due righe cristalline, senza mai poter inventare un numero o alterare la decisione.",
+      perVerticale: {
+        trasversale: "Victor fonde cinque lobi sensoriali specializzati in un unico spazio latente compatto e utilizza schede verticali intercambiabili a caldo per passare da un dominio all'altro senza riaddestramenti pesanti.",
+        arcada: "In clinica il Sistema Uno intercetta all'istante anomalie di agenda, colli di bottiglia operativi e segnali geometrici o radiografici, mentre il Sistema Due formula al medico un razionale sintetico di due righe.",
+        sinter: "In laboratorio il Sistema Uno analizza geometrie 3D e spettri vibrazionali in tempo reale, isolando micro-fratture o usure prima che il pezzo entri nel forno di sinterizzazione.",
+        vinea: "In campo il Sistema Uno incrocia serie storiche microclimatiche e immagini spettrali, emettendo allerte immediate anche su hardware compatto a basso consumo."
+      },
+      cassetti: [
+        {
+          titolo: "Sistema 1 Istintivo e Sistema 2 Vincolato",
+          testo: "Il primo cervello opera in 1.97 millisecondi con matematica deterministica sul tensore di stato. Il secondo cervello traduce l'esito in linguaggio umano chiaro, confinato a un massimo di quarantacinque token e due frasi, con divieto assoluto di allucinazione."
+        },
+        {
+          titolo: "Cinque Lobi Sensoriali Nello Spazio dei Pesi",
+          testo: "Victor non legge solo testo. Possiede lobi innati per geometria tridimensionale, bio-acustica meccanica, serie storiche predittive, tabelle relazionali e visione ottica, cuciti direttamente nello spazio latente."
+        },
+        {
+          titolo: "Schede Verticali Intercambiabili a Caldo",
+          testo: "Come un abito sartoriale su un corpo atletico, Victor innesta cartucce di dominio leggere in formato safetensors che specializzano l'automa per la clinica, il laboratorio o la filiera agricola."
+        }
       ],
       schede: [
-        { badge: "Scheda 01", titolo: "Progettazione su Misura", testo: "Audit preliminare da remoto e rilievo in sede con verbale firmato e punti aperti assegnati." },
-        { badge: "Scheda 03", titolo: "Fornitura Hardware Dedicata", testo: "Postazioni operative, nodo locale, archivio ridondato e continuità elettrica." },
-        { badge: "Scheda 04", titolo: "Installazione in Serie", testo: "Due specialisti per sede, collaudo completo e avviamento guidato della squadra." }
+        {
+          badge: "SISTEMA 1",
+          titolo: "Riflesso Decisionale in 1.97 Millisecondi",
+          testo: "Valutazione istantanea dello stato operativo con registro esplicito delle regole aziendali e soglie di confidenza calibrate."
+        },
+        {
+          badge: "SISTEMA 2",
+          titolo: "Micro-Razionale Chirurgico a Due Righe",
+          testo: "Spiegazione sintetica e verificabile dell'azione proposta senza mai sovrascrivere il calcolo matematico sottostante."
+        },
+        {
+          badge: "MULTI-MODALE",
+          titolo: "Cinque Sensi Computazionali Nativi",
+          testo: "Geometria 3D, ascolto vibrazionale, previsione temporale, matrici tabellari e visione ottica fusi in un solo nucleo."
+        }
       ],
-      perVerticale: {
-        trasversale: "Architettura locale con backup cifrato e ripristino automatico notturno in caso di anomalia.",
-        arcada: "Nodo clinico in segreteria separato dai riuniti, con archivio diagnostico residente in sede.",
-        sinter: "Server di laboratorio ottimizzato per calcolo GPU locale su modelli 3D e commesse.",
-        vinea: "Server di cantina con collegamento di campo verso i mezzi autonomi e i sensori di vigneto."
+      simulatore: {
+        tipo: "latenza",
+        titolo: "Confronto Reattivita Cognitiva",
+        opzioni: [
+          { label: "Victor Sistema 1 + Sistema 2", tempo: "1.97 ms", reparti: "Decisione matematica deterministica + razionale vincolato a 2 righe" },
+          { label: "Chatbot Cloud Tradizionale", tempo: "3.400 ms", reparti: "Latenza di rete elevata · Rischio di invenzione numerica · Dati inviati all'esterno" }
+        ]
       }
     },
+
     {
-      id: "rete",
+      id: "atto-02",
       codice: "02",
-      titolo: "La Rete e i Nodi",
-      sottotitolo: "Presidio Multi-Sede e Continuità",
+      titolo: "Intelligenza Diffusa e i Due Piani Separati",
+      titoloLuce: "Intelligenza Diffusa su",
+      titoloOro: "Due Piani Separati",
+      sottotitolo: "Sovranita assoluta dei dati sensibili nel nodo di sede e governo direzionale aggregato",
+      domandaGuida: "Come si governa un intero gruppo di sedi senza mai spostare un solo dato sensibile sul cloud",
       voce: "elsa",
-      voceNome: "Elsa",
-      audio: "assets/audio/stazione_02.mp3",
-      img: "assets/img/clinica_struttura.jpg",
-      narrazione: "Quando un gruppo cresce su più sedi, la complessità esplode. TrinAI collega ogni nodo operativo in un cruscotto unico di confronto, mantenendo i dati sensibili confinati nella sede in cui nascono.",
-      sottotitoli: [
-        { start: 0.0, end: 4.5, text: "Quando un gruppo cresce su più sedi, la complessità esplode." },
-        { start: 4.5, end: 9.8, text: "TrinAI collega ogni nodo operativo in un cruscotto unico di confronto." },
-        { start: 9.8, end: 13.8, text: "I dati sensibili restano sempre confinati nella sede in cui nascono." }
+      voceNome: "Elsa · Voce Atelier",
+      audio: "assets/audio/act_02.mp3",
+      video: "assets/video/act_02.mp4",
+      img: "assets/img/slide3_architecture.png",
+      narrazioneBreve: "La vera sicurezza non si promette con una clausola, si scolpisce nella fisica delle macchine. Abbiamo diviso l'architettura in due piani invalicabili. Sul primo piano vivono le postazioni operative e il Nodo Sovrano di Sede, dove i dati sensibili restano chiusi a chiave con backup immutabile. Sul secondo piano viaggia il Nodo Direzionale di Gruppo, che riceve esclusivamente indicatori economici aggregati e anonimizzati.",
+      perVerticale: {
+        trasversale: "Ogni sede opera in totale continuita anche se internet cade grazie alla Modalita Isola. La direzione centrale governa le performance complessive tramite messaggi firmati su rete privata senza mai esporre dati personali.",
+        arcada: "In Arcada cartelle cliniche, radiografie e anamnesi non lasciano mai il Nodo Sovrano del singolo poliambulatorio. La holding legge solo margini, saturazione e flussi aggregati con soglia minima di cinque casi.",
+        sinter: "Ogni postazione CAD CAM mantiene la propria continuita locale, mentre il server di laboratorio consolida i file geometrici e la tracciabilita immutabile dei dispositivi medici su misura.",
+        vinea: "Le unita in campo operano disconnesse per giorni e inviano al centro aziendale solo i pacchetti telemetrici firmati quando tornano sotto copertura."
+      },
+      cassetti: [
+        {
+          titolo: "Livello 0 · Postazioni Operative in Modalita Isola",
+          testo: "Mini-PC silenziosi da 32 GB con cassaforte locale cifrata. Se la connessione cade, la postazione continua a lavorare senza interruzioni per tutta la giornata e sincronizza la coda al ripristino."
+        },
+        {
+          titolo: "Livello 1 · Nodo Sovrano di Sede da 128 GB",
+          testo: "Custodisce l'intero patrimonio informativo sensibile della struttura, protetto da gruppo di continuita e archivio NAS con partizione immutabile WORM contro qualsiasi tentativo di alterazione o ransomware."
+        },
+        {
+          titolo: "Livello 2 · Nodo Direzionale e Soglia k >= 5",
+          testo: "Comunica con le sedi tramite invii firmati su VPN privata senza connessioni persistenti esposte. Riceve solo indicatori statistici con almeno cinque osservazioni aggregate, rendendo matematicamente impossibile risalire al singolo individuo."
+        }
       ],
       schede: [
-        { badge: "Scheda 02", titolo: "Supervisione Dodici Mesi", testo: "Presidio sistemistico da remoto, manutenzione periodica e rilascio nuove ricette operative." },
-        { badge: "Scheda 16", titolo: "Assistenza Tracciata", testo: "Canale sicuro attivato solo con consenso del titolare e registro completo delle attività." },
-        { badge: "Continuità", titolo: "Aggiornamenti Notturni", testo: "Rollback automatico alla versione precedente se un controllo rileva un'anomalia." }
+        {
+          badge: "LIVELLO 0",
+          titolo: "Postazioni Silenziose con Continuita Isola",
+          testo: "Operativita garantita anche a rete spenta con cifratura hardware locale e zero dipendenza da server esterni."
+        },
+        {
+          badge: "LIVELLO 1",
+          titolo: "Nodo Sovrano di Sede e Archivio WORM",
+          testo: "I dati diagnostici e industriali restano fisicamente dentro le mura della sede con backup immutabile."
+        },
+        {
+          badge: "LIVELLO 2",
+          titolo: "Plancia di Gruppo a Conoscenza Zero sui Dati Sensibili",
+          testo: "Controllo strategico multi-sede basato su pacchetti firmati e aggregazioni statistiche sopra soglia."
+        }
       ],
-      perVerticale: {
-        trasversale: "Confronto prestazioni tra filiali, preparazione ordini centralizzata e accesso sicuro fuori sede.",
-        arcada: "Dieci o più cliniche sincronizzate su un unico quadro direzionale senza spostare immagini TAC.",
-        sinter: "Ponte bidirezionale cifrato tra laboratorio odontotecnico e studi clinici collegati.",
-        vinea: "Collegamento tra appezzamenti, stazione meteo-sensoriale e cantina centrale."
+      simulatore: {
+        tipo: "topologia",
+        titolo: "Simulatore Flusso Dati sui Due Piani",
+        opzioni: [
+          { label: "Piano 1 · Dentro la Sede", tempo: "100% Locale", reparti: "Anagrafiche · Immagini · Voce · Documenti custoditi sul Nodo 128 GB con WORM" },
+          { label: "Piano 2 · Verso la Holding", tempo: "Solo k >= 5", reparti: "Margine orario · Saturazione · Scostamenti trimestrali firmati via VPN privata" },
+          { label: "Guasto Connessione Internet", tempo: "Zero Fermi", reparti: "Attivazione istantanea Modalita Isola su tutte le postazioni da 32 GB" }
+        ]
       }
     },
+
     {
-      id: "precisione",
+      id: "atto-03",
       codice: "03",
-      titolo: "Strumenti di Precisione",
-      sottotitolo: "Calcolo Spaziale 3D e Controllo Umano",
+      titolo: "Il Demone Semantico e il Computer Use",
+      titoloLuce: "Demone Semantico Rust e",
+      titoloOro: "Intelligenza sul Computer Use",
+      sottotitolo: "Automazione invisibile sui vostri gestionali attuali senza toccare il mouse e senza consumare scheda video",
+      domandaGuida: "Come fa l'intelligenza artificiale a usare i vostri programmi storici senza costringervi a cambiarli",
       voce: "elsa",
-      voceNome: "Elsa",
-      audio: "assets/audio/stazione_03.mp3",
-      img: "assets/img/clinica_riunito.jpg",
-      narrazione: "L'intelligenza artificiale propone e prepara, ma non sostituisce mai il professionista. Ogni misura dichiara il proprio margine di incertezza e ogni decisione critica richiede conferma umana.",
-      sottotitoli: [
-        { start: 0.0, end: 4.8, text: "L'intelligenza artificiale propone e prepara, ma non sostituisce mai il professionista." },
-        { start: 4.8, end: 10.6, text: "Ogni misura dichiara il proprio margine di incertezza e ogni passo critico attende conferma umana." }
-      ],
-      demoLink: { label: "Apri Laboratorio 3D Interattivo", url: "arkangel_viewer/index.html" },
-      schede: [
-        { badge: "Principio", titolo: "Controllo Umano Permanente", testo: "Supervisione umana nativa, nessuna azione non annullabile parte senza conferma." },
-        { badge: "Visione 3D", titolo: "Calcolo Spaziale Proprietario", testo: "Rendering Three.js in tempo reale con punti di repere e misure trasparenti." },
-        { badge: "Determinismo", titolo: "Zero Allucinazioni sui Numeri", testo: "Calcoli economici, scorte e dosaggi eseguiti da script certificati, mai da modelli linguistici." }
-      ],
+      voceNome: "Elsa · Voce Atelier",
+      audio: "assets/audio/act_03.mp3",
+      video: "assets/video/act_03.mp4",
+      img: "assets/img/slide2_daemon.png",
+      narrazioneBreve: "Nessuno vuole buttare via anni di abitudini o cambiare il gestionale dalla sera alla mattina. Per questo abbiamo forgiato un demone nativo in linguaggio Rust che dialoga direttamente con l'albero semantico di Windows. Non ruba il cursore del mouse, non occupa un solo megabyte di scheda grafica e non clicca mai alla cieca. Prepara il lavoro dietro le quinte, impara osservando i vostri operatori e chiede sempre conferma prima di ogni azione delicata.",
+      demoLink: {
+        url: "arkangel_viewer/index.html",
+        label: "Apri Laboratorio Visivo 3D e Geometria"
+      },
       perVerticale: {
-        trasversale: "Separazione netta tra calcolo deterministico dei numeri e supporto linguistico controllato.",
-        arcada: "Dettatura vocale a mani libere al riunito, mappatura 3D e riconoscimento componenti.",
-        sinter: "Segmentazione automatica STL su MeshSegNet e verifica spessori prima del fresaggio.",
-        vinea: "Sensori LiDAR e telecamere multispettrali con arresto di sicurezza automatico in presenza di persone."
+        trasversale: "Il demone semantico legge la struttura profonda delle finestre applicative con riferimenti univoci verificati. Se una finestra cambia stato anche di un solo millisecondo, il sistema si ferma in sicurezza anziche sbagliare bersaglio.",
+        arcada: "In segreteria e in sala il demone compila schede, allinea richiami e prepara preventivi sul gestionale odontoiatrico gia in uso, lasciando all'operatore umano il sigillo finale con un solo tocco.",
+        sinter: "Sulle stazioni di modellazione il demone automatizza l'importazione delle scansioni intraorali, la catalogazione dei file STL e la compilazione delle bolle di lavorazione.",
+        vinea: "Negli uffici agritech il demone compila automaticamente i portali regionali, i registri fitosanitari e le pratiche di conformita partendo dai dati raccolti in campo."
+      },
+      cassetti: [
+        {
+          titolo: "Albero di Accessibilita Nativo e Zero Furto di Focus",
+          testo: "A differenza dei vecchi bot che muovono il cursore sullo schermo bloccando il lavoratore, il nostro demone compilato in Rust interroga le interfacce native del sistema operativo in background, consumando zero memoria video."
+        },
+        {
+          titolo: "Riferimenti Qualificati e Sicurezza Fail-Closed",
+          testo: "Ogni pulsante o campo riceve un'impronta legata all'istante esatto della schermata. Se l'interfaccia muta o un elemento diventa ambiguo, il demone blocca l'azione istantaneamente impedendo errori su dati reali."
+        },
+        {
+          titolo: "Apprendistato Guardami Lavorare e Ciclo del Sonno",
+          testo: "Gli operatori insegnano le procedure semplicemente svolgendo il proprio lavoro quotidiano. Di notte il sistema consolida le regole apprese, le verifica su casi campione e mantiene il ritorno automatico alla versione precedente in caso di scostamento."
+        }
+      ],
+      schede: [
+        {
+          badge: "RUST NATIVO",
+          titolo: "Zero Mouse Rubato e Zero Impatto VRAM",
+          testo: "Esecuzione istantanea sull'albero semantico del sistema operativo mentre l'operatore continua a lavorare liberamente."
+        },
+        {
+          badge: "PREPARA E CHIEDI",
+          titolo: "Presidio Umano sulle Azioni Critiche",
+          testo: "L'agente compila l'intero flusso operativo ma attende sempre il consenso esplicito per invii, firme o modifiche contabili."
+        },
+        {
+          badge: "CICLO NOTTURNO",
+          titolo: "Consolidamento con Ritorno Automatico",
+          testo: "Distillazione notturna dell'esperienza operativa con collaudo su casi d'oro e ripristino immediato se la precisione cala."
+        }
+      ],
+      simulatore: {
+        tipo: "computer_use",
+        titolo: "Ispezione Demone Semantico vs Bot Tradizionale",
+        opzioni: [
+          { label: "Demone Semantico TrinAI in Rust", tempo: "0 MB VRAM", reparti: "Azione in background · Verifica crittografica elemento · Presidio umano Prepara e Chiedi" },
+          { label: "Automazione Tradizionale su Schermo", tempo: "4+ GB VRAM", reparti: "Sottrae il mouse all'operatore · Fragile se una finestra si sposta · Lento" }
+        ]
       }
     },
+
     {
-      id: "risorse",
+      id: "atto-04",
       codice: "04",
-      titolo: "Risorse e Magazzino",
-      sottotitolo: "Tracciabilità Lotti e Controllo Margini",
-      voce: "diego",
-      voceNome: "Diego",
-      audio: "assets/audio/stazione_04.mp3",
-      img: "assets/img/stage_magazzino.jpg",
-      narrazione: "Basta inventari manuali a fine mese o rotture di stock improvvise. Il sistema riconosce i materiali sul vassoio, traccia lotti e scadenze e prepara gli ordini prima che le scorte finiscano.",
-      sottotitoli: [
-        { start: 0.0, end: 4.6, text: "Basta inventari manuali a fine mese o rotture di stock improvvise." },
-        { start: 4.6, end: 10.2, text: "Il sistema riconosce i materiali, traccia lotti e scadenze e prepara gli ordini in anticipo." }
+      titolo: "Dal Laboratorio alla Sede in Due Giorni",
+      titoloLuce: "Pre-Addestramento in Lab,",
+      titoloOro: "Deploy e Istruzione in 2 Giorni",
+      sottotitolo: "Audit ed estrazione dati, addestramento e collaudo nei nostri laboratori, posa fisica con vassoio ottico e formazione in 48 ore salvo imprevisti",
+      domandaGuida: "Come si installa un sistema operativo sartoriale senza mai bloccare la vostra attivita quotidiana",
+      voce: "elsa",
+      voceNome: "Elsa · Voce Atelier",
+      audio: "assets/audio/act_04.mp3",
+      video: "assets/video/act_04.mp4",
+      img: "assets/img/slide5_sterilization.png",
+      narrazioneBreve: "Non veniamo mai a fare esperimenti dentro la vostra struttura. Tutto inizia con un audit approfondito e l'estrazione sicura dei dati storici. Poi il lavoro si sposta nei laboratori TrinAI, dove pre-addestriamo i modelli e collaudiamo l'intero ambiente prima ancora di spedire una sola macchina. Quando arriviamo da voi per il deploy fisico e il vassoio ottico, bastano due giorni, salvo imprevisti, per posare i nodi e istruire tutta la squadra.",
+      perVerticale: {
+        trasversale: "Il protocollo in quattro fasi concentra tutta la complessita ingegneristica nei laboratori TrinAI. In sede avvengono solo la posa fisica dei nodi pre-collaudati e l'affiancamento pratico in due giornate lavorative salvo imprevisti.",
+        arcada: "In clinica le sale non perdono un solo paziente. I nodi arrivano gia addestrati sullo storico dello studio, con lente confinata al solo vassoio strumenti per tracciare kit e cicli d'autoclave senza mai inquadrare volti.",
+        sinter: "In laboratorio odontotecnico i modelli geometrici e acustici vengono calibrati in anticipo sulle vostre fresatrici e sui vostri forni, attivando la linea in due giorni.",
+        vinea: "In azienda agricola le mappe catastali e le serie storiche microclimatiche vengono pre-caricate in laboratorio per una messa in campo immediata."
+      },
+      cassetti: [
+        {
+          titolo: "Fase 1 e 2 · Audit, Estrazione Dati e Pre-Addestramento in Laboratorio",
+          testo: "Eseguiamo l'audit dei flussi ed estraiamo in sicurezza lo storico operativo. Nei nostri laboratori cuciamo le cartucce di Victor sui vostri dati reali e istruiamo il demone semantico sui vostri programmi prima della consegna."
+        },
+        {
+          titolo: "Fase 3 e 4 · Collaudo Ambiente e Deploy Fisico in 2 Giorni Salvo Imprevisti",
+          testo: "Ogni nodo supera il collaudo su casi campione in ambiente simulato prima di partire. La posa fisica in sede e l'istruzione operativa del personale si completano in sole due giornate lavorative, salvo imprevisti, a porte aperte e senza fermi."
+        },
+        {
+          titolo: "Vassoio Ottico Privacy-First e Udito Meccanico",
+          testo: "Durante il deploy installiamo la lente orientata esclusivamente sul vassoio degli strumenti per scaricare lotti e verificare autoclavi senza mai riprendere le persone, insieme al fonendoscopio meccanico contro i guasti improvvisi."
+        }
       ],
       schede: [
-        { badge: "Scheda 08", titolo: "Controllo di Gestione 26 Voci", testo: "Costi diretti, laboratorio, cassa, marginalità oraria e bilancio previsionale a 3-6 mesi." },
-        { badge: "Automazione", titolo: "Scarico Senza Riprendere Persone", testo: "Camera stretta sul solo vassoio operativo, senza registrazione video né riconoscimento facciale." },
-        { badge: "Manutenzione", titolo: "Ascolto Acustico Macchine", testo: "Analisi armonica su compressori e impianti per prevedere i guasti prima del fermo." }
+        {
+          badge: "FASE LAB",
+          titolo: "Audit, Estrazione e Pre-Addestramento Fuori Sede",
+          testo: "Le macchine vengono addestrate sui vostri dati storici e collaudate nei laboratori TrinAI prima di entrare in struttura."
+        },
+        {
+          badge: "DEPLOY 48 ORE",
+          titolo: "Installazione Fisica e Istruzione in 2 Giorni",
+          testo: "Messa in opera rapida e formazione pratica della squadra in due giorni lavorativi, salvo imprevisti, con zero interruzioni."
+        },
+        {
+          badge: "PRIVACY NATIVA",
+          titolo: "Vassoio Ottico e Tracciabilita Automatica",
+          testo: "Riconoscimento istantaneo di materiali, lotti e cicli di sterilizzazione sul vassoio senza mai inquadrare volti."
+        }
       ],
-      perVerticale: {
-        trasversale: "Gestione commesse, logistica predittiva, scadenzario DPI e controllo margini orari.",
-        arcada: "Tracciabilità completa impianti e cicli autoclave collegati alla scheda operativa.",
-        sinter: "Gestione materie prime, dischi zirconia e tracciabilità lotti MDR 2017/745.",
-        vinea: "Quaderno di campagna automatico, consumo prodotti e schede lotto QR verso la cantina."
+      simulatore: {
+        tipo: "vassoio",
+        titolo: "Cronoprogramma Messa in Opera Sartoriale",
+        opzioni: [
+          { label: "1 · Audit ed Estrazione Dati", tempo: "Zero Fermi Sala", reparti: "Mappatura processi · Estrazione cifrata storico · Analisi gestionale e flussi" },
+          { label: "2 · Pre-Addestramento e Collaudo Lab", tempo: "In Sede TrinAI", reparti: "Forgiatura pesi su misura · Simulazione ambiente · Test su casi d'oro prima della spedizione" },
+          { label: "3 · Deploy Fisico e Istruzione", tempo: "2 Giorni in Sede", reparti: "Posa Mini-PC e Nodo 128 GB · Taratura vassoio ottico · Istruzione pratica equipe salvo imprevisti" }
+        ]
       }
     },
+
     {
-      id: "orchestra",
+      id: "atto-05",
       codice: "05",
-      titolo: "Squadra e Formazione",
-      sottotitolo: "Ruolo, Delega e Conformità AI Act",
+      titolo: "L'Orchestra Umana e le 150 Soft Skill",
+      titoloLuce: "L'Orchestra Umana e le",
+      titoloOro: "Centocinquanta Soft Skill",
+      sottotitolo: "Potenziamento delle competenze trasversali, matrice di delega Titolare-Squadra e zero classifiche punitive",
+      domandaGuida: "Come si trasforma un gruppo di lavoro in una squadra autonoma dove il titolare smette di essere il collo di bottiglia",
       voce: "elsa",
-      voceNome: "Elsa",
-      audio: "assets/audio/stazione_05.mp3",
-      img: "assets/img/stage_personale.jpg",
-      narrazione: "La tecnologia fallisce se la squadra non la adotta. TrinAI distingue il ruolo e mai la persona, misura le dinamiche di delega e certifica l'alfabetizzazione obbligatoria prevista dall'AI Act europeo.",
-      sottotitoli: [
-        { start: 0.0, end: 4.0, text: "La tecnologia fallisce se la squadra non la adotta." },
-        { start: 4.0, end: 10.8, text: "TrinAI distingue il ruolo e mai la persona, e certifica l'alfabetizzazione prevista dall'AI Act." }
+      voceNome: "Elsa · Voce Atelier",
+      audio: "assets/audio/act_05.mp3",
+      video: "assets/video/act_05.mp4",
+      img: "assets/img/slide7_training.png",
+      narrazioneBreve: "La tecnologia fallisce quando umilia le persone o pretende di sostituirle. Noi partiamo da una regola aurea, si valuta il ruolo e il processo, mai l'essere umano. Attraverso centocinquanta scenari situazionali incrociamo lo stile di guida del titolare con le attitudini reali dei collaboratori, costruendo un piano di delega a trenta, sessanta e novanta giorni e micro-allenamenti quotidiani che fanno fiorire il talento.",
+      perVerticale: {
+        trasversale: "L'assessment psicometrico e situazionale elimina l'attrito tra direzione e operativita, affiancando a ogni figura un percorso di crescita su misura e la certificazione europea sulle competenze AI.",
+        arcada: "In clinica il sistema armonizza il passaggio di consegne tra reception, assistenti alla poltrona, igienisti e direzione sanitaria, aumentando l'accettazione naturale dei piani di cura.",
+        sinter: "In laboratorio allinea la comunicazione tecnica tra reparto CAD, ceramisti e amministrazione, riducendo i rifacimenti dovuti a incomprensioni sulle prescrizioni.",
+        vinea: "Nelle aziende agricole struttura il passaggio di responsabilita tra agronomi, capi-squadra in campo e direzione commerciale."
+      },
+      cassetti: [
+        {
+          titolo: "Mappatura Situazionale a 150 Domande",
+          testo: "Un percorso basato su casi concreti e mai invasivi misura dodici dimensioni comportamentali tra cui ascolto attivo, tenuta sotto pressione, chiarezza espositiva, attitudine alla delega e gestione delle obiezioni."
+        },
+        {
+          titolo: "Incrocio Titolare-Squadra e Piano 30 60 90 Giorni",
+          testo: "La matrice confronta la propensione al controllo del titolare con la maturita operativa di ciascun ruolo, indicando esattamente quali compiti delegare subito, quali affiancare e quali presidiare."
+        },
+        {
+          titolo: "Micro-Training su Telegram e Certificazione Articolo 4",
+          testo: "Tre minuti di allenamento pratico a settimana direttamente sul telefono del collaboratore, senza alcuna classifica punitiva tra colleghi, con rilascio dell'attestato di alfabetizzazione previsto dall'Articolo 4 del Regolamento Europeo sull'Intelligenza Artificiale."
+        }
       ],
       schede: [
-        { badge: "Scheda 13", titolo: "Certificazione Art. 4 AI Act", testo: "Percorso formativo con verifica finale e attestati nominali per il fascicolo di conformità." },
-        { badge: "HR Advisory", titolo: "Matrice 150 Soft Skill", testo: "Assessment scenario-based e cross-matching tra titolare e team per sbloccare la delega." },
-        { badge: "Principio", titolo: "Nessuna Classifica Personale", testo: "Gli indicatori leggono sedi, sale e fasce orarie, mai pagelle sui singoli collaboratori." }
+        {
+          badge: "SOFT SKILL 150",
+          titolo: "Analisi Situazionale e Matrice di Delega",
+          testo: "Allineamento scientifico tra lo stile direzionale del fondatore e l'autonomia reale di ogni ruolo operativo."
+        },
+        {
+          badge: "CRESCITA CONTINUA",
+          titolo: "Piano 30 60 90 Giorni e Pillole Settimanali",
+          testo: "Formazione gentile e progressiva che libera il tempo del titolare senza generare ansia da prestazione nel team."
+        },
+        {
+          badge: "CONFORMITA UE",
+          titolo: "Alfabetizzazione Certificata AI Act Articolo 4",
+          testo: "Percorso formativo tracciato e certificato per adempiere agli obblighi europei sulle competenze digitali del personale."
+        }
       ],
-      perVerticale: {
-        trasversale: "Piano d'azione 30 60 90 giorni, micro-learning via Telegram e mappatura corsi D.Lgs 81/08.",
-        arcada: "Permessi differenziati per ruolo, la segreteria non accede alle immagini cliniche.",
-        sinter: "Allineamento protocolli tra tecnici CAD, ceramisti e controllo qualità finale.",
-        vinea: "Checklist sicurezza pre-lavoro e istruzioni vocali sul campo per operatori agricoli."
+      simulatore: {
+        tipo: "softskill",
+        titolo: "Simulatore Matrice di Delega 30 60 90 Giorni",
+        opzioni: [
+          { label: "Giorni 1-30 · Chiarezza dei Ruoli", tempo: "+4.5 ore/sett", reparti: "Mappatura 150 scenari · Eliminazione doppioni in segreteria · Regole di ingaggio chiare" },
+          { label: "Giorni 31-60 · Delega Assistita", tempo: "+8.0 ore/sett", reparti: "Presentazione autonoma prime visite · Gestione richiami e insoluti con guida AI" },
+          { label: "Giorni 61-90 · Squadra Autonoma", tempo: "+12.5 ore/sett", reparti: "Il titolare presidia solo strategia e alta complessita · Certificazione UE completata" }
+        ]
       }
     },
+
     {
-      id: "flusso",
+      id: "atto-06",
       codice: "06",
-      titolo: "Flusso e Relazione",
-      sottotitolo: "Esperienza Fluida e Zero Pressione",
-      voce: "diego",
-      voceNome: "Diego",
-      audio: "assets/audio/stazione_06.mp3",
-      img: "assets/img/pazienti_accoglienza.jpg",
-      narrazione: "Dalla prima accoglienza al seguito nel tempo, ogni interazione è progettata per ridurre l'attrito. Comunicazione visiva chiara, richiami automatici e interfacce leggere su canali che tutti già usano.",
-      sottotitoli: [
-        { start: 0.0, end: 5.0, text: "Dalla prima accoglienza al seguito nel tempo, ogni interazione riduce l'attrito." },
-        { start: 5.0, end: 10.6, text: "Comunicazione visiva chiara, richiami automatici e interfacce leggere sui canali quotidiani." }
-      ],
-      schede: [
-        { badge: "Scheda 06-07", titolo: "Immagine e Posizionamento", testo: "Ottimizzazione locale, recensioni verificate e automazioni approvate sempre dal titolare." },
-        { badge: "Scheda 09", titolo: "Comunicazione Trasparente", testo: "Spiegazioni visive in tre opzioni con simulatore chiaro e pieno controllo all'utente." },
-        { badge: "Area 02", titolo: "OpenAPI CCIAA e Scoring", testo: "Qualificazione istantanea di clienti B2B e fornitori tramite registri camerali ufficiali." }
-      ],
-      perVerticale: {
-        trasversale: "Telegram MiniApp a barriera zero senza download da store e con firma HMAC-SHA256.",
-        arcada: "Riduzione no-show, richiami automatici igiene e preventivo comprensibile senza immagini cruente.",
-        sinter: "Catalogo ordini digitale per gli studi clienti con notifiche di avanzamento in tempo reale.",
-        vinea: "Scheda lotto con QR pubblico verso il consumatore finale e tracciabilità trasparente."
-      }
-    },
-    {
-      id: "terminale",
-      codice: "07",
-      titolo: "Terminale Mobile H24",
-      sottotitolo: "Il Cockpit Direzionale in Tasca",
-      voce: "diego",
-      voceNome: "Diego",
-      audio: "assets/audio/stazione_07.mp3",
-      img: "assets/img/stage_viaggio.jpg",
-      narrazione: "Ovunque ti trovi, il tuo Agente Speciale risponde in tempo reale. Interroghi i numeri della giornata, controlli lo stato delle sedi o dei cantieri e confermi le azioni critiche con un tocco.",
-      sottotitoli: [
-        { start: 0.0, end: 4.5, text: "Ovunque ti trovi, il tuo Agente Speciale risponde in tempo reale." },
-        { start: 4.5, end: 10.4, text: "Interroghi i numeri, controlli lo stato delle sedi e confermi le azioni critiche con un tocco." }
-      ],
-      demoLink: { label: "Apri Cockpit Direzionale Live", url: "real_cockpit/index.html" },
-      schede: [
-        { badge: "Mobile", titolo: "Accesso con Secondo Fattore", testo: "Collegamento crittografato verso il nodo di sede basato su ruolo e conferma." },
-        { badge: "Voce", titolo: "Interrogazione Naturale", testo: "Comandi vocali trascritti in locale con Whisper senza inviare audio a server esterni." },
-        { badge: "Allarmi", titolo: "Sensori Locali in Tempo Reale", testo: "Avvisi immediati per allagamento, aperture porte, fumo o derive termiche." }
-      ],
-      perVerticale: {
-        trasversale: "Cruscotto direzionale sintetico accessibile da smartphone in qualsiasi momento.",
-        arcada: "Stato poltrone, saturazione, preventivi accettati e allarmi macchine in un'unica vista.",
-        sinter: "Avanzamento commesse urgenti, colli di bottiglia fresatori e stato spedizioni.",
-        vinea: "Report di fine giornata dal vigneto, stato batteria rover e conferma trattamenti."
-      }
-    },
-    {
-      id: "sovranita",
-      codice: "08",
-      titolo: "Conformità e Chiusura",
-      sottotitolo: "Dossier Tecnico, Finanziamenti e Tempo",
+      titolo: "Comunicazione Adattiva Un Passo alla Volta",
+      titoloLuce: "Comunicazione Adattiva",
+      titoloOro: "Un Passo alla Volta",
+      sottotitolo: "La grande scuola italiana di comunicazione e gestione tradotta in intelligenza artificiale etica",
+      domandaGuida: "Perche le persone dicono di si quando si sentono comprese e protette anziche spinte all'acquisto",
       voce: "elsa",
-      voceNome: "Elsa + Diego",
-      audio: "assets/audio/stazione_08.mp3",
-      img: "assets/img/stage_santuario.jpg",
-      narrazione: "L'eccellenza tecnologica vale solo se è giuridicamente blindata e sostenibile. Consegniamo il fascicolo completo di conformità, supportiamo le perizie per i crediti d'imposta e restituiamo tempo alla tua direzione. Nessun agente speciale veste di serie.",
-      sottotitoli: [
-        { start: 0.0, end: 5.2, text: "L'eccellenza tecnologica vale solo se è giuridicamente blindata e sostenibile." },
-        { start: 5.2, end: 11.4, text: "Consegniamo il fascicolo completo di conformità e le perizie tecniche per i bandi." },
-        { start: 11.4, end: 15.0, text: "Nessun agente speciale veste di serie." }
+      voceNome: "Elsa · Voce Atelier",
+      audio: "assets/audio/act_06.mp3",
+      video: "assets/video/act_06.mp4",
+      img: "assets/img/slide8_care.png",
+      narrazioneBreve: "Abbiamo tradotto in algoritmi decenni di alta scuola italiana nella comunicazione con il paziente e il cliente. Chi ha timore non deve mai vedere immagini crude o cifre complessive che spaventano. Il sistema adatta il linguaggio, sostituisce il realismo invasivo con eleganti tavole progettuali e accompagna la persona un passo alla volta, lasciandole sempre un pulsante esplicito per fermarsi quando desidera.",
+      perVerticale: {
+        trasversale: "Ogni proposta complessa viene scomposta in tappe comprensibili, adattando registro lessicale e profondita visiva al profilo emotivo e cognitivo dell'interlocutore.",
+        arcada: "In Arcada la presentazione del piano di cura segue il ritmo emotivo del paziente. Tavole blu progettuali sostituiscono le foto chirurgiche per i soggetti ansiosi e i costi vengono presentati per singola fase terapeutica.",
+        sinter: "Nel dialogo tra laboratorio e clinico le soluzioni protesiche complesse vengono illustrate con schemi biomeccanici chiari che facilitano la condivisione con il paziente finale.",
+        vinea: "Nella vendita B2B e nell'accoglienza in tenuta il racconto tecnico del vino e della filiera si adatta automaticamente tra sommelier, importatore estero e ospite appassionato."
+      },
+      cassetti: [
+        {
+          titolo: "Adattamento del Registro e Controllo dell'Ansia",
+          testo: "L'interfaccia calibra lessico e impatto visivo sul profilo della persona. Per chi vive con apprensione l'intervento, le immagini cliniche lasciano spazio a disegni architettonici e rassicuranti che spiegano il beneficio senza generare rifiuto."
+        },
+        {
+          titolo: "Metodo Un Passo alla Volta Senza Choc Iniziale",
+          testo: "Invece di presentare subito un preventivo monolitico che blocca la decisione, il percorso mostra e valorizza una tappa alla volta, consolidando la fiducia prima del passo successivo."
+        },
+        {
+          titolo: "Il Pulsante Basta Cosi e l'Etica del Rispetto",
+          testo: "Quando la persona comprende e accetta, continuare a parlare o aggiungere dettagli tecnici rischia di riaprire il dubbio. Il sistema segnala il momento esatto dell'accordo e restituisce sempre all'interlocutore il pieno controllo del ritmo."
+        }
       ],
       schede: [
-        { badge: "Scheda 14", titolo: "Fascicolo DPIA e FRIA", testo: "Valutazioni d'impatto privacy, diritti fondamentali e dossier sicurezza di rete." },
-        { badge: "Scheda 15", titolo: "Finanziamenti e Perizie", testo: "Relazioni tecniche asseverate per Transizione 5.0, Industria 4.0 e bandi digitali." },
-        { badge: "SLA Garanzia", titolo: "Proprietà Totale dei Dati", testo: "I dati restano del cliente e vengono restituiti in formato leggibile in ogni momento." }
+        {
+          badge: "REGISTRO ADATTIVO",
+          titolo: "Stile Visivo Progettuale Anti-Ansia",
+          testo: "Schemi chiari e tavole d'atelier al posto di immagini cruente per favorire serenita e comprensione immediata."
+        },
+        {
+          badge: "PASSO ALLA VOLTA",
+          titolo: "Progressione Graduale Senza Attrito",
+          testo: "Accompagnamento per fasi logiche che elimina il blocco psicologico dei grandi importi aggregati in apertura."
+        },
+        {
+          badge: "ETICA RELAZIONALE",
+          titolo: "Saper Fermarsi nel Momento Giusto",
+          testo: "Riconoscimento dei segnali di consenso per chiudere con eleganza senza sovraccaricare di dettagli superflui."
+        }
       ],
+      simulatore: {
+        tipo: "adattivo",
+        titolo: "Simulatore Registro Comunicativo Adattivo",
+        opzioni: [
+          { label: "Interlocutore Ansioso o Prudente", tempo: "Stile Blueprint", reparti: "Tavole schematiche rassicuranti · Lessico caldo ed essenziale · Presentazione per singola fase" },
+          { label: "Interlocutore Analitico o Tecnico", tempo: "Stile Dossier", reparti: "Dettaglio geometrico e funzionale · Cronoprogramma comparato · Indicatori di durabilita" },
+          { label: "Interlocutore Rapido e Deciso", tempo: "Sintesi Esecutiva", reparti: "Obiettivo finale in 30 secondi · Tappe chiave · Attivazione immediata della prima fase" }
+        ]
+      }
+    },
+
+    {
+      id: "atto-07",
+      codice: "07",
+      titolo: "Il Valore del Minuto, il ROI e il Mercato",
+      titoloLuce: "Il Valore del Minuto,",
+      titoloOro: "Il ROI e il Mercato",
+      sottotitolo: "Ventisei indicatori calcolati con matematica esatta, radar competitivo territoriale e reputazione verificata",
+      domandaGuida: "Quanto vale davvero ogni minuto della vostra struttura quando i numeri sono calcolati senza approssimazioni",
+      voce: "elsa",
+      voceNome: "Elsa · Voce Atelier",
+      audio: "assets/audio/act_07.mp3",
+      video: "assets/video/act_07.mp4",
+      img: "assets/img/slide6_marketing.png",
+      narrazioneBreve: "Un'intelligenza artificiale seria non tira mai a indovinare con i bilanci. Nella nostra Architettura i ventisei indici del controllo di gestione sono calcolati da formule matematiche pure e certificabili. Conoscete al centesimo il costo vivo di ogni minuto operativo, recuperate i preventivi fermi con eleganza e leggete il posizionamento reale del vostro territorio attraverso i dati camerali ufficiali.",
+      demoLink: {
+        url: "real_cockpit/index.html",
+        label: "Apri Plancia Direzionale Multi-Sede Live"
+      },
       perVerticale: {
-        trasversale: "Un percorso modulare costruito su misura per restituire controllo, margine e tempo.",
-        arcada: "Conformità sanitaria, GDPR e AI Act pronti per qualunque ispezione.",
-        sinter: "Fascicolo tecnico dispositivi su misura e tracciabilità completa di filiera.",
-        vinea: "Registro inviolabile delle operazioni agricole e certificazione di sostenibilità."
+        trasversale: "Il motore finanziario separa nettamente il calcolo deterministico dalla sintesi narrativa, offrendo previsioni di cassa a novanta giorni, recupero crediti garbato e analisi di mercato su fonti ufficiali.",
+        arcada: "In Arcada le 26 voci del controllo di gestione misurano margine orario per singola poltrona e branca, tasso di accettazione, richiami dormienti e ritorno reale del passaparola.",
+        sinter: "In Sinter il controllo incrocia tempi macchina, costo materie prime per elemento protesico, marginalita per listino studio e puntualita delle consegne.",
+        vinea: "In Vinea analizza costo per ettaro e per bottiglia, rotazione delle giacenze di cantina e marginalita per canale distributivo."
+      },
+      cassetti: [
+        {
+          titolo: "Ventisei Indici Deterministici e Mai Inventati",
+          testo: "Nessun modello linguistico tocca i calcoli contabili. Script deterministici certificati elaborano ricavi, costi fissi e variabili, margine di contribuzione orario e proiezione di liquidita, consegnando all'AI solo i risultati gia verificati."
+        },
+        {
+          titolo: "Recupero Preventivi Sospesi e Crediti con Garbo",
+          testo: "Il sistema individua i piani rimasti in sospeso e i saldi scaduti, preparando comunicazioni personalizzate che riattivano la relazione con tatto senza mai sembrare solleciti automatici freddi."
+        },
+        {
+          titolo: "Radar Competitivo Camerale e Reputazione Etica",
+          testo: "Attraverso i flussi ufficiali delle Camere di Commercio, la plancia mappa la densita competitiva del bacino territoriale e valorizza la reputazione organica nel pieno rispetto della deontologia professionale."
+        }
+      ],
+      schede: [
+        {
+          badge: "26 INDICI CLC",
+          titolo: "Controllo del Minuto Operativo al Centesimo",
+          testo: "Matematica deterministica su margini orari, saturazione sale, punto di pareggio e flussi di cassa predittivi."
+        },
+        {
+          badge: "RADAR MERCATO",
+          titolo: "Analisi Territoriale da Fonti Ufficiali",
+          testo: "Lettura oggettiva del posizionamento competitivo tramite bilanci e registri camerali del bacino di riferimento."
+        },
+        {
+          badge: "RELAZIONE E VALORE",
+          titolo: "Riattivazione Elegante del Capitale Dormiente",
+          testo: "Recupero strutturato di richiami, fasi terapeutiche sospese e insoluti con messaggi cuciti sulla singola persona."
+        }
+      ],
+      simulatore: {
+        tipo: "roi",
+        titolo: "Calcolatore Valore Recuperato e ROI Annuo",
+        opzioni: [
+          { label: "Studio o Struttura Singola · 3-4 Postazioni", tempo: "+68.000 € / anno", reparti: "Recupero 14% richiami dormienti · +9% accettazione per fasi · -6 ore/sett burocrazia" },
+          { label: "Poliambulatorio Strutturato · 6-8 Postazioni", tempo: "+145.000 € / anno", reparti: "Ottimizzazione margine orario su 26 voci · Riduzione buchi agenda · Delega segreteria" },
+          { label: "Rete Multi-Sede o Gruppo · 3+ Poli", tempo: "+390.000 € / anno", reparti: "Benchmarking tra sedi k >= 5 · Controllo centralizzato acquisti e saturazione" }
+        ]
+      }
+    },
+
+    {
+      id: "atto-08",
+      codice: "08",
+      titolo: "Ricerca Fondi, Scudo Europeo e Carta Servizi",
+      titoloLuce: "Ricerca Fondi, Scudo UE",
+      titoloOro: "E Sedici Schede Sartoriali",
+      sottotitolo: "Scouting attivo di bandi nazionali e regionali, Transizione 5.0 fino al 60.1 percento, DPIA FRIA e chiusura d'Atelier",
+      domandaGuida: "Come si finanzia l'innovazione attingendo ai fondi pubblici ed europei con una blindatura legale totale",
+      voce: "elsa",
+      voceNome: "Elsa · Voce Atelier",
+      audio: "assets/audio/act_08.mp3",
+      video: "assets/video/act_08.mp4",
+      img: "assets/img/hero_trinai_luxury.png",
+      narrazioneBreve: "Non vi lasciamo mai soli davanti alla burocrazia o alla finanza agevolata. Il nostro nucleo di Ricerca Fondi seleziona per voi i bandi regionali, camerali, nazionali ed europei piu vantaggiosi, preparando le perizie tecniche per abbattere oltre il sessanta percento dell'investimento e finanziare anche la formazione del personale. Tutto blindato dalle valutazioni d'impatto europee. Nessun agente speciale veste di serie.",
+      perVerticale: {
+        trasversale: "TrinAI affianca all'ingegneria informatica la ricerca proattiva dei fondi pubblici e interprofessionali, consegnando il dossier peritale completo e sedici schede modulari attivabili su misura.",
+        arcada: "Per i poliambulatori attiviamo ricerca bandi regionali e camerali, Fondi Interprofessionali per la formazione dell'equipe, credito d'imposta innovazione e dossier DPIA e FRIA sanitario.",
+        sinter: "Per i laboratori odontotecnici e manifatturieri cumuliamo Transizione 5.0, Industria 4.0, Nuova Sabatini e bandi ISI INAIL grazie all'interconnessione nativa dei macchinari.",
+        vinea: "Per le imprese agricole incrociamo CSR, PNRR Agritech, Transizione 5.0 e agevolazioni ZES per finanziare sensori in campo e risparmio idrico ed energetico."
+      },
+      cassetti: [
+        {
+          titolo: "Ricerca Attiva di Fondi, Bandi e Formazione Finanziata",
+          testo: "Mappiamo in continuo i bandi europei, nazionali, regionali e delle Camere di Commercio compatibili con la vostra Partita IVA. Includiamo l'accesso ai Fondi Interprofessionali e al Fondo Nuove Competenze per azzerare il costo delle ore formative del personale."
+        },
+        {
+          titolo: "Perizia Tecnica e Abbattimento Fiscale Fino al 60.1%",
+          testo: "Progettiamo l'interconnessione dei nodi e la telemetria energetica per soddisfare nativamente i requisiti di Transizione 5.0, Industria 4.0 e Nuova Sabatini, consegnando la relazione tecnica pronta per il revisore e riducendo l'esborso netto a meno del quaranta percento."
+        },
+        {
+          titolo: "Scudo Legale Europeo DPIA FRIA e Le 16 Schede dell'Atelier",
+          testo: "Consegnamo la Valutazione d'Impatto GDPR Articolo 35, la valutazione sui diritti fondamentali FRIA prevista dall'AI Act e le sedici schede modulari della Carta dei Servizi per attivare solo cio che serve, un passo alla volta."
+        }
+      ],
+      schede: [
+        {
+          badge: "SCOUTING FONDI",
+          titolo: "Ricerca Bandi e Fondi Interprofessionali",
+          testo: "Individuazione e istruttoria tecnica su bandi regionali, camerali, ISI INAIL e fondi per la formazione gratuita del team."
+        },
+        {
+          badge: "FINANZA 5.0",
+          titolo: "Abbattimento Netto Fino al 60.1 Percento",
+          testo: "Perizia di interconnessione ed efficienza operativa per massimizzare i crediti d'imposta su hardware e software."
+        },
+        {
+          badge: "PILASTRO LEGALE",
+          titolo: "Dossier DPIA FRIA e 16 Schede Modulari",
+          testo: "Blindatura probatoria completa per ispezioni europee e attivazione graduale dei quattro pilastri della Carta dei Servizi."
+        }
+      ],
+      simulatore: {
+        tipo: "fiscale",
+        titolo: "Simulatore Ricerca Fondi e Cumulo Agevolazioni",
+        opzioni: [
+          { label: "Transizione 5.0 + Nuova Sabatini", tempo: "-60.1% Costo Netto", reparti: "Credito d'imposta interconnessione ed efficienza · Contributo conto impianti · Perizia inclusa" },
+          { label: "Bandi Regionali PMI + Fondi Formazione", tempo: "Fino a 100% Training", reparti: "Scouting bandi camerali e ZES · Formazione AI Act Art. 4 coperta da Fondi Interprofessionali" },
+          { label: "Scudo Europeo + 16 Schede Modulari", tempo: "100% Blindato", reparti: "DPIA Art. 35 · FRIA AI Act · Attivazione progressiva su misura con la Direzione TrinAI" }
+        ]
       }
     }
   ]

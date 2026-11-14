@@ -1,124 +1,184 @@
 {
   "stazione_00": [
     {
-      "start": 0.1,
-      "end": 2.95,
-      "text": "Benvenuto nell'Atelier TrinAI."
+      "start": 0.0,
+      "end": 4.62,
+      "text": "I luoghi che contano non hanno insegne sulla porta, hanno un invito."
     },
     {
-      "start": 2.9,
-      "end": 6.6,
-      "text": "Non vendiamo software preconfezionati a canone."
+      "start": 4.62,
+      "end": 23.6,
+      "text": "Benvenuti nell'Atelier di Trinacria Artificial Intelligence, Start-up Innovativa ad alto valore tecnologico iscritta nella Sezione Speciale del Registro delle Imprese, con collaborazioni accademiche attive per i Master di Secondo Livello sulla gestione delle strutture sanitarie."
     },
     {
-      "start": 6.6,
-      "end": 15.12,
-      "text": "Progettiamo Agenti Speciali unendo il pattern neurale Victor, il guscio di sicurezza locale Harness e un Monolito Hardware dedicato."
+      "start": 23.6,
+      "end": 26.8,
+      "text": "Qui non vendiamo software in serie."
     },
     {
-      "start": 15.12,
-      "end": 18.91,
-      "text": "Ogni dato sensibile resta dentro la tua sede."
+      "start": 26.8,
+      "end": 38.29,
+      "text": "In sessanta secondi la nostra Architettura di Fondazione legge il DNA ufficiale della vostra impresa e accende sei reparti operativi cuciti sulle vostre reali procedure."
     }
   ],
   "stazione_01": [
     {
-      "start": 0.1,
-      "end": 5.76,
-      "text": "Ogni installazione nasce da un audit preliminare e da una sala di regia locale."
+      "start": 0.0,
+      "end": 6.32,
+      "text": "I modelli linguistici tradizionali parlano molto, ma non hanno riflessi né memoria operativa."
     },
     {
-      "start": 5.71,
-      "end": 15.08,
-      "text": "Il Monolito Hardware viene configurato, collaudato presso i nostri laboratori e consegnato pronto per operare anche senza connessione internet."
+      "start": 6.32,
+      "end": 12.1,
+      "text": "Victor nasce con un'architettura a doppio cervello ispirata alla neurobiologia umana."
+    },
+    {
+      "start": 12.1,
+      "end": 19.92,
+      "text": "Il Sistema Uno decide in un virgola novantasette millisecondi leggendo segnali nello spazio, nel tempo e nel suono."
+    },
+    {
+      "start": 19.92,
+      "end": 29.44,
+      "text": "Il Sistema Due interviene solo per spiegare il perché in due righe cristalline, senza mai poter inventare un numero o alterare la decisione."
     }
   ],
   "stazione_02": [
     {
-      "start": 0.1,
-      "end": 4.32,
-      "text": "Quando un gruppo cresce su più sedi, la complessità esplode."
+      "start": 0.0,
+      "end": 6.32,
+      "text": "La vera sicurezza non si promette con una clausola, si scolpisce nella fisica delle macchine."
     },
     {
-      "start": 4.27,
-      "end": 13.06,
-      "text": "TrinAI collega ogni nodo operativo in un cruscotto unico di confronto, mantenendo i dati sensibili confinati nella sede in cui nascono."
+      "start": 6.32,
+      "end": 10.13,
+      "text": "Abbiamo diviso l'architettura in due piani invalicabili."
+    },
+    {
+      "start": 10.13,
+      "end": 20.47,
+      "text": "Sul primo piano vivono le postazioni in Modalità Isola e il Nodo Sovrano di Sede, dove i dati sensibili restano chiusi a chiave con archivio immutabile."
+    },
+    {
+      "start": 20.47,
+      "end": 29.24,
+      "text": "Sul secondo piano viaggia il Nodo Direzionale di Gruppo, che riceve esclusivamente indicatori economici aggregati e anonimizzati."
     }
   ],
   "stazione_03": [
     {
-      "start": 0.1,
-      "end": 5.87,
-      "text": "L'intelligenza artificiale propone e prepara, ma non sostituisce mai il professionista."
+      "start": 0.0,
+      "end": 6.32,
+      "text": "Nessuno vuole buttare via anni di abitudini o cambiare il gestionale dalla sera alla mattina."
     },
     {
-      "start": 5.82,
-      "end": 12.42,
-      "text": "Ogni misura dichiara il proprio margine di incertezza e ogni decisione critica richiede conferma umana."
+      "start": 6.32,
+      "end": 15.44,
+      "text": "Per questo abbiamo forgiato un demone nativo in linguaggio Rust che dialoga direttamente con l'albero semantico del sistema operativo."
+    },
+    {
+      "start": 15.44,
+      "end": 21.28,
+      "text": "Non ruba il cursore del mouse, non consuma scheda grafica e non clicca mai alla cieca."
+    },
+    {
+      "start": 21.28,
+      "end": 29.99,
+      "text": "Prepara il lavoro dietro le quinte, impara osservando i vostri operatori e chiede sempre conferma prima di ogni azione delicata."
     }
   ],
   "stazione_04": [
     {
-      "start": 0.1,
-      "end": 5.18,
-      "text": "Basta inventari manuali a fine mese o rotture di stock improvvise."
+      "start": 0.0,
+      "end": 4.22,
+      "text": "Non veniamo mai a fare esperimenti dentro la vostra struttura."
     },
     {
-      "start": 5.13,
-      "end": 13.36,
-      "text": "Il sistema riconosce i materiali sul vassoio, traccia lotti e scadenze e prepara gli ordini prima che le scorte finiscano."
+      "start": 4.22,
+      "end": 9.52,
+      "text": "Tutto inizia con un audit approfondito e l'estrazione sicura dei dati storici."
+    },
+    {
+      "start": 9.52,
+      "end": 19.86,
+      "text": "Poi il lavoro si sposta nei laboratori TrinAI, dove pre-addestriamo i modelli e collaudiamo l'intero ambiente prima ancora di spedire una sola macchina."
+    },
+    {
+      "start": 19.86,
+      "end": 30.06,
+      "text": "Quando arriviamo da voi per il deploy fisico e il vassoio ottico, bastano due giorni, salvo imprevisti, per posare i nodi e istruire tutta la squadra."
     }
   ],
   "stazione_05": [
     {
-      "start": 0.1,
-      "end": 3.39,
-      "text": "La tecnologia fallisce se la squadra non la adotta."
+      "start": 0.0,
+      "end": 5.03,
+      "text": "La tecnologia fallisce quando umilia le persone o pretende di sostituirle."
     },
     {
-      "start": 3.34,
-      "end": 12.71,
-      "text": "TrinAI distingue il ruolo e mai la persona, misura le dinamiche di delega e certifica l'alfabetizzazione obbligatoria prevista dall'AI Act europeo."
+      "start": 5.03,
+      "end": 10.95,
+      "text": "Noi partiamo da una regola aurea: si valuta il ruolo e il processo, mai l'essere umano."
+    },
+    {
+      "start": 10.95,
+      "end": 29.78,
+      "text": "Attraverso centocinquanta scenari situazionali incrociamo lo stile di guida del titolare con le attitudini reali dei collaboratori, costruendo un piano di delega a trenta, sessanta e novanta giorni che libera il vostro tempo e certifica la squadra secondo le normative europee."
     }
   ],
   "stazione_06": [
     {
-      "start": 0.1,
-      "end": 6.88,
-      "text": "Dalla prima accoglienza al seguito nel tempo, ogni interazione è progettata per ridurre l'attrito."
+      "start": 0.0,
+      "end": 7.55,
+      "text": "Abbiamo tradotto in algoritmi decenni di alta scuola italiana nella comunicazione con il paziente e il cliente."
     },
     {
-      "start": 6.83,
-      "end": 13.89,
-      "text": "Comunicazione visiva chiara, richiami automatici e interfacce leggere su canali che tutti già usano."
+      "start": 7.55,
+      "end": 13.26,
+      "text": "Chi ha timore non deve mai vedere immagini crude o cifre complessive che spaventano."
+    },
+    {
+      "start": 13.26,
+      "end": 27.0,
+      "text": "Il sistema adatta il linguaggio, sostituisce il realismo invasivo con eleganti tavole progettuali e accompagna la persona un passo alla volta, lasciandole sempre il pieno controllo del proprio percorso."
     }
   ],
   "stazione_07": [
     {
-      "start": 0.1,
-      "end": 5.1,
-      "text": "Ovunque ti trovi, il tuo Agente Speciale risponde in tempo reale."
+      "start": 0.0,
+      "end": 5.03,
+      "text": "Un'intelligenza artificiale seria non tira mai a indovinare con i bilanci."
     },
     {
-      "start": 5.05,
-      "end": 13.38,
-      "text": "Interroghi i numeri della giornata, controlli lo stato delle sedi o dei cantieri e confermi le azioni critiche con un tocco."
+      "start": 5.03,
+      "end": 13.8,
+      "text": "Nella nostra Architettura i ventisei indici del controllo di gestione sono calcolati da formule matematiche pure e certificabili."
+    },
+    {
+      "start": 13.8,
+      "end": 27.34,
+      "text": "Conoscete al centesimo il valore vivo di ogni minuto operativo, riattivate con garbo i preventivi sospesi e leggete il posizionamento reale del vostro territorio attraverso i dati camerali ufficiali."
     }
   ],
   "stazione_08": [
     {
-      "start": 0.1,
-      "end": 5.75,
-      "text": "L'eccellenza tecnologica vale solo se è giuridicamente blindata e sostenibile."
+      "start": 0.0,
+      "end": 5.03,
+      "text": "Non vi lasciamo mai soli davanti alla burocrazia o alla finanza agevolata."
     },
     {
-      "start": 5.7,
-      "end": 14.53,
-      "text": "Consegniamo il fascicolo completo di conformità, supportiamo le perizie per i crediti d'imposta e restituiamo tempo alla tua direzione."
+      "start": 5.03,
+      "end": 22.44,
+      "text": "Il nostro nucleo di Ricerca Fondi seleziona per voi i bandi regionali, camerali, nazionali ed europei più vantaggiosi, preparando le perizie tecniche per abbattere oltre il sessanta percento dell'investimento e finanziare anche la formazione del personale."
     },
     {
-      "start": 14.52,
-      "end": 17.83,
+      "start": 22.44,
+      "end": 25.91,
+      "text": "Tutto blindato dalle valutazioni d'impatto europee."
+    },
+    {
+      "start": 25.91,
+      "end": 29.11,
       "text": "Nessun agente speciale veste di serie."
     }
   ]
