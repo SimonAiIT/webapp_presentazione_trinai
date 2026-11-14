@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>TrinAI Atelier — Presentazione Riservata</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/atelier.css">
+
+  <script src="assets/js/three.min.js" defer></script>
+  <script src="assets/js/suoni.js" defer></script>
+  <script src="assets/js/security-lock.js" defer></script>
+  <script src="assets/js/atelier-data.js" defer></script>
+  <script src="assets/js/audio-hud.js" defer></script>
+  <script src="assets/js/atelier-app.js" defer></script>
+</head>
+<body>
+
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- SECURITY GATE -->
+  <section id="gate-screen" aria-label="Accesso Riservato TrinAI Atelier">
+    <div class="gate-card">
+      <div class="gate-logo-row">
+        <img src="assets/img/trinai_scritta_bianca.png" alt="TrinAI" class="gate-logo">
+        <span class="gate-status-pill"><span class="pulse-dot"></span> Accesso Protetto</span>
+      </div>
+
+      <h1 class="gate-title">TrinAI Atelier</h1>
+      <p class="gate-subtitle">
+        Presentazione interattiva parlante. Inserisci il codice personale ricevuto dalla direzione per sbloccare le nove stazioni e l'audio narrante.
+      </p>
+
+      <form id="gate-form" class="gate-form" autocomplete="off">
+        <input
+          id="gate-code-input"
+          class="gate-input"
+          type="password"
+          placeholder="CODICE DI ACCESSO"
+          required
+          autocapitalize="characters"
+        >
+        <button type="submit" class="gate-btn">
+          <span>Inizializza Esperienza</span>
+          <span>→</span>
+        </button>
+        <div id="gate-error" class="gate-error" role="alert"></div>
+      </form>
+
+      <div class="gate-footnote">
+        Sessione tracciata con filigrana dinamica. L'accesso attiva il motore audio sincronizzato Diego ed Elsa su dispositivo mobile.
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN SPA SHELL -->
+  <div id="app-shell">
+    <header class="topbar">
+      <div class="topbar-brand">
+        <img src="assets/img/trinai_scritta_bianca.png" alt="TrinAI">
+        <span id="topbar-station-count" class="topbar-station-count">00 / 08</span>
+      </div>
+      <div class="topbar-actions">
+        <button id="btn-sound-toggle" class="icon-btn active" type="button">Ambiente ON</button>
+      </div>
+    </header>
+
+    <!-- Selettore Verticale -->
+    <nav id="vertical-bar" class="vertical-bar" aria-label="Selettore di Verticale"></nav>
+
+    <!-- Mappa Rapida 9 Stazioni -->
+    <nav id="station-nav-strip" class="station-nav-strip" aria-label="Stazioni Atelier"></nav>
+
+    <!-- Contenuto Dinamico Stazione -->
+    <main id="stage-root"></main>
+
+    <!-- Sottotitoli Live -->
+    <div id="hud-subtitle-wrap">
+      <div id="hud-subtitle-text"></div>
+    </div>
+
+    <!-- HUD Audio Persistente -->
+    <footer class="audio-hud">
+      <div class="hud-progress-track">
+        <div id="hud-audio-progress"></div>
+      </div>
+      <div class="hud-controls-row">
+        <div id="hud-speaker-badge" class="hud-speaker-badge" data-voice="diego">
+          <span id="hud-voice-wave" class="voice-orb"></span>
+          <span id="hud-speaker-name" class="speaker-label">Diego</span>
+        </div>
+
+        <div class="hud-nav-group">
+          <button id="hud-prev-btn" class="hud-btn" type="button" aria-label="Stazione precedente">←</button>
+          <button id="hud-play-btn" class="hud-btn hud-btn-primary" type="button" aria-label="Pausa o riprendi">Play</button>
+          <button id="hud-next-btn" class="hud-btn" type="button" aria-label="Stazione successiva">→</button>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- MODAL LABORATORI INTERATTIVI -->
+  <div id="lab-modal" role="dialog" aria-modal="true" aria-label="Laboratorio Interattivo">
+    <div class="lab-modal-bar">
+      <span id="lab-modal-title" class="speaker-label">Laboratorio Interattivo</span>
+      <button id="btn-close-lab" class="icon-btn active" type="button">Chiudi ×</button>
+    </div>
+    <iframe id="lab-iframe" title="Laboratorio TrinAI"></iframe>
+  </div>
+
+</body>
+</html>

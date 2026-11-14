@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- ArkAng-EL Simplified High-Legibility Icon (24px-64px) -->
+  <g id="ala-sinistra-ico">
+    <polygon points="8,12 16,36 36,34 26,18" fill="#1558c9" stroke="#8fb8f5" stroke-width="2.5" stroke-linejoin="round" />
+    <polygon points="22,30 14,48 32,44 36,34" fill="#d4ff24" stroke="#d4ff24" stroke-width="2.0" stroke-linejoin="round" />
+    <polygon points="32,44 28,82 38,58" fill="#1558c9" stroke="#8fb8f5" stroke-width="2.2" stroke-linejoin="round" />
+  </g>
+  <g id="ala-destra-ico">
+    <use href="#ala-sinistra-ico" transform="translate(100, 0) scale(-1, 1)" />
+  </g>
+  <!-- Simplified Dental Arch (14 high-contrast tooth units) -->
+  <ellipse cx="50" cy="46" rx="17" ry="23" fill="#061224" stroke="#4d8df0" stroke-width="1.8" />
+  <circle cx="53.8" cy="23.6" r="2.2" fill="#d4ff24" />
+  <circle cx="60.6" cy="28.0" r="2.2" fill="#e9eef7" />
+  <circle cx="65.3" cy="36.0" r="2.2" fill="#e9eef7" />
+  <circle cx="67.0" cy="46.0" r="2.2" fill="#e9eef7" />
+  <circle cx="65.3" cy="56.0" r="2.2" fill="#e9eef7" />
+  <circle cx="60.6" cy="64.0" r="2.2" fill="#e9eef7" />
+  <circle cx="53.8" cy="68.4" r="2.2" fill="#d4ff24" />
+  <circle cx="46.2" cy="68.4" r="2.2" fill="#d4ff24" />
+  <circle cx="39.4" cy="64.0" r="2.2" fill="#e9eef7" />
+  <circle cx="34.7" cy="56.0" r="2.2" fill="#e9eef7" />
+  <circle cx="33.0" cy="46.0" r="2.2" fill="#e9eef7" />
+  <circle cx="34.7" cy="36.0" r="2.2" fill="#e9eef7" />
+  <circle cx="39.4" cy="28.0" r="2.2" fill="#e9eef7" />
+  <circle cx="46.2" cy="23.6" r="2.2" fill="#d4ff24" />
+  <circle cx="50" cy="46" r="9" fill="none" stroke="#8fb8f5" stroke-width="1.8" />
+  <line x1="42" y1="46" x2="58" y2="46" stroke="#8fb8f5" stroke-width="1.6" />
+  <line x1="50" y1="38" x2="50" y2="54" stroke="#8fb8f5" stroke-width="1.6" />
+  <line x1="50" y1="46" x2="62" y2="34" stroke="#d4ff24" stroke-width="2.2" stroke-linecap="round" />
+  <circle cx="50" cy="46" r="1.8" fill="#e9eef7" />
+</svg>

@@ -1,0 +1,1885 @@
+﻿/* ==========================================================================
+   VICTOR · Arcada Demo — COCKPIT DIREZIONALE
+   DIREZIONE DI STILE: SALA DI CONTROLLO VIVA (REEL DI RIFERIMENTO)
+   Atelier TrinAI · Architettura a 60 FPS con Staffe agli Angoli
+   ========================================================================== */
+
+:root {
+  /* Fondi Sala di Controllo */
+  --bg-canvas: #070a0f;
+  --bg-panel: #0c111a;
+  --bg-panel-header: #101724;
+  --bg-subpanel: #080d15;
+  --bg-card: rgba(14, 21, 33, 0.7);
+  --bg-overlay: rgba(7, 10, 15, 0.88);
+
+  /* Accenti Cromatici di Riferimento */
+  --accent-orange: #f97316;
+  --accent-orange-glow: rgba(249, 115, 22, 0.28);
+  --accent-orange-dim: rgba(249, 115, 22, 0.12);
+
+  --accent-cyan: #38bdf8;
+  --accent-cyan-glow: rgba(56, 189, 248, 0.28);
+  --accent-cyan-dim: rgba(56, 189, 248, 0.12);
+
+  --accent-green: #10b981;
+  --accent-green-glow: rgba(16, 185, 129, 0.28);
+  --accent-green-dim: rgba(16, 185, 129, 0.12);
+
+  --accent-purple: #a855f7;
+  --accent-purple-glow: rgba(168, 85, 247, 0.28);
+  --accent-purple-dim: rgba(168, 85, 247, 0.12);
+
+  --accent-pink: #ec4899;
+  --accent-pink-glow: rgba(236, 72, 153, 0.28);
+  --accent-pink-dim: rgba(236, 72, 153, 0.12);
+
+  --accent-gold: #c9a24b;
+  --accent-gold-glow: rgba(201, 162, 75, 0.28);
+  --accent-gold-dim: rgba(201, 162, 75, 0.12);
+
+  --petrol-Arcada: #00364a;
+  --petrol-Arcada-light: #0d4a63;
+
+  /* Testi e Contrasto */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-dimmed: #475569;
+
+  /* Bordi e Griglia */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.14);
+  --border-highlight: rgba(249, 115, 22, 0.4);
+
+  /* Tipografia */
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-brand: 'Titillium Web', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --trans-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --trans-smooth: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset Globale */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: var(--bg-canvas);
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: -1px -1px;
+}
+
+/* ==========================================================================
+   1. TESTATA SUPERIORE A 4 CONTATORI E BADGE ARANCIO
+   ========================================================================== */
+.cockpit-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background-color: #080c14;
+  border-bottom: 1px solid var(--border-subtle);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  gap: 20px;
+}
+
+.header-left-col {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+/* Riquadro arancione pieno di riferimento: VICTOR · Arcada Demo */
+.brand-hero-block {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.brand-hero-pill {
+  background-color: var(--accent-orange);
+  color: #070a0f;
+  font-family: var(--font-mono);
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+  padding: 6px 14px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 0 16px var(--accent-orange-glow);
+  text-transform: uppercase;
+}
+
+.brand-hero-pill .pill-star {
+  font-size: 12px;
+}
+
+.brand-hero-meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  padding-left: 2px;
+}
+
+/* Dicitura centrale di sincronizzazione */
+.header-center-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+  flex: 1;
+}
+
+.header-mission-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.mission-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-green);
+  box-shadow: 0 0 8px var(--accent-green);
+  animation: pulseGreen 2s infinite ease-in-out;
+}
+
+@keyframes pulseGreen {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.header-lobi-strip {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dimmed);
+  letter-spacing: 0.4px;
+}
+
+.header-lobi-strip span {
+  color: var(--text-secondary);
+}
+
+/* 4 Grandi Contatori di Riferimento a destra */
+.header-right-col {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.header-counters {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-right: 16px;
+  border-right: 1px solid var(--border-subtle);
+}
+
+.counter-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.counter-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.6px;
+  margin-bottom: 2px;
+}
+
+.counter-value {
+  font-family: var(--font-mono);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text-primary);
+  font-feature-settings: "tnum" 1;
+}
+
+.counter-value.c-cyan {
+  color: var(--accent-cyan);
+  text-shadow: 0 0 12px var(--accent-cyan-glow);
+}
+
+.counter-value.c-orange {
+  color: var(--accent-orange);
+  text-shadow: 0 0 12px var(--accent-orange-glow);
+}
+
+.counter-value.c-gold {
+  color: var(--accent-gold);
+}
+
+/* Azioni testata: Privacy Toggle & Firma Atelier */
+.header-meta-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.btn-privacy-toggle {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--trans-fast);
+}
+
+.btn-privacy-toggle:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--border-medium);
+  color: var(--text-primary);
+}
+
+.btn-privacy-toggle.active {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  background: var(--accent-gold-dim);
+}
+
+.header-signatures {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-dimmed);
+}
+
+.header-signatures img {
+  height: 16px;
+  width: auto;
+  opacity: 0.7;
+}
+
+.discreet-demo-badge {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--accent-gold);
+  border: 1px dashed rgba(245, 158, 11, 0.3);
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 9px;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   2. BARRA DI NAVIGAZIONE A 8 TAB IN MONOSPAZIO
+   ========================================================================== */
+.cockpit-nav {
+  display: flex;
+  align-items: stretch;
+  background-color: #0a0f18;
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 0 14px;
+  gap: 2px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.cockpit-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-tab {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.35px;
+  padding: 10px 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: var(--trans-fast);
+}
+
+.nav-tab .tab-idx {
+  color: var(--text-dimmed);
+  font-weight: 600;
+}
+
+.nav-tab:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.nav-tab.active {
+  color: var(--accent-orange);
+  border-bottom-color: var(--accent-orange);
+  background: rgba(249, 115, 22, 0.04);
+}
+
+.nav-tab.active .tab-idx {
+  color: var(--accent-orange);
+}
+
+.tab-badge {
+  background: var(--accent-orange);
+  color: #000;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   3. STRUTTURA DELLE VISTE E PANNELLI CON STAFFE AGLI ANGOLI
+   ========================================================================== */
+.cockpit-viewport {
+  flex: 1;
+  padding: 20px 24px;
+  max-width: 1680px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.view-container {
+  display: none;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.view-container.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* IL PANNELLO CON LE STAFFE AGLI ANGOLI (Corner Brackets) */
+.ctrl-panel {
+  position: relative;
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: 2px;
+  margin-bottom: 20px;
+  --bracket-color: var(--accent-orange);
+}
+
+/* Le 4 Staffe a "L" */
+.ctrl-panel .bracket {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.ctrl-panel .bracket.tl {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid var(--bracket-color);
+  border-left: 2px solid var(--bracket-color);
+}
+
+.ctrl-panel .bracket.tr {
+  top: -1px;
+  right: -1px;
+  border-top: 2px solid var(--bracket-color);
+  border-right: 2px solid var(--bracket-color);
+}
+
+.ctrl-panel .bracket.bl {
+  bottom: -1px;
+  left: -1px;
+  border-bottom: 2px solid var(--bracket-color);
+  border-left: 2px solid var(--bracket-color);
+}
+
+.ctrl-panel .bracket.br {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid var(--bracket-color);
+  border-right: 2px solid var(--bracket-color);
+}
+
+/* Variazioni cromatiche delle staffe */
+.ctrl-panel.bracket-cyan {
+  --bracket-color: var(--accent-cyan);
+}
+.ctrl-panel.bracket-green {
+  --bracket-color: var(--accent-green);
+}
+.ctrl-panel.bracket-purple {
+  --bracket-color: var(--accent-purple);
+}
+.ctrl-panel.bracket-pink {
+  --bracket-color: var(--accent-pink);
+}
+.ctrl-panel.bracket-gold {
+  --bracket-color: var(--accent-gold);
+}
+
+/* Intestazione Pannello Monospazio Numerata (stile riferimento) */
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  background-color: var(--bg-panel-header);
+  border-bottom: 1px solid var(--border-subtle);
+  font-family: var(--font-mono);
+}
+
+.panel-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.panel-num-pill {
+  background-color: var(--bracket-color);
+  color: #070a0f;
+  font-weight: 800;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 2px;
+  letter-spacing: 0.5px;
+}
+
+.panel-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-primary);
+}
+
+.panel-subtitle {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.4px;
+}
+
+.panel-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.panel-telemetry-tag {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.panel-telemetry-tag strong {
+  color: var(--text-secondary);
+}
+
+.panel-body {
+  padding: 16px;
+  position: relative;
+}
+
+/* ==========================================================================
+   4. TORRE DI CONTROLLO: IL GRAFO VIVO A 60 FPS (HERO PANEL)
+   ========================================================================== */
+.graph-container {
+  position: relative;
+  width: 100%;
+  height: 570px;
+  background-color: #070b12;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+#grafoMemoriaCanvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+
+#grafoMemoriaCanvas:active {
+  cursor: grabbing;
+}
+
+/* Legenda Nodi a sinistra nel pannello del Grafo */
+.graph-legend-overlay {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(12, 17, 26, 0.85);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(8px);
+  padding: 10px 14px;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  z-index: 10;
+  pointer-events: auto;
+  min-width: 190px;
+}
+
+.legend-title {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.6px;
+  margin-bottom: 8px;
+}
+
+.legend-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+  gap: 12px;
+}
+
+.legend-row-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot-orange { background-color: var(--accent-orange); box-shadow: 0 0 6px var(--accent-orange); }
+.dot-cyan { background-color: var(--accent-cyan); box-shadow: 0 0 6px var(--accent-cyan); }
+.dot-green { background-color: var(--accent-green); box-shadow: 0 0 6px var(--accent-green); }
+.dot-purple { background-color: var(--accent-purple); box-shadow: 0 0 6px var(--accent-purple); }
+.dot-pink { background-color: var(--accent-pink); box-shadow: 0 0 6px var(--accent-pink); }
+.dot-gold { background-color: var(--accent-gold); box-shadow: 0 0 6px var(--accent-gold); }
+
+.legend-val {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.legend-footer {
+  font-size: 9.5px;
+  color: var(--text-dimmed);
+  margin-top: 8px;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 6px;
+  letter-spacing: 0.3px;
+}
+
+/* Card HUD Dinamica che segue l'evento live del Grafo */
+.graph-hud-card {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(12, 17, 26, 0.9);
+  border: 1px solid var(--border-medium);
+  backdrop-filter: blur(8px);
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  z-index: 10;
+  max-width: 380px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  border-left: 3px solid var(--accent-orange);
+  transition: var(--trans-fast);
+}
+
+.hud-top-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.hud-tag {
+  background: var(--accent-orange-dim);
+  color: var(--accent-orange);
+  font-size: 9.5px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 2px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.hud-time {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.hud-event-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  line-height: 1.35;
+}
+
+.hud-event-detail {
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* Pillole flottanti sui nodi del grafo disegnate dal canvas */
+
+/* ==========================================================================
+   5. GRIGLIA PANNELLI VIVI INFERIORE (02 ALBERO, 03 MEMORIA, 04 COMPAGNO, 05 CICLO, 06 MAPPA)
+   ========================================================================== */
+.panels-grid-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.panels-grid-trio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* PANNELLO 02: ALBERO DEI LOBI E 10 SEDI */
+.tree-panel-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.tree-code-sidebar {
+  background-color: var(--bg-subpanel);
+  border: 1px solid var(--border-subtle);
+  border-radius: 2px;
+  padding: 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tree-code-sidebar .code-line {
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.tree-code-sidebar .code-comment {
+  color: var(--text-dimmed);
+}
+
+.tree-code-sidebar .code-accent {
+  color: var(--accent-cyan);
+}
+
+.tree-code-sidebar .code-orange {
+  color: var(--accent-orange);
+}
+
+.tree-canvas-wrapper {
+  position: relative;
+  background-color: var(--bg-subpanel);
+  border: 1px solid var(--border-subtle);
+  border-radius: 2px;
+  height: 250px;
+  overflow: hidden;
+}
+
+#treeBezierSvg {
+  width: 100%;
+  height: 100%;
+}
+
+/* PANNELLO 03: AI-MEMORY E SCANSIONI */
+.memory-tasks-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.memory-task-card {
+  background-color: var(--bg-subpanel);
+  border: 1px solid var(--border-subtle);
+  border-radius: 2px;
+  padding: 12px 14px;
+  font-family: var(--font-mono);
+}
+
+.task-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.task-card-title {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.progress-track {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.6s ease;
+  position: relative;
+}
+
+.fill-orange {
+  background: linear-gradient(90deg, #ea580c, #f97316);
+  box-shadow: 0 0 10px var(--accent-orange);
+}
+
+.fill-cyan {
+  background: linear-gradient(90deg, #0284c7, #38bdf8);
+  box-shadow: 0 0 10px var(--accent-cyan);
+}
+
+.memory-subboxes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.subbox-terminal {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border-subtle);
+  border-radius: 2px;
+  padding: 8px 10px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+}
+
+.subbox-name {
+  color: var(--text-muted);
+  margin-bottom: 3px;
+}
+
+.subbox-val {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* PANNELLO 04: COMPAGNO DIREZIONALE & VOCE */
+.voice-phone-viewport {
+  background-color: var(--bg-subpanel);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 250px;
+}
+
+.phone-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 8px;
+}
+
+.phone-chat-bubble {
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.bubble-user {
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  color: var(--accent-cyan);
+  align-self: flex-start;
+  font-family: var(--font-mono);
+}
+
+.bubble-victor {
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.2);
+  color: var(--text-primary);
+}
+
+.voice-waveform-container {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 38px;
+  padding: 4px 8px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+}
+
+.wave-bar {
+  flex: 1;
+  background-color: var(--accent-cyan);
+  border-radius: 1px;
+  min-height: 4px;
+  animation: waveMotion 1.2s infinite ease-in-out;
+}
+
+@keyframes waveMotion {
+  0%, 100% { height: 15%; opacity: 0.3; }
+  50% { height: 95%; opacity: 1; background-color: var(--accent-orange); }
+}
+
+/* PANNELLO 05: CICLO GIORNO/NOTTE & LEZIONI */
+.cycle-panel-layout {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+  align-items: center;
+  min-height: 250px;
+}
+
+.analog-clock-container {
+  width: 130px;
+  height: 130px;
+  position: relative;
+  margin: 0 auto;
+}
+
+#dialClockSvg {
+  width: 100%;
+  height: 100%;
+}
+
+.rules-dot-matrix-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: var(--font-mono);
+}
+
+.dot-matrix-title {
+  font-size: 10.5px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.dot-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 4px;
+  background: var(--bg-subpanel);
+  padding: 10px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 2px;
+}
+
+.dot-cell {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+}
+
+.dot-cell.lit-cyan {
+  background: var(--accent-cyan);
+  box-shadow: 0 0 6px var(--accent-cyan);
+}
+
+.dot-cell.lit-pink {
+  background: var(--accent-pink);
+  box-shadow: 0 0 6px var(--accent-pink);
+}
+
+.dot-cell.lit-green {
+  background: var(--accent-green);
+  box-shadow: 0 0 6px var(--accent-green);
+}
+
+.rule-active-pill {
+  font-size: 11px;
+  color: var(--text-secondary);
+  border-left: 2px solid var(--accent-pink);
+  padding-left: 8px;
+  line-height: 1.4;
+}
+
+/* PANNELLO 06: MAPPA A CELLE DELLE 46 POLTRONE */
+.cell-matrix-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 250px;
+}
+
+.cell-matrix-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.matrix-legend-pills {
+  display: flex;
+  gap: 8px;
+}
+
+.matrix-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  color: var(--text-secondary);
+}
+
+.cell-grid-46 {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 6px;
+  background: var(--bg-subpanel);
+  padding: 12px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 2px;
+}
+
+.postazione-cell {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  font-weight: 700;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  border: 1px solid transparent;
+}
+
+.postazione-cell:hover {
+  transform: scale(1.15);
+  z-index: 10;
+}
+
+.cell-surgery {
+  background: rgba(16, 185, 129, 0.18);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: #34d399;
+}
+
+.cell-visit {
+  background: rgba(249, 115, 22, 0.18);
+  border-color: rgba(249, 115, 22, 0.4);
+  color: #fb923c;
+}
+
+.cell-sanitizing {
+  background: rgba(168, 85, 247, 0.18);
+  border-color: rgba(168, 85, 247, 0.4);
+  color: #c084fc;
+}
+
+.cell-free {
+  background: rgba(56, 189, 248, 0.18);
+  border-color: rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
+}
+
+.roadmap-flags-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-top: 4px;
+}
+
+.flag-chip {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  padding: 4px 8px;
+  border-radius: 2px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.flag-icon {
+  color: var(--accent-orange);
+}
+
+/* ==========================================================================
+   6. STRISCIA DI NOTIZIE SCORREVOLE CONTINUA (LIVE MARQUEE)
+   ========================================================================== */
+.cockpit-news-marquee {
+  display: flex;
+  align-items: center;
+  background-color: #080c14;
+  border-top: 1px solid var(--border-subtle);
+  height: 38px;
+  overflow: hidden;
+  position: sticky;
+  bottom: 0;
+  z-index: 90;
+}
+
+.marquee-badge {
+  background-color: var(--accent-orange);
+  color: #070a0f;
+  font-family: var(--font-mono);
+  font-weight: 800;
+  font-size: 10.5px;
+  padding: 0 14px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  letter-spacing: 0.6px;
+  z-index: 2;
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: marqueeScroll 45s linear infinite;
+  gap: 32px;
+  padding-left: 20px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--text-secondary);
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.news-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.news-time {
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+.news-tag {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-primary);
+  padding: 1px 6px;
+  border-radius: 2px;
+  font-size: 10px;
+}
+
+.news-sep {
+  color: var(--text-dimmed);
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ==========================================================================
+   7. STILI SPECIFICI PER LE ALTRE 7 VISTE (MANTENENDO LO STILE A CONTROLLO)
+   ========================================================================== */
+
+/* VISTA 02: SEDE NEL DETTAGLIO */
+.sedi-buttons-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.btn-sede-tab {
+  background: var(--bg-subpanel);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 8px 14px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--trans-fast);
+}
+
+.btn-sede-tab:hover {
+  border-color: var(--border-medium);
+  color: var(--text-primary);
+}
+
+.btn-sede-tab.active {
+  background: var(--accent-orange-dim);
+  border-color: var(--accent-orange);
+  color: var(--accent-orange);
+  font-weight: 700;
+}
+
+.semaforo-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+.sem-verde { background-color: var(--accent-green); box-shadow: 0 0 6px var(--accent-green); }
+.sem-ambra { background-color: var(--accent-orange); box-shadow: 0 0 6px var(--accent-orange); }
+.sem-rosso { background-color: #ef4444; box-shadow: 0 0 6px #ef4444; }
+
+.sede-hero-summary {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 16px;
+  background: var(--bg-subpanel);
+  border: 1px solid var(--border-subtle);
+  padding: 16px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  font-family: var(--font-mono);
+}
+
+.sede-hero-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.sede-hero-address {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.sede-stat-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.sede-stat-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.sede-stat-val {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Griglia sale e poltrone per sede */
+.sale-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.sala-card {
+  background: var(--bg-subpanel);
+  border: 1px solid var(--border-subtle);
+  border-radius: 2px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  transition: var(--trans-fast);
+}
+
+.sala-card:hover {
+  border-color: var(--border-medium);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+
+.sala-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sala-id-badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.sala-status-tag {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.tag-chirurgia { background: var(--accent-green-dim); color: var(--accent-green); border: 1px solid rgba(16, 185, 129, 0.3); }
+.tag-occupata { background: var(--accent-orange-dim); color: var(--accent-orange); border: 1px solid rgba(249, 115, 22, 0.3); }
+.tag-sanificazione { background: var(--accent-purple-dim); color: var(--accent-purple); border: 1px solid rgba(168, 85, 247, 0.3); }
+.tag-libera { background: var(--accent-cyan-dim); color: var(--accent-cyan); border: 1px solid rgba(56, 189, 248, 0.3); }
+
+.sala-procedure {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.35;
+}
+
+.sala-patient-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding-top: 6px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.pz-name {
+  color: var(--accent-gold);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pz-code {
+  color: var(--text-muted);
+}
+
+/* Agenda della Giornata per Sala */
+.agenda-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+}
+
+.agenda-table th {
+  text-align: left;
+  padding: 8px 12px;
+  background: var(--bg-subpanel);
+  color: var(--text-muted);
+  font-size: 10px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.agenda-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+.agenda-table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-primary);
+}
+
+/* Sala Macchine & Sterilizzazione */
+.machines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.machine-card {
+  background: var(--bg-subpanel);
+  border: 1px solid var(--border-subtle);
+  border-radius: 2px;
+  padding: 14px;
+  font-family: var(--font-mono);
+}
+
+.machine-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.machine-status {
+  font-size: 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.machine-metric-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-secondary);
+  padding: 3px 0;
+}
+
+/* VISTA 03: SENSI DI VICTOR */
+.sensi-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.spectrum-bars-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 8px;
+  border-radius: 2px;
+  border: 1px solid var(--border-subtle);
+  margin-top: 10px;
+}
+
+.spectrum-bar {
+  flex: 1;
+  background: var(--accent-cyan);
+  border-radius: 1px 1px 0 0;
+  transition: height 0.2s ease;
+}
+
+/* VISTA 04: ALLARMI E DECISIONI (Solo scostamenti certificati + Conferma Umana) */
+.alarms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.alarm-cert-card {
+  background: var(--bg-subpanel);
+  border: 1px solid var(--border-medium);
+  border-left: 4px solid var(--accent-orange);
+  border-radius: 2px;
+  padding: 16px 20px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: center;
+}
+
+.alarm-cert-card.resolved {
+  border-left-color: var(--accent-green);
+  opacity: 0.65;
+}
+
+.alarm-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.alarm-meta-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.alarm-lobo-pill {
+  background: var(--accent-orange);
+  color: #000;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 2px;
+  font-size: 10px;
+}
+
+.alarm-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.alarm-desc {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.alarm-proposal {
+  font-size: 12px;
+  color: var(--accent-cyan);
+  background: rgba(56, 189, 248, 0.06);
+  padding: 8px 12px;
+  border-radius: 2px;
+  border-left: 2px solid var(--accent-cyan);
+  font-family: var(--font-mono);
+}
+
+.alarm-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.btn-confirm-doctor {
+  background: var(--accent-orange);
+  color: #070a0f;
+  font-family: var(--font-mono);
+  font-weight: 800;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 14px var(--accent-orange-glow);
+  transition: var(--trans-fast);
+  white-space: nowrap;
+}
+
+.btn-confirm-doctor:hover {
+  background: #fb923c;
+  transform: translateY(-1px);
+}
+
+.btn-confirm-doctor:disabled {
+  background: #334155;
+  color: #94a3b8;
+  cursor: default;
+  box-shadow: none;
+  transform: none;
+}
+
+/* VISTA 05: COMPAGNO DIREZIONALE INTERATTIVO */
+.compagno-full-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 20px;
+}
+
+.chat-thread-container {
+  background: var(--bg-subpanel);
+  border: 1px solid var(--border-subtle);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  height: 580px;
+}
+
+.chat-messages-stream {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.msg-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 82%;
+}
+
+.msg-item.msg-user {
+  align-self: flex-end;
+}
+
+.msg-item.msg-victor {
+  align-self: flex-start;
+}
+
+.msg-bubble {
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.msg-user .msg-bubble {
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+}
+
+.msg-victor .msg-bubble {
+  background: rgba(16, 23, 36, 0.9);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--accent-orange);
+  color: var(--text-primary);
+}
+
+.msg-meta {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.chat-input-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  background: #090e18;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.btn-mic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--accent-orange-dim);
+  border: 1px solid var(--accent-orange);
+  color: var(--accent-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: var(--trans-fast);
+}
+
+.btn-mic:hover {
+  background: var(--accent-orange);
+  color: #000;
+}
+
+.chat-input-field {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  padding: 10px 14px;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  outline: none;
+}
+
+.chat-input-field:focus {
+  border-color: var(--accent-orange);
+}
+
+.btn-chat-send {
+  background: var(--accent-orange);
+  color: #000;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 11px;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.suggested-chips-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chip-btn {
+  background: var(--bg-subpanel);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 10px 12px;
+  border-radius: 2px;
+  cursor: pointer;
+  text-align: left;
+  line-height: 1.4;
+  transition: var(--trans-fast);
+}
+
+.chip-btn:hover {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  background: rgba(56, 189, 248, 0.04);
+}
+
+/* VISTA 06: MEMORIA E CRESCITA (cue / lesson / evidence / confidence) */
+.lessons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lesson-card {
+  background: var(--bg-subpanel);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--accent-pink);
+  border-radius: 2px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lesson-grid-fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+}
+
+.lesson-field {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 2px;
+  border: 1px solid var(--border-subtle);
+}
+
+.lesson-field-label {
+  font-size: 9.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+.lesson-field-val {
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.lesson-footer-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 10px;
+}
+
+.confidence-meter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent-pink);
+}
+
+.lesson-btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-lesson-approve {
+  background: var(--accent-green);
+  color: #000;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 11px;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-lesson-reject {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  border: 1px solid var(--border-subtle);
+  padding: 6px 14px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/* VISTA 07: CUORE (Preferenze Pazienti) */
+.cuore-kpis-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.cuore-kpi-card {
+  background: var(--bg-subpanel);
+  border: 1px solid var(--border-subtle);
+  padding: 16px;
+  border-radius: 2px;
+  font-family: var(--font-mono);
+}
+
+/* VISTA 08: FIDUCIA E CONFORMITÀ (Zero-Knowledge & Payload Log) */
+.cloud-payload-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.cloud-payload-table th {
+  padding: 8px 12px;
+  background: var(--bg-subpanel);
+  color: var(--text-muted);
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: left;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.cloud-payload-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+.payload-code {
+  background: #000;
+  padding: 2px 6px;
+  border-radius: 2px;
+  color: var(--accent-cyan);
+}
+
+/* ==========================================================================
+   8. RESPONSIVE PER SCHERMI GRANDI (1440px), IPAD (1024px) E MOBILE
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .panels-grid-row,
+  .panels-grid-trio,
+  .tree-panel-layout,
+  .sensi-grid-2col {
+    grid-template-columns: 1fr;
+  }
+
+  .compagno-full-layout {
+    grid-template-columns: 1fr 270px;
+    gap: 14px;
+  }
+
+  .chat-thread-container {
+    height: 440px;
+  }
+
+  .cockpit-header {
+    flex-wrap: wrap;
+    padding: 10px 16px;
+    gap: 10px;
+  }
+
+  .header-center-col {
+    order: 3;
+    width: 100%;
+    margin-top: 4px;
+  }
+
+  .header-counters {
+    gap: 12px;
+    padding-right: 12px;
+  }
+
+  .counter-value {
+    font-size: 20px;
+  }
+
+  .header-mission-badge {
+    font-size: 10.5px;
+    padding: 3px 10px;
+  }
+
+  .sede-hero-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cuore-kpis-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .cockpit-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .header-left-col,
+  .header-right-col {
+    justify-content: space-between;
+  }
+
+  .header-counters {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .graph-container {
+    height: 380px;
+  }
+}

@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victor · Polo Arcada Demo — Cockpit Direzionale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Titillium+Web:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stile.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. TESTATA SUPERIORE A 4 CONTATORI E BADGE ARANCIO (STILE REEL)
+       ======================================================================== -->
+  <header class="cockpit-header">
+    <div class="header-left-col">
+      <!-- Riquadro pieno arancione di riferimento -->
+      <div class="brand-hero-block">
+        <div class="brand-hero-pill">
+          <span class="pill-star">✦</span> VICTOR · Polo Arcada Demo
+        </div>
+        <div class="brand-hero-meta">10 SEDI ATTIVE · CERVELLO CONDIVISO · ATELIER TRINAI</div>
+      </div>
+    </div>
+
+    <!-- Telemetria centrale di veglia -->
+    <div class="header-center-col">
+      <div class="header-mission-badge" id="vegliaBadge">
+        <span class="mission-pulse"></span>
+        <span>Victor sta vegliando su <strong>10 sedi</strong> · 1.482 sensori · 184 macchine · 46 poltrone</span>
+      </div>
+      <div class="header-lobi-strip">
+        LOBI: <span>OCCHI</span> · <span>ORECCHIE</span> · <span>PELLE</span> · <span>CUORE</span> · <span>MEMORIA</span>
+      </div>
+    </div>
+
+    <!-- 4 Grandi Contatori a destra -->
+    <div class="header-right-col">
+      <div class="header-counters">
+        <div class="counter-box">
+          <span class="counter-label">SEDI</span>
+          <span class="counter-value" id="hdrCntSedi">10</span>
+        </div>
+        <div class="counter-box">
+          <span class="counter-label">SENSI ATTIVI</span>
+          <span class="counter-value c-cyan" id="hdrCntSensi">142</span>
+        </div>
+        <div class="counter-box">
+          <span class="counter-label">POSTAZIONI</span>
+          <span class="counter-value" id="hdrCntPostazioni">46</span>
+        </div>
+        <div class="counter-box">
+          <span class="counter-label">ALLARMI APERTI</span>
+          <span class="counter-value c-orange" id="hdrCntAllarmi">2</span>
+        </div>
+      </div>
+
+      <!-- Privacy & Firme d'Atelier -->
+      <div class="header-meta-actions">
+        <button type="button" class="btn-privacy-toggle active" id="btnTogglePrivacy" title="Attiva/disattiva visualizzazione nomi autentici">
+          <span>👁</span>
+          <span id="privacyModeLabel">Direzione (Nomi in chiaro)</span>
+        </button>
+        <div class="header-signatures">
+          <span class="discreet-demo-badge">dati dimostrativi</span>
+          <span>Atelier TrinAI</span>
+          <img src="asset/victor_logo.svg" alt="Victor Sigil">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       2. NAVIGAZIONE A 8 TAB IN MONOSPAZIO NUMERATO
+       ======================================================================== -->
+  <nav class="cockpit-nav" aria-label="Viste del Cockpit">
+    <button class="nav-tab active" data-view="torre">
+      <span class="tab-idx">01</span> TORRE DI CONTROLLO
+    </button>
+    <button class="nav-tab" data-view="sede">
+      <span class="tab-idx">02</span> SEDE NEL DETTAGLIO
+    </button>
+    <button class="nav-tab" data-view="sensi">
+      <span class="tab-idx">03</span> SENSI DI VICTOR
+    </button>
+    <button class="nav-tab" data-view="allarmi">
+      <span class="tab-idx">04</span> ALLARMI &amp; DECISIONI <span class="tab-badge" id="navBadgeAllarmi">2</span>
+    </button>
+    <button class="nav-tab" data-view="compagno">
+      <span class="tab-idx">05</span> COMPAGNO DIREZIONALE
+    </button>
+    <button class="nav-tab" data-view="memoria">
+      <span class="tab-idx">06</span> MEMORIA &amp; CRESCITA
+    </button>
+    <button class="nav-tab" data-view="cuore">
+      <span class="tab-idx">07</span> CUORE PAZIENTI
+    </button>
+    <button class="nav-tab" data-view="fiducia">
+      <span class="tab-idx">08</span> FIDUCIA &amp; PRIVACY
+    </button>
+  </nav>
+
+  <!-- ========================================================================
+       3. CORPO DELLE VISTE (VIEWPORT)
+       ======================================================================== -->
+  <main class="cockpit-viewport">
+
+    <!-- ======================================================================
+         VISTA 01: TORRE DI CONTROLLO (LA SALA DI CONTROLLO VIVA DI RIFERIMENTO)
+         ====================================================================== -->
+    <section class="view-container active" id="view-torre">
+      
+      <!-- HERO PANEL 01: IL GRAFO VIVO DELLA MEMORIA DI VICTOR A 60 FPS -->
+      <div class="ctrl-panel bracket-orange">
+        <span class="bracket tl"></span>
+        <span class="bracket tr"></span>
+        <span class="bracket bl"></span>
+        <span class="bracket br"></span>
+
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <span class="panel-num-pill">01</span>
+            <span class="panel-title">GBRAIN · IL GRAFO VIVO DELLA MEMORIA COLLETTIVA</span>
+            <span class="panel-subtitle">10 sedi collegate, una sola intelligenza viva</span>
+          </div>
+          <div class="panel-header-right">
+            <span class="panel-telemetry-tag"><strong>1.482</strong> SENSORI · <strong>3.840</strong> COLLEGAMENTI · <strong>60 FPS LIVE</strong></span>
+          </div>
+        </div>
+
+        <div class="panel-body" style="padding: 0;">
+          <div class="graph-container">
+            <!-- Canvas Force Simulation a 60 FPS -->
+            <canvas id="grafoMemoriaCanvas"></canvas>
+
+            <!-- Legenda Nodi a Sinistra -->
+            <div class="graph-legend-overlay">
+              <div class="legend-title">Nodi in Memoria Attiva</div>
+              <div class="legend-row">
+                <span class="legend-row-label"><span class="legend-dot dot-orange"></span> Sedi Cliniche</span>
+                <span class="legend-val">10</span>
+              </div>
+              <div class="legend-row">
+                <span class="legend-row-label"><span class="legend-dot dot-cyan"></span> Sensi Orecchie / Pelle</span>
+                <span class="legend-val">142</span>
+              </div>
+              <div class="legend-row">
+                <span class="legend-row-label"><span class="legend-dot dot-green"></span> Macchine &amp; Sale</span>
+                <span class="legend-val">86</span>
+              </div>
+              <div class="legend-row">
+                <span class="legend-row-label"><span class="legend-dot dot-purple"></span> Pazienti Trattati (PZ_)</span>
+                <span class="legend-val">418</span>
+              </div>
+              <div class="legend-row">
+                <span class="legend-row-label"><span class="legend-dot dot-pink"></span> Regole &amp; Lezioni</span>
+                <span class="legend-val">54</span>
+              </div>
+              <div class="legend-row">
+                <span class="legend-row-label"><span class="legend-dot dot-gold"></span> Eventi in Tempo Reale</span>
+                <span class="legend-val">32</span>
+              </div>
+              <div class="legend-footer">trascina i nodi · ogni evento rinforza il grafo</div>
+            </div>
+
+            <!-- Card HUD Dinamica che segue l'evento live -->
+            <div class="graph-hud-card" id="graphHud">
+              <div class="hud-top-meta">
+                <span class="hud-tag" id="hudTag">INTERVENTO ALL-ON-4</span>
+                <span class="hud-time" id="hudTime">13:46:12</span>
+              </div>
+              <div class="hud-event-title" id="hudTitle">Direzione · Caso Clinico A1</div>
+              <div class="hud-event-detail" id="hudDetail">Sede: Treviso Chirurgia 1 · Impianto Straumann BLX guidato in osteotomia corticale</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KPI DI GRUPPO IN STILE NUMERATO DI PRECISIONE -->
+      <div class="panels-grid-row" style="grid-template-columns: repeat(4, 1fr); margin-bottom: 20px;">
+        <div class="ctrl-panel bracket-cyan" style="margin-bottom: 0;">
+          <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+          <div class="panel-header">
+            <span class="panel-num-pill">K1</span>
+            <span class="panel-title">SATURAZIONE POLTRONE</span>
+          </div>
+          <div class="panel-body">
+            <div style="font-family: var(--font-mono); font-size: 28px; font-weight: 800; color: var(--accent-cyan); margin-bottom: 4px;">84.6%</div>
+            <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text-secondary);">39 sale occupate su 46 · Picco Mestre e Venezia (92%)</div>
+          </div>
+        </div>
+
+        <div class="ctrl-panel bracket-green" style="margin-bottom: 0;">
+          <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+          <div class="panel-header">
+            <span class="panel-num-pill">K2</span>
+            <span class="panel-title">PRIME VISITE &amp; PIANI</span>
+          </div>
+          <div class="panel-body">
+            <div style="font-family: var(--font-mono); font-size: 28px; font-weight: 800; color: var(--accent-green); margin-bottom: 4px;">28 oggi</div>
+            <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text-secondary);">412 nel mese · 76.4% accettazione preventivi</div>
+          </div>
+        </div>
+
+        <div class="ctrl-panel bracket-gold" style="margin-bottom: 0;">
+          <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+          <div class="panel-header">
+            <span class="panel-num-pill">K3</span>
+            <span class="panel-title">PROIEZIONE CHIUSURA</span>
+          </div>
+          <div class="panel-body">
+            <div style="font-family: var(--font-mono); font-size: 28px; font-weight: 800; color: var(--accent-gold); margin-bottom: 4px;">1.240.000 €</div>
+            <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text-secondary);">Incassati: <strong style="color: var(--accent-gold);">892.000 €</strong> (+6.9% sul target concordato)</div>
+          </div>
+        </div>
+
+        <div class="ctrl-panel bracket-gold" style="margin-bottom: 0;">
+          <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+          <div class="panel-header">
+            <span class="panel-num-pill">K4</span>
+            <span class="panel-title">SCORTE IMPIANTI GRUPPO</span>
+          </div>
+          <div class="panel-body">
+            <div style="font-family: var(--font-mono); font-size: 28px; font-weight: 800; color: var(--text-primary); margin-bottom: 4px;">1.240 pz</div>
+            <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text-secondary);">Straumann: 512 · Nobel: 388 · 100% tracciabilità</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FILA DI PANNELLI VIVI INTERMEDI (02 ALBERO & 03 AI-MEMORY) -->
+      <div class="panels-grid-row">
+        
+        <!-- PANNELLO 02: ALBERO DEI LOBI E 10 SEDI -->
+        <div class="ctrl-panel bracket-cyan">
+          <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+          <div class="panel-header">
+            <div class="panel-header-left">
+              <span class="panel-num-pill">02</span>
+              <span class="panel-title">ALBERO DEI LOBI &amp; 10 SEDI</span>
+              <span class="panel-subtitle">Sinapsi attive verso le 10 cliniche del Rete Arcada Demo</span>
+            </div>
+            <div class="panel-header-right">
+              <span class="panel-telemetry-tag"><strong>10/10</strong> SEDI CONNESSE · SINCRONIA IN TEMPO REALE</span>
+            </div>
+          </div>
+
+          <div class="panel-body">
+            <div class="tree-panel-layout">
+              <!-- Schema clinico a sinistra -->
+              <div class="tree-code-sidebar">
+                <div class="code-line code-comment">// Lobi Cognitivi &amp; Cliniche</div>
+                <div class="code-line"><span class="code-accent">#</span> Polo Arcada Demo.gruppo</div>
+                <div class="code-line">├─ <span class="code-orange">treviso.chirurgia</span> [6 sale]</div>
+                <div class="code-line">├─ <span class="code-accent">conegliano</span> [5 sale]</div>
+                <div class="code-line">├─ <span class="code-accent">venezia.sanmarco</span> [4 sale]</div>
+                <div class="code-line">├─ <span class="code-accent">mestre</span> [5 sale]</div>
+                <div class="code-line">├─ <span class="code-accent">oderzo</span> [4 sale]</div>
+                <div class="code-line">├─ <span class="code-accent">vittorio.veneto</span> [4 sale]</div>
+                <div class="code-line">├─ <span class="code-accent">belluno</span> [4 sale]</div>
+                <div class="code-line">├─ <span class="code-accent">pordenone</span> [4 sale]</div>
+                <div class="code-line">├─ <span class="code-accent">villorba</span> [4 sale]</div>
+                <div class="code-line">└─ <span class="code-accent">londra.wimpole</span> [6 sale]</div>
+                <div class="code-line code-comment" style="margin-top: 6px;">canale riservato: triveneto-londra</div>
+              </div>
+
+              <!-- Albero SVG Dinamico a destra -->
+              <div class="tree-canvas-wrapper">
+                <svg id="treeBezierSvg" viewBox="0 0 520 260">
+                  <!-- Tracciati e nodi generati via JS -->
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANNELLO 03: AI-MEMORY E SCANSIONI IN CODA -->
+        <div class="ctrl-panel bracket-orange">
+          <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+          <div class="panel-header">
+            <div class="panel-header-left">
+              <span class="panel-num-pill">03</span>
+              <span class="panel-title">NUCLEO DI VISIONE CLINICA &amp; MEMORIA</span>
+              <span class="panel-subtitle">Accuratezza diagnostico-operativa 99.8%</span>
+            </div>
+            <div class="panel-header-right">
+              <span class="panel-telemetry-tag"><strong>18/24</strong> IMMAGINI CLASSIFICATE OGGI</span>
+            </div>
+          </div>
+
+          <div class="panel-body">
+            <div class="memory-tasks-stack">
+              <!-- Task 1: Sonno notturno -->
+              <div class="memory-task-card">
+                <div class="task-card-header">
+                  <span class="task-card-title">Sonno Notturno &amp; Consolidamento Memoria</span>
+                  <span id="txtSonnoProg">94% · FASE 4/5 COMPLETATA</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-cyan" style="width: 94%;"></div>
+                </div>
+              </div>
+
+              <!-- Task 2: Lettore immagini in coda -->
+              <div class="memory-task-card">
+                <div class="task-card-header">
+                  <span class="task-card-title">Lettore Immagini in Coda (TAC 3D &amp; Panoramica)</span>
+                  <span id="txtScansProg">76% · 18/24 CLASSIFICATE</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-orange" style="width: 76%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Subboxes Clinical Style (Niente .log o .sys) -->
+            <div class="memory-subboxes-grid">
+              <div class="subbox-terminal">
+                <div class="subbox-name">Decisioni di oggi</div>
+                <div class="subbox-val">2 allarmi scostamento pronti</div>
+              </div>
+              <div class="subbox-terminal">
+                <div class="subbox-name">Richiami in scadenza</div>
+                <div class="subbox-val">491 confermati su 538 (91.2%)</div>
+              </div>
+              <div class="subbox-terminal">
+                <div class="subbox-name">Scorte impianti tracciate</div>
+                <div class="subbox-val">1.240 lotti verificati e sigillati</div>
+              </div>
+              <div class="subbox-terminal">
+                <div class="subbox-name">Integrità sala macchine</div>
+                <div class="subbox-val" style="color: var(--accent-green);">Regime nominale continuo</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TERNA INFERIORE DI PANNELLI VIVI (04 COMPAGNO, 05 CICLO, 06 MAPPA CELLE) -->
+      <div class="panels-grid-trio">
+        
+        <!-- PANNELLO 04: COMPAGNO DIREZIONALE (TELEFONO & ONDA VOCE) -->
+        <div class="ctrl-panel bracket-cyan">
+          <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+          <div class="panel-header">
+            <div class="panel-header-left">
+              <span class="panel-num-pill">04</span>
+              <span class="panel-title">COMPAGNO DIREZIONALE</span>
+            </div>
+            <div class="panel-header-right">
+              <span class="panel-telemetry-tag"><strong>AUDIO WEBRTC</strong></span>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="voice-phone-viewport">
+              <div class="phone-top-bar">
+                <span>Canale Riservato Direzione</span>
+                <span>Crittografia AES-256</span>
+              </div>
+              <div class="phone-chat-bubble bubble-user">
+                "Come sta andando oggi la saturazione a Treviso e Conegliano?"
+              </div>
+              <div class="phone-chat-bubble bubble-victor">
+                "Treviso all'88% con la tua chirurgia All-on-4 in corso; Conegliano all'82%. Il gruppo viaggia all'84.6%, +6.9% sulla proiezione di chiusura."
+              </div>
+              <!-- Onda della voce oscillante in tempo reale -->
+              <div class="voice-waveform-container" id="waveformLive">
+                <span class="wave-bar" style="animation-delay: 0.1s"></span>
+                <span class="wave-bar" style="animation-delay: 0.3s"></span>
+                <span class="wave-bar" style="animation-delay: 0.2s"></span>
+                <span class="wave-bar" style="animation-delay: 0.5s"></span>
+                <span class="wave-bar" style="animation-delay: 0.4s"></span>
+                <span class="wave-bar" style="animation-delay: 0.7s"></span>
+                <span class="wave-bar" style="animation-delay: 0.2s"></span>
+                <span class="wave-bar" style="animation-delay: 0.6s"></span>
+                <span class="wave-bar" style="animation-delay: 0.3s"></span>
+                <span class="wave-bar" style="animation-delay: 0.8s"></span>
+                <span class="wave-bar" style="animation-delay: 0.4s"></span>
+                <span class="wave-bar" style="animation-delay: 0.2s"></span>
+                <span class="wave-bar" style="animation-delay: 0.5s"></span>
+                <span class="wave-bar" style="animation-delay: 0.1s"></span>
+              </div>
+              <button type="button" class="btn-sede-tab" style="width: 100%; justify-content: center;" onclick="window.navToView('compagno')">
+                Apri Dialogo Completo con Victor →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANNELLO 05: CICLO GIORNO/NOTTE & LEZIONI (OROLOGIO ANALOGICO & DOT MATRIX) -->
+        <div class="ctrl-panel bracket-pink">
+          <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+          <div class="panel-header">
+            <div class="panel-header-left">
+              <span class="panel-num-pill">05</span>
+              <span class="panel-title">CICLO GIORNO/NOTTE &amp; REGOLE</span>
+            </div>
+            <div class="panel-header-right">
+              <span class="panel-telemetry-tag">PROSSIMO SONNO: <strong>03:00</strong></span>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="cycle-panel-layout">
+              <!-- Orologio analogico 24h a lancetta rotante -->
+              <div class="analog-clock-container">
+                <svg id="dialClockSvg" viewBox="0 0 120 120">
+                  <circle cx="60" cy="60" r="54" fill="#080d15" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+                  <!-- Settore notturno 03:00-04:30 -->
+                  <path d="M 60 60 L 78 12 A 54 54 0 0 1 98 26 Z" fill="rgba(236,72,153,0.2)"/>
+                  <!-- Quadrante ore -->
+                  <text x="60" y="20" font-family="'JetBrains Mono'" font-size="8" fill="#94a3b8" text-anchor="middle">24</text>
+                  <text x="100" y="63" font-family="'JetBrains Mono'" font-size="8" fill="#94a3b8" text-anchor="middle">06</text>
+                  <text x="60" y="106" font-family="'JetBrains Mono'" font-size="8" fill="#94a3b8" text-anchor="middle">12</text>
+                  <text x="20" y="63" font-family="'JetBrains Mono'" font-size="8" fill="#94a3b8" text-anchor="middle">18</text>
+                  <!-- Lancetta che gira con animazione -->
+                  <line id="clockHand" x1="60" y1="60" x2="60" y2="24" stroke="#f97316" stroke-width="2.5" stroke-linecap="round"/>
+                  <circle cx="60" cy="60" r="4" fill="#f97316"/>
+                </svg>
+              </div>
+
+              <!-- File di pallini che si accendono (Dot Matrix di regole) -->
+              <div class="rules-dot-matrix-box">
+                <div class="dot-matrix-title">54 Regole Cognitive Attive</div>
+                <div class="dot-grid" id="rulesDotGrid">
+                  <!-- Inseriti via JS -->
+                </div>
+                <div class="rule-active-pill">
+                  ✓ <strong>regola_pelle_notturna</strong>: tolleranza delta T 0.5°C validata su 10 sedi
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANNELLO 06: MAPPA A CELLE DELLE 46 POLTRONE -->
+        <div class="ctrl-panel bracket-purple">
+          <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+          <div class="panel-header">
+            <div class="panel-header-left">
+              <span class="panel-num-pill">06</span>
+              <span class="panel-title">MAPPA A CELLE · 46 POLTRONE</span>
+            </div>
+            <div class="panel-header-right">
+              <span class="panel-telemetry-tag"><strong>39 OCCUPATE</strong> · <strong>4 SANIFICAZIONE</strong></span>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="cell-matrix-container">
+              <div class="cell-matrix-header">
+                <span>Stato Postazioni 10 Sedi</span>
+                <div class="matrix-legend-pills">
+                  <span class="matrix-pill"><span class="legend-dot dot-green"></span> Chirurgia</span>
+                  <span class="matrix-pill"><span class="legend-dot dot-orange"></span> Visita</span>
+                  <span class="matrix-pill"><span class="legend-dot dot-purple"></span> Sanif.</span>
+                  <span class="matrix-pill"><span class="legend-dot dot-cyan"></span> Libera</span>
+                </div>
+              </div>
+
+              <!-- Matrice di 46 quadratini pulsanti -->
+              <div class="cell-grid-46" id="postazioniGrid46">
+                <!-- Generato via JS -->
+              </div>
+
+              <!-- Bandierine / Milestones attive -->
+              <div class="roadmap-flags-row">
+                <div class="flag-chip"><span class="flag-icon">⚑</span> All-on-4 Treviso: fine fra 14 min</div>
+                <div class="flag-chip"><span class="flag-icon">⚑</span> Impronta 3D Venezia: pronta</div>
+                <div class="flag-chip"><span class="flag-icon">⚑</span> CBCT Conegliano: in lettura</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ======================================================================
+         VISTA 02: SEDE NEL DETTAGLIO (LE 10 SEDI, POLTRONE, AGENDA, MACCHINE)
+         ====================================================================== -->
+    <section class="view-container" id="view-sede">
+      
+      <!-- Selettore orizzontale a 10 sedi con semaforo -->
+      <div class="sedi-buttons-strip" id="sediTabStrip">
+        <!-- Generato via JS -->
+      </div>
+
+      <!-- Scheda Hero Sede Selezionata con Mappa Territoriale a Fianco -->
+      <div class="panels-grid-row" style="grid-template-columns: 1fr 340px; margin-bottom: 20px;">
+        <div class="sede-hero-summary" id="sedeSummaryBox" style="margin-bottom: 0;">
+          <div>
+            <div class="sede-hero-title" id="sedeDettNome">Treviso — Centro Chirurgico Principale</div>
+            <div class="sede-hero-address" id="sedeDettIndirizzo">Via del Nodo Centrale, 1 · Direttore Sanitario: Direttore Sanitario</div>
+            <div style="font-size: 11px; color: var(--accent-green); margin-top: 6px;" id="sedeDettStatus">
+              ● Regime nominale eccellente. 6 sale attive, saturazione all'88%.
+            </div>
+          </div>
+          <div class="sede-stat-box">
+            <span class="sede-stat-label">Saturazione Oggi</span>
+            <span class="sede-stat-val" id="sedeDettSaturazione" style="color: var(--accent-cyan);">88.0%</span>
+          </div>
+          <div class="sede-stat-box">
+            <span class="sede-stat-label">Prime Visite</span>
+            <span class="sede-stat-val" id="sedeDettPrimeVisite" style="color: var(--accent-green);">5 visite</span>
+          </div>
+          <div class="sede-stat-box">
+            <span class="sede-stat-label">Incasso Odierno</span>
+            <span class="sede-stat-val" id="sedeDettIncasso" style="color: var(--accent-orange);">14.800 €</span>
+          </div>
+        </div>
+
+        <!-- Mappa Vettoriale Stilizzata Triveneto + Londra Inset -->
+        <div class="ctrl-panel bracket-gold" style="margin-bottom: 0;">
+          <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+          <div class="panel-header">
+            <span class="panel-num-pill">MAP</span>
+            <span class="panel-title">TRIVENETO &amp; LONDRA</span>
+          </div>
+          <div class="panel-body" style="padding: 6px; height: 180px; position: relative;">
+            <svg id="trivenetoMapSvg" viewBox="0 0 500 420" style="width: 100%; height: 100%; background: #070b12; border-radius: 2px;">
+              <!-- Disegnato via JS -->
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Griglia Sale e Poltrone -->
+      <div class="ctrl-panel bracket-cyan">
+        <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <span class="panel-num-pill">S1</span>
+            <span class="panel-title">SALE OPERATORIE E POLTRONE IN TEMPO REALE</span>
+          </div>
+          <div class="panel-header-right">
+            <span class="panel-telemetry-tag">CLICCA SUL PAZIENTE PER IL CODICE RISERVATO</span>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="sale-grid" id="saleContainer">
+            <!-- Popolato via JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Agenda della Giornata per Sala -->
+      <div class="ctrl-panel bracket-orange">
+        <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <span class="panel-num-pill">S2</span>
+            <span class="panel-title">AGENDA OPERATORIA DELLA GIORNATA PER SALA</span>
+          </div>
+          <div class="panel-header-right">
+            <span class="panel-telemetry-tag">TEMPI E PROCEDURE CERTIFICATI DAI LOBI</span>
+          </div>
+        </div>
+        <div class="panel-body" style="padding: 0; overflow-x: auto;">
+          <table class="agenda-table">
+            <thead>
+              <tr>
+                <th>Orario</th>
+                <th>Sala</th>
+                <th>Procedura Clinica</th>
+                <th>Paziente</th>
+                <th>Identificativo Victor</th>
+                <th>Stato</th>
+              </tr>
+            </thead>
+            <tbody id="agendaTableBody">
+              <!-- Popolato via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Sala Macchine & Sterilizzazione -->
+      <div class="ctrl-panel bracket-green">
+        <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <span class="panel-num-pill">S3</span>
+            <span class="panel-title">SALA MACCHINE &amp; CENTRALE STERILIZZAZIONE</span>
+          </div>
+          <div class="panel-header-right">
+            <span class="panel-telemetry-tag">TELEMETRIA ELETTROMECCANICA CONTINUA</span>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="machines-grid" id="machinesGrid">
+            <!-- Popolato via JS -->
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ======================================================================
+         VISTA 03: SENSI DI VICTOR (ORECCHIE, PELLE, OCCHI, DATO MANCANTE)
+         ====================================================================== -->
+    <section class="view-container" id="view-sensi">
+      <div class="sensi-grid-2col">
+        
+        <!-- ORECCHIE -->
+        <div class="ctrl-panel bracket-cyan">
+          <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+          <div class="panel-header">
+            <div class="panel-header-left">
+              <span class="panel-num-pill">01</span>
+              <span class="panel-title">ORECCHIE · ACUSTICA COMPRESSORI &amp; ASPIRATORI</span>
+            </div>
+            <div class="panel-header-right">
+              <span class="panel-telemetry-tag">32 NODI AUDIO</span>
+            </div>
+          </div>
+          <div class="panel-body">
+            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">
+              Victor ascolta costantemente la firma armonica di ogni motore. Classifica in tempo reale se il suono rientra nel "normale" o evidenzia scostamenti meccanici.
+            </p>
+            <div style="background: var(--bg-subpanel); border: 1px solid var(--border-subtle); padding: 12px; border-radius: 2px; margin-bottom: 12px;">
+              <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 11px; margin-bottom: 4px;">
+                <span style="font-weight: 700; color: var(--text-primary);">Compressore Kaeser SX6 — Conegliano</span>
+                <span style="color: var(--accent-orange);">ANOMALO DA 42 MIN</span>
+              </div>
+              <div style="font-size: 11.5px; color: var(--text-secondary); line-height: 1.4;">
+                Frequenza di risonanza slittata da 49.8 Hz a 53.4 Hz con vibrazione a 4.2 mm/s. Cuscinetto cinghia in fase di affaticamento preventivo.
+              </div>
+              <div class="spectrum-bars-row" id="spectrumConegliano"></div>
+            </div>
+
+            <div style="background: var(--bg-subpanel); border: 1px solid var(--border-subtle); padding: 12px; border-radius: 2px;">
+              <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 11px; margin-bottom: 4px;">
+                <span style="font-weight: 700; color: var(--text-primary);">Centrale Aspirazione Cattani Turbo-Smart — Treviso</span>
+                <span style="color: var(--accent-green);">NOMINALE (99.8%)</span>
+              </div>
+              <div style="font-size: 11.5px; color: var(--text-secondary); line-height: 1.4;">
+                Pressione negativa -0.22 bar costante, spettro acustico uniforme a 48 dB(A).
+              </div>
+              <div class="spectrum-bars-row" id="spectrumTreviso"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PELLE -->
+        <div class="ctrl-panel bracket-gold">
+          <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+          <div class="panel-header">
+            <div class="panel-header-left">
+              <span class="panel-num-pill">02</span>
+              <span class="panel-title">PELLE · MICROCLIMA &amp; REGOLE PERIMETRALI</span>
+            </div>
+            <div class="panel-header-right">
+              <span class="panel-telemetry-tag">240 SENSORI ATTIVI · 10 SEDI</span>
+            </div>
+          </div>
+          <div class="panel-body">
+            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">
+              Temperatura, umidità relativa, assenza fumo e allagamento in ogni stanza. Ogni sensore applica la regola del "quando": i varchi perimetrali allarmano solo dalle 20:00 alle 07:30.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; font-family: var(--font-mono); font-size: 11px; margin-bottom: 12px;">
+              <div class="subbox-terminal">
+                <div class="subbox-name">Treviso · Chirurgia Guidata 1</div>
+                <div class="subbox-val" style="color: var(--accent-green);">21.4 °C · 46% Umidità · Allagamento: NO</div>
+              </div>
+              <div class="subbox-terminal">
+                <div class="subbox-name">Venezia · Sala San Marco</div>
+                <div class="subbox-val" style="color: var(--accent-green);">20.2 °C · 50% Umidità · Allagamento: NO</div>
+              </div>
+              <div class="subbox-terminal">
+                <div class="subbox-name">Mestre · Sala 2 Rigenerativa</div>
+                <div class="subbox-val" style="color: var(--accent-green);">21.8 °C · 45% Umidità · Fumo: Assente</div>
+              </div>
+              <div class="subbox-terminal">
+                <div class="subbox-name">Conegliano · Sterilizzazione</div>
+                <div class="subbox-val" style="color: var(--accent-green);">22.1 °C · 48% Umidità · Scarichi: OK</div>
+              </div>
+              <div class="subbox-terminal">
+                <div class="subbox-name">Belluno · Studio Diagnosi 3D</div>
+                <div class="subbox-val" style="color: var(--accent-green);">20.5 °C · 44% Umidità · Clima: Nominale</div>
+              </div>
+              <div class="subbox-terminal">
+                <div class="subbox-name">Oderzo · Sala 1 Protesica</div>
+                <div class="subbox-val" style="color: var(--accent-green);">21.2 °C · 47% Umidità · Pressione: OK</div>
+              </div>
+              <div class="subbox-terminal">
+                <div class="subbox-name">Pordenone · Chirurgia A</div>
+                <div class="subbox-val" style="color: var(--accent-green);">21.5 °C · 45% Umidità · Filtri HEPA: OK</div>
+              </div>
+              <div class="subbox-terminal">
+                <div class="subbox-name">Londra · Wimpole St Suite 1</div>
+                <div class="subbox-val" style="color: var(--accent-cyan);">20.8 °C · Varco attivo (Blocco ore 20:00)</div>
+              </div>
+            </div>
+            <!-- Grafico Sparkline di stabilità climatica 24h -->
+            <div style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); padding: 8px 12px; border-radius: 2px; font-family: var(--font-mono); font-size: 10.5px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 4px; color: var(--text-muted);">
+                <span>Stabilità Termica Sale Chirurgiche (ultime 24h)</span>
+                <span style="color: var(--accent-gold);">Delta T medio: ±0.3 °C (Eccellente)</span>
+              </div>
+              <svg viewBox="0 0 400 28" style="width: 100%; height: 26px;">
+                <polyline fill="none" stroke="#c9a24b" stroke-width="1.8" points="0,15 40,14 80,16 120,13 160,15 200,12 240,14 280,13 320,15 360,14 400,14" />
+                <circle cx="400" cy="14" r="3" fill="#f97316" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- OCCHI -->
+        <div class="ctrl-panel bracket-orange">
+          <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+          <div class="panel-header">
+            <div class="panel-header-left">
+              <span class="panel-num-pill">03</span>
+              <span class="panel-title">OCCHI · LETTORE RADIOGRAFIE &amp; MARCA IMPIANTI</span>
+            </div>
+            <div class="panel-header-right">
+              <span class="panel-telemetry-tag">18 RADIOGRAFIE ANALIZZATE OGGI</span>
+            </div>
+          </div>
+          <div class="panel-body">
+            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">
+              Riconoscimento computazionale automatico su TAC 3D e Panoramiche per marca e geometria dell'impianto (Straumann, Nobel, Astra Tech, Zimmer). Allineamento passaporto implantare e scorte magazzino.
+            </p>
+            <div class="memory-tasks-stack">
+              <div class="subbox-terminal">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                  <strong style="color: var(--accent-gold); cursor: pointer;" title="Identificativo protetto: PZ_3914_TRE">Caso Clinico A1</strong>
+                  <span style="color: var(--accent-green);">RICONOSCIUTO 99.4%</span>
+                </div>
+                <div>Straumann BLX 4.5 x 10 mm · Spire apicali verificate · Scarico automatico magazzino Treviso</div>
+              </div>
+              <div class="subbox-terminal">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                  <strong style="color: var(--accent-gold); cursor: pointer;" title="Identificativo protetto: PZ_4120_CON">Caso Clinico B2</strong>
+                  <span style="color: var(--accent-green);">RICONOSCIUTO 98.7%</span>
+                </div>
+                <div>Nobel Biocare Active 4.3 x 11.5 mm · Connessione conica interna · Passaporto validato</div>
+              </div>
+              <div class="subbox-terminal">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                  <strong style="color: var(--accent-gold); cursor: pointer;" title="Identificativo protetto: PZ_2744_TRE">Caso Clinico C3</strong>
+                  <span style="color: var(--accent-green);">RICONOSCIUTO 99.1%</span>
+                </div>
+                <div>Astra Tech EV 4.2 x 11 mm · Controllo osseo crestale completato · Passaporto registrato</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DATO MANCANTE -->
+        <div class="ctrl-panel bracket-purple">
+          <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+          <div class="panel-header">
+            <div class="panel-header-left">
+              <span class="panel-num-pill">04</span>
+              <span class="panel-title">DATO MANCANTE · RICOSTRUZIONE SENSORI MUTI</span>
+            </div>
+            <div class="panel-header-right">
+              <span class="panel-telemetry-tag">1 SENSORE MUTO RICOSTRUITO</span>
+            </div>
+          </div>
+          <div class="panel-body">
+            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">
+              Quando un sensore fisico smette di trasmettere, Victor non si ferma: ricostruisce il dato mancante triangolando gli altri sensori operativi e calcolando la confidenza statistica.
+            </p>
+            <div style="background: var(--bg-subpanel); border: 1px solid var(--border-subtle); padding: 12px; border-radius: 2px;">
+              <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 11px; margin-bottom: 4px;">
+                <span style="color: var(--accent-purple); font-weight: 700;">Conegliano · Sensore Flusso Aspirazione Sala 2</span>
+                <span style="color: var(--accent-cyan);">CONFIDENZA RICOSTRUZIONE: 96.8%</span>
+              </div>
+              <div style="font-size: 11.5px; color: var(--text-secondary); line-height: 1.45;">
+                Il flussimetro non invia pacchetti da 3 ore. Victor stima la depressione a -0.21 bar correlando l'assorbimento elettrico della lampada scialitica con il micro-switch della valvola poltrona. Nessuna interruzione clinica.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         VISTA 04: ALLARMI E DECISIONI (CONFERMA UMANA DEL DOTTORE)
+         ====================================================================== -->
+    <section class="view-container" id="view-allarmi">
+      <div class="ctrl-panel bracket-orange">
+        <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <span class="panel-num-pill">04</span>
+            <span class="panel-title">ALLARMI CERTIFICATI &amp; DECISIONI DIREZIONALI</span>
+          </div>
+          <div class="panel-header-right">
+            <span class="panel-telemetry-tag">OGNI PASSO IRREVERSIBILE RICHIEDE LA TUA CONFERMA</span>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="alarms-list" id="alarmsContainer">
+            <!-- Popolato via JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         VISTA 05: COMPAGNO DIREZIONALE (CHAT INTERATTIVA SIMULATA)
+         ====================================================================== -->
+    <section class="view-container" id="view-compagno">
+      <div class="compagno-full-layout">
+        
+        <!-- Stream Conversazione -->
+        <div class="ctrl-panel bracket-cyan" style="margin-bottom: 0;">
+          <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+          <div class="panel-header">
+            <div class="panel-header-left">
+              <span class="panel-num-pill">05</span>
+              <span class="panel-title">DIALOGO CON VICTOR · NUCLEO DIREZIONALE</span>
+            </div>
+            <div class="panel-header-right">
+              <span class="panel-telemetry-tag">RISPOSTE ANCORATE AI DATI DELLE 10 SEDI</span>
+            </div>
+          </div>
+          <div class="panel-body" style="padding: 0;">
+            <div class="chat-thread-container">
+              <div class="chat-messages-stream" id="chatStream">
+                <!-- Messaggi popolati via JS -->
+              </div>
+              <div class="chat-input-bar">
+                <button type="button" class="btn-mic" id="btnMicChat" title="Dettatura vocale">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                    <line x1="12" y1="19" x2="12" y2="23"/>
+                    <line x1="8" y1="23" x2="16" y2="23"/>
+                  </svg>
+                </button>
+                <input type="text" class="chat-input-field" id="chatInputField" placeholder="Chiedi a Victor (es. saturazione, forniture, proiezioni di chiusura)...">
+                <button type="button" class="btn-chat-send" id="btnSendChat">Invia</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Colonna suggerimenti e telemetria -->
+        <div class="ctrl-panel bracket-gold" style="margin-bottom: 0;">
+          <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+          <div class="panel-header">
+            <span class="panel-num-pill">Q</span>
+            <span class="panel-title">DOMANDE GUIDATE</span>
+          </div>
+          <div class="panel-body">
+            <p style="font-size: 11.5px; color: var(--text-secondary); margin-bottom: 12px;">
+              Clicca per interrogare Victor sui parametri chiave del gruppo Polo Arcada Demo:
+            </p>
+            <div class="suggested-chips-container" id="suggestedChipsContainer">
+              <!-- Chips via JS -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         VISTA 06: MEMORIA E CRESCITA (RICHIESTE VICTOR & LEZIONI DA APPROVARE)
+         ====================================================================== -->
+    <section class="view-container" id="view-memoria">
+      
+      <!-- Sezione Richieste di Victor per il Team TrinAI -->
+      <div class="ctrl-panel bracket-orange">
+        <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <span class="panel-num-pill">M1</span>
+            <span class="panel-title">RICHIESTE DI VICTOR PER IL TEAM TRINAI</span>
+          </div>
+          <div class="panel-header-right">
+            <span class="panel-telemetry-tag">COSE CHE MANCANO A VICTOR PER VEGLIARE MEGLIO</span>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="memory-subboxes-grid" style="grid-template-columns: repeat(3, 1fr);" id="richiesteVictorContainer">
+            <!-- Inserito via JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Lezioni da approvare: Cue / Lesson / Evidence / Confidence -->
+      <div class="ctrl-panel bracket-pink">
+        <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <span class="panel-num-pill">M2</span>
+            <span class="panel-title">LEZIONI PROPOSTE DA APPROVARE</span>
+          </div>
+          <div class="panel-header-right">
+            <span class="panel-telemetry-tag">FORMATO CUE / LESSON / EVIDENCE / CONFIDENCE</span>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="lessons-list" id="lessonsContainer">
+            <!-- Popolato via JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Lezioni storiche estese da una sede a tutte le altre -->
+      <div class="ctrl-panel bracket-green">
+        <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <span class="panel-num-pill">M3</span>
+            <span class="panel-title">LEZIONI STORICHE CONDIVISE SULLE 10 SEDI</span>
+          </div>
+          <div class="panel-header-right">
+            <span class="panel-telemetry-tag">CONTAMINAZIONE VIRTUOSA DI GRUPPO</span>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="memory-subboxes-grid" style="grid-template-columns: repeat(2, 1fr);" id="lezioniStoricheContainer">
+            <!-- Popolato via JS -->
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ======================================================================
+         VISTA 07: CUORE (PREFERENZE PAZIENTI & COMFORT)
+         ====================================================================== -->
+    <section class="view-container" id="view-cuore">
+      
+      <!-- KPI aggregati dai minigiochi accettazione -->
+      <div class="cuore-kpis-grid">
+        <div class="cuore-kpi-card">
+          <div class="subbox-name">Palette Accoglienza Preferita</div>
+          <div style="font-size: 22px; font-weight: 800; color: var(--accent-gold); margin: 6px 0;">66.8%</div>
+          <div style="font-size: 11px; color: var(--text-secondary);">Toni caldi champagne e legno (vs 33.2% bianco clinico puro)</div>
+        </div>
+
+        <div class="cuore-kpi-card">
+          <div class="subbox-name">Presentazione Preventivo</div>
+          <div style="font-size: 22px; font-weight: 800; color: var(--accent-cyan); margin: 6px 0;">72.4%</div>
+          <div style="font-size: 11px; color: var(--text-secondary);">Simulazione estetica render 3D (vs 27.6% schemi tecnici puri)</div>
+        </div>
+
+        <div class="cuore-kpi-card">
+          <div class="subbox-name">Stile del Piano Terapeutico</div>
+          <div style="font-size: 22px; font-weight: 800; color: var(--accent-orange); margin: 6px 0;">81.5%</div>
+          <div style="font-size: 11px; color: var(--text-secondary);">Essenziale a tappe con rate chiare (vs 18.5% capitolato dettagliato)</div>
+        </div>
+
+        <div class="cuore-kpi-card">
+          <div class="subbox-name">Tempo Medio Attesa Sala</div>
+          <div style="font-size: 22px; font-weight: 800; color: var(--accent-green); margin: 6px 0;">6.2 min</div>
+          <div style="font-size: 11px; color: var(--text-secondary);">Target eccellenza gruppo &lt; 8 min rispettato al 100%</div>
+        </div>
+      </div>
+
+      <!-- Tabella Comfort e Attesa per Sede -->
+      <div class="ctrl-panel bracket-gold">
+        <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <span class="panel-num-pill">07</span>
+            <span class="panel-title">INDICI DI COMFORT &amp; PREFERENZE PER LE 10 SEDI</span>
+          </div>
+          <div class="panel-header-right">
+            <span class="panel-telemetry-tag">1.840 RILEVAZIONI ANONIMIZZATE</span>
+          </div>
+        </div>
+        <div class="panel-body" style="padding: 0; overflow-x: auto;">
+          <table class="agenda-table">
+            <thead>
+              <tr>
+                <th>Sede Arcada</th>
+                <th>Tempo Medio Attesa</th>
+                <th>Comfort Acustico</th>
+                <th>Preferenza Render 3D</th>
+                <th>Stile Preventivo Preferito</th>
+              </tr>
+            </thead>
+            <tbody id="cuoreTableBody">
+              <!-- Popolato via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ======================================================================
+         VISTA 08: FIDUCIA E CONFORMITÀ (ZERO-KNOWLEDGE & LOG CLOUD)
+         ====================================================================== -->
+    <section class="view-container" id="view-fiducia">
+      
+      <!-- Architettura Zero-Knowledge -->
+      <div class="ctrl-panel bracket-purple">
+        <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <span class="panel-num-pill">08</span>
+            <span class="panel-title">ARCHITETTURA CRITTOGRAFICA ZERO-KNOWLEDGE</span>
+          </div>
+          <div class="panel-header-right">
+            <span class="panel-telemetry-tag">SEGREGAZIONE DATI LOCALE VS NUCLEO REMOTO</span>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div style="font-size: 12.5px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 16px;">
+            I nomi anagrafici dei pazienti risiedono unicamente nel database locale cifrato della clinica. Compaiono sullo schermo solo se la sessione autenticata appartiene al Direttore Clinico. A qualsiasi entità esterna, al cloud o ai lobi di telemetria, il paziente è unicamente un identificativo pseudonimo <code class="payload-code">PZ_xxxx</code> generato con crittografia asimmetrica a conoscenza zero.
+          </div>
+
+          <div class="panels-grid-row" style="margin-bottom: 0;">
+            <div class="subbox-terminal">
+              <div class="subbox-name">Modello Crittografico</div>
+              <div class="subbox-val">Tokenizzazione HSM SHA-256 + AES-256 GCM locale</div>
+            </div>
+            <div class="subbox-terminal">
+              <div class="subbox-name">Canale Londra Wimpole St</div>
+              <div class="subbox-val">VPN WireGuard cifrata ChaCha20-Poly1305 (24.2 ms)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Registro Payload Verso il Cloud Mascherato -->
+      <div class="ctrl-panel bracket-cyan">
+        <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <span class="panel-num-pill">LOG</span>
+            <span class="panel-title">REGISTRO PAYLOAD TRASMESSI AL CLOUD CON MASCHERATURA</span>
+          </div>
+          <div class="panel-header-right">
+            <span class="panel-telemetry-tag">SOLO SERIE NUMERICHE E VETTORI DI STATO</span>
+          </div>
+        </div>
+        <div class="panel-body" style="padding: 0; overflow-x: auto;">
+          <table class="cloud-payload-table">
+            <thead>
+              <tr>
+                <th>Ora</th>
+                <th>Tipo Telemetria</th>
+                <th>Nodo di Origine</th>
+                <th>Payload Cifrato Trasmesso</th>
+                <th>Garanzia Privacy</th>
+              </tr>
+            </thead>
+            <tbody id="cloudPayloadTableBody">
+              <!-- Popolato via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Sonno di Victor e Telemetria Server Rack -->
+      <div class="panels-grid-row">
+        <div class="ctrl-panel bracket-green">
+          <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+          <div class="panel-header">
+            <span class="panel-num-pill">S</span>
+            <span class="panel-title">CICLO DEL SONNO NOTTURNO DI VICTOR</span>
+          </div>
+          <div class="panel-body" id="sonnoCicloBody">
+            <!-- Popolato via JS -->
+          </div>
+        </div>
+
+        <div class="ctrl-panel bracket-gold">
+          <span class="bracket tl"></span><span class="bracket tr"></span><span class="bracket bl"></span><span class="bracket br"></span>
+          <div class="panel-header">
+            <span class="panel-num-pill">R</span>
+            <span class="panel-title">TELEMETRIA SERVER RACK EDGE</span>
+          </div>
+          <div class="panel-body" id="rackTelemetryBody">
+            <!-- Popolato via JS -->
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       4. STRISCIA DI NOTIZIE SCORREVOLE CONTINUA (LIVE MARQUEE A PIÈ DI PAGINA)
+       ======================================================================== -->
+  <footer class="cockpit-news-marquee">
+    <div class="marquee-badge">
+      <span>●</span> VICTOR LIVE FEED
+    </div>
+    <div class="marquee-track" id="liveMarqueeTrack">
+      <!-- Generato dinamicamente via JS -->
+    </div>
+  </footer>
+
+  <!-- Script Applicativi -->
+  <script src="dati.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

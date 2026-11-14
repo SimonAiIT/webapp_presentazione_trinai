@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="100%" height="100%">
+  <title>Arcada - Arco v2 e Diamante Victor</title>
+  <defs>
+    <!-- Petalo a mezzaluna TrinAI puro: corda 160, sagitta 40, arco R=100 -->
+    <path id="petalo" d="M -80 0 L 80 0 A 100 100 0 0 0 -80 0 Z"/>
+  </defs>
+  <!-- Cupola identica all'arco della v2 (arcada_petali.svg): 5 conci senza colonne -->
+  <g id="arcada-arco-petali" fill="#050811">
+    <!-- Chiave di volta sommitale (verticale a 90°) -->
+    <use href="#petalo" transform="translate(512 200) rotate(90)"/>
+
+    <!-- Conci radiali intermedi dell'arco a tutto sesto -->
+    <use href="#petalo" transform="translate(359 250) rotate(54)"/>
+    <use href="#petalo" transform="translate(665 250) rotate(126)"/>
+
+    <!-- Conci radiali d'imposta -->
+    <use href="#petalo" transform="translate(265 380) rotate(18)"/>
+    <use href="#petalo" transform="translate(759 380) rotate(162)"/>
+  </g>
+  <!-- V di Victor custodita sotto l'arco (identica a Victor corretto) -->
+  <g id="arcada-v-petali" fill="#050811">
+    <!-- Asta sinistra della V -->
+    <use href="#petalo" transform="translate(440.0 676.0) rotate(52.0) scale(1.35)"/>
+    <!-- Asta destra della V (speculare) -->
+    <use href="#petalo" transform="translate(584.0 676.0) rotate(-52.0) scale(-1.35, 1.35)"/>
+  </g>
+  <!-- Profilo essenziale a tratto del diamante di Victor (spessore 24) -->
+  <g id="arcada-diamante-profilo" fill="none" stroke="#050811" stroke-width="24" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="342.0,480.0 682.0,480.0 782.0,620.0 512,880.0 242.0,620.0"/>
+  </g>
+</svg>

@@ -1,0 +1,125 @@
+{
+  "stazione_00": [
+    {
+      "start": 0.1,
+      "end": 2.95,
+      "text": "Benvenuto nell'Atelier TrinAI."
+    },
+    {
+      "start": 2.9,
+      "end": 6.6,
+      "text": "Non vendiamo software preconfezionati a canone."
+    },
+    {
+      "start": 6.6,
+      "end": 15.12,
+      "text": "Progettiamo Agenti Speciali unendo il pattern neurale Victor, il guscio di sicurezza locale Harness e un Monolito Hardware dedicato."
+    },
+    {
+      "start": 15.12,
+      "end": 18.91,
+      "text": "Ogni dato sensibile resta dentro la tua sede."
+    }
+  ],
+  "stazione_01": [
+    {
+      "start": 0.1,
+      "end": 5.76,
+      "text": "Ogni installazione nasce da un audit preliminare e da una sala di regia locale."
+    },
+    {
+      "start": 5.71,
+      "end": 15.08,
+      "text": "Il Monolito Hardware viene configurato, collaudato presso i nostri laboratori e consegnato pronto per operare anche senza connessione internet."
+    }
+  ],
+  "stazione_02": [
+    {
+      "start": 0.1,
+      "end": 4.32,
+      "text": "Quando un gruppo cresce su più sedi, la complessità esplode."
+    },
+    {
+      "start": 4.27,
+      "end": 13.06,
+      "text": "TrinAI collega ogni nodo operativo in un cruscotto unico di confronto, mantenendo i dati sensibili confinati nella sede in cui nascono."
+    }
+  ],
+  "stazione_03": [
+    {
+      "start": 0.1,
+      "end": 5.87,
+      "text": "L'intelligenza artificiale propone e prepara, ma non sostituisce mai il professionista."
+    },
+    {
+      "start": 5.82,
+      "end": 12.42,
+      "text": "Ogni misura dichiara il proprio margine di incertezza e ogni decisione critica richiede conferma umana."
+    }
+  ],
+  "stazione_04": [
+    {
+      "start": 0.1,
+      "end": 5.18,
+      "text": "Basta inventari manuali a fine mese o rotture di stock improvvise."
+    },
+    {
+      "start": 5.13,
+      "end": 13.36,
+      "text": "Il sistema riconosce i materiali sul vassoio, traccia lotti e scadenze e prepara gli ordini prima che le scorte finiscano."
+    }
+  ],
+  "stazione_05": [
+    {
+      "start": 0.1,
+      "end": 3.39,
+      "text": "La tecnologia fallisce se la squadra non la adotta."
+    },
+    {
+      "start": 3.34,
+      "end": 12.71,
+      "text": "TrinAI distingue il ruolo e mai la persona, misura le dinamiche di delega e certifica l'alfabetizzazione obbligatoria prevista dall'AI Act europeo."
+    }
+  ],
+  "stazione_06": [
+    {
+      "start": 0.1,
+      "end": 6.88,
+      "text": "Dalla prima accoglienza al seguito nel tempo, ogni interazione è progettata per ridurre l'attrito."
+    },
+    {
+      "start": 6.83,
+      "end": 13.89,
+      "text": "Comunicazione visiva chiara, richiami automatici e interfacce leggere su canali che tutti già usano."
+    }
+  ],
+  "stazione_07": [
+    {
+      "start": 0.1,
+      "end": 5.1,
+      "text": "Ovunque ti trovi, il tuo Agente Speciale risponde in tempo reale."
+    },
+    {
+      "start": 5.05,
+      "end": 13.38,
+      "text": "Interroghi i numeri della giornata, controlli lo stato delle sedi o dei cantieri e confermi le azioni critiche con un tocco."
+    }
+  ],
+  "stazione_08": [
+    {
+      "start": 0.1,
+      "end": 5.75,
+      "text": "L'eccellenza tecnologica vale solo se è giuridicamente blindata e sostenibile."
+    },
+    {
+      "start": 5.7,
+      "end": 14.53,
+      "text": "Consegniamo il fascicolo completo di conformità, supportiamo le perizie per i crediti d'imposta e restituiamo tempo alla tua direzione."
+    },
+    {
+      "start": 14.52,
+      "end": 17.83,
+      "text": "Nessun agente speciale veste di serie."
+    }
+  ]
+}

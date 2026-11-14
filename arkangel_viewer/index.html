@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArkAng-EL · Cockpit</title>
+  <link rel="icon" type="image/png" href="img/arkangel_icona_96.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="offline_case.js"></script>
+  <script src="vendor/three.min.js"></script>
+  <script src="vendor/OrbitControls.js"></script>
+</head>
+<body class="cockpit-page">
+
+  <header class="bp-navbar cockpit-navbar">
+    <div class="bp-nav-brand">
+      <span class="trinai-logo-acid" role="img" aria-label="TrinAI"></span>
+      <span class="brand-divider" aria-hidden="true"></span>
+      <img class="arkangel-symbol-img" src="img/arkangel_icona_96.png" alt="ArkAng-EL">
+      <span class="bp-nav-brand-title">ArkAng-EL</span>
+    </div>
+
+    <nav class="cockpit-nav" aria-label="Menu principale">
+      <ul class="bp-nav-links">
+        <li><a class="bp-nav-link active" href="index.html" aria-current="page">Cockpit</a></li>
+        <li><a class="bp-nav-link" href="ml_studio.html">Mano del medico</a></li>
+        <li><a class="bp-nav-link" href="osservabilita.html">Osservabilità</a></li>
+        <li><a class="bp-nav-link" href="presentazione.html">Presentazione</a></li>
+        <li><a class="bp-nav-link" href="documentazione.html">Documentazione</a></li>
+      </ul>
+    </nav>
+
+    <div class="bp-nav-actions">
+      <button id="btnOpenTuning" class="bp-btn-outline" type="button">Calibra</button>
+      <button id="btnExportStl" class="bp-btn-outline" type="button">Esporta guida STL</button>
+    </div>
+  </header>
+
+  <div class="cockpit-grid">
+
+    <aside class="cockpit-register bp-panel" aria-labelledby="registerTitle">
+      <div class="bp-panel-header">
+        <span id="registerTitle" class="bp-panel-title">Misure del caso</span>
+        <span id="caseTag" class="case-tag">Caso</span>
+      </div>
+
+      <div class="register-scroll">
+        <div class="case-block">
+          <label class="case-label" for="presetSelect">Caso</label>
+          <select id="presetSelect" class="bp-select case-select">
+            <option value="">Caricamento casi...</option>
+          </select>
+        </div>
+
+        <section class="reg-group" aria-labelledby="groupCaso">
+          <h2 id="groupCaso" class="reg-title">Caso</h2>
+
+          <div class="param-row">
+            <label for="inputArch">
+              <span class="reg-name">Arcata</span>
+              <span class="reg-sym">arcus dentalis</span>
+            </label>
+            <select id="inputArch">
+              <option value="Mandibola" selected>Mandibola</option>
+              <option value="Mascella">Mascella</option>
+            </select>
+          </div>
+
+          <div class="param-row">
+            <label for="inputNImp">
+              <span class="reg-name">Numero di impianti</span>
+              <span class="reg-sym">n</span>
+            </label>
+            <select id="inputNImp">
+              <option value="auto" selected>Automatico</option>
+              <option value="4">All-on-4</option>
+              <option value="5_R">All-on-5 a destra</option>
+              <option value="5_L">All-on-5 a sinistra</option>
+              <option value="6">All-on-6</option>
+              <option value="7">All-on-7</option>
+              <option value="8">All-on-8</option>
+              <option value="10">All-on-10</option>
+            </select>
+          </div>
+        </section>
+
+        <section class="reg-group" aria-labelledby="groupForma">
+          <h2 id="groupForma" class="reg-title">Forma dell'arcata</h2>
+
+          <div class="param-row">
+            <label for="inputChordR">
+              <span class="reg-name">Larghezza a destra</span>
+              <span class="reg-sym">semicorda Dx</span>
+            </label>
+            <input type="number" id="inputChordR" step="0.5" value="17.5">
+          </div>
+
+          <div class="param-row">
+            <label for="inputDepthR">
+              <span class="reg-name">Profondità a destra</span>
+              <span class="reg-sym">freccia AP Dx</span>
+            </label>
+            <input type="number" id="inputDepthR" step="0.5" value="15.0">
+          </div>
+
+          <div class="param-row">
+            <label for="inputChordL">
+              <span class="reg-name">Larghezza a sinistra</span>
+              <span class="reg-sym">semicorda Sx</span>
+            </label>
+            <input type="number" id="inputChordL" step="0.5" value="19.0">
+          </div>
+
+          <div class="param-row">
+            <label for="inputDepthL">
+              <span class="reg-name">Profondità a sinistra</span>
+              <span class="reg-sym">freccia AP Sx</span>
+            </label>
+            <input type="number" id="inputDepthL" step="0.5" value="16.5">
+          </div>
+        </section>
+
+        <section class="reg-group" aria-labelledby="groupNervi">
+          <h2 id="groupNervi" class="reg-title">Nervi e qualità dell'osso</h2>
+
+          <div class="param-row">
+            <label for="inputLoopR">
+              <span class="reg-name">Loop del nervo a destra</span>
+              <span class="reg-sym">loop Dx</span>
+            </label>
+            <input type="number" id="inputLoopR" step="0.1" value="4.2">
+          </div>
+
+          <div class="param-row">
+            <label for="inputLoopL">
+              <span class="reg-name">Loop del nervo a sinistra</span>
+              <span class="reg-sym">loop Sx</span>
+            </label>
+            <input type="number" id="inputLoopL" step="0.1" value="2.5">
+          </div>
+
+          <div class="param-row">
+            <label for="inputUndercut">
+              <span class="reg-name">Sottosquadro</span>
+              <span class="reg-sym">angolo linguale o nasale</span>
+            </label>
+            <input type="number" id="inputUndercut" step="1" value="14.0">
+          </div>
+
+          <div class="param-row">
+            <label for="inputHuAnt">
+              <span class="reg-name">Densità anteriore</span>
+              <span class="reg-sym">unità Hounsfield</span>
+            </label>
+            <input type="number" id="inputHuAnt" step="50" value="1120">
+          </div>
+          <div id="badgeMischAnt" class="misch-badge misch-d2">D2 Cortico-Spongiosa</div>
+
+          <div class="param-row">
+            <label for="inputHuPost">
+              <span class="reg-name">Densità posteriore</span>
+              <span class="reg-sym">unità Hounsfield</span>
+            </label>
+            <input type="number" id="inputHuPost" step="50" value="780">
+          </div>
+          <div id="badgeMischPost" class="misch-badge misch-d2">D2 Cortico-Spongiosa</div>
+
+          <div class="param-row">
+            <label for="inputVProst">
+              <span class="reg-name">Spazio protesico</span>
+              <span class="reg-sym">distanza cresta-piano</span>
+            </label>
+            <input type="number" id="inputVProst" step="0.5" value="14.5">
+          </div>
+        </section>
+
+        <section class="reg-group" aria-labelledby="groupQuote">
+          <h2 id="groupQuote" class="reg-title">Quote ossee e imperfezioni</h2>
+
+          <div class="param-row">
+            <label for="inputHAnt">
+              <span class="reg-name">Altezza anteriore</span>
+              <span class="reg-sym">H ant</span>
+            </label>
+            <input type="number" id="inputHAnt" step="0.5" value="15.0">
+          </div>
+
+          <div class="param-row">
+            <label for="inputHPostR">
+              <span class="reg-name">Altezza posteriore destra</span>
+              <span class="reg-sym">H post Dx</span>
+            </label>
+            <input type="number" id="inputHPostR" step="0.5" value="8.8">
+          </div>
+
+          <div class="param-row">
+            <label for="inputHPostL">
+              <span class="reg-name">Altezza posteriore sinistra</span>
+              <span class="reg-sym">H post Sx</span>
+            </label>
+            <input type="number" id="inputHPostL" step="0.5" value="10.2">
+          </div>
+
+          <div class="param-row">
+            <label for="inputWAnt">
+              <span class="reg-name">Spessore anteriore</span>
+              <span class="reg-sym">W ant</span>
+            </label>
+            <input type="number" id="inputWAnt" step="0.5" value="5.5">
+          </div>
+
+          <div class="param-row">
+            <label for="inputWPost">
+              <span class="reg-name">Spessore posteriore</span>
+              <span class="reg-sym">W post</span>
+            </label>
+            <input type="number" id="inputWPost" step="0.5" value="6.2">
+          </div>
+
+          <div class="param-row">
+            <label for="inputZDropR">
+              <span class="reg-name">Sella concava a destra</span>
+              <span class="reg-sym">avvallamento ΔZ Dx</span>
+            </label>
+            <input type="number" id="inputZDropR" step="0.2" min="0" max="6" value="2.2">
+          </div>
+
+          <div class="param-row">
+            <label for="inputZDropL">
+              <span class="reg-name">Sella concava a sinistra</span>
+              <span class="reg-sym">avvallamento ΔZ Sx</span>
+            </label>
+            <input type="number" id="inputZDropL" step="0.2" min="0" max="6" value="1.0">
+          </div>
+
+          <div class="param-row">
+            <label for="inputDefectZone">
+              <span class="reg-name">Sede del difetto</span>
+              <span class="reg-sym">zona anatomica</span>
+            </label>
+            <select id="inputDefectZone">
+              <option value="none">Nessuno, cresta regolare</option>
+              <option value="ant_R" selected>Canino o incisivo a destra</option>
+              <option value="ant_L">Canino o incisivo a sinistra</option>
+              <option value="post_R">Premolare distale a destra</option>
+              <option value="post_L">Premolare distale a sinistra</option>
+              <option value="midline">Linea mediana, canale nasopalatino</option>
+            </select>
+          </div>
+
+          <div class="param-row">
+            <label for="inputDefectDz">
+              <span class="reg-name">Cratere verticale</span>
+              <span class="reg-sym">ΔZ del difetto</span>
+            </label>
+            <input type="number" id="inputDefectDz" step="0.2" min="0" max="6" value="2.4">
+          </div>
+
+          <div class="param-row">
+            <label for="inputDefectDw">
+              <span class="reg-name">Deiscenza buccale</span>
+              <span class="reg-sym">ΔW del difetto</span>
+            </label>
+            <input type="number" id="inputDefectDw" step="0.2" min="0" max="4" value="1.2">
+          </div>
+
+          <div class="param-row">
+            <label for="selectProfiloMedico">
+              <span class="reg-name">Profilo del medico</span>
+              <span class="reg-sym">minimi d'osso</span>
+            </label>
+            <select id="selectProfiloMedico"></select>
+          </div>
+
+          <div class="param-row">
+            <label for="inputMinLato">
+              <span class="reg-name">Osso per lato</span>
+              <span class="reg-sym">larghezza per lato (mm)</span>
+            </label>
+            <input type="number" id="inputMinLato" step="0.1" min="0" value="0">
+          </div>
+
+          <div class="param-row">
+            <label for="inputMinAltezza">
+              <span class="reg-name">Altezza</span>
+              <span class="reg-sym">osso in altezza (mm)</span>
+            </label>
+            <input type="number" id="inputMinAltezza" step="0.1" min="0" value="0">
+          </div>
+
+          <div class="param-row">
+            <label for="inputMinNervo">
+              <span class="reg-name">Margine dal nervo</span>
+              <span class="reg-sym">distanza dal nervo (mm)</span>
+            </label>
+            <input type="number" id="inputMinNervo" step="0.1" min="0" value="0">
+          </div>
+
+          <div class="param-row">
+            <label for="inputCollarDepth">
+              <span class="reg-name">Colletto sotto la cresta (mm)</span>
+              <span class="reg-sym">0 = a filo dell'osso, scelta del medico</span>
+            </label>
+            <input type="number" id="inputCollarDepth" step="0.1" min="0" value="0">
+          </div>
+
+          <div class="param-row">
+            <label for="inputNerveConfidence">
+              <span class="reg-name">Fascia di confidenza dall'asse del nervo (mm)</span>
+              <span class="reg-sym">raggio del nervo 1,45 + errore del modello (Time)</span>
+            </label>
+            <input type="number" id="inputNerveConfidence" step="0.1" min="0" value="2.9">
+          </div>
+
+          <div class="param-row">
+            <label for="inputConfidenceDistance">
+              <span class="reg-name">Distanza voluta dalla confidenza (mm)</span>
+              <span class="reg-sym">scelta del medico</span>
+            </label>
+            <input type="number" id="inputConfidenceDistance" step="0.1" min="0" value="0">
+          </div>
+
+          <div class="param-row">
+            <label for="inputNomeProfilo">
+              <span class="reg-name">Nome nuovo profilo</span>
+              <span class="reg-sym">salva</span>
+            </label>
+            <input type="text" id="inputNomeProfilo" value="">
+            <button id="btnSaveProfilo" class="bp-btn-outline" type="button">Salva profilo</button>
+          </div>
+        </section>
+
+        <div class="register-action">
+          <button id="btnCalculate" class="bp-btn-solid accent" type="button">Ricalcola</button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="cockpit-scene" aria-label="Scena 3D del modello">
+      <div id="viewport3d"></div>
+      <div id="sceneLabels" class="scene-labels" aria-hidden="true"></div>
+      <div id="tooltip3d"></div>
+      <div id="noCaseOverlay" class="no-case-overlay">
+        <span class="no-case-text">Scegli un caso per vedere il piano</span>
+      </div>
+
+      <div class="scene-toolbar" role="group" aria-label="Viste della scena">
+        <button class="cam-btn active" type="button" data-cam="iso">Isometrica</button>
+        <button class="cam-btn" type="button" data-cam="top">Occlusale</button>
+        <button class="cam-btn" type="button" data-cam="front">Frontale</button>
+        <button class="cam-btn" type="button" data-cam="right">Laterale destra</button>
+        <button class="cam-btn" type="button" data-cam="left">Laterale sinistra</button>
+        <span class="toolbar-sep" aria-hidden="true"></span>
+        <button id="btnFit" class="cam-btn cam-fit" type="button">Inquadra</button>
+      </div>
+
+      <details class="bp-accordion scene-layers">
+        <summary class="bp-accordion-summary">Livelli</summary>
+        <div class="scene-layers-body">
+          <label><input type="checkbox" id="toggleArch" checked> Arcata</label>
+          <label><input type="checkbox" id="toggleImplants" checked> Impianti</label>
+          <label><input type="checkbox" id="toggleMua" checked> Boccole</label>
+          <label><input type="checkbox" id="toggleNerves" checked> Nervo</label>
+          <label><input type="checkbox" id="toggleConfidence" checked> Mostra confidenza</label>
+          <label><input type="checkbox" id="togglePins" checked> Pin</label>
+          <label><input type="checkbox" id="toggleGuideBar" checked> Barra dima</label>
+          <label><input type="checkbox" id="toggleFiducials" checked> Fiduciali</label>
+        </div>
+      </details>
+    </main>
+
+    <section class="cockpit-panel" aria-label="Risultato del caso">
+
+      <div class="bp-panel verdict-panel">
+        <div class="bp-panel-header">
+          <span class="bp-panel-title">Verdetto</span>
+          <span class="panel-hint">Carico immediato</span>
+        </div>
+        <div id="loadVerdict" class="verdict-body safe">
+          <div class="verdict-distance-block">
+            <span class="verdict-label">Distanza dal nervo</span>
+            <p class="verdict-distance"><span id="verdictDistance">2,4</span><span class="verdict-unit">mm</span></p>
+          </div>
+          <div class="verdict-copy">
+            <h2 id="verdictTitle" class="verdict-title">Piano sicuro</h2>
+            <p id="verdictSub" class="verdict-sub">Distanza dal nervo e dal bordo della confidenza.</p>
+            <div id="confidenceDeclaration" class="confidence-declaration" hidden></div>
+            <div class="verdict-scene-actions"><button id="btnLookHere" class="bp-btn-outline btn-compact" type="button">Guarda qui</button><button id="btnLookHook" class="bp-btn-outline btn-compact" type="button">Guarda l'uncino</button><button id="btnReturnView" class="bp-btn-outline btn-compact" type="button" hidden>Torna alla vista di prima</button></div>
+            <p id="verdictBoneWarning" class="verdict-bone-warning" style="display: none;"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bp-panel measure-panel">
+        <div class="bp-panel-header">
+          <span class="bp-panel-title">Misure del piano</span>
+          <span class="panel-hint">Valori calcolati</span>
+        </div>
+        <div class="measure-list">
+          <div class="bp-register-row measure-row">
+            <span class="bp-register-label">Inclinazione</span>
+            <span class="bp-register-value"><span id="kpiTilt">0</span><span class="bp-register-unit">°</span></span>
+          </div>
+          <div class="bp-register-row measure-row">
+            <span class="bp-register-label">Sbalzo</span>
+            <span class="bp-register-value"><span id="kpiCantilever">0</span><span class="bp-register-unit">mm</span></span>
+          </div>
+          <div class="bp-register-row measure-row">
+            <span class="bp-register-label">Aggancio dell'impianto</span>
+            <span class="bp-register-value"><span id="kpiTorque">0</span><span class="bp-register-unit">Ncm</span></span>
+          </div>
+          <div class="bp-register-row measure-row">
+            <span class="bp-register-label">Stabilità</span>
+            <span class="bp-register-value"><span id="kpiMinIsq">0</span><span class="bp-register-unit">ISQ</span></span>
+          </div>
+          <div class="bp-register-row measure-row">
+            <span class="bp-register-label">Micromovimento</span>
+            <span class="bp-register-value"><span id="kpiMicromotion">0</span><span class="bp-register-unit">µm</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bp-panel chart-panel">
+        <div class="bp-panel-header">
+          <span class="bp-panel-title">Curva della stabilità</span>
+          <span class="panel-hint">0-16 settimane</span>
+        </div>
+        <div class="chart-body">
+          <svg id="stabilitySvg" viewBox="0 0 380 150" role="img" aria-label="Curva della stabilità nel tempo"></svg>
+        </div>
+      </div>
+
+      <div class="bp-panel test-panel" id="loadTestPanel">
+        <div class="bp-panel-header">
+          <span class="bp-panel-title">Prove di carico</span>
+          <span class="panel-hint">Stress test epocale</span>
+        </div>
+        <div class="test-panel-body">
+          <p id="loadTestStatus" class="load-test-status">Il piano ha superato le prove alla prova 1</p>
+          <div class="table-scroll table-scroll-sm">
+            <table class="data-table test-table">
+              <thead>
+                <tr>
+                  <th>Epoca</th>
+                  <th>Modifica apportata</th>
+                  <th>Esito</th>
+                </tr>
+              </thead>
+              <tbody id="loadTestTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="bp-panel spectrum-bars-panel" id="spectrumBarsPanel">
+        <div class="bp-panel-header">
+          <span class="bp-panel-title">Quanti impianti</span>
+          <span class="panel-hint">Probabilità di successo</span>
+        </div>
+        <div class="spectrum-bars-body" id="spectrumBarsList"></div>
+      </div>
+
+      <div class="bp-panel models-panel" id="modelsPanel">
+        <div class="bp-panel-header">
+          <span class="bp-panel-title">Modelli sul caso</span>
+          <button id="btnRunNeural" class="bp-btn-outline btn-compact" type="button">Avvia inferenza</button>
+        </div>
+        <div class="models-body">
+          <div id="neuralLiveOutput" class="models-list">
+            <p class="models-empty">Premi «Avvia inferenza» per interrogare i cinque motori sul caso corrente.</p>
+          </div>
+        </div>
+      </div>
+
+      <details class="bp-accordion cockpit-details">
+        <summary class="bp-accordion-summary">Dettaglio del caso</summary>
+        <div class="bp-accordion-content detail-content">
+
+          <p id="solverNote" class="solver-note"></p>
+
+          <div class="detail-block">
+            <h3 class="detail-title">Anatomia e compensazioni</h3>
+            <div id="imperfectionNotes" class="detail-text">Caricamento del profilo anatomico...</div>
+          </div>
+
+
+
+          <div class="detail-block">
+            <div class="detail-block-head">
+              <h3 class="detail-title">Soluzioni da quattro a dieci impianti</h3>
+              <span id="recommendedArchBadge" class="recommended-badge"></span>
+            </div>
+            <div class="table-scroll">
+              <table class="data-table" id="spectrumTable">
+                <thead>
+                  <tr>
+                    <th>Opzione</th>
+                    <th>Schema</th>
+                    <th>Epoche</th>
+                    <th>Von Mises</th>
+                    <th>Tarnow</th>
+                    <th>Successo a dieci anni</th>
+                    <th>Esito</th>
+                  </tr>
+                </thead>
+                <tbody id="spectrumTableBody"></tbody>
+              </table>
+            </div>
+            <div id="epochLogSummary" class="epoch-summary"></div>
+          </div>
+
+          <div class="detail-block">
+            <h3 class="detail-title">Impianti e monconi</h3>
+            <div class="table-scroll">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Sito</th>
+                    <th>Impianto</th>
+                    <th>Cresta</th>
+                    <th>Inclinazione</th>
+                    <th>Moncone</th>
+                    <th>Distanza nervo</th>
+                    <th>Osso sotto l'apice</th>
+                    <th>Aggancio</th>
+                  </tr>
+                </thead>
+                <tbody id="implantsTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="detail-block">
+            <h3 class="detail-title">Pin di ancoraggio</h3>
+            <div class="table-scroll">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Pin</th>
+                    <th>Ingresso</th>
+                    <th>Distanza dall'impianto</th>
+                    <th>Impianto più vicino</th>
+                  </tr>
+                </thead>
+                <tbody id="pinsTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="detail-actions">
+            <button id="btnPrintReport" class="bp-btn-outline" type="button">Stampa il report</button>
+          </div>
+        </div>
+      </details>
+
+    </section>
+  </div>
+
+  <footer class="bp-footer">
+    <div class="bp-footer-brand">
+      <span class="trinai-logo-acid-sm" role="img" aria-label="TrinAI"></span>
+      <span>Un prodotto TrinAI</span>
+    </div>
+    <span>ArkAng-EL · Cockpit</span>
+  </footer>
+
+  <div id="tuningModal" class="modal-backdrop">
+    <div class="modal-window" role="dialog" aria-modal="true" aria-labelledby="tuningTitle">
+      <div class="modal-header">
+        <h2 id="tuningTitle">Calibrazione dello stile chirurgico</h2>
+        <button id="btnCloseTuning" class="modal-close" type="button" aria-label="Chiudi">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <p class="modal-text">
+          Aggiorna la memoria del motore sulle preferenze dell'implantologo.
+          I pesi restano su disco e non richiedono una connessione.
+        </p>
+
+        <div class="priors-summary">
+          <div class="prior-stat">Casi calibrati: <span id="priorCasesCount">0</span></div>
+          <div class="prior-stat">Correzione dell'inclinazione: <span id="priorTiltBias">0,0°</span></div>
+          <div class="prior-stat">Margine dal nervo: <span id="priorNerveMargin">2,0 mm</span></div>
+          <div class="prior-stat">Fattore di sbalzo: <span id="priorCantilever">1,0x</span></div>
+        </div>
+
+        <div class="tuning-form">
+          <div class="tuning-form-row">
+            <label for="tunePredTilt">Inclinazione calcolata dal modello</label>
+            <input type="number" id="tunePredTilt" readonly>
+          </div>
+          <div class="tuning-form-row">
+            <label for="tuneSurgeonTilt">Inclinazione scelta dal chirurgo</label>
+            <input type="number" id="tuneSurgeonTilt" step="0.5">
+          </div>
+          <div class="tuning-form-row">
+            <label for="tunePredCant">Sbalzo massimo teorico</label>
+            <input type="number" id="tunePredCant" readonly>
+          </div>
+          <div class="tuning-form-row">
+            <label for="tuneSurgeonCant">Sbalzo massimo accettato</label>
+            <input type="number" id="tuneSurgeonCant" step="0.5">
+          </div>
+          <div class="tuning-form-row">
+            <label for="tuneNerveMargin">Distanza minima desiderata dal nervo</label>
+            <input type="number" id="tuneNerveMargin" step="0.1">
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="btnResetPriors" class="bp-btn-outline" type="button">Ripristina i valori iniziali</button>
+        <button id="btnApplyTuning" class="bp-btn-solid" type="button">Apprendi e ricalcola</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

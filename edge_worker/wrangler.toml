@@ -1,0 +1,7 @@
+name = "trinai-atelier-gate"
+main = "worker.js"
+compatibility_date = "2026-11-01"
+
+[[kv_namespaces]]
+binding = "ATELIER_CODES"
+id = "SOSTITUISCI_CON_KV_NAMESPACE_ID"

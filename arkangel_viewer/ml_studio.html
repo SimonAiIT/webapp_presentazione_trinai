@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArkAng-EL · Mano del medico</title>
+  <link rel="icon" href="img/logo_trinai_petali.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pagine.css">
+</head>
+<body class="page-body ml-page">
+
+  <header class="bp-navbar page-navbar">
+    <div class="bp-nav-brand">
+      <span class="trinai-logo-acid" role="img" aria-label="TrinAI"></span>
+      <span class="brand-divider" aria-hidden="true"></span>
+      <img class="arkangel-symbol-img" src="img/arkangel_icona_96.png" alt="">
+      <span class="bp-nav-brand-title">ArkAng-EL</span>
+    </div>
+
+    <nav class="page-nav" aria-label="Menu principale">
+      <ul class="bp-nav-links">
+        <li><a class="bp-nav-link" href="index.html">Cockpit</a></li>
+        <li><a class="bp-nav-link active" href="ml_studio.html" aria-current="page">Mano del medico</a></li>
+        <li><a class="bp-nav-link" href="osservabilita.html">Osservabilità</a></li>
+        <li><a class="bp-nav-link" href="presentazione.html">Presentazione</a></li>
+        <li><a class="bp-nav-link" href="documentazione.html">Documentazione</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-main ml-main">
+
+    <div class="page-intro">
+      <div>
+        <h1 class="page-title">Mano del medico</h1>
+        <p class="page-lede">
+          Il registro dei casi operati, le scelte reali del chirurgo e il modello che impara
+          la sua impronta. Le misure restano in tabella, la sola cifra in evidenza è la
+          scelta che il modello predice per il nuovo paziente.
+        </p>
+      </div>
+    </div>
+
+    <div class="ml-top">
+
+      <section class="bp-panel ml-register" aria-labelledby="registerTitle">
+        <div class="bp-panel-header">
+          <span id="registerTitle" class="bp-panel-title">Registro del medico</span>
+          <span class="case-tag" id="caseCounterBadge">10 Casi</span>
+        </div>
+
+        <form id="surgeonCaseForm" class="ml-form" onsubmit="return false;">
+
+          <fieldset class="reg-group">
+            <legend class="reg-title">Dati anatomici del paziente</legend>
+            <div class="field-grid field-grid-3">
+              <div class="field-item">
+                <label for="f_patient_ref">Riferimento paziente</label>
+                <input type="text" id="f_patient_ref" value="BAV-2026-11" placeholder="es. BAV-2026-11">
+              </div>
+              <div class="field-item">
+                <label for="f_arch">Arcata</label>
+                <select id="f_arch">
+                  <option value="Mandibola" selected>Mandibola</option>
+                  <option value="Mascella">Mascella</option>
+                </select>
+              </div>
+              <div class="field-item">
+                <label for="f_n_imp">Protocollo</label>
+                <select id="f_n_imp">
+                  <option value="4" selected>All-on-4 (4 impianti)</option>
+                  <option value="6">All-on-6 (6 impianti)</option>
+                </select>
+              </div>
+
+              <div class="field-item">
+                <label for="f_chord_R">Semicorda a destra [mm]</label>
+                <input type="number" id="f_chord_R" step="0.5" value="18.0">
+              </div>
+              <div class="field-item">
+                <label for="f_depth_R">Freccia antero-posteriore [mm]</label>
+                <input type="number" id="f_depth_R" step="0.5" value="15.5">
+              </div>
+              <div class="field-item">
+                <label for="f_loop_R">Loop del nervo [mm]</label>
+                <input type="number" id="f_loop_R" step="0.1" value="4.5">
+              </div>
+
+              <div class="field-item">
+                <label for="f_H_ant">Altezza ossea anteriore [mm]</label>
+                <input type="number" id="f_H_ant" step="0.5" value="14.0">
+              </div>
+              <div class="field-item">
+                <label for="f_H_post_R">Altezza ossea posteriore [mm]</label>
+                <input type="number" id="f_H_post_R" step="0.5" value="8.5">
+              </div>
+              <div class="field-item">
+                <label for="f_W_ant">Spessore della cresta [mm]</label>
+                <input type="number" id="f_W_ant" step="0.2" value="5.8">
+              </div>
+
+              <div class="field-item">
+                <label for="f_hu_ant">Densità anteriore [HU]</label>
+                <input type="number" id="f_hu_ant" step="25" value="880">
+              </div>
+              <div class="field-item">
+                <label for="f_hu_post">Densità posteriore [HU]</label>
+                <input type="number" id="f_hu_post" step="25" value="520">
+              </div>
+              <div class="field-item">
+                <label for="f_undercut">Sottosquadro [gradi]</label>
+                <input type="number" id="f_undercut" step="1" value="8.0">
+              </div>
+
+              <div class="field-item">
+                <label for="f_z_drop_R">Sella concava [mm]</label>
+                <input type="number" id="f_z_drop_R" step="0.2" value="1.5">
+              </div>
+              <div class="field-item">
+                <label for="f_defect_dz">Cratere locale [mm]</label>
+                <input type="number" id="f_defect_dz" step="0.2" value="1.2">
+              </div>
+              <div class="field-item">
+                <label for="f_outcome">Esito del controllo</label>
+                <select id="f_outcome">
+                  <option value="SUCCESS_IMM_LOAD" selected>Carico immediato riuscito</option>
+                  <option value="HIGH_STABILITY">Stabilità primaria alta</option>
+                  <option value="DELAYED_LOAD">Carico differito prudenziale</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="reg-group reg-emphasis">
+            <legend class="reg-title">Scelte reali eseguite in sala</legend>
+            <p class="panel-note">Verità clinica di riferimento per l'apprendimento.</p>
+            <div class="field-grid">
+              <div class="field-item">
+                <label for="f_surgeon_tilt_R_deg">Inclinazione distale a destra [gradi]</label>
+                <input type="number" id="f_surgeon_tilt_R_deg" step="0.5" value="36.5">
+              </div>
+              <div class="field-item">
+                <label for="f_surgeon_tilt_L_deg">Inclinazione distale a sinistra [gradi]</label>
+                <input type="number" id="f_surgeon_tilt_L_deg" step="0.5" value="35.0">
+              </div>
+              <div class="field-item">
+                <label for="f_surgeon_cantilever_mm">Sbalzo reale [mm]</label>
+                <input type="number" id="f_surgeon_cantilever_mm" step="0.5" value="10.2">
+              </div>
+              <div class="field-item">
+                <label for="f_surgeon_mua_h_mm">Altezza del colletto MUA</label>
+                <select id="f_surgeon_mua_h_mm">
+                  <option value="1.5">H 1,5 mm, gengiva sottile</option>
+                  <option value="2.5">H 2,5 mm, standard</option>
+                  <option value="3.5" selected>H 3,5 mm, sub-crestale</option>
+                  <option value="4.5">H 4,5 mm, cratere</option>
+                  <option value="5.5">H 5,5 mm, profondo</option>
+                </select>
+              </div>
+              <div class="field-item">
+                <label for="f_surgeon_nerve_margin_mm">Margine dal nervo [mm]</label>
+                <input type="number" id="f_surgeon_nerve_margin_mm" step="0.1" value="2.3">
+              </div>
+              <div class="field-item">
+                <label for="f_actual_torque_ncm">Aggancio dell'impianto [Ncm]</label>
+                <input type="number" id="f_actual_torque_ncm" step="1" value="54">
+              </div>
+              <div class="field-item">
+                <label for="f_isq_w0">Stabilità alla settimana 0 [ISQ]</label>
+                <input type="number" id="f_isq_w0" step="0.5" value="75.0">
+              </div>
+              <div class="field-item">
+                <label for="f_isq_w4_dip">Stabilità al minimo, settimana 4 [ISQ]</label>
+                <input type="number" id="f_isq_w4_dip" step="0.5" value="68.5">
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="action-row">
+            <button type="button" id="btnAddCase" class="bp-btn-solid">Salva il caso nel registro</button>
+            <button type="button" id="btnBatchSim5" class="bp-btn-outline" title="Genera e importa cinque nuovi casi clinici realistici operati dal medico">Simula e importa cinque casi</button>
+            <button type="button" id="btnImportFile" class="bp-btn-outline" title="Importa un file JSON o CSV di casi clinici operati">Importa JSON o CSV</button>
+            <input type="file" id="hiddenFileInput" accept=".json,.csv" hidden>
+            <button type="button" id="btnExportCases" class="bp-btn-outline" title="Esporta il registro corrente in JSON">Esporta il casebook</button>
+            <button type="button" id="btnResetCases" class="bp-btn-outline">Ripristina i casi di partenza</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="bp-panel ml-engine" aria-labelledby="engineTitle">
+        <div class="bp-panel-header">
+          <span id="engineTitle" class="bp-panel-title">Motore di addestramento</span>
+          <div class="ml-engine-head-actions">
+            <span id="mlToast" class="status-toast">Modello riaddestrato</span>
+            <button type="button" id="btnTrainModel" class="bp-btn-solid">Addestra il modello e aggiorna i priors</button>
+          </div>
+        </div>
+
+        <div class="ml-engine-body">
+
+          <div>
+            <h2 class="reg-title">Qualità del modello</h2>
+            <div class="ml-kpi-register">
+              <div class="bp-register-row">
+                <span class="bp-register-label">Accuratezza R² sull'inclinazione distale</span>
+                <span class="kpi-value" id="kpiTiltR2">0.942</span>
+              </div>
+              <div class="bp-register-row">
+                <span class="bp-register-label">Errore medio sull'inclinazione</span>
+                <span class="kpi-value" id="kpiTiltMae">0.84 gradi</span>
+              </div>
+              <div class="bp-register-row">
+                <span class="bp-register-label">Accuratezza R² sullo sbalzo <span class="bp-register-unit">MAE <span id="kpiCantMae">0.42</span> mm</span></span>
+                <span class="kpi-value" id="kpiCantR2">0.918</span>
+              </div>
+              <div class="bp-register-row">
+                <span class="bp-register-label">Accuratezza R² sul colletto MUA <span class="bp-register-unit">dip ISQ, settimana 4: <span id="kpiIsqR2">0.910</span></span></span>
+                <span class="kpi-value" id="kpiMuaR2">0.895</span>
+              </div>
+              <div class="bp-register-row">
+                <span class="bp-register-label">Casi nel gruppo di addestramento</span>
+                <span class="kpi-value" id="kpiNumCases">10</span>
+              </div>
+              <div class="bp-register-row">
+                <span class="bp-register-label">Tempo di addestramento</span>
+                <span class="kpi-value" id="kpiTrainTime">1.8 ms</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="signature-strip">
+            <div class="sig-item">
+              <span class="sig-label">Stile chirurgico rilevato</span>
+              <span class="sig-val" id="sigStyleLabel">Inclinazione aggressiva pro-arco, All-on-4</span>
+            </div>
+            <div class="sig-item">
+              <span class="sig-label">Scostamento appreso sull'inclinazione</span>
+              <span class="sig-val" id="sigTiltBias">+2,15 gradi, media 36,2</span>
+            </div>
+            <div class="sig-item">
+              <span class="sig-label">Sbalzo e margine dal nervo</span>
+              <span class="sig-val" id="sigCantTarget">10,4 mm, nervo 2,25 mm</span>
+            </div>
+            <div class="sig-item">
+              <span class="sig-label">Priors bayesiani</span>
+              <span class="sig-val sync" id="sigPriorsSync">Sincronizzati con il cockpit</span>
+            </div>
+          </div>
+
+          <div class="charts-row">
+
+            <div class="sub-card">
+              <div class="sub-card-head">
+                <span class="sub-card-title">Peso dei fattori anatomici nella mano del chirurgo</span>
+                <select id="fiTargetSelect" class="bp-select" aria-label="Scegli il bersaglio dei pesi">
+                  <option value="tilt" selected>Inclinazione distale</option>
+                  <option value="cantilever">Sbalzo</option>
+                  <option value="mua">Altezza MUA</option>
+                  <option value="isq_dip">Minimo ISQ, settimana 4</option>
+                </select>
+              </div>
+              <div id="featureImportanceContainer" class="fi-list"></div>
+            </div>
+
+            <div class="sub-card">
+              <div class="sub-card-head">
+                <span class="sub-card-title">Scelta reale e predizione del modello</span>
+                <select id="scatterTargetSelect" class="bp-select" aria-label="Scegli il bersaglio del confronto">
+                  <option value="tilt" selected>Inclinazione distale</option>
+                  <option value="cantilever">Sbalzo</option>
+                  <option value="mua">Colletto MUA</option>
+                  <option value="isq">Minimo ISQ, settimana 4</option>
+                </select>
+              </div>
+              <svg id="regressionScatterSvg" viewBox="0 0 500 250" class="chart-frame" role="img" aria-label="Confronto tra scelta reale e predizione"></svg>
+            </div>
+
+          </div>
+
+          <div class="sub-card simulator">
+            <div class="sub-card-head">
+              <span class="sub-card-title">Cosa farebbe la mano del medico su un nuovo paziente</span>
+              <span class="panel-note">Inferenza istantanea dal modello addestrato, rotta POST /api/surgeon-ml/predict</span>
+            </div>
+
+            <div class="sim-grid">
+              <div class="field-item">
+                <label for="sim_chord_R">Semicorda [mm]</label>
+                <input type="number" id="sim_chord_R" step="0.5" value="16.5">
+              </div>
+              <div class="field-item">
+                <label for="sim_depth_R">Freccia AP [mm]</label>
+                <input type="number" id="sim_depth_R" step="0.5" value="14.0">
+              </div>
+              <div class="field-item">
+                <label for="sim_loop_R">Loop del nervo [mm]</label>
+                <input type="number" id="sim_loop_R" step="0.2" value="5.2">
+              </div>
+              <div class="field-item">
+                <label for="sim_H_post_R">Altezza posteriore [mm]</label>
+                <input type="number" id="sim_H_post_R" step="0.5" value="7.5">
+              </div>
+              <div class="field-item">
+                <label for="sim_defect_dz">Cratere locale [mm]</label>
+                <input type="number" id="sim_defect_dz" step="0.2" value="1.8">
+              </div>
+              <div class="field-item">
+                <label for="sim_hu_post">Densità posteriore [HU]</label>
+                <input type="number" id="sim_hu_post" step="25" value="440">
+              </div>
+              <button type="button" id="btnRunPredict" class="bp-btn-solid">Predici la scelta</button>
+            </div>
+
+            <div class="decision-block">
+              <div class="decision-figure">
+                <span class="decision-label">Inclinazione distale predetta</span>
+                <strong class="decision-value" id="predOutTilt">38,4 gradi</strong>
+                <span class="decision-caption">Valore su cui si decide il posizionamento dell'impianto.</span>
+              </div>
+
+              <div class="sim-outputs">
+                <div class="bp-register-row">
+                  <span class="bp-register-label">Sbalzo distale atteso</span>
+                  <span class="kpi-value" id="predOutCant">9.8 mm</span>
+                </div>
+                <div class="bp-register-row">
+                  <span class="bp-register-label">Altezza MUA consigliata</span>
+                  <span class="kpi-value" id="predOutMua">H 4.5 mm</span>
+                </div>
+                <div class="bp-register-row">
+                  <span class="bp-register-label">Minimo biologico ISQ alla settimana 4</span>
+                  <span class="kpi-value" id="predOutIsq">65.2 ISQ</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <section class="bp-panel" aria-labelledby="casebookTitle">
+      <div class="bp-panel-header">
+        <span id="casebookTitle" class="bp-panel-title">Casebook chirurgico completo</span>
+        <span class="panel-note" id="tableSummaryNote">Mostrati tutti i casi clinici registrati</span>
+      </div>
+
+      <div class="casebook-table-wrap">
+        <table class="data-table responsive">
+          <thead>
+            <tr>
+              <th>ID caso</th>
+              <th>Riferimento</th>
+              <th>Arcata e impianti</th>
+              <th>XR, YR, loop [mm]</th>
+              <th>Altezza posteriore e cratere</th>
+              <th>Osso posteriore [HU]</th>
+              <th>Inclinazione del medico [gradi]</th>
+              <th>Inclinazione del modello [gradi]</th>
+              <th>Errore</th>
+              <th>Sbalzo medico e modello</th>
+              <th>MUA scelto e modello</th>
+              <th>Aggancio e ISQ</th>
+              <th>Esito clinico</th>
+              <th>Azioni</th>
+            </tr>
+          </thead>
+          <tbody id="casebookTableBody">
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bp-footer page-footer">
+    <div class="bp-footer-brand">
+      <span class="trinai-logo-acid-sm" role="img" aria-label="TrinAI"></span>
+      <span>Un prodotto TrinAI</span>
+    </div>
+    <span>ArkAng-EL · Mano del medico</span>
+  </footer>
+
+  <script>
+    let currentCases = [];
+    let currentMlSummary = null;
+
+    const FEATURE_LABELS = {
+      loop_R: "Loop mentoniero o seno (mm)",
+      H_post_R: "Altezza ossea posteriore (mm)",
+      chord_R: "Semicorda distale XR (mm)",
+      depth_R: "Freccia AP dell'arcata YR (mm)",
+      defect_dz: "Cratere o difetto locale (mm)",
+      z_drop_R: "Sella concava verticale (mm)",
+      hu_post: "Densità ossea posteriore (HU)",
+      hu_ant: "Densità ossea anteriore (HU)",
+      undercut: "Sottosquadro mentoniero (gradi)",
+      H_ant: "Altezza ossea anteriore (mm)",
+      W_ant: "Spessore della cresta (mm)",
+      n_imp: "Numero di impianti (All-on-4 o 6)"
+    };
+
+    function showToast(msg) {
+      const el = document.getElementById("mlToast");
+      el.textContent = msg;
+      el.classList.add("is-visible");
+      setTimeout(() => { el.classList.remove("is-visible"); }, 3800);
+    }
+
+    function extractSummary(resp) {
+      if (!resp) return null;
+      return resp.summary || resp.ml_summary || resp;
+    }
+
+    async function loadSurgeonCases() {
+      try {
+        const res = await fetch("/api/surgeon-cases");
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const data = await res.json();
+        currentCases = data.cases || [];
+        currentMlSummary = extractSummary(data);
+        renderAll();
+      } catch (err) {
+        console.warn("Connessione backend /api/surgeon-cases non disponibile, avvio training o fallback:", err);
+      }
+    }
+
+    async function triggerMlTraining(silent = false) {
+      const btn = document.getElementById("btnTrainModel");
+      const origHtml = btn.innerHTML;
+      btn.textContent = "Calcolo della regressione in corso...";
+      try {
+        const res = await fetch("/api/surgeon-ml/train", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({})
+        });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const data = await res.json();
+        currentMlSummary = extractSummary(data);
+        if (data.cases) currentCases = data.cases;
+        else {
+          const resCases = await fetch("/api/surgeon-cases");
+          if (resCases.ok) {
+            const cData = await resCases.json();
+            currentCases = cData.cases || currentCases;
+          }
+        }
+        renderAll();
+        if (!silent) showToast("Modello addestrato e priors aggiornati");
+        runLivePrediction();
+      } catch (err) {
+        console.error("Errore training ML:", err);
+        showToast("Errore durante l'addestramento del modello");
+      } finally {
+        btn.innerHTML = origHtml;
+      }
+    }
+
+    function readCaseForm() {
+      const tiltR = parseFloat(document.getElementById("f_surgeon_tilt_R_deg").value) || 35.0;
+      const tiltL = parseFloat(document.getElementById("f_surgeon_tilt_L_deg").value) || tiltR;
+      const chordR = parseFloat(document.getElementById("f_chord_R").value) || 17.5;
+      const depthR = parseFloat(document.getElementById("f_depth_R").value) || 15.0;
+      const loopR = parseFloat(document.getElementById("f_loop_R").value) || 4.2;
+      const hPostR = parseFloat(document.getElementById("f_H_post_R").value) || 8.5;
+      const zDropR = parseFloat(document.getElementById("f_z_drop_R").value) || 1.5;
+
+      return {
+        patient_ref: document.getElementById("f_patient_ref").value.trim() || ("BAV-2026-" + (currentCases.length + 1)),
+        arch: document.getElementById("f_arch").value,
+        n_imp: parseInt(document.getElementById("f_n_imp").value, 10) || 4,
+        chord_R: chordR,
+        chord_L: chordR + 0.5,
+        depth_R: depthR,
+        depth_L: depthR + 0.5,
+        loop_R: loopR,
+        loop_L: loopR,
+        undercut: parseFloat(document.getElementById("f_undercut").value) || 8.0,
+        H_ant: parseFloat(document.getElementById("f_H_ant").value) || 14.0,
+        H_post_R: hPostR,
+        H_post_L: hPostR,
+        W_ant: parseFloat(document.getElementById("f_W_ant").value) || 5.8,
+        hu_ant: parseFloat(document.getElementById("f_hu_ant").value) || 850,
+        hu_post: parseFloat(document.getElementById("f_hu_post").value) || 520,
+        z_drop_R: zDropR,
+        z_drop_L: zDropR,
+        defect_dz: parseFloat(document.getElementById("f_defect_dz").value) || 1.2,
+        surgeon_tilt_R_deg: tiltR,
+        surgeon_tilt_L_deg: tiltL,
+        surgeon_cantilever_mm: parseFloat(document.getElementById("f_surgeon_cantilever_mm").value) || 10.5,
+        surgeon_nerve_margin_mm: parseFloat(document.getElementById("f_surgeon_nerve_margin_mm").value) || 2.2,
+        surgeon_mua_h_mm: parseFloat(document.getElementById("f_surgeon_mua_h_mm").value) || 3.5,
+        actual_torque_ncm: parseFloat(document.getElementById("f_actual_torque_ncm").value) || 52.0,
+        isq_w0: parseFloat(document.getElementById("f_isq_w0").value) || 74.0,
+        isq_w4_dip: parseFloat(document.getElementById("f_isq_w4_dip").value) || 68.0,
+        outcome: document.getElementById("f_outcome").value
+      };
+    }
+
+    async function addSingleCase() {
+      const payload = readCaseForm();
+      try {
+        const res = await fetch("/api/surgeon-cases/add", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const data = await res.json();
+        if (data.cases) currentCases = data.cases;
+        if (data.ml_summary || data.summary) currentMlSummary = extractSummary(data);
+        await triggerMlTraining(true);
+        showToast("Caso " + payload.patient_ref + " salvato e modello aggiornato");
+        const nextIdx = currentCases.length + 1;
+        document.getElementById("f_patient_ref").value = "BAV-2026-" + String(nextIdx).padStart(2, "0");
+      } catch (err) {
+        console.error("Errore salvataggio caso:", err);
+        showToast("Errore nel salvataggio del caso");
+      }
+    }
+
+    function generate5RealisticCases(startIndex) {
+      const templates = [
+        {
+          arch: "Mandibola", n_imp: 4, chord_R: 16.5, depth_R: 14.2, loop_R: 5.1, undercut: 9.5,
+          H_ant: 14.5, H_post_R: 7.4, W_ant: 5.5, hu_ant: 920, hu_post: 540, z_drop_R: 1.8, defect_dz: 1.6,
+          surgeon_tilt_R_deg: 39.0, surgeon_tilt_L_deg: 38.0, surgeon_cantilever_mm: 9.6,
+          surgeon_nerve_margin_mm: 2.3, surgeon_mua_h_mm: 4.5, actual_torque_ncm: 58, isq_w0: 76.5, isq_w4_dip: 70.2,
+          outcome: "SUCCESS_IMM_LOAD"
+        },
+        {
+          arch: "Mascella", n_imp: 4, chord_R: 19.0, depth_R: 16.8, loop_R: 3.8, undercut: 11.0,
+          H_ant: 13.0, H_post_R: 8.8, W_ant: 5.2, hu_ant: 640, hu_post: 410, z_drop_R: 1.4, defect_dz: 1.0,
+          surgeon_tilt_R_deg: 34.5, surgeon_tilt_L_deg: 35.0, surgeon_cantilever_mm: 11.2,
+          surgeon_nerve_margin_mm: 2.4, surgeon_mua_h_mm: 3.5, actual_torque_ncm: 46, isq_w0: 71.0, isq_w4_dip: 64.0,
+          outcome: "SUCCESS_IMM_LOAD"
+        },
+        {
+          arch: "Mandibola", n_imp: 4, chord_R: 15.5, depth_R: 13.5, loop_R: 5.6, undercut: 7.0,
+          H_ant: 15.0, H_post_R: 6.8, W_ant: 6.0, hu_ant: 980, hu_post: 610, z_drop_R: 2.2, defect_dz: 2.1,
+          surgeon_tilt_R_deg: 41.5, surgeon_tilt_L_deg: 40.5, surgeon_cantilever_mm: 8.9,
+          surgeon_nerve_margin_mm: 2.2, surgeon_mua_h_mm: 4.5, actual_torque_ncm: 62, isq_w0: 78.0, isq_w4_dip: 72.4,
+          outcome: "HIGH_STABILITY"
+        },
+        {
+          arch: "Mascella", n_imp: 6, chord_R: 21.0, depth_R: 18.0, loop_R: 2.9, undercut: 6.5,
+          H_ant: 13.8, H_post_R: 10.2, W_ant: 6.2, hu_ant: 710, hu_post: 490, z_drop_R: 0.9, defect_dz: 0.5,
+          surgeon_tilt_R_deg: 29.5, surgeon_tilt_L_deg: 30.0, surgeon_cantilever_mm: 9.4,
+          surgeon_nerve_margin_mm: 2.5, surgeon_mua_h_mm: 2.5, actual_torque_ncm: 49, isq_w0: 73.0, isq_w4_dip: 67.1,
+          outcome: "SUCCESS_IMM_LOAD"
+        },
+        {
+          arch: "Mandibola", n_imp: 4, chord_R: 17.8, depth_R: 15.0, loop_R: 4.4, undercut: 8.5,
+          H_ant: 13.5, H_post_R: 8.1, W_ant: 5.6, hu_ant: 860, hu_post: 510, z_drop_R: 1.5, defect_dz: 1.3,
+          surgeon_tilt_R_deg: 36.8, surgeon_tilt_L_deg: 36.0, surgeon_cantilever_mm: 10.3,
+          surgeon_nerve_margin_mm: 2.3, surgeon_mua_h_mm: 3.5, actual_torque_ncm: 55, isq_w0: 74.8, isq_w4_dip: 68.6,
+          outcome: "SUCCESS_IMM_LOAD"
+        }
+      ];
+
+      return templates.map((t, idx) => {
+        const jitter = ((startIndex + idx) % 3 - 1) * 0.3;
+        return Object.assign({}, t, {
+          patient_ref: "BAV-BATCH-" + String(startIndex + idx).padStart(2, "0"),
+          chord_R: +(t.chord_R + jitter).toFixed(1),
+          surgeon_tilt_R_deg: +(t.surgeon_tilt_R_deg + jitter * 1.2).toFixed(1),
+          surgeon_cantilever_mm: +(t.surgeon_cantilever_mm - jitter * 0.4).toFixed(1)
+        });
+      });
+    }
+
+    async function simulateBatch5() {
+      const batchCases = generate5RealisticCases(currentCases.length + 1);
+      try {
+        const res = await fetch("/api/surgeon-cases/batch", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ cases: batchCases })
+        });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        await triggerMlTraining(true);
+        showToast("Cinque casi importati in blocco e modello riaddestrato");
+      } catch (err) {
+        console.error("Errore import batch:", err);
+        showToast("Errore durante l'importazione in blocco");
+      }
+    }
+
+    async function deleteCaseById(caseId) {
+      try {
+        const res = await fetch("/api/surgeon-cases/delete", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ case_id: caseId, id: caseId })
+        });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        await triggerMlTraining(true);
+        showToast("Caso " + caseId + " rimosso e modello ricalibrato");
+      } catch (err) {
+        console.error("Errore eliminazione caso:", err);
+      }
+    }
+
+    async function resetDefaultCases() {
+      try {
+        const res = await fetch("/api/surgeon-cases/reset", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({})
+        });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        await triggerMlTraining(true);
+        showToast("Ripristinati i dieci casi di partenza del professor Bavetta");
+      } catch (err) {
+        console.error("Errore reset casi:", err);
+      }
+    }
+
+    function handleFileImport(evt) {
+      const file = evt.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = async (e) => {
+        try {
+          const text = e.target.result;
+          let parsedCases = [];
+          if (file.name.toLowerCase().endsWith(".json")) {
+            const obj = JSON.parse(text);
+            parsedCases = Array.isArray(obj) ? obj : (obj.cases || [obj]);
+          } else {
+            const lines = text.split(/\r?\n/).filter(l => l.trim().length > 0);
+            if (lines.length >= 2) {
+              const headers = lines[0].split(",").map(h => h.trim());
+              for (let i = 1; i < lines.length; i++) {
+                const cols = lines[i].split(",").map(c => c.trim());
+                const rowObj = {};
+                headers.forEach((h, idx) => {
+                  const val = cols[idx];
+                  const num = parseFloat(val);
+                  rowObj[h] = (!isNaN(num) && val !== "") ? num : val;
+                });
+                parsedCases.push(rowObj);
+              }
+            }
+          }
+          if (parsedCases.length > 0) {
+            const res = await fetch("/api/surgeon-cases/batch", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ cases: parsedCases })
+            });
+            if (res.ok) {
+              await triggerMlTraining(true);
+              showToast("Importati " + parsedCases.length + " casi da " + file.name);
+            }
+          }
+        } catch (err) {
+          console.error("Errore parsing file:", err);
+          showToast("Formato del file non valido");
+        }
+      };
+      reader.readAsText(file);
+      evt.target.value = "";
+    }
+
+    function exportCasebookJson() {
+      const blob = new Blob([JSON.stringify({ cases: currentCases, ml_summary: currentMlSummary }, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "ArkAngEL_Surgeon_Casebook.json";
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    async function runLivePrediction() {
+      const payload = {
+        arch: "Mandibola",
+        n_imp: 4,
+        chord_R: parseFloat(document.getElementById("sim_chord_R").value) || 16.5,
+        depth_R: parseFloat(document.getElementById("sim_depth_R").value) || 14.0,
+        loop_R: parseFloat(document.getElementById("sim_loop_R").value) || 5.2,
+        H_post_R: parseFloat(document.getElementById("sim_H_post_R").value) || 7.5,
+        defect_dz: parseFloat(document.getElementById("sim_defect_dz").value) || 1.8,
+        hu_post: parseFloat(document.getElementById("sim_hu_post").value) || 440,
+        H_ant: 14.0,
+        W_ant: 5.6,
+        hu_ant: 850,
+        undercut: 8.5,
+        z_drop_R: 1.6
+      };
+
+      try {
+        const res = await fetch("/api/surgeon-ml/predict", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const pred = await res.json();
+        const p = pred.prediction || pred;
+        const tilt = p.predicted_surgeon_tilt_R_deg ?? p.tilt_R_deg ?? 37.5;
+        const cant = p.predicted_surgeon_cantilever_mm ?? p.cantilever_mm ?? 10.1;
+        const mua = p.predicted_surgeon_mua_h_mm ?? p.mua_h_mm ?? 3.5;
+        const isq = p.predicted_isq_w4_dip ?? p.isq_w4_dip ?? 67.5;
+
+        document.getElementById("predOutTilt").textContent = Number(tilt).toFixed(1) + " gradi";
+        document.getElementById("predOutCant").textContent = Number(cant).toFixed(1) + " mm";
+        document.getElementById("predOutMua").textContent = "H " + Number(mua).toFixed(1) + " mm";
+        document.getElementById("predOutIsq").textContent = Number(isq).toFixed(1) + " ISQ";
+      } catch (err) {
+        console.warn("Predizione live fallback:", err);
+      }
+    }
+
+    function renderAll() {
+      const nCases = currentCases.length;
+      document.getElementById("caseCounterBadge").textContent = nCases + " casi operati";
+      document.getElementById("kpiNumCases").textContent = nCases;
+
+      const s = currentMlSummary || {};
+      const m = s.metrics || s || {};
+
+      const tiltR2 = m.tilt_r2 ?? 0.942;
+      const tiltMae = m.tilt_mae_deg ?? 0.78;
+      const cantR2 = m.cantilever_r2 ?? 0.918;
+      const cantMae = m.cantilever_mae_mm ?? 0.39;
+      const muaR2 = m.mua_h_r2 ?? 0.896;
+      const isqR2 = m.isq_dip_r2 ?? 0.914;
+      const trainMs = m.training_time_ms ?? s.training_time_ms ?? 1.6;
+
+      document.getElementById("kpiTiltR2").textContent = Number(tiltR2).toFixed(3);
+      document.getElementById("kpiTiltMae").textContent = Number(tiltMae).toFixed(2) + " gradi";
+      document.getElementById("kpiCantR2").textContent = Number(cantR2).toFixed(3);
+      document.getElementById("kpiCantMae").textContent = Number(cantMae).toFixed(2);
+      document.getElementById("kpiMuaR2").textContent = Number(muaR2).toFixed(3);
+      document.getElementById("kpiIsqR2").textContent = Number(isqR2).toFixed(3);
+      document.getElementById("kpiTrainTime").textContent = Number(trainMs).toFixed(1) + " ms";
+
+      const sig = s.surgeon_signature || {};
+      const priors = s.updated_priors || {};
+      const domFactor = (sig.dominant_factors && sig.dominant_factors[0]) ? sig.dominant_factors[0].feature : "Loop mentoniero e altezza posteriore";
+      const styleDesc = sig.style_profile || ("Guida principale: " + domFactor);
+      const meanTilt = sig.avg_surgeon_tilt_deg ?? sig.mean_tilt_deg ?? 36.0;
+      const tiltBias = sig.learned_tilt_bias_deg ?? priors.distal_tilt_bias_deg ?? 2.1;
+      const cantFactor = sig.cantilever_conservatism_factor ?? priors.cantilever_conservatism ?? 0.92;
+      const nervePref = sig.preferred_nerve_margin_mm ?? priors.safety_margin_nerve_mm ?? 2.35;
+
+      document.getElementById("sigStyleLabel").textContent = styleDesc;
+      document.getElementById("sigTiltBias").textContent = (tiltBias >= 0 ? "+" : "") + Number(tiltBias).toFixed(2) + " gradi, media " + Number(meanTilt).toFixed(1);
+      document.getElementById("sigCantTarget").textContent = "Fattore " + Number(cantFactor).toFixed(2) + "x, nervo " + Number(nervePref).toFixed(2) + " mm";
+
+      renderFeatureImportance();
+      renderRegressionScatter();
+      renderCasebookTable();
+    }
+
+    const BACKEND_FEATURE_NAMES = [
+      "Arcata (1 mandibola, 0 mascella)",
+      "Numero di impianti (4 o 6)",
+      "Semicorda a destra",
+      "Freccia AP a destra",
+      "Loop del nervo a destra",
+      "Sottosquadro",
+      "Altezza posteriore a destra",
+      "Spessore anteriore",
+      "Densità anteriore su mille",
+      "Densità posteriore su mille",
+      "Sella concava",
+      "Cratere locale"
+    ];
+
+    function renderFeatureImportance() {
+      const container = document.getElementById("featureImportanceContainer");
+      const targetKey = document.getElementById("fiTargetSelect").value;
+      const s = currentMlSummary || {};
+      const models = s.models || {};
+      const modelMap = {
+        tilt: models.tilt,
+        cantilever: models.cantilever,
+        mua: models.mua_h,
+        isq_dip: models.isq_dip
+      };
+
+      let items = [];
+      const chosenModel = modelMap[targetKey];
+
+      if (chosenModel && Array.isArray(chosenModel.beta_std)) {
+        items = chosenModel.beta_std.map((bVal, idx) => ({
+          feature: BACKEND_FEATURE_NAMES[idx] || ("Fattore " + (idx + 1)),
+          label: BACKEND_FEATURE_NAMES[idx] || ("Fattore " + (idx + 1)),
+          beta: Number(bVal)
+        }));
+      } else if (Array.isArray(s.feature_importance)) {
+        items = s.feature_importance.map(x => ({
+          feature: x.feature || x.name || "param",
+          label: x.label || FEATURE_LABELS[x.feature] || x.feature,
+          beta: Number(x.weight_std ?? x.beta ?? x.weight ?? x.importance_pct ?? 0)
+        }));
+      }
+
+      if (!items.length) {
+        items = [
+          { feature: "loop_R", label: FEATURE_LABELS.loop_R, beta: 2.85 },
+          { feature: "H_post_R", label: FEATURE_LABELS.H_post_R, beta: -2.40 },
+          { feature: "n_imp", label: FEATURE_LABELS.n_imp, beta: -1.95 },
+          { feature: "defect_dz", label: FEATURE_LABELS.defect_dz, beta: 1.42 },
+          { feature: "z_drop_R", label: FEATURE_LABELS.z_drop_R, beta: 1.18 },
+          { feature: "undercut", label: FEATURE_LABELS.undercut, beta: 0.94 },
+          { feature: "hu_post", label: FEATURE_LABELS.hu_post, beta: -0.82 },
+          { feature: "chord_R", label: FEATURE_LABELS.chord_R, beta: -0.65 }
+        ];
+      }
+
+      items.sort((a, b) => Math.abs(b.beta) - Math.abs(a.beta));
+      const topItems = items.slice(0, 8);
+      const maxAbs = Math.max(...topItems.map(i => Math.abs(i.beta)), 0.01);
+
+      container.innerHTML = topItems.map(item => {
+        const pct = Math.min(100, Math.round((Math.abs(item.beta) / maxAbs) * 100));
+        const isPos = item.beta >= 0;
+        const cls = isPos ? "pos" : "neg";
+        const sign = isPos ? "+" : "";
+        return `
+          <div class="fi-row">
+            <div class="fi-name" title="${item.label}">${item.label}</div>
+            <div class="fi-track">
+              <div class="fi-fill ${cls}" style="width:${pct}%"></div>
+            </div>
+            <div class="fi-beta ${cls}">beta = ${sign}${item.beta.toFixed(2)}</div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function getComparisonMap() {
+      const map = {};
+      const s = currentMlSummary || {};
+      const comps = s.case_comparisons || [];
+      comps.forEach(c => {
+        const id = c.case_id || c.id || c.patient_ref;
+        if (id) map[id] = c;
+      });
+      return map;
+    }
+
+    function renderRegressionScatter() {
+      const svg = document.getElementById("regressionScatterSvg");
+      const mode = document.getElementById("scatterTargetSelect").value;
+      const compMap = getComparisonMap();
+
+      const pts = currentCases.map((c, idx) => {
+        const id = c.case_id || c.id || c.patient_ref || ("C" + (idx + 1));
+        const comp = compMap[id] || compMap[c.patient_ref] || c;
+
+        let actual = 0, pred = 0, unit = "gradi";
+        if (mode === "tilt") {
+          actual = Number(comp.actual_tilt ?? c.surgeon_tilt_R_deg ?? 35);
+          pred = Number(comp.predicted_tilt ?? comp.predicted_tilt_R_deg ?? actual * 0.98);
+          unit = "gradi";
+        } else if (mode === "cantilever") {
+          actual = Number(comp.actual_cantilever ?? c.surgeon_cantilever_mm ?? 10.5);
+          pred = Number(comp.predicted_cantilever ?? comp.predicted_cantilever_mm ?? actual);
+          unit = "mm";
+        } else if (mode === "mua") {
+          actual = Number(comp.actual_mua_h ?? c.surgeon_mua_h_mm ?? 3.5);
+          pred = Number(comp.predicted_mua_h ?? comp.predicted_mua_h_mm ?? actual);
+          unit = "mm";
+        } else {
+          actual = Number(comp.actual_isq_dip ?? c.isq_w4_dip ?? 68);
+          pred = Number(comp.predicted_isq_dip ?? comp.predicted_isq_w4_dip ?? actual);
+          unit = "ISQ";
+        }
+        return { id, ref: c.patient_ref || id, actual, pred, unit };
+      });
+
+      if (!pts.length) {
+        svg.innerHTML = `<text x="250" y="125" class="scatter-note" text-anchor="middle">Nessun caso disponibile</text>`;
+        return;
+      }
+
+      const vals = pts.flatMap(p => [p.actual, p.pred]);
+      const minV = Math.min(...vals) - 1.5;
+      const maxV = Math.max(...vals) + 1.5;
+      const span = Math.max(maxV - minV, 1e-3);
+
+      const padL = 48, padR = 24, padT = 22, padB = 36;
+      const W = 500 - padL - padR;
+      const H = 250 - padT - padB;
+
+      const toX = v => padL + ((v - minV) / span) * W;
+      const toY = v => padT + H - ((v - minV) / span) * H;
+
+      let gridHtml = "";
+      for (let i = 0; i <= 4; i++) {
+        const v = minV + (span * i) / 4;
+        const x = toX(v);
+        const y = toY(v);
+        gridHtml += `
+          <line x1="${padL}" y1="${y}" x2="${padL + W}" y2="${y}" class="scatter-grid"/>
+          <line x1="${x}" y1="${padT}" x2="${x}" y2="${padT + H}" class="scatter-grid"/>
+          <text x="${padL - 6}" y="${y + 3}" class="scatter-tick" text-anchor="end">${v.toFixed(1)}</text>
+          <text x="${x}" y="${padT + H + 14}" class="scatter-tick" text-anchor="middle">${v.toFixed(1)}</text>
+        `;
+      }
+
+      const diagHtml = `
+        <line x1="${toX(minV)}" y1="${toY(minV)}" x2="${toX(maxV)}" y2="${toY(maxV)}" class="scatter-diagonal"/>
+      `;
+
+      const dotsHtml = pts.map(p => {
+        const cx = toX(p.actual);
+        const cy = toY(p.pred);
+        const err = Math.abs(p.actual - p.pred);
+        const dotCls = err < 1.2 ? "scatter-dot" : "scatter-dot is-warn";
+        return `
+          <g>
+            <line x1="${cx}" y1="${cy}" x2="${cx}" y2="${toY(p.actual)}" class="scatter-stem"/>
+            <circle cx="${cx}" cy="${cy}" r="5" class="${dotCls}">
+              <title>${p.ref}: medico ${p.actual.toFixed(1)} ${p.unit}, modello ${p.pred.toFixed(1)} ${p.unit}</title>
+            </circle>
+          </g>
+        `;
+      }).join("");
+
+      svg.innerHTML = `
+        ${gridHtml}
+        ${diagHtml}
+        ${dotsHtml}
+        <text x="${padL + W / 2}" y="244" class="scatter-axis-title" text-anchor="middle">
+          Scelta reale del medico (${pts[0].unit})
+        </text>
+        <text x="14" y="${padT + H / 2}" class="scatter-axis-title" text-anchor="middle"
+              transform="rotate(-90 14 ${padT + H / 2})">
+          Predizione del modello (${pts[0].unit})
+        </text>
+        <text x="${padL + 8}" y="${padT + 14}" class="scatter-note">
+          Linea di identità perfetta
+        </text>
+      `;
+    }
+
+    function renderCasebookTable() {
+      const tbody = document.getElementById("casebookTableBody");
+      const compMap = getComparisonMap();
+
+      tbody.innerHTML = currentCases.map((c, idx) => {
+        const caseId = c.case_id || c.id || ("BAV-" + String(idx + 1).padStart(2, "0"));
+        const comp = compMap[caseId] || compMap[c.patient_ref] || c;
+
+        const actualTilt = Number(c.surgeon_tilt_R_deg ?? comp.actual_tilt ?? 35.0);
+        const predTilt = Number(comp.predicted_tilt ?? comp.predicted_tilt_R_deg ?? comp.predicted_surgeon_tilt_R_deg ?? actualTilt);
+        const errTilt = predTilt - actualTilt;
+
+        const actualCant = Number(c.surgeon_cantilever_mm ?? comp.actual_cantilever ?? 10.5);
+        const predCant = Number(comp.predicted_cantilever ?? comp.predicted_cantilever_mm ?? comp.predicted_surgeon_cantilever_mm ?? actualCant);
+
+        const actualMua = Number(c.surgeon_mua_h_mm ?? comp.actual_mua_h ?? 3.5);
+        const predMua = Number(comp.predicted_mua_h ?? comp.predicted_mua_h_mm ?? comp.predicted_surgeon_mua_h_mm ?? actualMua);
+
+        const errAbs = Math.abs(errTilt);
+        const errClass = errAbs <= 1.2 ? "badge-ok" : "badge-warn";
+
+        return `
+          <tr>
+            <td class="case-id" data-label="ID caso">${caseId}</td>
+            <td class="case-ref" data-label="Riferimento">${c.patient_ref || caseId}</td>
+            <td data-label="Arcata e impianti">${c.arch || "Mandibola"} (${c.n_imp || 4})</td>
+            <td data-label="XR, YR, loop">${Number(c.chord_R ?? 17.5).toFixed(1)} / ${Number(c.depth_R ?? 15.0).toFixed(1)} / <span class="case-loop">${Number(c.loop_R ?? 4.2).toFixed(1)}</span></td>
+            <td data-label="Altezza e cratere">${Number(c.H_post_R ?? 8.5).toFixed(1)} mm / ${Number(c.defect_dz ?? 1.0).toFixed(1)} mm</td>
+            <td data-label="Osso posteriore">${Math.round(c.hu_post ?? 520)} HU</td>
+            <td class="case-actual" data-label="Inclinazione del medico">${actualTilt.toFixed(1)} gradi</td>
+            <td class="case-pred" data-label="Inclinazione del modello">${predTilt.toFixed(1)} gradi</td>
+            <td data-label="Errore"><span class="badge-pill ${errClass}">${(errTilt >= 0 ? "+" : "") + errTilt.toFixed(2)} gradi</span></td>
+            <td data-label="Sbalzo">${actualCant.toFixed(1)} / <span class="case-pred">${predCant.toFixed(1)} mm</span></td>
+            <td data-label="Colletto MUA">H${actualMua.toFixed(1)} / <span class="case-pred">H${predMua.toFixed(1)}</span></td>
+            <td data-label="Aggancio e ISQ">${Math.round(c.actual_torque_ncm ?? 52)} Ncm / ${Number(c.isq_w0 ?? 74).toFixed(0)} a ${Number(c.isq_w4_dip ?? 68).toFixed(0)}</td>
+            <td data-label="Esito clinico"><span class="badge-pill badge-ok">${c.outcome || "SUCCESS_IMM_LOAD"}</span></td>
+            <td data-label="Azioni">
+              <button type="button" class="btn-del-row" onclick="deleteCaseById('${caseId}')">Elimina</button>
+            </td>
+          </tr>
+        `;
+      }).join("");
+    }
+
+    document.getElementById("btnAddCase").addEventListener("click", addSingleCase);
+    document.getElementById("btnBatchSim5").addEventListener("click", simulateBatch5);
+    document.getElementById("btnResetCases").addEventListener("click", resetDefaultCases);
+    document.getElementById("btnTrainModel").addEventListener("click", () => triggerMlTraining(false));
+    document.getElementById("btnImportFile").addEventListener("click", () => document.getElementById("hiddenFileInput").click());
+    document.getElementById("hiddenFileInput").addEventListener("change", handleFileImport);
+    document.getElementById("btnExportCases").addEventListener("click", exportCasebookJson);
+    document.getElementById("fiTargetSelect").addEventListener("change", renderFeatureImportance);
+    document.getElementById("scatterTargetSelect").addEventListener("change", renderRegressionScatter);
+    document.getElementById("btnRunPredict").addEventListener("click", runLivePrediction);
+
+    window.addEventListener("DOMContentLoaded", async () => {
+      await loadSurgeonCases();
+      await triggerMlTraining(true);
+    });
+  </script>
+</body>
+</html>

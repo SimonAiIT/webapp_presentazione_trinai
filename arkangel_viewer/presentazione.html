@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArkAng-EL · Presentazione</title>
+  <link rel="icon" href="img/logo_trinai_petali.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pagine.css">
+</head>
+<body class="pres-page">
+
+  <header class="bp-navbar page-navbar">
+    <div class="bp-nav-brand">
+      <span class="trinai-logo-acid" role="img" aria-label="TrinAI"></span>
+      <span class="brand-divider" aria-hidden="true"></span>
+      <img class="arkangel-symbol-img" src="img/arkangel_icona_96.png" alt="">
+      <span class="bp-nav-brand-title">ArkAng-EL</span>
+    </div>
+
+    <nav class="page-nav" aria-label="Menu principale">
+      <ul class="bp-nav-links">
+        <li><a class="bp-nav-link" href="index.html">Cockpit</a></li>
+        <li><a class="bp-nav-link" href="ml_studio.html">Mano del medico</a></li>
+        <li><a class="bp-nav-link" href="osservabilita.html">Osservabilità</a></li>
+        <li><a class="bp-nav-link active" href="presentazione.html" aria-current="page">Presentazione</a></li>
+        <li><a class="bp-nav-link" href="documentazione.html">Documentazione</a></li>
+      </ul>
+    </nav>
+
+    <div class="pres-tools">
+      <button type="button" id="btnToggleOverview" class="bp-btn-outline" aria-pressed="false">Vista completa</button>
+      <button type="button" class="bp-btn-outline" onclick="window.print()">Stampa</button>
+    </div>
+  </header>
+
+  <main class="pres-stage">
+
+    <section class="pres-slide active" data-index="0">
+      <div class="pres-inner">
+        <div class="pres-topline">
+          <span class="pres-kicker">Manifesto · filosofia chirurgica</span>
+          <span class="pres-count">01 / 10</span>
+        </div>
+
+        <div class="pres-brandmark">
+          <span class="trinai-logo-acid" role="img" aria-label="TrinAI"></span>
+          <img class="arkangel-symbol-img" src="img/arkangel_simbolo_256.png" alt="">
+          <span class="pres-brandname">ArkAng<span>-EL</span></span>
+        </div>
+
+        <div class="pres-layout">
+          <div>
+            <h1 class="pres-title">La chirurgia implantare non ha bisogno di una TC. <span class="pres-accent">Ha bisogno di geometria.</span></h1>
+            <p class="pres-lead">
+              Il chirurgo legge pochi parametri con il righello, la suite sintetizza
+              l'arcata in tre dimensioni e restituisce una mesh pronta per il CAD.
+              Zero-DICOM, zero cloud, zero attese.
+            </p>
+
+            <div class="pres-points">
+              <div class="pres-point">
+                <div class="pres-point-title">Riferimento universale</div>
+                <div class="pres-point-text">Origine in P0, forami destro e sinistro, tre sfere fiduciali.</div>
+              </div>
+              <div class="pres-point">
+                <div class="pres-point-title">Sintesi deterministica</div>
+                <div class="pres-point-text">Spline asimmetriche e anti-collisione in R³, nessuna segmentazione pesante.</div>
+              </div>
+              <div class="pres-point">
+                <div class="pres-point-title">Uscita immediata</div>
+                <div class="pres-point-text">STL allineabile in Exocad, BlueSkyPlan e 3Shape.</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="pres-big">0</div>
+            <div class="pres-big-note">file DICOM necessari per iniziare il planning.</div>
+            <div class="pres-formula">
+              P0 = (0, 0, 0)<br>
+              <span class="eq-muted">X destra, Y antero-posteriore, Z occlusale</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pres-slide" data-index="1">
+      <div class="pres-inner">
+        <div class="pres-topline">
+          <span class="pres-kicker">Cresta reale · topografia non ideale</span>
+          <span class="pres-count">02 / 10</span>
+        </div>
+
+        <div class="pres-layout">
+          <div>
+            <h1 class="pres-title">La cresta non è piatta. È un <span class="pres-accent">dato di progetto.</span></h1>
+            <p class="pres-lead">
+              Sella concava, cratere post-estrattivo e deiscenza buccale non sono
+              errori da correggere a mano: sono imperfezioni che il motore scava
+              fisicamente nella spline e nell'STL.
+            </p>
+
+            <div class="pres-points">
+              <div class="pres-point">
+                <div class="pres-point-title">Sella concava</div>
+                <div class="pres-point-text">Caduta posteriore controllata, non un arco piatto a Z = 0.</div>
+              </div>
+              <div class="pres-point">
+                <div class="pres-point-title">Cratere locale</div>
+                <div class="pres-point-text">Campana gaussiana centrata sul difetto indicato dal medico.</div>
+              </div>
+              <div class="pres-point">
+                <div class="pres-point-title">Deiscenza buccale</div>
+                <div class="pres-point-text">Restringimento effettivo della cresta, compensato dall'asse.</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="pres-formula accent">
+              Z(x) = −|ΔZ<sub>sella</sub>| · (|x| / X<sub>max</sub>)<sup>1.6</sup><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;− |ΔZ<sub>def</sub>| · exp(−(x − x<sub>c</sub>)² / 2σ<sub>x</sub>²)
+            </div>
+            <div class="pres-formula">
+              W<sub>eff</sub>(x) = W<sub>base</sub>(x)<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;− |ΔW<sub>def</sub>| · exp(−(x − x<sub>c</sub>)² / 2σ<sub>x</sub>²)
+            </div>
+            <p class="pres-figure-caption">
+              La stessa geometria alimenta il cockpit WebGL e il file esportato per l'odontotecnico.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pres-slide" data-index="2">
+      <div class="pres-inner">
+        <div class="pres-topline">
+          <span class="pres-kicker">Compensazioni · osso e protesi</span>
+          <span class="pres-count">03 / 10</span>
+        </div>
+
+        <div class="pres-layout">
+          <div>
+            <h1 class="pres-title">Se l'osso scende, <span class="pres-accent">il MUA sale.</span></h1>
+            <p class="pres-lead">
+              Affondamento subcrestale e colletto transmucoso si compensano.
+              Tutti i camini emergono sullo stesso piano protesico, anche su una
+              cresta irregolare.
+            </p>
+
+            <div class="pres-points">
+              <div class="pres-point">
+                <div class="pres-point-title">Affondamento reale</div>
+                <div class="pres-point-text">La fixture cerca il fondo osseo sano del cratere, non la quota ideale.</div>
+              </div>
+              <div class="pres-point">
+                <div class="pres-point-title">Colletto variabile</div>
+                <div class="pres-point-text">MUA da H1,5 a H5,5 per mantenere il piano occlusale.</div>
+              </div>
+              <div class="pres-point">
+                <div class="pres-point-title">Tilt di sicurezza</div>
+                <div class="pres-point-text">Inclinazione palatale o linguale quando la corticale è sottile.</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="pres-big">H5,5</div>
+            <div class="pres-big-note">colletto massimo compensato, senza cantilever fuori misura.</div>
+            <div class="pres-formula accent">
+              H<sub>MUA</sub> = V<sub>prost</sub> − Z<sub>crest</sub> + H<sub>base</sub>
+            </div>
+            <div class="pres-figure">
+              <svg viewBox="0 0 460 190" role="img" aria-label="Compensazione del cratere con MUA H5,5">
+                <line x1="28" y1="38" x2="432" y2="38" class="chart-dash-soft"/>
+                <text x="32" y="28" class="chart-label">Piano protesico</text>
+
+                <path d="M 28 96 Q 120 96 190 100 Q 255 146 318 142 Q 380 112 432 114" class="chart-line-main"/>
+                <text x="42" y="86" class="chart-label">Cresta regolare</text>
+                <text x="246" y="164" class="chart-label-accent">Cratere osseo</text>
+
+                <rect x="104" y="98" width="16" height="64" class="chart-bar"/>
+                <rect x="102" y="76" width="20" height="22" class="chart-bar-safe"/>
+                <line x1="112" y1="38" x2="112" y2="76" class="chart-line-soft"/>
+                <text x="112" y="184" class="chart-label" text-anchor="middle">H2,5</text>
+
+                <rect x="288" y="140" width="16" height="50" class="chart-bar"/>
+                <rect x="286" y="88" width="20" height="52" class="chart-bar-warn"/>
+                <line x1="296" y1="38" x2="296" y2="88" class="chart-line-accent"/>
+                <text x="296" y="184" class="chart-label-accent" text-anchor="middle">H5,5 compensato</text>
+              </svg>
+              <div class="pres-figure-caption">La fixture scende nel cratere, il colletto recupera la quota.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pres-slide" data-index="3">
+      <div class="pres-inner">
+        <div class="pres-topline">
+          <span class="pres-kicker">Sicurezza · geometria esatta</span>
+          <span class="pres-count">04 / 10</span>
+        </div>
+
+        <div class="pres-layout">
+          <div>
+            <h1 class="pres-title">Nessun impianto <span class="pres-accent">entra nel nervo.</span></h1>
+            <p class="pres-lead">
+              Il loop mentoniero e i pin della mascherina sono segmenti finiti nello
+              spazio. La distanza minima è calcolata in forma chiusa e corretta prima
+              dell'esportazione.
+            </p>
+
+            <div class="pres-points">
+              <div class="pres-point">
+                <div class="pres-point-title">Soglia del chirurgo</div>
+                <div class="pres-point-text">Clearance minima forzata a 2,0 mm dal loop e dalla parete antrale.</div>
+              </div>
+              <div class="pres-point">
+                <div class="pres-point-title">Pin protetti</div>
+                <div class="pres-point-text">Se un pin si avvicina all'apice, viene traslato apicalmente.</div>
+              </div>
+              <div class="pres-point">
+                <div class="pres-point-title">Correzione automatica</div>
+                <div class="pres-point-text">Il tilt mesio-distale aumenta fino a rientrare nella soglia.</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="pres-big">≥ 2,0 mm</div>
+            <div class="pres-big-note">distanza minima tra impianto e strutture nervose.</div>
+            <div class="pres-formula accent">
+              d<sub>min</sub>(S<sub>1</sub>, S<sub>2</sub>) = min<sub>s,t∈[0,1]</sub> ‖(P<sub>1</sub> + s·u) − (Q<sub>1</sub> + t·v)‖<sub>2</sub><br>
+              <span class="eq-muted">− R<sub>impianto</sub> − R<sub>target</sub></span>
+            </div>
+            <p class="pres-figure-caption">
+              Il vincolo non è una stima voxel: è la distanza esatta tra due segmenti sghembi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pres-slide" data-index="4">
+      <div class="pres-inner">
+        <div class="pres-topline">
+          <span class="pres-kicker">Biomeccanica · Skalak, Misch, Brunski</span>
+          <span class="pres-count">05 / 10</span>
+        </div>
+
+        <div class="pres-layout">
+          <div>
+            <h1 class="pres-title">Il carico si decide <span class="pres-accent">in micrometri.</span></h1>
+            <p class="pres-lead">
+              Dalla densità Hounsfield al verdetto sul carico immediato: il modello
+              combina classe ossea, spread antero-posteriore e cantilever in un'unica
+              soglia biologica.
+            </p>
+
+            <div class="pres-points">
+              <div class="pres-point">
+                <div class="pres-point-title">D1 → D4</div>
+                <div class="pres-point-text">La densità locale pesa sul torque e sulla stabilità primaria.</div>
+              </div>
+              <div class="pres-point">
+                <div class="pres-point-title">AP spread</div>
+                <div class="pres-point-text">La leva della Toronto Bridge governa il cantilever massimo.</div>
+              </div>
+              <div class="pres-point">
+                <div class="pres-point-title">Soglia di Brunski</div>
+                <div class="pres-point-text">Sotto 150 µm il carico immediato resta biologicamente difendibile.</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="pres-big">150 µm</div>
+            <div class="pres-big-note">micromovimento massimo ammesso per l'osteointegrazione.</div>
+            <div class="pres-formula accent">
+              δ<sub>µm</sub> = 38 · (75 / ISQ<sub>min</sub>)<sup>2.3</sup><br>
+              <span class="eq-muted">· (1 + 0,35 · L<sub>cant</sub> / AP)</span>
+            </div>
+            <div class="pres-formula">
+              L<sub>cant,max</sub> = min(16 mm, AP · k<sub>Misch</sub> · c<sub>chirurgo</sub>)
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pres-slide" data-index="5">
+      <div class="pres-inner">
+        <div class="pres-topline">
+          <span class="pres-kicker">Forecasting · Google TimesFM 2.5</span>
+          <span class="pres-count">06 / 10</span>
+        </div>
+
+        <div class="pres-layout">
+          <div>
+            <h1 class="pres-title">Il dip critico si prevede, <span class="pres-accent">non si subisce.</span></h1>
+            <p class="pres-lead">
+              La stabilità primaria scende mentre quella secondaria sale. TimesFM 2.5
+              legge la traiettoria ISQ e proietta il consolidamento settimana per
+              settimana, con bande q10–q90.
+            </p>
+
+            <div class="pres-points">
+              <div class="pres-point">
+                <div class="pres-point-title">Finestra W2–W4</div>
+                <div class="pres-point-text">Il punto più fragile del percorso, previsto prima dell'intervento.</div>
+              </div>
+              <div class="pres-point">
+                <div class="pres-point-title">Pesi locali</div>
+                <div class="pres-point-text">200M parametri PyTorch, 925 MB, esecuzione offline.</div>
+              </div>
+              <div class="pres-point">
+                <div class="pres-point-title">Zero-shot</div>
+                <div class="pres-point-text">Nessun training sul singolo paziente, nessuna chiamata cloud.</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="pres-big">W3</div>
+            <div class="pres-big-note">settimana del dip minimo previsto, il momento in cui decidere il carico.</div>
+            <div class="pres-formula accent">
+              ISQ(t) = ISQ<sub>0</sub> · e<sup>−t/τ<sub>d</sub></sup><br>
+              <span class="eq-muted">+ A<sub>bio</sub> / (1 + e<sup>−(t−t<sub>0</sub>)/k</sup>) · D(t) − P<sub>overload</sub>(t)</span>
+            </div>
+            <div class="pres-figure">
+              <svg viewBox="0 0 460 180" role="img" aria-label="Curva ISQ con dip critico alla settimana 3">
+                <line x1="34" y1="150" x2="430" y2="150" class="chart-grid-line"/>
+                <line x1="34" y1="20" x2="34" y2="150" class="chart-grid-line"/>
+                <path d="M 34 42 Q 110 112 250 142 L 430 148" class="chart-line-soft"/>
+                <path d="M 34 148 Q 130 134 200 76 Q 290 38 430 34" class="chart-line-main"/>
+                <path d="M 34 44 Q 92 108 124 98 Q 190 52 300 40 L 430 36" class="chart-line-accent"/>
+                <circle cx="112" cy="99" r="5" class="chart-dot-accent"/>
+                <text x="120" y="94" class="chart-label-accent">W3 · dip</text>
+                <text x="318" y="30" class="chart-label">TimesFM · q10–q90</text>
+                <text x="34" y="166" class="chart-label">W0</text>
+                <text x="414" y="166" class="chart-label">W16</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pres-slide" data-index="6">
+      <div class="pres-inner">
+        <div class="pres-topline">
+          <span class="pres-kicker">Consenso · TabPFN v2</span>
+          <span class="pres-count">07 / 10</span>
+        </div>
+
+        <div class="pres-layout">
+          <div>
+            <h1 class="pres-title">133 casi, <span class="pres-accent">un solo forward pass.</span></h1>
+            <p class="pres-lead">
+              TabPFN v2 legge l'intero corpus clinico in-context e restituisce tilt,
+              dip ISQ e torque senza retraining. Il consenso fra sei modelli diventa
+              un prior locale.
+            </p>
+
+            <div class="pres-points">
+              <div class="pres-point">
+                <div class="pres-point-title">Corpus unificato</div>
+                <div class="pres-point-text">Argon, Codex, Opencode, ChatGPT, Grok e Perplexity sullo stesso protocollo.</div>
+              </div>
+              <div class="pres-point">
+                <div class="pres-point-title">In-context learning</div>
+                <div class="pres-point-text">Nessun addestramento aggiuntivo sul dataset del medico.</div>
+              </div>
+              <div class="pres-point">
+                <div class="pres-point-title">Checkpoint locale</div>
+                <div class="pres-point-text">44,4 MB, inferenza su CPU o GPU della workstation.</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="pres-big">133</div>
+            <div class="pres-big-note">casi clinici sintetici e validati nel dataset master.</div>
+            <div class="pres-formula accent">
+              p(y<sub>query</sub> | x<sub>query</sub>, D<sub>133</sub>) =<br>
+              <span class="eq-muted">TabPFN<sub>θ</sub>(x<sub>query</sub>, {(x<sub>i</sub>, y<sub>i</sub>)<sub>i=1..133</sub>})</span>
+            </div>
+            <p class="pres-figure-caption">Zero cloud. Zero pesi scaricati a runtime.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pres-slide" data-index="7">
+      <div class="pres-inner">
+        <div class="pres-topline">
+          <span class="pres-kicker">Personalizzazione · mano del medico</span>
+          <span class="pres-count">08 / 10</span>
+        </div>
+
+        <div class="pres-layout">
+          <div>
+            <h1 class="pres-title">La mano del chirurgo <span class="pres-accent">diventa un parametro.</span></h1>
+            <p class="pres-lead">
+              Ogni operatore inclina, accorcia e margina in modo diverso. Il registro
+              dei casi operati addestra una Ridge L2 in forma chiusa e sincronizza i
+              prior usati dal cockpit.
+            </p>
+
+            <div class="pres-points">
+              <div class="pres-point">
+                <div class="pres-point-title">Registro reale</div>
+                <div class="pres-point-text">Anatomia del paziente e scelta effettivamente eseguita in sala.</div>
+              </div>
+              <div class="pres-point">
+                <div class="pres-point-title">Multi-target</div>
+                <div class="pres-point-text">Tilt, cantilever, altezza MUA e dip ISQ con R² fino a 0,99.</div>
+              </div>
+              <div class="pres-point">
+                <div class="pres-point-title">Trasparenza</div>
+                <div class="pres-point-text">Feature importance sempre visibile al medico.</div>
+              </div>
+            </div>
+
+            <div class="pres-actions">
+              <a class="bp-btn-outline" href="ml_studio.html">Apri Mano del medico</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="pres-big">0,99</div>
+            <div class="pres-big-note">R² sul tilt distale appreso dai casi del chirurgo.</div>
+            <div class="pres-formula accent">
+              β̂ = (Z<sup>T</sup>Z + λI)<sup>−1</sup> Z<sup>T</sup> y<sub>chirurgo</sub>
+            </div>
+            <p class="pres-figure-caption">
+              Il modello non sostituisce la mano: la rende ripetibile e verificabile.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pres-slide" data-index="8">
+      <div class="pres-inner">
+        <div class="pres-topline">
+          <span class="pres-kicker">Osservabilità · sicurezza verificabile</span>
+          <span class="pres-count">09 / 10</span>
+        </div>
+
+        <div class="pres-layout">
+          <div>
+            <h1 class="pres-title">Ogni calcolo lascia <span class="pres-accent">una traccia verificabile.</span></h1>
+            <p class="pres-lead">
+              Telemetria, sei guardrail, model drift e Monte Carlo. Il sistema dichiara
+              che cosa ha fatto, con quale margine e con quale livello di confidenza.
+            </p>
+
+            <div class="pres-points">
+              <div class="pres-point">
+                <div class="pres-point-title">Tempi</div>
+                <div class="pres-point-text">P50, P95 e P99 del risolutore e dell'inferenza, sempre visibili.</div>
+              </div>
+              <div class="pres-point">
+                <div class="pres-point-title">Guardrail</div>
+                <div class="pres-point-text">Nervo, pin, crateri, MUA, micromovimento e canale nasopalatino.</div>
+              </div>
+              <div class="pres-point">
+                <div class="pres-point-title">Robustezza</div>
+                <div class="pres-point-text">Errore del righello simulato su 60–100 perturbazioni.</div>
+              </div>
+            </div>
+
+            <div class="pres-actions">
+              <a class="bp-btn-outline" href="osservabilita.html">Apri Osservabilità</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="pres-big">100%</div>
+            <div class="pres-big-note">delle perturbazioni resta sopra 2,0 mm di clearance dal nervo.</div>
+            <div class="pres-formula accent">
+              X<sub>pert</sub> ~ N(X<sub>medico</sub>, σ² = 0,45²)<br>
+              <span class="eq-muted">clearance ≥ 2,0 mm su ogni iterazione</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pres-slide" data-index="9">
+      <div class="pres-inner">
+        <div class="pres-topline">
+          <span class="pres-kicker">Architettura · deployment clinico</span>
+          <span class="pres-count">10 / 10</span>
+        </div>
+
+        <div class="pres-brandmark">
+          <span class="trinai-logo-acid" role="img" aria-label="TrinAI"></span>
+          <img class="arkangel-symbol-img" src="img/arkangel_simbolo_256.png" alt="">
+          <span class="pres-brandname">ArkAng<span>-EL</span></span>
+        </div>
+
+        <div class="pres-layout">
+          <div>
+            <h1 class="pres-title">Tutto dentro una cartella. <span class="pres-accent">Anche l'AI.</span></h1>
+            <p class="pres-lead">
+              Runtime Python, pesi TimesFM e TabPFN, dataset, cockpit, ML Studio e
+              documentazione. Si copia su una chiavetta e si apre sulla workstation
+              clinica, senza installare nulla.
+            </p>
+
+            <div class="pres-steps">
+              <div class="pres-step">
+                <div class="pres-step-num">01</div>
+                <div class="pres-step-title">Misure in 30 secondi</div>
+                <div class="pres-step-text">Semicorde, frecce, loop, HU e imperfezioni locali.</div>
+              </div>
+              <div class="pres-step">
+                <div class="pres-step-num">02</div>
+                <div class="pres-step-title">Verifica biomeccanica</div>
+                <div class="pres-step-text">ISQ, Brunski, MUA e mano del medico nello stesso passaggio.</div>
+              </div>
+              <div class="pres-step">
+                <div class="pres-step-num">03</div>
+                <div class="pres-step-title">STL e tre sfere</div>
+                <div class="pres-step-text">Allineamento point-based in Exocad, BlueSkyPlan o 3Shape.</div>
+              </div>
+            </div>
+
+            <div class="pres-actions">
+              <a class="bp-btn-solid" href="index.html">Vai al cockpit</a>
+              <a class="bp-btn-outline" href="documentazione.html">Manuale tecnico</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="pres-big">1</div>
+            <div class="pres-big-note">cartella trasportabile. Nessun server esterno, nessuna licenza cloud.</div>
+            <div class="pres-formula">
+              ArkAng-EL_Suite/<br>
+              <span class="eq-muted">runtime · models · data · web</span>
+            </div>
+            <p class="pres-figure-caption">
+              Un prodotto TrinAI · ArkAng-EL, progettato per l'eccellenza chirurgica.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pres-controls">
+    <div class="pres-credit">
+      <span class="trinai-logo-acid-sm" role="img" aria-label="TrinAI"></span>
+      <span>Un prodotto TrinAI</span>
+    </div>
+
+    <div class="pres-nav">
+      <button type="button" id="btnPrevSlide" class="bp-btn-outline">Precedente</button>
+      <div id="dotNav" class="pres-dots" aria-label="Navigazione slide"></div>
+      <span class="pres-count" id="presCount">01 / 10</span>
+      <button type="button" id="btnNextSlide" class="bp-btn-solid">Successiva</button>
+    </div>
+
+    <span class="pres-hint">Frecce sinistra e destra per navigare</span>
+  </footer>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll(".pres-slide"));
+    const dotNav = document.getElementById("dotNav");
+    const presCount = document.getElementById("presCount");
+    const overviewBtn = document.getElementById("btnToggleOverview");
+    let currentSlide = 0;
+
+    function pad(n) {
+      return String(n).padStart(2, "0");
+    }
+
+    function renderDots() {
+      dotNav.innerHTML = "";
+      slides.forEach((_, idx) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "pres-dot" + (idx === currentSlide ? " active" : "");
+        b.title = `Vai alla slide ${idx + 1}`;
+        b.setAttribute("aria-label", `Vai alla slide ${idx + 1}`);
+        b.addEventListener("click", () => goToSlide(idx));
+        dotNav.appendChild(b);
+      });
+    }
+
+    function goToSlide(idx) {
+      currentSlide = (idx + slides.length) % slides.length;
+      slides.forEach((s, i) => s.classList.toggle("active", i === currentSlide));
+      presCount.textContent = `${pad(currentSlide + 1)} / ${pad(slides.length)}`;
+      renderDots();
+
+      if (document.body.classList.contains("pres-overview")) {
+        slides[currentSlide].scrollIntoView({ block: "start" });
+      }
+    }
+
+    document.getElementById("btnPrevSlide").addEventListener("click", () => goToSlide(currentSlide - 1));
+    document.getElementById("btnNextSlide").addEventListener("click", () => goToSlide(currentSlide + 1));
+
+    overviewBtn.addEventListener("click", () => {
+      const overview = document.body.classList.toggle("pres-overview");
+      overviewBtn.textContent = overview ? "Vista slide" : "Vista completa";
+      overviewBtn.setAttribute("aria-pressed", String(overview));
+      if (!overview) {
+        slides[currentSlide].scrollIntoView({ block: "start" });
+      }
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if (document.body.classList.contains("pres-overview")) return;
+      if (e.key === "ArrowRight" || e.key === "PageDown" || e.key === " ") {
+        e.preventDefault();
+        goToSlide(currentSlide + 1);
+      } else if (e.key === "ArrowLeft" || e.key === "PageUp") {
+        e.preventDefault();
+        goToSlide(currentSlide - 1);
+      }
+    });
+
+    goToSlide(0);
+  </script>
+</body>
+</html>

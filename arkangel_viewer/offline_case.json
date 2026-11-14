@@ -1,0 +1,4512 @@
+{
+  "preset": {
+    "id": "tf2_004",
+    "name": "ToothFairy2, caso 004, misurato sul caso vero",
+    "badge": "Caso vero",
+    "description": "Caso ToothFairy2F_004 (dataset pubblico verificato). Larghezza, profondit\u00e0 dell'arcata, altezze, larghezze, sella posteriore, difetto e densit\u00e0 sono MISURATI dalle maschere. Non misurati: numero di impianti (scelta del medico, qui 4), vano protesico (14 mm, scelta del medico), ansa del nervo (2,0 mm, valore tipico di letteratura, da misurare con l'atlante).",
+    "params": {
+      "arch": "Mandibola",
+      "n_imp": 4,
+      "chord_R": 20.4,
+      "depth_R": 21.9,
+      "chord_L": 21.4,
+      "depth_L": 23.1,
+      "loop_R": 2.0,
+      "loop_L": 2.0,
+      "undercut": 13.8,
+      "H_ant": 6.6,
+      "H_post_R": 7.3,
+      "H_post_L": 12.9,
+      "W_ant": 9.0,
+      "W_post": 9.2,
+      "hu_ant": 1173,
+      "hu_post": 598,
+      "V_prost": 14.0,
+      "z_drop_R": 9.0,
+      "z_drop_L": 10.2,
+      "defect_zone": "none",
+      "defect_dz": 0.0,
+      "defect_dw": 0.0
+    }
+  },
+  "solve_result": {
+    "params": {
+      "arch": "Mandibola",
+      "n_imp": 4,
+      "chord_R": 20.4,
+      "depth_R": 21.9,
+      "chord_L": 21.4,
+      "depth_L": 23.1,
+      "loop_R": 2.0,
+      "loop_L": 2.0,
+      "undercut": 13.8,
+      "H_ant": 6.6,
+      "H_post_R": 7.3,
+      "H_post_L": 12.9,
+      "W_ant": 9.0,
+      "W_post": 9.2,
+      "hu_ant": 1173,
+      "hu_post": 598,
+      "V_prost": 14.0,
+      "z_drop_R": 9.0,
+      "z_drop_L": 10.2,
+      "defect_zone": "none",
+      "defect_dz": 0.0,
+      "defect_dw": 0.0,
+      "n_right": 2,
+      "n_left": 2,
+      "_epoch_diam_boost": 0.0,
+      "_epoch_len_boost": 0.0,
+      "_epoch_subcrestal_boost": 0.0,
+      "_epoch_tilt_boost": 6.5,
+      "_epoch_cant_scale": 0.73
+    },
+    "priors_used": {
+      "surgeon_name": "Prof. Giuseppe Bavetta",
+      "calibrated_cases_count": 10,
+      "distal_tilt_bias_deg": -1.07,
+      "safety_margin_nerve_mm": 2.36,
+      "subcrestal_depth_mm": 0.5,
+      "cantilever_conservatism": 0.926,
+      "preferred_sleeve_offset_mm": 3.5,
+      "clinical_history": [],
+      "last_ml_training_timestamp": "2026-10-28 15:26:07"
+    },
+    "misch_ant_str": "D1 (Corticale Densa >1150 HU)",
+    "misch_post_str": "D3 (Trabecolare Fine 350-750 HU)",
+    "fiducials": {
+      "P0_Midline": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "Foramen_Sinus_R": {
+        "x": 20.4,
+        "y": -21.9,
+        "z": -13.75
+      },
+      "Foramen_Sinus_L": {
+        "x": -21.4,
+        "y": -23.1,
+        "z": -18.59
+      },
+      "Nerve_Loop_R": {
+        "x": 18.4,
+        "y": -18.09,
+        "z": -11.65
+      },
+      "Nerve_Loop_L": {
+        "x": -19.4,
+        "y": -19.27,
+        "z": -15.81
+      }
+    },
+    "imperfection_3d": null,
+    "imperfection_notes": [
+      "Sella Edentula Posteriore Concava: \u0394Z_R = -9.0mm, \u0394Z_L = -10.2mm rispetto alla midline P0."
+    ],
+    "implants": [
+      {
+        "label": "Post. Dx (15/45)",
+        "diam": 6.0,
+        "length": 8.0,
+        "bone_height_mm": 7.3,
+        "bone_margin_mm": 1.52,
+        "cortical_margin_mm": 0.93,
+        "p0_distance_mm": 24.88,
+        "p_crest": {
+          "x": 17.34,
+          "y": -16.21,
+          "z": -7.44
+        },
+        "p_apex": {
+          "x": 14.01,
+          "y": -11.8,
+          "z": -13.22
+        },
+        "axis_dir": {
+          "x": -0.42,
+          "y": 0.55,
+          "z": -0.72
+        },
+        "tilt_md": 43.4,
+        "tilt_bl": -4.8,
+        "total_tilt": 43.7,
+        "mua_angle": 45,
+        "mua_residual": 1.3,
+        "mua_height": 5.5,
+        "hex_rot": 307,
+        "nerve_clearance_mm": 1.46,
+        "nerve_margin_mm": 1.46,
+        "nerve_ok": true,
+        "bic_pct": 50.3,
+        "torque_ncm": 53,
+        "local_dz_mm": 0.0,
+        "local_dw_mm": 0.0,
+        "site_note": "Osso Regolare",
+        "nota_catalogo": null,
+        "nessuna_coppia_commerciale": false,
+        "osso_che_manca": {
+          "altezza": {
+            "minimo_mm": 0.0,
+            "disponibile_mm": 1.52,
+            "manca_mm": 0.0,
+            "avanza_mm": 1.52
+          },
+          "larghezza": {
+            "minimo_mm": 0.0,
+            "disponibile_mm": 0.93,
+            "manca_mm": 0.0,
+            "avanza_mm": 0.93
+          },
+          "nervo": {
+            "minimo_mm": 0.0,
+            "disponibile_mm": 1.46,
+            "manca_mm": 0.0,
+            "avanza_mm": 1.46
+          }
+        }
+      },
+      {
+        "label": "Ant. Dx  (12/42)",
+        "diam": 4.8,
+        "length": 4.0,
+        "bone_height_mm": 6.6,
+        "bone_margin_mm": 2.64,
+        "cortical_margin_mm": 1.96,
+        "p0_distance_mm": 6.32,
+        "p_crest": {
+          "x": 5.72,
+          "y": -2.09,
+          "z": -1.68
+        },
+        "p_apex": {
+          "x": 5.38,
+          "y": -1.68,
+          "z": -5.64
+        },
+        "axis_dir": {
+          "x": -0.09,
+          "y": 0.1,
+          "z": -0.99
+        },
+        "tilt_md": 7.4,
+        "tilt_bl": 2.0,
+        "total_tilt": 7.6,
+        "mua_angle": 0,
+        "mua_residual": 7.6,
+        "mua_height": 3.5,
+        "hex_rot": 0,
+        "nerve_clearance_mm": 19.39,
+        "nerve_margin_mm": 19.39,
+        "nerve_ok": true,
+        "bic_pct": 68.9,
+        "torque_ncm": 59,
+        "local_dz_mm": 0.0,
+        "local_dw_mm": 0.0,
+        "site_note": "Osso Regolare",
+        "nota_catalogo": {
+          "lunghezza": {
+            "valore_mm": 4.0,
+            "fonte": "straumann.com, 510(k) K202942",
+            "stato": "verificato"
+          }
+        },
+        "nessuna_coppia_commerciale": false,
+        "osso_che_manca": {
+          "altezza": {
+            "minimo_mm": 0.0,
+            "disponibile_mm": 2.64,
+            "manca_mm": 0.0,
+            "avanza_mm": 2.64
+          },
+          "larghezza": {
+            "minimo_mm": 0.0,
+            "disponibile_mm": 1.96,
+            "manca_mm": 0.0,
+            "avanza_mm": 1.96
+          },
+          "nervo": {
+            "minimo_mm": 0.0,
+            "disponibile_mm": 19.39,
+            "manca_mm": 0.0,
+            "avanza_mm": 19.39
+          }
+        }
+      },
+      {
+        "label": "Ant. Sx  (22/32)",
+        "diam": 4.8,
+        "length": 4.0,
+        "bone_height_mm": 6.6,
+        "bone_margin_mm": 2.64,
+        "cortical_margin_mm": 1.96,
+        "p0_distance_mm": 6.71,
+        "p_crest": {
+          "x": -6.05,
+          "y": -2.23,
+          "z": -1.85
+        },
+        "p_apex": {
+          "x": -5.55,
+          "y": -2.06,
+          "z": -5.82
+        },
+        "axis_dir": {
+          "x": 0.13,
+          "y": 0.04,
+          "z": -0.99
+        },
+        "tilt_md": 7.4,
+        "tilt_bl": 2.0,
+        "total_tilt": 7.6,
+        "mua_angle": 0,
+        "mua_residual": 7.6,
+        "mua_height": 3.5,
+        "hex_rot": 0,
+        "nerve_clearance_mm": 21.84,
+        "nerve_margin_mm": 21.84,
+        "nerve_ok": true,
+        "bic_pct": 68.9,
+        "torque_ncm": 59,
+        "local_dz_mm": 0.0,
+        "local_dw_mm": 0.0,
+        "site_note": "Osso Regolare",
+        "nota_catalogo": {
+          "lunghezza": {
+            "valore_mm": 4.0,
+            "fonte": "straumann.com, 510(k) K202942",
+            "stato": "verificato"
+          }
+        },
+        "nessuna_coppia_commerciale": false,
+        "osso_che_manca": {
+          "altezza": {
+            "minimo_mm": 0.0,
+            "disponibile_mm": 2.64,
+            "manca_mm": 0.0,
+            "avanza_mm": 2.64
+          },
+          "larghezza": {
+            "minimo_mm": 0.0,
+            "disponibile_mm": 1.96,
+            "manca_mm": 0.0,
+            "avanza_mm": 1.96
+          },
+          "nervo": {
+            "minimo_mm": 0.0,
+            "disponibile_mm": 21.84,
+            "manca_mm": 0.0,
+            "avanza_mm": 21.84
+          }
+        }
+      },
+      {
+        "label": "Post. Sx (25/35)",
+        "diam": 6.0,
+        "length": 12.5,
+        "bone_height_mm": 12.9,
+        "bone_margin_mm": 2.17,
+        "cortical_margin_mm": 0.55,
+        "p0_distance_mm": 26.64,
+        "p_crest": {
+          "x": -18.34,
+          "y": -17.36,
+          "z": -8.47
+        },
+        "p_apex": {
+          "x": -16.12,
+          "y": -11.35,
+          "z": -19.2
+        },
+        "axis_dir": {
+          "x": 0.18,
+          "y": 0.48,
+          "z": -0.86
+        },
+        "tilt_md": 30.4,
+        "tilt_bl": -4.8,
+        "total_tilt": 30.9,
+        "mua_angle": 30,
+        "mua_residual": 0.9,
+        "mua_height": 5.5,
+        "hex_rot": 249,
+        "nerve_clearance_mm": 2.62,
+        "nerve_margin_mm": 2.62,
+        "nerve_ok": true,
+        "bic_pct": 56.6,
+        "torque_ncm": 58,
+        "local_dz_mm": 0.0,
+        "local_dw_mm": 0.0,
+        "site_note": "Osso Regolare",
+        "nota_catalogo": null,
+        "nessuna_coppia_commerciale": false,
+        "osso_che_manca": {
+          "altezza": {
+            "minimo_mm": 0.0,
+            "disponibile_mm": 2.17,
+            "manca_mm": 0.0,
+            "avanza_mm": 2.17
+          },
+          "larghezza": {
+            "minimo_mm": 0.0,
+            "disponibile_mm": 0.55,
+            "manca_mm": 0.0,
+            "avanza_mm": 0.55
+          },
+          "nervo": {
+            "minimo_mm": 0.0,
+            "disponibile_mm": 2.62,
+            "manca_mm": 0.0,
+            "avanza_mm": 2.62
+          }
+        }
+      }
+    ],
+    "geometry_ok": true,
+    "geometry_issues": [],
+    "riepilogo_carenze_osso": "Nessuna carenza, avanzano al minimo 0,6 mm",
+    "pins": [
+      {
+        "name": "Pin 1 (Mediano Sinfisi/Nasale)",
+        "entry": {
+          "x": 0.0,
+          "y": 3.2,
+          "z": -6.8
+        },
+        "tip": {
+          "x": 0.0,
+          "y": -10.62,
+          "z": -9.06
+        },
+        "clearance_mm": 2.56,
+        "closest_imp": "Ant. Dx  (12/42)"
+      },
+      {
+        "name": "Pin 2 (Laterale Dx)",
+        "entry": {
+          "x": 8.97,
+          "y": -5.48,
+          "z": -12.57
+        },
+        "tip": {
+          "x": 19.64,
+          "y": -14.26,
+          "z": -14.83
+        },
+        "clearance_mm": 2.0,
+        "closest_imp": "Post. Dx (15/45)"
+      },
+      {
+        "name": "Pin 3 (Laterale Sx)",
+        "entry": {
+          "x": -14.59,
+          "y": -6.03,
+          "z": -10.9
+        },
+        "tip": {
+          "x": -3.87,
+          "y": -14.75,
+          "z": -13.15
+        },
+        "clearance_mm": 4.51,
+        "closest_imp": "Post. Sx (25/35)"
+      }
+    ],
+    "arch_spline_points": [
+      {
+        "x": -22.47,
+        "y": -25.28,
+        "z": -11.03
+      },
+      {
+        "x": -21.74,
+        "y": -23.78,
+        "z": -10.46
+      },
+      {
+        "x": -21.01,
+        "y": -22.32,
+        "z": -9.9
+      },
+      {
+        "x": -20.28,
+        "y": -20.9,
+        "z": -9.36
+      },
+      {
+        "x": -19.54,
+        "y": -19.53,
+        "z": -8.82
+      },
+      {
+        "x": -18.81,
+        "y": -18.2,
+        "z": -8.3
+      },
+      {
+        "x": -18.08,
+        "y": -16.91,
+        "z": -7.79
+      },
+      {
+        "x": -17.35,
+        "y": -15.67,
+        "z": -7.29
+      },
+      {
+        "x": -16.62,
+        "y": -14.47,
+        "z": -6.81
+      },
+      {
+        "x": -15.89,
+        "y": -13.31,
+        "z": -6.33
+      },
+      {
+        "x": -15.15,
+        "y": -12.2,
+        "z": -5.87
+      },
+      {
+        "x": -14.42,
+        "y": -11.13,
+        "z": -5.43
+      },
+      {
+        "x": -13.69,
+        "y": -10.11,
+        "z": -4.99
+      },
+      {
+        "x": -12.96,
+        "y": -9.13,
+        "z": -4.57
+      },
+      {
+        "x": -12.23,
+        "y": -8.2,
+        "z": -4.17
+      },
+      {
+        "x": -11.5,
+        "y": -7.32,
+        "z": -3.77
+      },
+      {
+        "x": -10.77,
+        "y": -6.48,
+        "z": -3.4
+      },
+      {
+        "x": -10.03,
+        "y": -5.69,
+        "z": -3.04
+      },
+      {
+        "x": -9.3,
+        "y": -4.95,
+        "z": -2.69
+      },
+      {
+        "x": -8.57,
+        "y": -4.25,
+        "z": -2.36
+      },
+      {
+        "x": -7.84,
+        "y": -3.6,
+        "z": -2.05
+      },
+      {
+        "x": -7.11,
+        "y": -3.01,
+        "z": -1.75
+      },
+      {
+        "x": -6.38,
+        "y": -2.46,
+        "z": -1.47
+      },
+      {
+        "x": -5.65,
+        "y": -1.96,
+        "z": -1.21
+      },
+      {
+        "x": -4.91,
+        "y": -1.52,
+        "z": -0.97
+      },
+      {
+        "x": -4.18,
+        "y": -1.13,
+        "z": -0.75
+      },
+      {
+        "x": -3.45,
+        "y": -0.79,
+        "z": -0.55
+      },
+      {
+        "x": -2.72,
+        "y": -0.51,
+        "z": -0.38
+      },
+      {
+        "x": -1.99,
+        "y": -0.28,
+        "z": -0.23
+      },
+      {
+        "x": -1.26,
+        "y": -0.12,
+        "z": -0.11
+      },
+      {
+        "x": -0.52,
+        "y": -0.02,
+        "z": -0.03
+      },
+      {
+        "x": 0.21,
+        "y": -0.0,
+        "z": -0.01
+      },
+      {
+        "x": 0.94,
+        "y": -0.07,
+        "z": -0.07
+      },
+      {
+        "x": 1.67,
+        "y": -0.21,
+        "z": -0.16
+      },
+      {
+        "x": 2.4,
+        "y": -0.42,
+        "z": -0.29
+      },
+      {
+        "x": 3.13,
+        "y": -0.68,
+        "z": -0.45
+      },
+      {
+        "x": 3.86,
+        "y": -1.01,
+        "z": -0.63
+      },
+      {
+        "x": 4.6,
+        "y": -1.39,
+        "z": -0.83
+      },
+      {
+        "x": 5.33,
+        "y": -1.83,
+        "z": -1.05
+      },
+      {
+        "x": 6.06,
+        "y": -2.32,
+        "z": -1.29
+      },
+      {
+        "x": 6.79,
+        "y": -2.86,
+        "z": -1.55
+      },
+      {
+        "x": 7.52,
+        "y": -3.46,
+        "z": -1.82
+      },
+      {
+        "x": 8.25,
+        "y": -4.11,
+        "z": -2.12
+      },
+      {
+        "x": 8.98,
+        "y": -4.8,
+        "z": -2.42
+      },
+      {
+        "x": 9.72,
+        "y": -5.55,
+        "z": -2.75
+      },
+      {
+        "x": 10.45,
+        "y": -6.35,
+        "z": -3.08
+      },
+      {
+        "x": 11.18,
+        "y": -7.2,
+        "z": -3.44
+      },
+      {
+        "x": 11.91,
+        "y": -8.09,
+        "z": -3.8
+      },
+      {
+        "x": 12.64,
+        "y": -9.04,
+        "z": -4.19
+      },
+      {
+        "x": 13.37,
+        "y": -10.03,
+        "z": -4.58
+      },
+      {
+        "x": 14.11,
+        "y": -11.07,
+        "z": -4.99
+      },
+      {
+        "x": 14.84,
+        "y": -12.15,
+        "z": -5.41
+      },
+      {
+        "x": 15.57,
+        "y": -13.28,
+        "z": -5.84
+      },
+      {
+        "x": 16.3,
+        "y": -14.46,
+        "z": -6.29
+      },
+      {
+        "x": 17.03,
+        "y": -15.68,
+        "z": -6.74
+      },
+      {
+        "x": 17.76,
+        "y": -16.95,
+        "z": -7.21
+      },
+      {
+        "x": 18.49,
+        "y": -18.27,
+        "z": -7.69
+      },
+      {
+        "x": 19.23,
+        "y": -19.62,
+        "z": -8.19
+      },
+      {
+        "x": 19.96,
+        "y": -21.03,
+        "z": -8.69
+      },
+      {
+        "x": 20.69,
+        "y": -22.48,
+        "z": -9.2
+      },
+      {
+        "x": 21.42,
+        "y": -23.97,
+        "z": -9.73
+      }
+    ],
+    "ap_spread": 15.28,
+    "max_cantilever": 10.3,
+    "min_inter_implant_mm": 6.13,
+    "n_imp_resolved": 4,
+    "n_right": 2,
+    "n_left": 2,
+    "avg_torque": 57,
+    "avg_bic": 61.2,
+    "weeks": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "isq_curve": [
+      67.7,
+      61.5,
+      58.1,
+      59.9,
+      67.8,
+      75.4,
+      78.8,
+      79.7,
+      79.6,
+      79.2,
+      78.7,
+      78.3,
+      78.0,
+      77.7,
+      77.5,
+      77.3,
+      77.2
+    ],
+    "isq_mech": [
+      67.8,
+      59.6,
+      53.4,
+      48.6,
+      45.1,
+      42.4,
+      40.3,
+      38.8,
+      37.6,
+      36.7,
+      36.0,
+      35.5,
+      35.1,
+      34.8,
+      34.6,
+      34.4,
+      34.3
+    ],
+    "isq_bio": [
+      0.0,
+      2.7,
+      8.1,
+      16.4,
+      26.1,
+      33.9,
+      38.6,
+      41.0,
+      42.1,
+      42.5,
+      42.7,
+      42.8,
+      42.8,
+      42.9,
+      42.9,
+      42.9,
+      42.9
+    ],
+    "min_isq": 58.1,
+    "min_week": 2,
+    "micromotion_um": 84.5,
+    "load_verdict": "CARICO IMMEDIATO CON CANTILEVER RIDOTTO [GIALLO] | Nessuna carenza, avanzano al minimo 0,6 mm | Minimi del medico non impostati: valutato solo il limite fisico",
+    "load_code": "YELLOW",
+    "bone_minimums": {
+      "altezza_mm": 0.0,
+      "larghezza_per_lato_mm": 0.0,
+      "nervo_mm": 0.0
+    },
+    "minimi_impostati": false,
+    "minimi_del_medico_messaggio": "Minimi del medico non impostati: valutato solo il limite fisico",
+    "bone_minimums_message": "Minimi del medico non impostati: valutato solo il limite fisico",
+    "minimi_message": "Minimi del medico non impostati: valutato solo il limite fisico",
+    "minimi_medico_messaggio": "Minimi del medico non impostati: valutato solo il limite fisico",
+    "avviso_minimi": "Minimi del medico non impostati: valutato solo il limite fisico",
+    "note_minimi": "Minimi del medico non impostati: valutato solo il limite fisico",
+    "profile_name": "nessun profilo",
+    "profilo_medico": "nessun profilo",
+    "profile": "nessun profilo",
+    "bone_profile": "nessun profilo",
+    "profilo": "nessun profilo",
+    "geometry_reason": "",
+    "base_plan_margins": [
+      {
+        "label": "Post. Dx (15/45)",
+        "bone_margin_mm": 1.73,
+        "cortical_margin_mm": 1.51,
+        "nerve_margin_mm": 1.76
+      },
+      {
+        "label": "Ant. Dx  (12/42)",
+        "bone_margin_mm": 2.62,
+        "cortical_margin_mm": 1.96,
+        "nerve_margin_mm": 19.29
+      },
+      {
+        "label": "Ant. Sx  (22/32)",
+        "bone_margin_mm": 2.62,
+        "cortical_margin_mm": 1.96,
+        "nerve_margin_mm": 21.74
+      },
+      {
+        "label": "Post. Sx (25/35)",
+        "bone_margin_mm": 1.98,
+        "cortical_margin_mm": 0.69,
+        "nerve_margin_mm": 2.1
+      }
+    ],
+    "stress_test": {
+      "passed_gate": false,
+      "classification_label": "BOCCIATA -> RICLASSIFICA",
+      "success_probability_10yr_pct": 79.8,
+      "p_mechanical_pct": 80.2,
+      "p_biological_tarnow_pct": 99.5,
+      "max_von_mises_mpa": 21.8,
+      "von_mises_R_mpa": 21.8,
+      "von_mises_L_mpa": 18.9,
+      "max_bending_moment_ncm": 52.3,
+      "min_tarnow_distance_mm": 6.13,
+      "micromotion_um": 84.5,
+      "min_isq": 58.1,
+      "geometry_ok": true,
+      "geometry_issues": [],
+      "reject_reasons": [
+        "Micromovimenti 84.5 \u03bcm / ISQ Dip 58.1 fuori target carico immediato",
+        "Clearance Nervo 1.46 mm < 2.36 mm"
+      ]
+    },
+    "epochs_run": 18,
+    "epoch_history": [
+      {
+        "epoch": 1,
+        "passed": false,
+        "mutation": "Geometria Iniziale Standard",
+        "von_mises_mpa": 36.3,
+        "micromotion_um": 93.0,
+        "min_isq": 57.4,
+        "tarnow_mm": 6.32,
+        "cantilever_mm": 14.1,
+        "geometry_ok": true,
+        "success_prob_pct": 60.7,
+        "reject_reason": "Micromovimenti 93.0 \u03bcm / ISQ Dip 57.4 fuori target carico immediato"
+      },
+      {
+        "epoch": 2,
+        "passed": false,
+        "mutation": "OptFormer Tilt +1.8\u00b0 (nessun aumento di osso, lunghezza o diametro)",
+        "von_mises_mpa": 36.8,
+        "micromotion_um": 93.0,
+        "min_isq": 57.4,
+        "tarnow_mm": 6.27,
+        "cantilever_mm": 14.1,
+        "geometry_ok": true,
+        "success_prob_pct": 60.0,
+        "reject_reason": "Micromovimenti 93.0 \u03bcm / ISQ Dip 57.4 fuori target carico immediato"
+      },
+      {
+        "epoch": 3,
+        "passed": false,
+        "mutation": "OptFormer Tilt +3.6\u00b0 (nessun aumento di osso, lunghezza o diametro)",
+        "von_mises_mpa": 25.9,
+        "micromotion_um": 90.8,
+        "min_isq": 58.0,
+        "tarnow_mm": 6.22,
+        "cantilever_mm": 14.1,
+        "geometry_ok": true,
+        "success_prob_pct": 76.1,
+        "reject_reason": "Micromovimenti 90.8 \u03bcm / ISQ Dip 58.0 fuori target carico immediato"
+      },
+      {
+        "epoch": 4,
+        "passed": false,
+        "mutation": "OptFormer Tilt +5.4\u00b0 (nessun aumento di osso, lunghezza o diametro)",
+        "von_mises_mpa": 26.2,
+        "micromotion_um": 90.8,
+        "min_isq": 58.0,
+        "tarnow_mm": 6.17,
+        "cantilever_mm": 14.1,
+        "geometry_ok": true,
+        "success_prob_pct": 75.9,
+        "reject_reason": "Micromovimenti 90.8 \u03bcm / ISQ Dip 58.0 fuori target carico immediato"
+      },
+      {
+        "epoch": 5,
+        "passed": false,
+        "mutation": "OptFormer Tilt +7.2\u00b0 (nessun aumento di osso, lunghezza o diametro)",
+        "von_mises_mpa": 24.2,
+        "micromotion_um": 90.1,
+        "min_isq": 58.2,
+        "tarnow_mm": 6.11,
+        "cantilever_mm": 14.1,
+        "geometry_ok": true,
+        "success_prob_pct": 77.1,
+        "reject_reason": "Micromovimenti 90.1 \u03bcm / ISQ Dip 58.2 fuori target carico immediato"
+      },
+      {
+        "epoch": 6,
+        "passed": false,
+        "mutation": "OptFormer Tilt +9.0\u00b0 (nessun aumento di osso, lunghezza o diametro)",
+        "von_mises_mpa": 24.4,
+        "micromotion_um": 90.1,
+        "min_isq": 58.2,
+        "tarnow_mm": 6.06,
+        "cantilever_mm": 14.1,
+        "geometry_ok": true,
+        "success_prob_pct": 77.1,
+        "reject_reason": "Micromovimenti 90.1 \u03bcm / ISQ Dip 58.2 fuori target carico immediato"
+      },
+      {
+        "epoch": 7,
+        "passed": false,
+        "mutation": "Riduzione Cantilever (97%) senza aumentare osso, lunghezza o diametro",
+        "von_mises_mpa": 24.1,
+        "micromotion_um": 89.6,
+        "min_isq": 58.2,
+        "tarnow_mm": 6.11,
+        "cantilever_mm": 13.8,
+        "geometry_ok": true,
+        "success_prob_pct": 77.4,
+        "reject_reason": "Micromovimenti 89.6 \u03bcm / ISQ Dip 58.2 fuori target carico immediato"
+      },
+      {
+        "epoch": 8,
+        "passed": false,
+        "mutation": "Riduzione Cantilever (95%) senza aumentare osso, lunghezza o diametro",
+        "von_mises_mpa": 23.8,
+        "micromotion_um": 89.0,
+        "min_isq": 58.2,
+        "tarnow_mm": 6.11,
+        "cantilever_mm": 13.4,
+        "geometry_ok": true,
+        "success_prob_pct": 77.7,
+        "reject_reason": "Micromovimenti 89.0 \u03bcm / ISQ Dip 58.2 fuori target carico immediato"
+      },
+      {
+        "epoch": 9,
+        "passed": false,
+        "mutation": "Riduzione Cantilever (92%) senza aumentare osso, lunghezza o diametro",
+        "von_mises_mpa": 23.7,
+        "micromotion_um": 88.5,
+        "min_isq": 58.2,
+        "tarnow_mm": 6.11,
+        "cantilever_mm": 13.1,
+        "geometry_ok": true,
+        "success_prob_pct": 78.0,
+        "reject_reason": "Micromovimenti 88.5 \u03bcm / ISQ Dip 58.2 fuori target carico immediato"
+      },
+      {
+        "epoch": 10,
+        "passed": false,
+        "mutation": "Riduzione Cantilever (90%) senza aumentare osso, lunghezza o diametro",
+        "von_mises_mpa": 23.4,
+        "micromotion_um": 87.9,
+        "min_isq": 58.2,
+        "tarnow_mm": 6.11,
+        "cantilever_mm": 12.7,
+        "geometry_ok": true,
+        "success_prob_pct": 78.3,
+        "reject_reason": "Micromovimenti 87.9 \u03bcm / ISQ Dip 58.2 fuori target carico immediato"
+      },
+      {
+        "epoch": 11,
+        "passed": false,
+        "mutation": "Riduzione Cantilever (87%) senza aumentare osso, lunghezza o diametro",
+        "von_mises_mpa": 23.2,
+        "micromotion_um": 87.4,
+        "min_isq": 58.2,
+        "tarnow_mm": 6.11,
+        "cantilever_mm": 12.4,
+        "geometry_ok": true,
+        "success_prob_pct": 78.5,
+        "reject_reason": "Micromovimenti 87.4 \u03bcm / ISQ Dip 58.2 fuori target carico immediato"
+      },
+      {
+        "epoch": 12,
+        "passed": false,
+        "mutation": "Riduzione Cantilever (85%) senza aumentare osso, lunghezza o diametro",
+        "von_mises_mpa": 23.0,
+        "micromotion_um": 86.8,
+        "min_isq": 58.2,
+        "tarnow_mm": 6.11,
+        "cantilever_mm": 12.0,
+        "geometry_ok": true,
+        "success_prob_pct": 78.9,
+        "reject_reason": "Micromovimenti 86.8 \u03bcm / ISQ Dip 58.2 fuori target carico immediato"
+      },
+      {
+        "epoch": 13,
+        "passed": false,
+        "mutation": "Ulteriore Riduzione Cantilever (95%) senza aumentare osso, lunghezza o diametro",
+        "von_mises_mpa": 23.8,
+        "micromotion_um": 89.5,
+        "min_isq": 58.1,
+        "tarnow_mm": 6.13,
+        "cantilever_mm": 13.5,
+        "geometry_ok": true,
+        "success_prob_pct": 77.1,
+        "reject_reason": "Micromovimenti 89.5 \u03bcm / ISQ Dip 58.1 fuori target carico immediato"
+      },
+      {
+        "epoch": 14,
+        "passed": false,
+        "mutation": "Ulteriore Riduzione Cantilever (91%) senza aumentare osso, lunghezza o diametro",
+        "von_mises_mpa": 23.4,
+        "micromotion_um": 88.6,
+        "min_isq": 58.1,
+        "tarnow_mm": 6.13,
+        "cantilever_mm": 12.9,
+        "geometry_ok": true,
+        "success_prob_pct": 77.6,
+        "reject_reason": "Micromovimenti 88.6 \u03bcm / ISQ Dip 58.1 fuori target carico immediato"
+      },
+      {
+        "epoch": 15,
+        "passed": false,
+        "mutation": "Ulteriore Riduzione Cantilever (86%) senza aumentare osso, lunghezza o diametro",
+        "von_mises_mpa": 23.0,
+        "micromotion_um": 87.5,
+        "min_isq": 58.1,
+        "tarnow_mm": 6.13,
+        "cantilever_mm": 12.2,
+        "geometry_ok": true,
+        "success_prob_pct": 78.2,
+        "reject_reason": "Micromovimenti 87.5 \u03bcm / ISQ Dip 58.1 fuori target carico immediato"
+      },
+      {
+        "epoch": 16,
+        "passed": false,
+        "mutation": "Ulteriore Riduzione Cantilever (82%) senza aumentare osso, lunghezza o diametro",
+        "von_mises_mpa": 22.6,
+        "micromotion_um": 86.5,
+        "min_isq": 58.1,
+        "tarnow_mm": 6.13,
+        "cantilever_mm": 11.6,
+        "geometry_ok": true,
+        "success_prob_pct": 78.8,
+        "reject_reason": "Micromovimenti 86.5 \u03bcm / ISQ Dip 58.1 fuori target carico immediato"
+      },
+      {
+        "epoch": 17,
+        "passed": false,
+        "mutation": "Ulteriore Riduzione Cantilever (77%) senza aumentare osso, lunghezza o diametro",
+        "von_mises_mpa": 22.3,
+        "micromotion_um": 85.6,
+        "min_isq": 58.1,
+        "tarnow_mm": 6.13,
+        "cantilever_mm": 11.0,
+        "geometry_ok": true,
+        "success_prob_pct": 79.2,
+        "reject_reason": "Micromovimenti 85.6 \u03bcm / ISQ Dip 58.1 fuori target carico immediato"
+      },
+      {
+        "epoch": 18,
+        "passed": false,
+        "mutation": "Ulteriore Riduzione Cantilever (73%) senza aumentare osso, lunghezza o diametro",
+        "von_mises_mpa": 21.8,
+        "micromotion_um": 84.5,
+        "min_isq": 58.1,
+        "tarnow_mm": 6.13,
+        "cantilever_mm": 10.3,
+        "geometry_ok": true,
+        "success_prob_pct": 79.8,
+        "reject_reason": "Micromovimenti 84.5 \u03bcm / ISQ Dip 58.1 fuori target carico immediato"
+      }
+    ],
+    "active_architecture_code": "4",
+    "recommended_architecture_code": "5_L",
+    "recommended_architecture_label": "All-on-5 Rinforzo Sx (2 Dx + 3 Sx) \u2014 89.0%",
+    "implant_spectrum": [
+      {
+        "code": "4",
+        "label": "All-on-4 Standard",
+        "schema": "2 Dx + 2 Sx",
+        "total_implants": 4,
+        "n_right": 2,
+        "n_left": 2,
+        "epochs_to_converge": 18,
+        "passed_gate": false,
+        "success_prob_pct": 79.8,
+        "p_mech_pct": 80.2,
+        "p_bio_tarnow_pct": 99.5,
+        "max_von_mises_mpa": 21.8,
+        "von_mises_R_mpa": 21.8,
+        "von_mises_L_mpa": 18.9,
+        "max_bending_moment_ncm": 52.3,
+        "micromotion_um": 84.5,
+        "min_isq": 58.1,
+        "min_tarnow_mm": 6.13,
+        "ap_spread_mm": 15.28,
+        "max_cantilever_mm": 10.3,
+        "status_badge": "MARGINALE / CARICO RIDOTTO",
+        "status_tone": "yellow",
+        "is_recommended": false
+      },
+      {
+        "code": "5_R",
+        "label": "All-on-5 Rinforzo Dx",
+        "schema": "3 Dx + 2 Sx",
+        "total_implants": 5,
+        "n_right": 3,
+        "n_left": 2,
+        "epochs_to_converge": 18,
+        "passed_gate": false,
+        "success_prob_pct": 84.9,
+        "p_mech_pct": 85.4,
+        "p_bio_tarnow_pct": 99.5,
+        "max_von_mises_mpa": 27.3,
+        "von_mises_R_mpa": 27.3,
+        "von_mises_L_mpa": 20.8,
+        "max_bending_moment_ncm": 43.0,
+        "micromotion_um": 79.1,
+        "min_isq": 58.0,
+        "min_tarnow_mm": 4.58,
+        "ap_spread_mm": 16.32,
+        "max_cantilever_mm": 16.0,
+        "status_badge": "MARGINALE / CARICO RIDOTTO",
+        "status_tone": "yellow",
+        "is_recommended": false
+      },
+      {
+        "code": "5_L",
+        "label": "All-on-5 Rinforzo Sx",
+        "schema": "2 Dx + 3 Sx",
+        "total_implants": 5,
+        "n_right": 2,
+        "n_left": 3,
+        "epochs_to_converge": 18,
+        "passed_gate": false,
+        "success_prob_pct": 89.0,
+        "p_mech_pct": 89.5,
+        "p_bio_tarnow_pct": 99.5,
+        "max_von_mises_mpa": 20.7,
+        "von_mises_R_mpa": 20.7,
+        "von_mises_L_mpa": 14.1,
+        "max_bending_moment_ncm": 48.5,
+        "micromotion_um": 72.5,
+        "min_isq": 58.6,
+        "min_tarnow_mm": 4.69,
+        "ap_spread_mm": 17.07,
+        "max_cantilever_mm": 12.3,
+        "status_badge": "MARGINALE / CARICO RIDOTTO",
+        "status_tone": "yellow",
+        "is_recommended": true
+      },
+      {
+        "code": "6",
+        "label": "All-on-6 Bilanciata",
+        "schema": "3 Dx + 3 Sx",
+        "total_implants": 6,
+        "n_right": 3,
+        "n_left": 3,
+        "epochs_to_converge": 18,
+        "passed_gate": false,
+        "success_prob_pct": 85.9,
+        "p_mech_pct": 93.5,
+        "p_bio_tarnow_pct": 91.8,
+        "max_von_mises_mpa": 15.4,
+        "von_mises_R_mpa": 15.4,
+        "von_mises_L_mpa": 13.4,
+        "max_bending_moment_ncm": 37.8,
+        "micromotion_um": 63.8,
+        "min_isq": 59.1,
+        "min_tarnow_mm": 3.27,
+        "ap_spread_mm": 17.14,
+        "max_cantilever_mm": 13.1,
+        "status_badge": "MARGINALE / CARICO RIDOTTO",
+        "status_tone": "yellow",
+        "is_recommended": false
+      },
+      {
+        "code": "7",
+        "label": "All-on-7 Asimmetrica",
+        "schema": "4 Dx + 3 Sx",
+        "total_implants": 7,
+        "n_right": 4,
+        "n_left": 3,
+        "epochs_to_converge": 18,
+        "passed_gate": false,
+        "success_prob_pct": 83.1,
+        "p_mech_pct": 94.8,
+        "p_bio_tarnow_pct": 89.0,
+        "max_von_mises_mpa": 13.0,
+        "von_mises_R_mpa": 6.2,
+        "von_mises_L_mpa": 13.0,
+        "max_bending_moment_ncm": 26.3,
+        "micromotion_um": 55.4,
+        "min_isq": 59.4,
+        "min_tarnow_mm": 3.0,
+        "ap_spread_mm": 25.89,
+        "max_cantilever_mm": 16.0,
+        "status_badge": "MARGINALE / CARICO RIDOTTO",
+        "status_tone": "yellow",
+        "is_recommended": false
+      },
+      {
+        "code": "8",
+        "label": "All-on-8 Full-Arch",
+        "schema": "4 Dx + 4 Sx",
+        "total_implants": 8,
+        "n_right": 4,
+        "n_left": 4,
+        "epochs_to_converge": 18,
+        "passed_gate": false,
+        "success_prob_pct": 82.1,
+        "p_mech_pct": 95.3,
+        "p_bio_tarnow_pct": 89.0,
+        "max_von_mises_mpa": 5.4,
+        "von_mises_R_mpa": 5.4,
+        "von_mises_L_mpa": 4.3,
+        "max_bending_moment_ncm": 11.2,
+        "micromotion_um": 49.2,
+        "min_isq": 60.1,
+        "min_tarnow_mm": 3.0,
+        "ap_spread_mm": 27.36,
+        "max_cantilever_mm": 16.0,
+        "status_badge": "MARGINALE / CARICO RIDOTTO",
+        "status_tone": "yellow",
+        "is_recommended": false
+      },
+      {
+        "code": "10",
+        "label": "All-on-10 Estesa FP-1",
+        "schema": "5 Dx + 5 Sx",
+        "total_implants": 10,
+        "n_right": 5,
+        "n_left": 5,
+        "epochs_to_converge": 18,
+        "passed_gate": false,
+        "success_prob_pct": 24.3,
+        "p_mech_pct": 96.2,
+        "p_bio_tarnow_pct": 26.9,
+        "max_von_mises_mpa": 13.8,
+        "von_mises_R_mpa": 13.8,
+        "von_mises_L_mpa": 8.2,
+        "max_bending_moment_ncm": 21.6,
+        "micromotion_um": 40.5,
+        "min_isq": 61.5,
+        "min_tarnow_mm": 2.0,
+        "ap_spread_mm": 28.75,
+        "max_cantilever_mm": 16.0,
+        "status_badge": "AFFOLLAMENTO TARNOW (<3mm)",
+        "status_tone": "red",
+        "is_recommended": false
+      }
+    ],
+    "uncertainty": {
+      "metodo": "split conformal, residui assoluti",
+      "livello": 0.9,
+      "inclinazione_distale": {
+        "previsione": 39.55,
+        "minimo": 35.54,
+        "massimo": 43.57,
+        "larghezza": 8.04,
+        "livello": 0.9,
+        "copertura_garantita": true
+      },
+      "stabilita_minima": {
+        "previsione": 57.35,
+        "minimo": 45.22,
+        "massimo": 69.48,
+        "larghezza": 24.26,
+        "livello": 0.9,
+        "copertura_garantita": true
+      },
+      "n_casi_riferimento": 133
+    },
+    "input_check": {
+      "ood": true,
+      "punteggio": 7.615,
+      "soglia": 5.749,
+      "motivi": [
+        "Freccia antero-posteriore sinistra 23,1 mm, superiore a tutti i casi di riferimento",
+        "Altezza d'osso anteriore 6,6 mm, pi\u00f9 bassa di tutti i casi di riferimento",
+        "Spessore d'osso anteriore 9 mm, superiore a tutti i casi di riferimento",
+        "Spessore d'osso posteriore 9,2 mm, superiore a tutti i casi di riferimento",
+        "Combinazione di valori insolita: distanza 7,6 contro una soglia di 5,7 (99 per cento dei 133 casi di riferimento)"
+      ]
+    },
+    "monotone_check": {
+      "metodo": "HistGradientBoosting con vincoli monotoni",
+      "stabilita_minima": {
+        "stima_monotona": 59.05,
+        "solutore": 58.1,
+        "differenza": 0.95
+      },
+      "micromovimenti_um": {
+        "stima_monotona": 101.89,
+        "solutore": 84.5,
+        "differenza": 17.39
+      },
+      "vincoli": {
+        "stabilita_minima": "non scende con densit\u00e0, lunghezza, diametro",
+        "micromovimenti": "non scendono con lo sbalzo, non salgono con la densit\u00e0"
+      }
+    },
+    "density_map": {
+      "label": "stima da 3 punti, incertezza alta",
+      "n_punti_misurati": 3,
+      "punti_misurati": [
+        {
+          "x": 0.0,
+          "y": -0.0,
+          "z": 0.0,
+          "hu": 1173.0
+        },
+        {
+          "x": 15.3,
+          "y": -12.86,
+          "z": -5.68,
+          "hu": 598.0
+        },
+        {
+          "x": -16.05,
+          "y": -13.57,
+          "z": -6.44,
+          "hu": 598.0
+        }
+      ],
+      "n_arcata": 40,
+      "n_profondita": 5,
+      "shape": [
+        40,
+        5
+      ],
+      "grid": [
+        {
+          "x": -22.47,
+          "y": -25.28,
+          "z": -11.03,
+          "hu": 598.0,
+          "incertezza": 244.3,
+          "fascia": [
+            353.7,
+            842.3
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 0,
+          "profondita_idx": 0
+        },
+        {
+          "x": -22.47,
+          "y": -25.28,
+          "z": -14.25,
+          "hu": 628.2,
+          "incertezza": 256.3,
+          "fascia": [
+            372.0,
+            884.5
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 0,
+          "profondita_idx": 1
+        },
+        {
+          "x": -22.47,
+          "y": -25.28,
+          "z": -17.48,
+          "hu": 657.9,
+          "incertezza": 289.9,
+          "fascia": [
+            368.0,
+            947.8
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 0,
+          "profondita_idx": 2
+        },
+        {
+          "x": -22.47,
+          "y": -25.28,
+          "z": -20.7,
+          "hu": 666.8,
+          "incertezza": 318.7,
+          "fascia": [
+            348.1,
+            985.6
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 0,
+          "profondita_idx": 3
+        },
+        {
+          "x": -22.47,
+          "y": -25.28,
+          "z": -23.93,
+          "hu": 665.5,
+          "incertezza": 335.4,
+          "fascia": [
+            330.1,
+            1000.8
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 0,
+          "profondita_idx": 4
+        },
+        {
+          "x": -21.34,
+          "y": -22.99,
+          "z": -10.16,
+          "hu": 598.0,
+          "incertezza": 234.9,
+          "fascia": [
+            363.1,
+            832.9
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 1,
+          "profondita_idx": 0
+        },
+        {
+          "x": -21.34,
+          "y": -22.99,
+          "z": -13.38,
+          "hu": 635.7,
+          "incertezza": 246.8,
+          "fascia": [
+            389.0,
+            882.5
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 1,
+          "profondita_idx": 1
+        },
+        {
+          "x": -21.34,
+          "y": -22.99,
+          "z": -16.6,
+          "hu": 666.3,
+          "incertezza": 283.9,
+          "fascia": [
+            382.4,
+            950.2
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 1,
+          "profondita_idx": 2
+        },
+        {
+          "x": -21.34,
+          "y": -22.99,
+          "z": -19.82,
+          "hu": 672.8,
+          "incertezza": 315.5,
+          "fascia": [
+            357.4,
+            988.3
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 1,
+          "profondita_idx": 3
+        },
+        {
+          "x": -21.34,
+          "y": -22.99,
+          "z": -23.04,
+          "hu": 669.5,
+          "incertezza": 333.5,
+          "fascia": [
+            336.0,
+            1002.9
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 1,
+          "profondita_idx": 4
+        },
+        {
+          "x": -20.22,
+          "y": -20.8,
+          "z": -9.31,
+          "hu": 598.0,
+          "incertezza": 225.9,
+          "fascia": [
+            372.1,
+            823.9
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 2,
+          "profondita_idx": 0
+        },
+        {
+          "x": -20.22,
+          "y": -20.8,
+          "z": -12.45,
+          "hu": 644.0,
+          "incertezza": 237.3,
+          "fascia": [
+            406.7,
+            881.2
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 2,
+          "profondita_idx": 1
+        },
+        {
+          "x": -20.22,
+          "y": -20.8,
+          "z": -15.59,
+          "hu": 674.7,
+          "incertezza": 276.5,
+          "fascia": [
+            398.2,
+            951.3
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 2,
+          "profondita_idx": 2
+        },
+        {
+          "x": -20.22,
+          "y": -20.8,
+          "z": -18.73,
+          "hu": 679.1,
+          "incertezza": 310.5,
+          "fascia": [
+            368.6,
+            989.6
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 2,
+          "profondita_idx": 3
+        },
+        {
+          "x": -20.22,
+          "y": -20.8,
+          "z": -21.87,
+          "hu": 674.0,
+          "incertezza": 330.4,
+          "fascia": [
+            343.7,
+            1004.4
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 2,
+          "profondita_idx": 4
+        },
+        {
+          "x": -19.09,
+          "y": -18.71,
+          "z": -8.5,
+          "hu": 598.0,
+          "incertezza": 217.7,
+          "fascia": [
+            380.3,
+            815.7
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 3,
+          "profondita_idx": 0
+        },
+        {
+          "x": -19.09,
+          "y": -18.71,
+          "z": -11.55,
+          "hu": 654.4,
+          "incertezza": 228.7,
+          "fascia": [
+            425.7,
+            883.0
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 3,
+          "profondita_idx": 1
+        },
+        {
+          "x": -19.09,
+          "y": -18.71,
+          "z": -14.61,
+          "hu": 684.1,
+          "incertezza": 269.5,
+          "fascia": [
+            414.6,
+            953.6
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 3,
+          "profondita_idx": 2
+        },
+        {
+          "x": -19.09,
+          "y": -18.71,
+          "z": -17.66,
+          "hu": 685.8,
+          "incertezza": 305.6,
+          "fascia": [
+            380.2,
+            991.5
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 3,
+          "profondita_idx": 3
+        },
+        {
+          "x": -19.09,
+          "y": -18.71,
+          "z": -20.72,
+          "hu": 678.8,
+          "incertezza": 327.2,
+          "fascia": [
+            351.6,
+            1006.1
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 3,
+          "profondita_idx": 4
+        },
+        {
+          "x": -17.97,
+          "y": -16.72,
+          "z": -7.71,
+          "hu": 598.0,
+          "incertezza": 212.7,
+          "fascia": [
+            385.3,
+            810.7
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 4,
+          "profondita_idx": 0
+        },
+        {
+          "x": -17.97,
+          "y": -16.72,
+          "z": -10.68,
+          "hu": 667.4,
+          "incertezza": 221.2,
+          "fascia": [
+            446.2,
+            888.5
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 4,
+          "profondita_idx": 1
+        },
+        {
+          "x": -17.97,
+          "y": -16.72,
+          "z": -13.66,
+          "hu": 694.5,
+          "incertezza": 263.0,
+          "fascia": [
+            431.5,
+            957.5
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 4,
+          "profondita_idx": 2
+        },
+        {
+          "x": -17.97,
+          "y": -16.72,
+          "z": -16.63,
+          "hu": 692.9,
+          "incertezza": 300.8,
+          "fascia": [
+            392.1,
+            993.8
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 4,
+          "profondita_idx": 3
+        },
+        {
+          "x": -17.97,
+          "y": -16.72,
+          "z": -19.6,
+          "hu": 683.9,
+          "incertezza": 324.0,
+          "fascia": [
+            359.9,
+            1007.9
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 4,
+          "profondita_idx": 4
+        },
+        {
+          "x": -16.84,
+          "y": -14.83,
+          "z": -6.95,
+          "hu": 598.0,
+          "incertezza": 210.7,
+          "fascia": [
+            387.3,
+            808.7
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 5,
+          "profondita_idx": 0
+        },
+        {
+          "x": -16.84,
+          "y": -14.83,
+          "z": -9.84,
+          "hu": 683.4,
+          "incertezza": 214.9,
+          "fascia": [
+            468.5,
+            898.3
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 5,
+          "profondita_idx": 1
+        },
+        {
+          "x": -16.84,
+          "y": -14.83,
+          "z": -12.73,
+          "hu": 705.8,
+          "incertezza": 257.1,
+          "fascia": [
+            448.7,
+            962.9
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 5,
+          "profondita_idx": 2
+        },
+        {
+          "x": -16.84,
+          "y": -14.83,
+          "z": -15.62,
+          "hu": 700.5,
+          "incertezza": 296.2,
+          "fascia": [
+            404.3,
+            996.6
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 5,
+          "profondita_idx": 3
+        },
+        {
+          "x": -16.84,
+          "y": -14.83,
+          "z": -18.51,
+          "hu": 689.1,
+          "incertezza": 320.8,
+          "fascia": [
+            368.3,
+            1009.8
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 5,
+          "profondita_idx": 4
+        },
+        {
+          "x": -15.72,
+          "y": -13.05,
+          "z": -6.23,
+          "hu": 614.1,
+          "incertezza": 208.5,
+          "fascia": [
+            405.6,
+            822.6
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 6,
+          "profondita_idx": 0
+        },
+        {
+          "x": -15.72,
+          "y": -13.05,
+          "z": -9.03,
+          "hu": 702.6,
+          "incertezza": 209.9,
+          "fascia": [
+            492.7,
+            912.5
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 6,
+          "profondita_idx": 1
+        },
+        {
+          "x": -15.72,
+          "y": -13.05,
+          "z": -11.84,
+          "hu": 718.1,
+          "incertezza": 251.9,
+          "fascia": [
+            466.2,
+            969.9
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 6,
+          "profondita_idx": 2
+        },
+        {
+          "x": -15.72,
+          "y": -13.05,
+          "z": -14.65,
+          "hu": 708.3,
+          "incertezza": 291.7,
+          "fascia": [
+            416.6,
+            1000.1
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 6,
+          "profondita_idx": 3
+        },
+        {
+          "x": -15.72,
+          "y": -13.05,
+          "z": -17.45,
+          "hu": 694.5,
+          "incertezza": 317.5,
+          "fascia": [
+            377.0,
+            1012.0
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 6,
+          "profondita_idx": 4
+        },
+        {
+          "x": -14.59,
+          "y": -11.38,
+          "z": -5.53,
+          "hu": 666.8,
+          "incertezza": 202.9,
+          "fascia": [
+            463.9,
+            869.8
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 7,
+          "profondita_idx": 0
+        },
+        {
+          "x": -14.59,
+          "y": -11.38,
+          "z": -8.25,
+          "hu": 724.9,
+          "incertezza": 206.3,
+          "fascia": [
+            518.6,
+            931.2
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 7,
+          "profondita_idx": 1
+        },
+        {
+          "x": -14.59,
+          "y": -11.38,
+          "z": -10.98,
+          "hu": 731.2,
+          "incertezza": 247.4,
+          "fascia": [
+            483.7,
+            978.6
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 7,
+          "profondita_idx": 2
+        },
+        {
+          "x": -14.59,
+          "y": -11.38,
+          "z": -13.7,
+          "hu": 716.6,
+          "incertezza": 287.5,
+          "fascia": [
+            429.0,
+            1004.1
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 7,
+          "profondita_idx": 3
+        },
+        {
+          "x": -14.59,
+          "y": -11.38,
+          "z": -16.42,
+          "hu": 700.1,
+          "incertezza": 314.3,
+          "fascia": [
+            385.9,
+            1014.4
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 7,
+          "profondita_idx": 4
+        },
+        {
+          "x": -13.47,
+          "y": -9.81,
+          "z": -4.86,
+          "hu": 717.3,
+          "incertezza": 201.8,
+          "fascia": [
+            515.4,
+            919.1
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 8,
+          "profondita_idx": 0
+        },
+        {
+          "x": -13.47,
+          "y": -9.81,
+          "z": -7.5,
+          "hu": 749.8,
+          "incertezza": 204.1,
+          "fascia": [
+            545.8,
+            953.9
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 8,
+          "profondita_idx": 1
+        },
+        {
+          "x": -13.47,
+          "y": -9.81,
+          "z": -10.14,
+          "hu": 745.0,
+          "incertezza": 243.8,
+          "fascia": [
+            501.2,
+            988.8
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 8,
+          "profondita_idx": 2
+        },
+        {
+          "x": -13.47,
+          "y": -9.81,
+          "z": -12.78,
+          "hu": 725.1,
+          "incertezza": 283.7,
+          "fascia": [
+            441.4,
+            1008.8
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 8,
+          "profondita_idx": 3
+        },
+        {
+          "x": -13.47,
+          "y": -9.81,
+          "z": -15.43,
+          "hu": 706.0,
+          "incertezza": 311.1,
+          "fascia": [
+            394.9,
+            1017.0
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 8,
+          "profondita_idx": 4
+        },
+        {
+          "x": -12.34,
+          "y": -8.34,
+          "z": -4.23,
+          "hu": 765.4,
+          "incertezza": 200.7,
+          "fascia": [
+            564.8,
+            966.1
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 9,
+          "profondita_idx": 0
+        },
+        {
+          "x": -12.34,
+          "y": -8.34,
+          "z": -6.79,
+          "hu": 776.6,
+          "incertezza": 203.3,
+          "fascia": [
+            573.4,
+            979.9
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 9,
+          "profondita_idx": 1
+        },
+        {
+          "x": -12.34,
+          "y": -8.34,
+          "z": -9.34,
+          "hu": 759.4,
+          "incertezza": 241.0,
+          "fascia": [
+            518.4,
+            1000.5
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 9,
+          "profondita_idx": 2
+        },
+        {
+          "x": -12.34,
+          "y": -8.34,
+          "z": -11.9,
+          "hu": 733.9,
+          "incertezza": 280.1,
+          "fascia": [
+            453.8,
+            1014.0
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 9,
+          "profondita_idx": 3
+        },
+        {
+          "x": -12.34,
+          "y": -8.34,
+          "z": -14.46,
+          "hu": 712.0,
+          "incertezza": 307.9,
+          "fascia": [
+            404.1,
+            1019.9
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 9,
+          "profondita_idx": 4
+        },
+        {
+          "x": -11.22,
+          "y": -6.99,
+          "z": -3.63,
+          "hu": 811.4,
+          "incertezza": 197.4,
+          "fascia": [
+            614.1,
+            1008.8
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 10,
+          "profondita_idx": 0
+        },
+        {
+          "x": -11.22,
+          "y": -6.99,
+          "z": -6.1,
+          "hu": 804.4,
+          "incertezza": 203.8,
+          "fascia": [
+            600.6,
+            1008.2
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 10,
+          "profondita_idx": 1
+        },
+        {
+          "x": -11.22,
+          "y": -6.99,
+          "z": -8.58,
+          "hu": 774.3,
+          "incertezza": 239.1,
+          "fascia": [
+            535.2,
+            1013.4
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 10,
+          "profondita_idx": 2
+        },
+        {
+          "x": -11.22,
+          "y": -6.99,
+          "z": -11.05,
+          "hu": 743.0,
+          "incertezza": 276.9,
+          "fascia": [
+            466.0,
+            1019.9
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 10,
+          "profondita_idx": 3
+        },
+        {
+          "x": -11.22,
+          "y": -6.99,
+          "z": -13.53,
+          "hu": 718.2,
+          "incertezza": 304.8,
+          "fascia": [
+            413.4,
+            1023.0
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 10,
+          "profondita_idx": 4
+        },
+        {
+          "x": -10.09,
+          "y": -5.75,
+          "z": -3.06,
+          "hu": 855.3,
+          "incertezza": 197.8,
+          "fascia": [
+            657.5,
+            1053.0
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 11,
+          "profondita_idx": 0
+        },
+        {
+          "x": -10.09,
+          "y": -5.75,
+          "z": -5.46,
+          "hu": 832.5,
+          "incertezza": 205.7,
+          "fascia": [
+            626.8,
+            1038.1
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 11,
+          "profondita_idx": 1
+        },
+        {
+          "x": -10.09,
+          "y": -5.75,
+          "z": -7.85,
+          "hu": 789.3,
+          "incertezza": 237.9,
+          "fascia": [
+            551.4,
+            1027.3
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 11,
+          "profondita_idx": 2
+        },
+        {
+          "x": -10.09,
+          "y": -5.75,
+          "z": -10.24,
+          "hu": 752.2,
+          "incertezza": 274.1,
+          "fascia": [
+            478.1,
+            1026.3
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 11,
+          "profondita_idx": 3
+        },
+        {
+          "x": -10.09,
+          "y": -5.75,
+          "z": -12.63,
+          "hu": 724.6,
+          "incertezza": 301.9,
+          "fascia": [
+            422.7,
+            1026.4
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 11,
+          "profondita_idx": 4
+        },
+        {
+          "x": -8.97,
+          "y": -4.62,
+          "z": -2.54,
+          "hu": 897.1,
+          "incertezza": 197.7,
+          "fascia": [
+            699.4,
+            1094.8
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 12,
+          "profondita_idx": 0
+        },
+        {
+          "x": -8.97,
+          "y": -4.62,
+          "z": -4.85,
+          "hu": 860.1,
+          "incertezza": 205.6,
+          "fascia": [
+            654.5,
+            1065.7
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 12,
+          "profondita_idx": 1
+        },
+        {
+          "x": -8.97,
+          "y": -4.62,
+          "z": -7.16,
+          "hu": 804.4,
+          "incertezza": 235.5,
+          "fascia": [
+            568.9,
+            1040.0
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 12,
+          "profondita_idx": 2
+        },
+        {
+          "x": -8.97,
+          "y": -4.62,
+          "z": -9.46,
+          "hu": 761.6,
+          "incertezza": 270.6,
+          "fascia": [
+            491.0,
+            1032.1
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 12,
+          "profondita_idx": 3
+        },
+        {
+          "x": -8.97,
+          "y": -4.62,
+          "z": -11.77,
+          "hu": 731.1,
+          "incertezza": 298.4,
+          "fascia": [
+            432.7,
+            1029.6
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 12,
+          "profondita_idx": 4
+        },
+        {
+          "x": -7.84,
+          "y": -3.6,
+          "z": -2.05,
+          "hu": 936.9,
+          "incertezza": 191.3,
+          "fascia": [
+            745.6,
+            1128.3
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 13,
+          "profondita_idx": 0
+        },
+        {
+          "x": -7.84,
+          "y": -3.6,
+          "z": -4.27,
+          "hu": 886.8,
+          "incertezza": 198.8,
+          "fascia": [
+            688.0,
+            1085.6
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 13,
+          "profondita_idx": 1
+        },
+        {
+          "x": -7.84,
+          "y": -3.6,
+          "z": -6.5,
+          "hu": 819.3,
+          "incertezza": 228.5,
+          "fascia": [
+            590.9,
+            1047.8
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 13,
+          "profondita_idx": 2
+        },
+        {
+          "x": -7.84,
+          "y": -3.6,
+          "z": -8.73,
+          "hu": 771.0,
+          "incertezza": 264.3,
+          "fascia": [
+            506.7,
+            1035.3
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 13,
+          "profondita_idx": 3
+        },
+        {
+          "x": -7.84,
+          "y": -3.6,
+          "z": -10.95,
+          "hu": 737.9,
+          "incertezza": 293.4,
+          "fascia": [
+            444.4,
+            1031.3
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 13,
+          "profondita_idx": 4
+        },
+        {
+          "x": -6.71,
+          "y": -2.71,
+          "z": -1.6,
+          "hu": 974.9,
+          "incertezza": 187.9,
+          "fascia": [
+            787.1,
+            1162.8
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 14,
+          "profondita_idx": 0
+        },
+        {
+          "x": -6.71,
+          "y": -2.71,
+          "z": -3.74,
+          "hu": 912.0,
+          "incertezza": 193.3,
+          "fascia": [
+            718.7,
+            1105.4
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 14,
+          "profondita_idx": 1
+        },
+        {
+          "x": -6.71,
+          "y": -2.71,
+          "z": -5.88,
+          "hu": 833.9,
+          "incertezza": 221.9,
+          "fascia": [
+            612.0,
+            1055.9
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 14,
+          "profondita_idx": 2
+        },
+        {
+          "x": -6.71,
+          "y": -2.71,
+          "z": -8.03,
+          "hu": 780.5,
+          "incertezza": 258.1,
+          "fascia": [
+            522.4,
+            1038.7
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 14,
+          "profondita_idx": 3
+        },
+        {
+          "x": -6.71,
+          "y": -2.71,
+          "z": -10.17,
+          "hu": 744.7,
+          "incertezza": 288.3,
+          "fascia": [
+            456.5,
+            1033.0
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 14,
+          "profondita_idx": 4
+        },
+        {
+          "x": -5.59,
+          "y": -1.93,
+          "z": -1.19,
+          "hu": 1011.3,
+          "incertezza": 187.2,
+          "fascia": [
+            824.1,
+            1198.4
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 15,
+          "profondita_idx": 0
+        },
+        {
+          "x": -5.59,
+          "y": -1.93,
+          "z": -3.25,
+          "hu": 935.5,
+          "incertezza": 189.2,
+          "fascia": [
+            746.3,
+            1124.7
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 15,
+          "profondita_idx": 1
+        },
+        {
+          "x": -5.59,
+          "y": -1.93,
+          "z": -5.31,
+          "hu": 848.0,
+          "incertezza": 216.0,
+          "fascia": [
+            632.0,
+            1064.0
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 15,
+          "profondita_idx": 2
+        },
+        {
+          "x": -5.59,
+          "y": -1.93,
+          "z": -7.37,
+          "hu": 790.0,
+          "incertezza": 252.0,
+          "fascia": [
+            538.0,
+            1042.1
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 15,
+          "profondita_idx": 3
+        },
+        {
+          "x": -5.59,
+          "y": -1.93,
+          "z": -9.44,
+          "hu": 751.8,
+          "incertezza": 282.9,
+          "fascia": [
+            468.8,
+            1034.7
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 15,
+          "profondita_idx": 4
+        },
+        {
+          "x": -4.46,
+          "y": -1.27,
+          "z": -0.83,
+          "hu": 1046.0,
+          "incertezza": 188.9,
+          "fascia": [
+            857.1,
+            1235.0
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 16,
+          "profondita_idx": 0
+        },
+        {
+          "x": -4.46,
+          "y": -1.27,
+          "z": -2.81,
+          "hu": 956.8,
+          "incertezza": 186.4,
+          "fascia": [
+            770.4,
+            1143.2
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 16,
+          "profondita_idx": 1
+        },
+        {
+          "x": -4.46,
+          "y": -1.27,
+          "z": -4.79,
+          "hu": 861.4,
+          "incertezza": 210.6,
+          "fascia": [
+            650.8,
+            1072.0
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 16,
+          "profondita_idx": 2
+        },
+        {
+          "x": -4.46,
+          "y": -1.27,
+          "z": -6.77,
+          "hu": 799.5,
+          "incertezza": 246.1,
+          "fascia": [
+            553.4,
+            1045.6
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 16,
+          "profondita_idx": 3
+        },
+        {
+          "x": -4.46,
+          "y": -1.27,
+          "z": -8.74,
+          "hu": 759.0,
+          "incertezza": 277.5,
+          "fascia": [
+            481.5,
+            1036.5
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 16,
+          "profondita_idx": 4
+        },
+        {
+          "x": -3.34,
+          "y": -0.74,
+          "z": -0.52,
+          "hu": 1079.4,
+          "incertezza": 192.8,
+          "fascia": [
+            886.6,
+            1272.3
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 17,
+          "profondita_idx": 0
+        },
+        {
+          "x": -3.34,
+          "y": -0.74,
+          "z": -2.42,
+          "hu": 975.6,
+          "incertezza": 184.7,
+          "fascia": [
+            790.9,
+            1160.3
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 17,
+          "profondita_idx": 1
+        },
+        {
+          "x": -3.34,
+          "y": -0.74,
+          "z": -4.31,
+          "hu": 874.0,
+          "incertezza": 205.9,
+          "fascia": [
+            668.1,
+            1079.8
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 17,
+          "profondita_idx": 2
+        },
+        {
+          "x": -3.34,
+          "y": -0.74,
+          "z": -6.21,
+          "hu": 808.8,
+          "incertezza": 240.3,
+          "fascia": [
+            568.5,
+            1049.2
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 17,
+          "profondita_idx": 3
+        },
+        {
+          "x": -3.34,
+          "y": -0.74,
+          "z": -8.1,
+          "hu": 766.3,
+          "incertezza": 271.9,
+          "fascia": [
+            494.4,
+            1038.2
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 17,
+          "profondita_idx": 4
+        },
+        {
+          "x": -2.21,
+          "y": -0.35,
+          "z": -0.27,
+          "hu": 1111.7,
+          "incertezza": 198.6,
+          "fascia": [
+            913.1,
+            1310.3
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 18,
+          "profondita_idx": 0
+        },
+        {
+          "x": -2.21,
+          "y": -0.35,
+          "z": -2.08,
+          "hu": 991.4,
+          "incertezza": 183.8,
+          "fascia": [
+            807.5,
+            1175.2
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 18,
+          "profondita_idx": 1
+        },
+        {
+          "x": -2.21,
+          "y": -0.35,
+          "z": -3.9,
+          "hu": 885.5,
+          "incertezza": 201.8,
+          "fascia": [
+            683.8,
+            1087.3
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 18,
+          "profondita_idx": 2
+        },
+        {
+          "x": -2.21,
+          "y": -0.35,
+          "z": -5.71,
+          "hu": 818.0,
+          "incertezza": 234.8,
+          "fascia": [
+            583.2,
+            1052.8
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 18,
+          "profondita_idx": 3
+        },
+        {
+          "x": -2.21,
+          "y": -0.35,
+          "z": -7.52,
+          "hu": 773.8,
+          "incertezza": 266.3,
+          "fascia": [
+            507.5,
+            1040.0
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 18,
+          "profondita_idx": 4
+        },
+        {
+          "x": -1.09,
+          "y": -0.09,
+          "z": -0.09,
+          "hu": 1143.1,
+          "incertezza": 205.9,
+          "fascia": [
+            937.2,
+            1349.0
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 19,
+          "profondita_idx": 0
+        },
+        {
+          "x": -1.09,
+          "y": -0.09,
+          "z": -1.82,
+          "hu": 1003.6,
+          "incertezza": 183.6,
+          "fascia": [
+            820.1,
+            1187.2
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 19,
+          "profondita_idx": 1
+        },
+        {
+          "x": -1.09,
+          "y": -0.09,
+          "z": -3.55,
+          "hu": 895.9,
+          "incertezza": 198.3,
+          "fascia": [
+            697.6,
+            1094.3
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 19,
+          "profondita_idx": 2
+        },
+        {
+          "x": -1.09,
+          "y": -0.09,
+          "z": -5.28,
+          "hu": 826.9,
+          "incertezza": 229.6,
+          "fascia": [
+            597.3,
+            1056.4
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 19,
+          "profondita_idx": 3
+        },
+        {
+          "x": -1.09,
+          "y": -0.09,
+          "z": -7.01,
+          "hu": 781.3,
+          "incertezza": 260.6,
+          "fascia": [
+            520.7,
+            1041.9
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 19,
+          "profondita_idx": 4
+        },
+        {
+          "x": 0.04,
+          "y": -0.0,
+          "z": -0.0,
+          "hu": 1171.9,
+          "incertezza": 214.0,
+          "fascia": [
+            958.0,
+            1385.9
+          ],
+          "misch_class": "D1",
+          "misch_label": "D1 (Corticale Densa >1150 HU)",
+          "arcata_idx": 20,
+          "profondita_idx": 0
+        },
+        {
+          "x": 0.04,
+          "y": -0.0,
+          "z": -1.65,
+          "hu": 1011.5,
+          "incertezza": 183.7,
+          "fascia": [
+            827.8,
+            1195.2
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 20,
+          "profondita_idx": 1
+        },
+        {
+          "x": 0.04,
+          "y": -0.0,
+          "z": -3.3,
+          "hu": 904.5,
+          "incertezza": 195.7,
+          "fascia": [
+            708.8,
+            1100.2
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 20,
+          "profondita_idx": 2
+        },
+        {
+          "x": 0.04,
+          "y": -0.0,
+          "z": -4.95,
+          "hu": 835.0,
+          "incertezza": 224.8,
+          "fascia": [
+            610.1,
+            1059.8
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 20,
+          "profondita_idx": 3
+        },
+        {
+          "x": 0.04,
+          "y": -0.0,
+          "z": -6.6,
+          "hu": 788.6,
+          "incertezza": 255.1,
+          "fascia": [
+            533.5,
+            1043.6
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 20,
+          "profondita_idx": 4
+        },
+        {
+          "x": 1.16,
+          "y": -0.11,
+          "z": -0.09,
+          "hu": 1139.4,
+          "incertezza": 204.9,
+          "fascia": [
+            934.5,
+            1344.3
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 21,
+          "profondita_idx": 0
+        },
+        {
+          "x": 1.16,
+          "y": -0.11,
+          "z": -1.75,
+          "hu": 1007.4,
+          "incertezza": 183.6,
+          "fascia": [
+            823.8,
+            1190.9
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 21,
+          "profondita_idx": 1
+        },
+        {
+          "x": 1.16,
+          "y": -0.11,
+          "z": -3.41,
+          "hu": 901.9,
+          "incertezza": 196.2,
+          "fascia": [
+            705.7,
+            1098.1
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 21,
+          "profondita_idx": 2
+        },
+        {
+          "x": 1.16,
+          "y": -0.11,
+          "z": -5.07,
+          "hu": 833.1,
+          "incertezza": 225.6,
+          "fascia": [
+            607.5,
+            1058.7
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 21,
+          "profondita_idx": 3
+        },
+        {
+          "x": 1.16,
+          "y": -0.11,
+          "z": -6.73,
+          "hu": 787.2,
+          "incertezza": 255.9,
+          "fascia": [
+            531.3,
+            1043.1
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 21,
+          "profondita_idx": 4
+        },
+        {
+          "x": 2.29,
+          "y": -0.38,
+          "z": -0.27,
+          "hu": 1106.2,
+          "incertezza": 197.4,
+          "fascia": [
+            908.9,
+            1303.6
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 22,
+          "profondita_idx": 0
+        },
+        {
+          "x": 2.29,
+          "y": -0.38,
+          "z": -1.94,
+          "hu": 998.4,
+          "incertezza": 183.6,
+          "fascia": [
+            814.8,
+            1181.9
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 22,
+          "profondita_idx": 1
+        },
+        {
+          "x": 2.29,
+          "y": -0.38,
+          "z": -3.61,
+          "hu": 897.2,
+          "incertezza": 197.3,
+          "fascia": [
+            699.9,
+            1094.5
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 22,
+          "profondita_idx": 2
+        },
+        {
+          "x": 2.29,
+          "y": -0.38,
+          "z": -5.28,
+          "hu": 830.2,
+          "incertezza": 226.8,
+          "fascia": [
+            603.3,
+            1057.0
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 22,
+          "profondita_idx": 3
+        },
+        {
+          "x": 2.29,
+          "y": -0.38,
+          "z": -6.95,
+          "hu": 785.2,
+          "incertezza": 257.0,
+          "fascia": [
+            528.1,
+            1042.2
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 22,
+          "profondita_idx": 4
+        },
+        {
+          "x": 3.41,
+          "y": -0.8,
+          "z": -0.52,
+          "hu": 1072.1,
+          "incertezza": 191.5,
+          "fascia": [
+            880.6,
+            1263.6
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 23,
+          "profondita_idx": 0
+        },
+        {
+          "x": 3.41,
+          "y": -0.8,
+          "z": -2.19,
+          "hu": 984.7,
+          "incertezza": 183.9,
+          "fascia": [
+            800.8,
+            1168.6
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 23,
+          "profondita_idx": 1
+        },
+        {
+          "x": 3.41,
+          "y": -0.8,
+          "z": -3.87,
+          "hu": 890.3,
+          "incertezza": 199.0,
+          "fascia": [
+            691.3,
+            1089.3
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 23,
+          "profondita_idx": 2
+        },
+        {
+          "x": 3.41,
+          "y": -0.8,
+          "z": -5.55,
+          "hu": 826.1,
+          "incertezza": 228.5,
+          "fascia": [
+            597.6,
+            1054.6
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 23,
+          "profondita_idx": 3
+        },
+        {
+          "x": 3.41,
+          "y": -0.8,
+          "z": -7.23,
+          "hu": 782.5,
+          "incertezza": 258.5,
+          "fascia": [
+            524.1,
+            1041.0
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 23,
+          "profondita_idx": 4
+        },
+        {
+          "x": 4.54,
+          "y": -1.36,
+          "z": -0.81,
+          "hu": 1036.7,
+          "incertezza": 187.7,
+          "fascia": [
+            849.0,
+            1224.3
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 24,
+          "profondita_idx": 0
+        },
+        {
+          "x": 4.54,
+          "y": -1.36,
+          "z": -2.5,
+          "hu": 966.7,
+          "incertezza": 185.0,
+          "fascia": [
+            781.7,
+            1151.6
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 24,
+          "profondita_idx": 1
+        },
+        {
+          "x": 4.54,
+          "y": -1.36,
+          "z": -4.19,
+          "hu": 881.1,
+          "incertezza": 201.4,
+          "fascia": [
+            679.7,
+            1082.6
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 24,
+          "profondita_idx": 2
+        },
+        {
+          "x": 4.54,
+          "y": -1.36,
+          "z": -5.88,
+          "hu": 820.8,
+          "incertezza": 230.7,
+          "fascia": [
+            590.2,
+            1051.5
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 24,
+          "profondita_idx": 3
+        },
+        {
+          "x": 4.54,
+          "y": -1.36,
+          "z": -7.57,
+          "hu": 779.2,
+          "incertezza": 260.2,
+          "fascia": [
+            519.0,
+            1039.4
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 24,
+          "profondita_idx": 4
+        },
+        {
+          "x": 5.66,
+          "y": -2.05,
+          "z": -1.16,
+          "hu": 999.7,
+          "incertezza": 186.2,
+          "fascia": [
+            813.5,
+            1185.9
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 25,
+          "profondita_idx": 0
+        },
+        {
+          "x": 5.66,
+          "y": -2.05,
+          "z": -2.86,
+          "hu": 944.7,
+          "incertezza": 187.1,
+          "fascia": [
+            757.6,
+            1131.8
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 25,
+          "profondita_idx": 1
+        },
+        {
+          "x": 5.66,
+          "y": -2.05,
+          "z": -4.56,
+          "hu": 869.7,
+          "incertezza": 204.6,
+          "fascia": [
+            665.2,
+            1074.3
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 25,
+          "profondita_idx": 2
+        },
+        {
+          "x": 5.66,
+          "y": -2.05,
+          "z": -6.25,
+          "hu": 814.4,
+          "incertezza": 233.4,
+          "fascia": [
+            581.0,
+            1047.8
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 25,
+          "profondita_idx": 3
+        },
+        {
+          "x": 5.66,
+          "y": -2.05,
+          "z": -7.95,
+          "hu": 775.2,
+          "incertezza": 262.3,
+          "fascia": [
+            512.9,
+            1037.5
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 25,
+          "profondita_idx": 4
+        },
+        {
+          "x": 6.79,
+          "y": -2.86,
+          "z": -1.55,
+          "hu": 961.0,
+          "incertezza": 187.5,
+          "fascia": [
+            773.5,
+            1148.5
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 26,
+          "profondita_idx": 0
+        },
+        {
+          "x": 6.79,
+          "y": -2.86,
+          "z": -3.26,
+          "hu": 919.2,
+          "incertezza": 190.6,
+          "fascia": [
+            728.6,
+            1109.7
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 26,
+          "profondita_idx": 1
+        },
+        {
+          "x": 6.79,
+          "y": -2.86,
+          "z": -4.96,
+          "hu": 856.1,
+          "incertezza": 208.6,
+          "fascia": [
+            647.5,
+            1064.7
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 26,
+          "profondita_idx": 2
+        },
+        {
+          "x": 6.79,
+          "y": -2.86,
+          "z": -6.67,
+          "hu": 806.6,
+          "incertezza": 236.7,
+          "fascia": [
+            570.0,
+            1043.3
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 26,
+          "profondita_idx": 3
+        },
+        {
+          "x": 6.79,
+          "y": -2.86,
+          "z": -8.38,
+          "hu": 770.5,
+          "incertezza": 264.8,
+          "fascia": [
+            505.7,
+            1035.2
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 26,
+          "profondita_idx": 4
+        },
+        {
+          "x": 7.92,
+          "y": -3.8,
+          "z": -1.98,
+          "hu": 920.4,
+          "incertezza": 191.9,
+          "fascia": [
+            728.5,
+            1112.3
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 27,
+          "profondita_idx": 0
+        },
+        {
+          "x": 7.92,
+          "y": -3.8,
+          "z": -3.7,
+          "hu": 890.5,
+          "incertezza": 195.7,
+          "fascia": [
+            694.8,
+            1086.2
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 27,
+          "profondita_idx": 1
+        },
+        {
+          "x": 7.92,
+          "y": -3.8,
+          "z": -5.41,
+          "hu": 840.4,
+          "incertezza": 213.5,
+          "fascia": [
+            626.8,
+            1053.9
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 27,
+          "profondita_idx": 2
+        },
+        {
+          "x": 7.92,
+          "y": -3.8,
+          "z": -7.13,
+          "hu": 797.7,
+          "incertezza": 240.6,
+          "fascia": [
+            557.1,
+            1038.3
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 27,
+          "profondita_idx": 3
+        },
+        {
+          "x": 7.92,
+          "y": -3.8,
+          "z": -8.85,
+          "hu": 765.0,
+          "incertezza": 267.6,
+          "fascia": [
+            497.4,
+            1032.6
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 27,
+          "profondita_idx": 4
+        },
+        {
+          "x": 9.04,
+          "y": -4.86,
+          "z": -2.45,
+          "hu": 877.7,
+          "incertezza": 197.2,
+          "fascia": [
+            680.5,
+            1074.9
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 28,
+          "profondita_idx": 0
+        },
+        {
+          "x": 9.04,
+          "y": -4.86,
+          "z": -4.18,
+          "hu": 859.2,
+          "incertezza": 200.5,
+          "fascia": [
+            658.7,
+            1059.7
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 28,
+          "profondita_idx": 1
+        },
+        {
+          "x": 9.04,
+          "y": -4.86,
+          "z": -5.9,
+          "hu": 822.7,
+          "incertezza": 217.8,
+          "fascia": [
+            604.8,
+            1040.5
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 28,
+          "profondita_idx": 2
+        },
+        {
+          "x": 9.04,
+          "y": -4.86,
+          "z": -7.63,
+          "hu": 787.5,
+          "incertezza": 244.0,
+          "fascia": [
+            543.5,
+            1031.5
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 28,
+          "profondita_idx": 3
+        },
+        {
+          "x": 9.04,
+          "y": -4.86,
+          "z": -9.36,
+          "hu": 758.8,
+          "incertezza": 270.2,
+          "fascia": [
+            488.6,
+            1029.0
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 28,
+          "profondita_idx": 4
+        },
+        {
+          "x": 10.17,
+          "y": -6.04,
+          "z": -2.95,
+          "hu": 832.8,
+          "incertezza": 195.6,
+          "fascia": [
+            637.2,
+            1028.4
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 29,
+          "profondita_idx": 0
+        },
+        {
+          "x": 10.17,
+          "y": -6.04,
+          "z": -4.69,
+          "hu": 825.9,
+          "incertezza": 197.4,
+          "fascia": [
+            628.5,
+            1023.2
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 29,
+          "profondita_idx": 1
+        },
+        {
+          "x": 10.17,
+          "y": -6.04,
+          "z": -6.43,
+          "hu": 803.4,
+          "incertezza": 215.6,
+          "fascia": [
+            587.7,
+            1019.0
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 29,
+          "profondita_idx": 2
+        },
+        {
+          "x": 10.17,
+          "y": -6.04,
+          "z": -8.16,
+          "hu": 776.3,
+          "incertezza": 243.0,
+          "fascia": [
+            533.3,
+            1019.3
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 29,
+          "profondita_idx": 3
+        },
+        {
+          "x": 10.17,
+          "y": -6.04,
+          "z": -9.9,
+          "hu": 751.8,
+          "incertezza": 270.0,
+          "fascia": [
+            481.9,
+            1021.8
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 29,
+          "profondita_idx": 4
+        },
+        {
+          "x": 11.29,
+          "y": -7.33,
+          "z": -3.49,
+          "hu": 785.7,
+          "incertezza": 197.8,
+          "fascia": [
+            587.9,
+            983.4
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 30,
+          "profondita_idx": 0
+        },
+        {
+          "x": 11.29,
+          "y": -7.33,
+          "z": -5.24,
+          "hu": 791.1,
+          "incertezza": 195.9,
+          "fascia": [
+            595.3,
+            987.0
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 30,
+          "profondita_idx": 1
+        },
+        {
+          "x": 11.29,
+          "y": -7.33,
+          "z": -6.99,
+          "hu": 782.9,
+          "incertezza": 214.4,
+          "fascia": [
+            568.5,
+            997.3
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 30,
+          "profondita_idx": 2
+        },
+        {
+          "x": 11.29,
+          "y": -7.33,
+          "z": -8.73,
+          "hu": 764.1,
+          "incertezza": 242.5,
+          "fascia": [
+            521.6,
+            1006.7
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 30,
+          "profondita_idx": 3
+        },
+        {
+          "x": 11.29,
+          "y": -7.33,
+          "z": -10.48,
+          "hu": 744.2,
+          "incertezza": 270.1,
+          "fascia": [
+            474.1,
+            1014.3
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 30,
+          "profondita_idx": 4
+        },
+        {
+          "x": 12.42,
+          "y": -8.74,
+          "z": -4.07,
+          "hu": 736.1,
+          "incertezza": 201.9,
+          "fascia": [
+            534.2,
+            938.0
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 31,
+          "profondita_idx": 0
+        },
+        {
+          "x": 12.42,
+          "y": -8.74,
+          "z": -5.82,
+          "hu": 756.1,
+          "incertezza": 195.9,
+          "fascia": [
+            560.1,
+            952.0
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 31,
+          "profondita_idx": 1
+        },
+        {
+          "x": 12.42,
+          "y": -8.74,
+          "z": -7.58,
+          "hu": 761.8,
+          "incertezza": 214.2,
+          "fascia": [
+            547.6,
+            976.0
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 31,
+          "profondita_idx": 2
+        },
+        {
+          "x": 12.42,
+          "y": -8.74,
+          "z": -9.34,
+          "hu": 751.2,
+          "incertezza": 242.9,
+          "fascia": [
+            508.4,
+            994.1
+          ],
+          "misch_class": "D2",
+          "misch_label": "D2 (Cortico-Spongiosa 750-1150 HU)",
+          "arcata_idx": 31,
+          "profondita_idx": 3
+        },
+        {
+          "x": 12.42,
+          "y": -8.74,
+          "z": -11.09,
+          "hu": 736.0,
+          "incertezza": 270.8,
+          "fascia": [
+            465.2,
+            1006.8
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 31,
+          "profondita_idx": 4
+        },
+        {
+          "x": 13.54,
+          "y": -10.26,
+          "z": -4.67,
+          "hu": 684.2,
+          "incertezza": 201.9,
+          "fascia": [
+            482.3,
+            886.0
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 32,
+          "profondita_idx": 0
+        },
+        {
+          "x": 13.54,
+          "y": -10.26,
+          "z": -6.44,
+          "hu": 722.2,
+          "incertezza": 197.5,
+          "fascia": [
+            524.7,
+            919.7
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 32,
+          "profondita_idx": 1
+        },
+        {
+          "x": 13.54,
+          "y": -10.26,
+          "z": -8.2,
+          "hu": 740.7,
+          "incertezza": 215.3,
+          "fascia": [
+            525.4,
+            955.9
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 32,
+          "profondita_idx": 2
+        },
+        {
+          "x": 13.54,
+          "y": -10.26,
+          "z": -9.97,
+          "hu": 737.8,
+          "incertezza": 244.0,
+          "fascia": [
+            493.9,
+            981.8
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 32,
+          "profondita_idx": 3
+        },
+        {
+          "x": 13.54,
+          "y": -10.26,
+          "z": -11.74,
+          "hu": 727.3,
+          "incertezza": 272.0,
+          "fascia": [
+            455.3,
+            999.3
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 32,
+          "profondita_idx": 4
+        },
+        {
+          "x": 14.67,
+          "y": -11.9,
+          "z": -5.31,
+          "hu": 629.7,
+          "incertezza": 206.4,
+          "fascia": [
+            423.3,
+            836.1
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 33,
+          "profondita_idx": 0
+        },
+        {
+          "x": 14.67,
+          "y": -11.9,
+          "z": -7.08,
+          "hu": 691.5,
+          "incertezza": 200.5,
+          "fascia": [
+            491.0,
+            892.0
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 33,
+          "profondita_idx": 1
+        },
+        {
+          "x": 14.67,
+          "y": -11.9,
+          "z": -8.86,
+          "hu": 720.2,
+          "incertezza": 217.6,
+          "fascia": [
+            502.6,
+            937.9
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 33,
+          "profondita_idx": 2
+        },
+        {
+          "x": 14.67,
+          "y": -11.9,
+          "z": -10.64,
+          "hu": 724.3,
+          "incertezza": 246.0,
+          "fascia": [
+            478.3,
+            970.3
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 33,
+          "profondita_idx": 3
+        },
+        {
+          "x": 14.67,
+          "y": -11.9,
+          "z": -12.41,
+          "hu": 718.2,
+          "incertezza": 273.7,
+          "fascia": [
+            444.5,
+            992.0
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 33,
+          "profondita_idx": 4
+        },
+        {
+          "x": 15.79,
+          "y": -13.64,
+          "z": -5.98,
+          "hu": 598.0,
+          "incertezza": 210.7,
+          "fascia": [
+            387.3,
+            808.7
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 34,
+          "profondita_idx": 0
+        },
+        {
+          "x": 15.79,
+          "y": -13.64,
+          "z": -7.76,
+          "hu": 665.9,
+          "incertezza": 204.8,
+          "fascia": [
+            461.1,
+            870.7
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 34,
+          "profondita_idx": 1
+        },
+        {
+          "x": 15.79,
+          "y": -13.64,
+          "z": -9.55,
+          "hu": 701.1,
+          "incertezza": 221.3,
+          "fascia": [
+            479.8,
+            922.4
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 34,
+          "profondita_idx": 2
+        },
+        {
+          "x": 15.79,
+          "y": -13.64,
+          "z": -11.33,
+          "hu": 711.0,
+          "incertezza": 249.0,
+          "fascia": [
+            462.0,
+            959.9
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 34,
+          "profondita_idx": 3
+        },
+        {
+          "x": 15.79,
+          "y": -13.64,
+          "z": -13.12,
+          "hu": 709.0,
+          "incertezza": 276.1,
+          "fascia": [
+            432.9,
+            985.1
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 34,
+          "profondita_idx": 4
+        },
+        {
+          "x": 16.92,
+          "y": -15.49,
+          "z": -6.67,
+          "hu": 598.0,
+          "incertezza": 211.9,
+          "fascia": [
+            386.1,
+            809.9
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 35,
+          "profondita_idx": 0
+        },
+        {
+          "x": 16.92,
+          "y": -15.49,
+          "z": -8.47,
+          "hu": 646.5,
+          "incertezza": 210.3,
+          "fascia": [
+            436.1,
+            856.8
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 35,
+          "profondita_idx": 1
+        },
+        {
+          "x": 16.92,
+          "y": -15.49,
+          "z": -10.26,
+          "hu": 683.9,
+          "incertezza": 226.3,
+          "fascia": [
+            457.6,
+            910.2
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 35,
+          "profondita_idx": 2
+        },
+        {
+          "x": 16.92,
+          "y": -15.49,
+          "z": -12.06,
+          "hu": 698.0,
+          "incertezza": 252.9,
+          "fascia": [
+            445.2,
+            950.9
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 35,
+          "profondita_idx": 3
+        },
+        {
+          "x": 16.92,
+          "y": -15.49,
+          "z": -13.85,
+          "hu": 699.7,
+          "incertezza": 279.2,
+          "fascia": [
+            420.5,
+            978.8
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 35,
+          "profondita_idx": 4
+        },
+        {
+          "x": 18.04,
+          "y": -17.45,
+          "z": -7.4,
+          "hu": 598.0,
+          "incertezza": 216.2,
+          "fascia": [
+            381.8,
+            814.2
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 36,
+          "profondita_idx": 0
+        },
+        {
+          "x": 18.04,
+          "y": -17.45,
+          "z": -9.2,
+          "hu": 632.6,
+          "incertezza": 217.0,
+          "fascia": [
+            415.6,
+            849.7
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 36,
+          "profondita_idx": 1
+        },
+        {
+          "x": 18.04,
+          "y": -17.45,
+          "z": -11.0,
+          "hu": 668.8,
+          "incertezza": 232.6,
+          "fascia": [
+            436.2,
+            901.4
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 36,
+          "profondita_idx": 2
+        },
+        {
+          "x": 18.04,
+          "y": -17.45,
+          "z": -12.81,
+          "hu": 685.8,
+          "incertezza": 257.8,
+          "fascia": [
+            428.1,
+            943.6
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 36,
+          "profondita_idx": 3
+        },
+        {
+          "x": 18.04,
+          "y": -17.45,
+          "z": -14.61,
+          "hu": 690.5,
+          "incertezza": 282.8,
+          "fascia": [
+            407.7,
+            973.3
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 36,
+          "profondita_idx": 4
+        },
+        {
+          "x": 19.17,
+          "y": -19.52,
+          "z": -8.15,
+          "hu": 598.0,
+          "incertezza": 223.8,
+          "fascia": [
+            374.2,
+            821.8
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 37,
+          "profondita_idx": 0
+        },
+        {
+          "x": 19.17,
+          "y": -19.52,
+          "z": -9.96,
+          "hu": 623.1,
+          "incertezza": 225.1,
+          "fascia": [
+            398.0,
+            848.2
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 37,
+          "profondita_idx": 1
+        },
+        {
+          "x": 19.17,
+          "y": -19.52,
+          "z": -11.78,
+          "hu": 656.0,
+          "incertezza": 240.0,
+          "fascia": [
+            416.0,
+            896.0
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 37,
+          "profondita_idx": 2
+        },
+        {
+          "x": 19.17,
+          "y": -19.52,
+          "z": -13.59,
+          "hu": 674.5,
+          "incertezza": 263.5,
+          "fascia": [
+            411.0,
+            938.1
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 37,
+          "profondita_idx": 3
+        },
+        {
+          "x": 19.17,
+          "y": -19.52,
+          "z": -15.4,
+          "hu": 681.6,
+          "incertezza": 287.1,
+          "fascia": [
+            394.5,
+            968.7
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 37,
+          "profondita_idx": 4
+        },
+        {
+          "x": 20.29,
+          "y": -21.69,
+          "z": -8.93,
+          "hu": 598.0,
+          "incertezza": 232.7,
+          "fascia": [
+            365.3,
+            830.7
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 38,
+          "profondita_idx": 0
+        },
+        {
+          "x": 20.29,
+          "y": -21.69,
+          "z": -10.75,
+          "hu": 616.5,
+          "incertezza": 234.3,
+          "fascia": [
+            382.2,
+            850.8
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 38,
+          "profondita_idx": 1
+        },
+        {
+          "x": 20.29,
+          "y": -21.69,
+          "z": -12.57,
+          "hu": 645.4,
+          "incertezza": 248.3,
+          "fascia": [
+            397.0,
+            893.7
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 38,
+          "profondita_idx": 2
+        },
+        {
+          "x": 20.29,
+          "y": -21.69,
+          "z": -14.4,
+          "hu": 664.3,
+          "incertezza": 270.1,
+          "fascia": [
+            394.2,
+            934.4
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 38,
+          "profondita_idx": 3
+        },
+        {
+          "x": 20.29,
+          "y": -21.69,
+          "z": -16.22,
+          "hu": 673.1,
+          "incertezza": 291.9,
+          "fascia": [
+            381.2,
+            965.1
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 38,
+          "profondita_idx": 4
+        },
+        {
+          "x": 21.42,
+          "y": -23.97,
+          "z": -9.73,
+          "hu": 598.0,
+          "incertezza": 241.7,
+          "fascia": [
+            356.3,
+            839.7
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 39,
+          "profondita_idx": 0
+        },
+        {
+          "x": 21.42,
+          "y": -23.97,
+          "z": -11.56,
+          "hu": 611.9,
+          "incertezza": 244.4,
+          "fascia": [
+            367.5,
+            856.3
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 39,
+          "profondita_idx": 1
+        },
+        {
+          "x": 21.42,
+          "y": -23.97,
+          "z": -13.38,
+          "hu": 636.4,
+          "incertezza": 257.4,
+          "fascia": [
+            379.1,
+            893.8
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 39,
+          "profondita_idx": 2
+        },
+        {
+          "x": 21.42,
+          "y": -23.97,
+          "z": -15.21,
+          "hu": 654.9,
+          "incertezza": 277.0,
+          "fascia": [
+            377.9,
+            931.9
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 39,
+          "profondita_idx": 3
+        },
+        {
+          "x": 21.42,
+          "y": -23.97,
+          "z": -17.03,
+          "hu": 665.0,
+          "incertezza": 296.9,
+          "fascia": [
+            368.1,
+            961.9
+          ],
+          "misch_class": "D3",
+          "misch_label": "D3 (Trabecolare Fine 350-750 HU)",
+          "arcata_idx": 39,
+          "profondita_idx": 4
+        }
+      ],
+      "stats": {
+        "hu_min": 598.0,
+        "hu_max": 1171.9,
+        "hu_mean": 776.1,
+        "incertezza_media": 237.2
+      }
+    },
+    "surgeon_ml_prediction": {
+      "source": "Surgeon_Hand_ML_Model",
+      "trained_on_cases": 10,
+      "predicted_surgeon_tilt_R_deg": 44.2,
+      "predicted_surgeon_cantilever_mm": 10.0,
+      "predicted_surgeon_mua_h_mm": 3.5,
+      "predicted_isq_w4_dip": 61.0,
+      "signature": {
+        "avg_surgeon_tilt_deg": 36.0,
+        "learned_tilt_bias_deg": -1.07,
+        "preferred_nerve_margin_mm": 2.36,
+        "cantilever_conservatism_factor": 0.926,
+        "dominant_factors": [
+          {
+            "feature": "Altezza Post. Dx (H_post_R)",
+            "weight_std": -2.1215,
+            "importance_pct": 26.8
+          },
+          {
+            "feature": "Loop / Seno Dx (loop_R)",
+            "weight_std": 1.1732,
+            "importance_pct": 14.8
+          },
+          {
+            "feature": "Densit\u00e0 Post. (HU_post/1000)",
+            "weight_std": -0.9329,
+            "importance_pct": 11.8
+          },
+          {
+            "feature": "Semicorda Dx (chord_R)",
+            "weight_std": -0.6203,
+            "importance_pct": 7.8
+          },
+          {
+            "feature": "Densit\u00e0 Ant. (HU_ant/1000)",
+            "weight_std": -0.6199,
+            "importance_pct": 7.8
+          }
+        ]
+      }
+    },
+    "google_research": {
+      "e3x": {
+        "engine": "Google Research E3x (E(3)-Equivariant Spherical Harmonics l=0,1,2)",
+        "repo_path": "C:\\Users\\garof\\Desktop\\TrinAi\\ArkAng-EL\\2_IL_CALCOLATORE\\google_research\\e3x_repo",
+        "repo_cloned": true,
+        "scalar_field_l0": 0.4733,
+        "dipolar_anisotropy_l1": 0.1366,
+        "quadrupolar_stress_tensor_l2": 0.1764,
+        "so3_rototranslation_error": 0.0,
+        "equivariance_verified": true
+      },
+      "hyperbo": {
+        "engine": "Google Research HyperBO (Pre-trained Mat\u00e9rn-5/2 ARD Gaussian Process)",
+        "repo_path": "C:\\Users\\garof\\Desktop\\TrinAi\\ArkAng-EL\\2_IL_CALCOLATORE\\google_research\\hyperbo_repo",
+        "repo_cloned": true,
+        "pretrain_domains": 6,
+        "pretrain_cases": 133,
+        "target_surgeon_cases": 10,
+        "gp_posterior_tilt_mean_deg": 36.29,
+        "gp_posterior_tilt_std_deg": 5.64,
+        "gp_posterior_tilt_ci95": [
+          25.2,
+          47.3
+        ],
+        "gp_posterior_isq_mean": 58.9,
+        "expected_improvement_ei": 1.157
+      },
+      "optformer": {
+        "engine": "Google Research OptFormer (Attention-Conditioned Trajectory Optimizer)",
+        "repo_path": "C:\\Users\\garof\\Desktop\\TrinAi\\ArkAng-EL\\2_IL_CALCOLATORE\\google_research\\optformer_repo",
+        "repo_cloned": true,
+        "evaluated_trajectory_trials": 12,
+        "optimal_distal_tilt_deg": 38.4,
+        "optimal_cantilever_mm": 13.1,
+        "optimal_mua_h_mm": 5.5,
+        "expected_min_isq": 57.4,
+        "expected_micromotion_um": 91.2,
+        "max_reward_score": 104.87,
+        "top_3_trials": [
+          {
+            "delta_tilt_bias": 1.5,
+            "cant_factor": 0.88,
+            "distal_tilt_deg": 38.8,
+            "mua_h_mm": 5.5,
+            "ap_spread_mm": 15.28,
+            "max_cantilever_mm": 12.5,
+            "min_isq": 57.4,
+            "micromotion_um": 90.4,
+            "min_nerve_mm": 1.81,
+            "reward": 104.87
+          },
+          {
+            "delta_tilt_bias": 1.5,
+            "cant_factor": 1.0,
+            "distal_tilt_deg": 38.8,
+            "mua_h_mm": 5.5,
+            "ap_spread_mm": 15.28,
+            "max_cantilever_mm": 14.1,
+            "min_isq": 57.4,
+            "micromotion_um": 93.0,
+            "min_nerve_mm": 1.81,
+            "reward": 103.7
+          },
+          {
+            "delta_tilt_bias": 0.0,
+            "cant_factor": 0.88,
+            "distal_tilt_deg": 37.3,
+            "mua_h_mm": 5.5,
+            "ap_spread_mm": 15.28,
+            "max_cantilever_mm": 12.5,
+            "min_isq": 57.4,
+            "micromotion_um": 90.4,
+            "min_nerve_mm": 1.76,
+            "reward": 103.62
+          }
+        ]
+      },
+      "neural_status": {
+        "available": true,
+        "message": "Pesi locali TimesFM 2.5 (200M) + TabPFN v2 pronti in /models",
+        "timesfm_weights_present": true,
+        "timesfm_weights_path": "C:\\Users\\garof\\Desktop\\TrinAi\\ArkAng-EL\\2_IL_CALCOLATORE\\models\\timesfm-2.5-200m-pytorch",
+        "tabpfn_weights_present": true,
+        "tabpfn_weights_path": "C:\\Users\\garof\\Desktop\\TrinAi\\ArkAng-EL\\2_IL_CALCOLATORE\\models\\tabpfn\\tabpfn-v2-regressor.ckpt",
+        "dataset_master_present": true,
+        "dataset_cases_count": 133,
+        "models_warmed_up": false
+      }
+    }
+  }
+}
