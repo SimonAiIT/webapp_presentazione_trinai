@@ -72,7 +72,7 @@
       );
     }
     disegnaPulsanteDestro();
-    if (icon) icon.textContent = state === "playing" ? "❚❚" : state === "ended" ? "→" : "▶";
+    if (icon) icon.textContent = state === "playing" ? "❚❚" : state === "ended" ? "" : "▶";
     if (label) label.textContent = state === "playing" ? "Metti in pausa" : state === "ended" ? "Avanti" : "Ascolta il racconto";
   }
 

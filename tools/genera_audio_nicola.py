@@ -64,14 +64,9 @@ def parla(testo, ruolo, pos_par, tot_par, idx_fr, tot_fr):
 
 
 def paragrafo(testo, pos_par):
-    frasi = [f.strip() for f in re.findall(r"[^.?!]+[.?!]", testo) if f.strip()]
-    pezzi = []
-    for i, f in enumerate(frasi):
-        for testo_b, ruolo in spezza(f):
-            s, pausa = parla(testo_b, ruolo, pos_par, len(frasi), i, len(frasi))
-            pezzi.append(s)
-            pezzi.append(silenzio(pausa))
-    return np.concatenate(pezzi)
+    """Voce naturale: ogni paragrafo letto d'un fiato, velocita costante, nessun effetto."""
+    s, _ = k.create(testo, voice=VOCE, speed=1.0, lang="it")
+    return s
 
 
 def genera(codice, dati, tutti_i_punti):
