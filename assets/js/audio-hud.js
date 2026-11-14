@@ -228,7 +228,7 @@
     voiceEl.play().catch(() => {});
   }
 
-  // Mute generale: voce e colonna sonora, ricordato su questo dispositivo
+  // Mute della sola musica di sottofondo, ricordato su questo dispositivo
   const CHIAVE_MUTE = "trinai_atelier_mute";
   let muted = false;
   const SVG_ALTOPARLANTE_ON =
@@ -236,12 +236,12 @@
   const SVG_ALTOPARLANTE_OFF =
     '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M17 9.5l5 5"/><path d="M22 9.5l-5 5"/></svg>';
   function applicaMute() {
-    voiceEl.muted = muted;
+    // il mute riguarda solo la musica: la voce resta sempre udibile
     themeEl.muted = muted;
     const btn = document.getElementById("btn-mute");
     if (btn) {
       btn.innerHTML = muted ? SVG_ALTOPARLANTE_OFF : SVG_ALTOPARLANTE_ON;
-      btn.setAttribute("aria-label", muted ? "Riattiva l'audio" : "Disattiva l'audio");
+      btn.setAttribute("aria-label", muted ? "Riattiva la musica" : "Disattiva la musica");
       btn.setAttribute("aria-pressed", muted ? "true" : "false");
     }
   }

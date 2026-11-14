@@ -75,7 +75,6 @@
 
   function playUiSound(type) {
     const s = window.suoniCAOS;
-    if (window.TRINAI_AUDIO_HUD && window.TRINAI_AUDIO_HUD.isMuted()) return;
     if (s && typeof s.riproduci === "function" && SFX_MAP[type]) {
       try {
         s.riproduci(SFX_MAP[type]);
