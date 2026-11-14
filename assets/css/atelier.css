@@ -1497,3 +1497,32 @@ video.hero-media { animation: none; object-position: 50% 20%; }
 
 /* pulsanti della pagina iniziale: solo testo, centrato */
 .gate-btn { justify-content: center; text-align: center; }
+
+/* TUTTI I PULSANTI IN VETRO */
+.gate-btn,
+.icon-btn,
+.drawer-lab-btn,
+.drawer-act-btn,
+.lab-modal-bar .icon-btn {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 8px 26px rgba(0, 0, 0, 0.35);
+  color: var(--text-main);
+}
+.gate-btn-gold {
+  background: linear-gradient(180deg, rgba(245, 215, 110, 0.34), rgba(212, 175, 55, 0.14));
+  border-color: rgba(245, 215, 110, 0.55);
+  color: #fff8df;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
+}
+.drawer-act-btn.active,
+.icon-btn.active {
+  background: linear-gradient(180deg, rgba(245, 215, 110, 0.26), rgba(212, 175, 55, 0.1));
+  border-color: rgba(245, 215, 110, 0.5);
+  color: var(--gold-bright);
+}
+.drawer-lab-btn { color: #e8f6ff; border-color: rgba(120, 200, 255, 0.35); }
+.gate-btn:active, .drawer-lab-btn:active, .drawer-act-btn:active, .icon-btn:active { transform: scale(0.98); }
+.icon-btn { white-space: nowrap; }
