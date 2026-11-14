@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="robots" content="noindex, nofollow">
-  <title>TrinAI Atelier — Sartoria Computazionale e Intelligenza Diffusa</title>
+  <title>TrinAI Atelier — Il Primo Laboratorio Sartoriale Italiano di Intelligenza Artificiale</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,7 @@
 
   <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
-  <!-- SECURITY GATE CON VIDEO BLACK CARD -->
+  <!-- SECURITY GATE CON L'INVITO PREQUEL 1 -->
   <section id="gate-screen" aria-label="Accesso Riservato TrinAI Atelier">
     <div class="gate-card">
       <div class="gate-logo-row">
@@ -33,7 +33,7 @@
       <div class="gate-video-frame">
         <video
           id="gate-video"
-          src="assets/video/gate.mp4"
+          src="assets/video/invito_prequel1.mp4"
           poster="assets/img/hero_trinai_luxury.png"
           autoplay
           muted
@@ -44,16 +44,16 @@
 
       <h1 class="gate-title">TrinAI Atelier</h1>
       <p class="gate-subtitle">
-        Presentazione interattiva cinematografica con voce narrante e colonna sonora originale. Sblocca l'invito riservato per attivare l'esperienza audio e video.
+        I posti che contano non hanno insegne sulla porta, hanno un invito. Sblocca il carosello tridimensionale e la voce narrante per esplorare la nostra architettura sovrana.
       </p>
 
       <button id="btn-instant-pass" type="button" class="gate-btn gate-btn-gold">
-        <span>Attiva Invito Black Card e Audio</span>
+        <span>Apri l'Invito e Avvia Esperienza</span>
         <span>→</span>
       </button>
 
       <details class="gate-code-drawer">
-        <summary>Hai un codice direzionale specifico</summary>
+        <summary>Accesso con codice direzionale</summary>
         <form id="gate-form" class="gate-form" autocomplete="off">
           <input
             id="gate-code-input"
@@ -76,7 +76,7 @@
     </div>
   </section>
 
-  <!-- MAIN SPA SHELL -->
+  <!-- MAIN SPA SHELL CON MENU HAMBURGER E CAROSELLO CARD 3D -->
   <div id="app-shell">
     <header class="topbar">
       <div class="topbar-brand">
@@ -85,23 +85,57 @@
       </div>
       <div class="topbar-actions">
         <button id="btn-theme-toggle" class="icon-btn active" type="button">Musica ON</button>
-        <button id="btn-sound-toggle" class="icon-btn active" type="button">Suoni ON</button>
+        <button id="btn-hamburger" class="hamburger-btn" type="button" aria-label="Apri indice degli atti" aria-expanded="false">
+          <span class="ham-lines">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="ham-label">Indice</span>
+        </button>
       </div>
     </header>
 
-    <!-- Selettore Verticale -->
-    <nav id="vertical-bar" class="vertical-bar" aria-label="Selettore di Verticale"></nav>
+    <!-- DRAWER MENU HAMBURGER -->
+    <div id="drawer-backdrop" class="drawer-backdrop" aria-hidden="true"></div>
+    <aside id="hamburger-drawer" class="hamburger-drawer" aria-label="Indice degli Atti TrinAI">
+      <div class="drawer-header">
+        <div>
+          <div class="drawer-kicker">Navigazione Rapida</div>
+          <div class="drawer-title">I Nove Atti dell'Atelier</div>
+        </div>
+        <button id="btn-close-drawer" class="icon-btn active" type="button">Chiudi ×</button>
+      </div>
 
-    <!-- Mappa Rapida 9 Atti -->
-    <nav id="station-nav-strip" class="station-nav-strip" aria-label="Atti Atelier"></nav>
+      <div id="drawer-nav-list" class="drawer-nav-list"></div>
 
-    <!-- Contenuto Dinamico Stazione -->
-    <main id="stage-root"></main>
+      <div class="drawer-labs-box">
+        <div class="drawer-kicker">Laboratori Interattivi Live</div>
+        <button type="button" class="drawer-lab-btn" data-lab-url="real_cockpit/index.html" data-lab-title="Plancia Direzionale Multi-Sede Live">
+          <span>Plancia Direzionale Multi-Sede</span>
+          <span>→</span>
+        </button>
+        <button type="button" class="drawer-lab-btn" data-lab-url="arkangel_viewer/index.html" data-lab-title="Laboratorio Visivo 3D e Geometria">
+          <span>Visore Geometrico 3D</span>
+          <span>→</span>
+        </button>
+      </div>
 
-    <!-- HUD Audio e Sottotitoli Integrati a Fondo Pagina Zero Overlap -->
+      <div class="drawer-footer">
+        <button id="btn-sound-toggle" class="icon-btn active" type="button">Suoni Interfaccia ON</button>
+        <p class="drawer-legal">Trinacria Artificial Intelligence S.r.l. · Start-up Innovativa · REA PA 452478</p>
+      </div>
+    </aside>
+
+    <!-- PALCOSCENICO CAROSELLO CARD 3D -->
+    <main id="carousel-3d-viewport" class="carousel-3d-viewport" aria-label="Carosello 3D degli Atti">
+      <div id="carousel-3d-track" class="carousel-3d-track"></div>
+    </main>
+
+    <!-- HUD AUDIO E SOTTOTITOLI INTEGRATI A FONDO PAGINA ZERO OVERLAP -->
     <footer class="audio-hud">
       <div id="hud-subtitle-wrap" class="hud-subtitle-dock">
-        <div id="hud-subtitle-text" class="visible">Tocca Ascolta Atto per avviare la voce narrante sincronizzata</div>
+        <div id="hud-subtitle-text" class="visible">Scorri le card in 3D o tocca Ascolta Atto per la narrazione</div>
       </div>
       <div class="hud-progress-track">
         <div id="hud-audio-progress"></div>
@@ -109,13 +143,15 @@
       <div class="hud-controls-row">
         <div id="hud-speaker-badge" class="hud-speaker-badge" data-voice="elsa">
           <span id="hud-voice-wave" class="voice-orb"></span>
-          <span id="hud-speaker-name" class="speaker-label">Elsa · Voce Atelier</span>
+          <span id="hud-speaker-name" class="speaker-label">Elsa · Voce Narrante Atelier</span>
         </div>
 
+        <div class="hud-dots" id="hud-dots" aria-label="Indicatore Card 3D"></div>
+
         <div class="hud-nav-group">
-          <button id="hud-prev-btn" class="hud-btn" type="button" aria-label="Atto precedente">←</button>
+          <button id="hud-prev-btn" class="hud-btn" type="button" aria-label="Card precedente">←</button>
           <button id="hud-play-btn" class="hud-btn hud-btn-primary" type="button" aria-label="Pausa o riprendi">Ascolta Atto</button>
-          <button id="hud-next-btn" class="hud-btn" type="button" aria-label="Atto successivo">→</button>
+          <button id="hud-next-btn" class="hud-btn" type="button" aria-label="Card successiva">→</button>
         </div>
       </div>
     </footer>

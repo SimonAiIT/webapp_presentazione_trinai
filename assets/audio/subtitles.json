@@ -2,183 +2,243 @@
   "stazione_00": [
     {
       "start": 0.0,
-      "end": 4.62,
-      "text": "I luoghi che contano non hanno insegne sulla porta, hanno un invito."
+      "end": 4.56,
+      "text": "I posti che contano non hanno insegne sulla porta, hanno un invito."
     },
     {
-      "start": 4.62,
-      "end": 23.6,
-      "text": "Benvenuti nell'Atelier di Trinacria Artificial Intelligence, Start-up Innovativa ad alto valore tecnologico iscritta nella Sezione Speciale del Registro delle Imprese, con collaborazioni accademiche attive per i Master di Secondo Livello sulla gestione delle strutture sanitarie."
+      "start": 4.56,
+      "end": 15.91,
+      "text": "Benvenuti nell'Atelier di Trinacria Artificial Intelligence, Start-up Innovativa ad alto valore tecnologico iscritta nella Sezione Speciale del Registro delle Imprese."
     },
     {
-      "start": 23.6,
-      "end": 26.8,
-      "text": "Qui non vendiamo software in serie."
+      "start": 15.91,
+      "end": 29.51,
+      "text": "Non siamo una software house tradizionale: nella nostra compagine lavorano fianco a fianco medici specialisti, esperti di risorse umane, architetti di intelligenza artificiale e ingegneri industriali."
     },
     {
-      "start": 26.8,
-      "end": 38.29,
-      "text": "In sessanta secondi la nostra Architettura di Fondazione legge il DNA ufficiale della vostra impresa e accende sei reparti operativi cuciti sulle vostre reali procedure."
+      "start": 29.51,
+      "end": 35.09,
+      "text": "Quando entrate nell'Atelier non comprate un programma vuoto da compilare per mesi."
+    },
+    {
+      "start": 35.09,
+      "end": 59.16,
+      "text": "La nostra Architettura di Fondazione parte dalla vostra Partita IVA, legge i registri ufficiali delle Camere di Commercio e in cinque minuti genera l'ossatura digitale completa della vostra azienda, attivando sei reparti operativi già pronti a dialogare tra loro, che si tratti di un poliambulatorio, di un laboratorio tecnico o di un'impresa produttiva."
     }
   ],
   "stazione_01": [
     {
       "start": 0.0,
-      "end": 6.32,
-      "text": "I modelli linguistici tradizionali parlano molto, ma non hanno riflessi né memoria operativa."
+      "end": 7.75,
+      "text": "Chi è Victor? Victor non è uno di quei programmi famosi che chiacchierano su internet e spesso inventano risposte."
     },
     {
-      "start": 6.32,
-      "end": 12.1,
-      "text": "Victor nasce con un'architettura a doppio cervello ispirata alla neurobiologia umana."
+      "start": 7.75,
+      "end": 17.14,
+      "text": "Victor è un automa decisionale silenzioso, progettato per lavorare dentro la vostra azienda come un direttore operativo che non dorme mai."
     },
     {
-      "start": 12.1,
-      "end": 19.92,
-      "text": "Il Sistema Uno decide in un virgola novantasette millisecondi leggendo segnali nello spazio, nel tempo e nel suono."
+      "start": 17.14,
+      "end": 29.58,
+      "text": "Senza svelare le formule segrete con cui lo abbiamo forgiato, vi basta sapere che è costruito come la mente umana: ha cinque sensi per percepire la realtà e due cervelli ben distinti."
     },
     {
-      "start": 19.92,
-      "end": 29.44,
-      "text": "Il Sistema Due interviene solo per spiegare il perché in due righe cristalline, senza mai poter inventare un numero o alterare la decisione."
+      "start": 29.58,
+      "end": 46.65,
+      "text": "Il primo cervello è l'istinto matematico: in meno di due millisecondi legge contemporaneamente i numeri del bilancio, l'andamento del tempo, le forme tridimensionali e persino il rumore dei macchinari, individuando subito un problema o un'opportunità."
+    },
+    {
+      "start": 46.65,
+      "end": 60.79,
+      "text": "Il secondo cervello entra in azione solo quando la decisione è già presa e messa al sicuro: vi parla o vi scrive due sole righe chiarissime per spiegarvi il perché, senza alcuna possibilità di inventare dati."
     }
   ],
   "stazione_02": [
     {
       "start": 0.0,
-      "end": 6.32,
-      "text": "La vera sicurezza non si promette con una clausola, si scolpisce nella fisica delle macchine."
+      "end": 12.31,
+      "text": "Quando affidate i dati dei vostri clienti, dei vostri pazienti o dei vostri progetti a un servizio esterno in cloud, state consegnando il cuore della vostra azienda a qualcun altro."
     },
     {
-      "start": 6.32,
-      "end": 10.13,
-      "text": "Abbiamo diviso l'architettura in due piani invalicabili."
+      "start": 12.31,
+      "end": 19.79,
+      "text": "Noi abbiamo scelto la via opposta: l'intelligenza diffusa e sovrana, divisa su due piani fisicamente separati."
     },
     {
-      "start": 10.13,
-      "end": 20.47,
-      "text": "Sul primo piano vivono le postazioni in Modalità Isola e il Nodo Sovrano di Sede, dove i dati sensibili restano chiusi a chiave con archivio immutabile."
+      "start": 19.79,
+      "end": 30.94,
+      "text": "Sul primo piano, dentro i vostri uffici o le vostre sale, installiamo postazioni compatte da trentadue gigabyte e un Nodo Sovrano di Sede da centoventotto gigabyte."
     },
     {
-      "start": 20.47,
-      "end": 29.24,
-      "text": "Sul secondo piano viaggia il Nodo Direzionale di Gruppo, che riceve esclusivamente indicatori economici aggregati e anonimizzati."
+      "start": 30.94,
+      "end": 42.09,
+      "text": "Qui dentro rimangono chiusi a chiave tutti i nomi, le immagini, le voci e i segreti industriali, protetti da un archivio immutabile che nessun virus può cancellare."
+    },
+    {
+      "start": 42.09,
+      "end": 50.59,
+      "text": "E se un giorno cade la linea internet, ogni postazione entra in Modalità Isola e continua a lavorare senza perdere un minuto."
+    },
+    {
+      "start": 50.59,
+      "end": 64.12,
+      "text": "Sul secondo piano, se avete più sedi, la direzione centrale riceve solo i totali economici anonimizzati su almeno cinque casi, così governate l'intero gruppo senza mai esporre un solo dato personale."
     }
   ],
   "stazione_03": [
     {
       "start": 0.0,
-      "end": 6.32,
-      "text": "Nessuno vuole buttare via anni di abitudini o cambiare il gestionale dalla sera alla mattina."
+      "end": 8.43,
+      "text": "Il più grande ostacolo all'innovazione è la paura di dover buttare via il proprio gestionale storico e ricominciare da capo."
     },
     {
-      "start": 6.32,
-      "end": 15.44,
-      "text": "Per questo abbiamo forgiato un demone nativo in linguaggio Rust che dialoga direttamente con l'albero semantico del sistema operativo."
+      "start": 8.43,
+      "end": 11.93,
+      "text": "Con noi non cambiate nemmeno un'abitudine."
     },
     {
-      "start": 15.44,
-      "end": 21.28,
-      "text": "Non ruba il cursore del mouse, non consuma scheda grafica e non clicca mai alla cieca."
+      "start": 11.93,
+      "end": 22.13,
+      "text": "Abbiamo creato un motore leggerissimo, scritto in linguaggio Rust, che sa leggere e usare direttamente i programmi già installati sui vostri computer."
     },
     {
-      "start": 21.28,
-      "end": 29.99,
-      "text": "Prepara il lavoro dietro le quinte, impara osservando i vostri operatori e chiede sempre conferma prima di ogni azione delicata."
+      "start": 22.13,
+      "end": 38.86,
+      "text": "A differenza dei vecchi sistemi automatici che muovono la freccia del mouse sullo schermo impedendovi di lavorare, il nostro assistente opera dietro le quinte: non vi ruba mai il mouse, usa zero megabyte di scheda grafica e non clicca mai a caso."
+    },
+    {
+      "start": 38.86,
+      "end": 55.66,
+      "text": "Nei primi giorni vi guarda lavorare in silenzio e impara le vostre sequenze; poi inizia a preparare per voi fatture, richiami, schede tecniche e ordini, fermandosi sempre un istante prima dell'invio per chiedervi il permesso con un semplice tocco."
+    },
+    {
+      "start": 55.66,
+      "end": 60.14,
+      "text": "E di notte ripassa e mette in sicurezza tutto ciò che ha imparato."
     }
   ],
   "stazione_04": [
     {
       "start": 0.0,
-      "end": 4.22,
-      "text": "Non veniamo mai a fare esperimenti dentro la vostra struttura."
+      "end": 7.07,
+      "text": "Chi fa impresa non può permettersi cantieri informatici che bloccano gli uffici o le sale per settimane."
     },
     {
-      "start": 4.22,
-      "end": 9.52,
-      "text": "Tutto inizia con un audit approfondito e l'estrazione sicura dei dati storici."
+      "start": 7.07,
+      "end": 15.84,
+      "text": "Per questo abbiamo creato un metodo di messa in opera in quattro fasi che sposta tutta la complessità dentro i nostri laboratori."
     },
     {
-      "start": 9.52,
-      "end": 19.86,
-      "text": "Poi il lavoro si sposta nei laboratori TrinAI, dove pre-addestriamo i modelli e collaudiamo l'intero ambiente prima ancora di spedire una sola macchina."
+      "start": 15.84,
+      "end": 22.3,
+      "text": "Nella prima fase facciamo un audit accurato ed estraiamo in modo cifrato i vostri dati storici."
     },
     {
-      "start": 19.86,
-      "end": 30.06,
-      "text": "Quando arriviamo da voi per il deploy fisico e il vassoio ottico, bastano due giorni, salvo imprevisti, per posare i nodi e istruire tutta la squadra."
+      "start": 22.3,
+      "end": 32.57,
+      "text": "Nella seconda fase portiamo questo patrimonio nei laboratori TrinAI, dove pre-addestriamo Victor sulla vostra storia reale e cuciamo l'abito su misura."
+    },
+    {
+      "start": 32.57,
+      "end": 39.44,
+      "text": "Nella terza fase eseguiamo il collaudo completo dell'ambiente simulando le vostre giornate di lavoro."
+    },
+    {
+      "start": 39.44,
+      "end": 58.07,
+      "text": "Solo quando tutto è perfetto passiamo alla quarta fase: veniamo fisicamente da voi e in soli due giorni lavorativi, salvo imprevisti, posiamo le macchine, attiviamo il vassoio ottico che riconosce i materiali senza mai riprendere i volti e istruiamo tutta la vostra squadra."
     }
   ],
   "stazione_05": [
     {
       "start": 0.0,
-      "end": 5.03,
-      "text": "La tecnologia fallisce quando umilia le persone o pretende di sostituirle."
+      "end": 9.93,
+      "text": "Anche la tecnologia più potente del mondo serve a poco se le persone che lavorano con voi sono confuse, sovraccariche o messe nel ruolo sbagliato."
     },
     {
-      "start": 5.03,
-      "end": 10.95,
-      "text": "Noi partiamo da una regola aurea: si valuta il ruolo e il processo, mai l'essere umano."
+      "start": 9.93,
+      "end": 17.95,
+      "text": "La nostra regola fondamentale è semplice: si misura il processo e si supporta il ruolo, non si giudica mai la persona."
     },
     {
-      "start": 10.95,
-      "end": 29.78,
-      "text": "Attraverso centocinquanta scenari situazionali incrociamo lo stile di guida del titolare con le attitudini reali dei collaboratori, costruendo un piano di delega a trenta, sessanta e novanta giorni che libera il vostro tempo e certifica la squadra secondo le normative europee."
+      "start": 17.95,
+      "end": 30.06,
+      "text": "Attraverso centocinquanta domande basate su situazioni concrete di lavoro quotidiano, incrociamo il modo di guidare del titolare con i punti di forza reali di ogni collaboratore."
+    },
+    {
+      "start": 30.06,
+      "end": 54.33,
+      "text": "In questo modo scoprite chi è portato per l'accoglienza, chi per l'organizzazione di precisione e chi per la chiusura degli accordi, ottenendo un piano pratico a trenta, sessanta e novanta giorni per delegare in serenità e accompagnare il team con tre minuti di formazione pratica a settimana, certificata secondo l'Articolo quattro del Regolamento Europeo."
     }
   ],
   "stazione_06": [
     {
       "start": 0.0,
-      "end": 7.55,
-      "text": "Abbiamo tradotto in algoritmi decenni di alta scuola italiana nella comunicazione con il paziente e il cliente."
+      "end": 7.62,
+      "text": "TrinAI non nasce in un garage di programmatori isolati dal mondo, ma sui banchi dell'alta formazione accademica."
     },
     {
-      "start": 7.55,
-      "end": 13.26,
-      "text": "Chi ha timore non deve mai vedere immagini crude o cifre complessive che spaventano."
+      "start": 7.62,
+      "end": 26.93,
+      "text": "Come attestato nel Registro delle Imprese, collaboriamo ufficialmente con l'Università Cattolica del Sacro Cuore e con l'Università Vita-Salute San Raffaele per il Master di Secondo Livello sulla gestione delle strutture sanitarie, oltre a tenere corsi Postgraduate di alta direzione."
     },
     {
-      "start": 13.26,
-      "end": 27.0,
-      "text": "Il sistema adatta il linguaggio, sostituisce il realismo invasivo con eleganti tavole progettuali e accompagna la persona un passo alla volta, lasciandole sempre il pieno controllo del proprio percorso."
+      "start": 26.93,
+      "end": 52.43,
+      "text": "Nelle aule universitarie e nei percorsi Postgraduate noi spieghiamo la metodologia: insegniamo agli imprenditori e ai direttori come governare i numeri, come guidare le persone e come comunicare con il cliente o il paziente un passo alla volta, sostituendo le immagini crude con tavole progettuali rassicuranti e presentando i costi per singola fase senza mai generare ansia."
+    },
+    {
+      "start": 52.43,
+      "end": 60.52,
+      "text": "Nell'Atelier TrinAI prendiamo quella stessa metodologia insegnata all'università e la cuciamo dentro i vostri computer."
     }
   ],
   "stazione_07": [
     {
       "start": 0.0,
-      "end": 5.03,
-      "text": "Un'intelligenza artificiale seria non tira mai a indovinare con i bilanci."
+      "end": 10.47,
+      "text": "Molti imprenditori lavorano dodici ore al giorno ma scoprono solo a fine anno, dal commercialista, se hanno davvero guadagnato e dove hanno perso margine."
     },
     {
-      "start": 5.03,
-      "end": 13.8,
-      "text": "Nella nostra Architettura i ventisei indici del controllo di gestione sono calcolati da formule matematiche pure e certificabili."
+      "start": 10.47,
+      "end": 21.15,
+      "text": "Nella nostra architettura i conti non li fa un modello linguistico che tira a indovinare: li eseguono formule matematiche pure su ventisei indicatori chiave."
     },
     {
-      "start": 13.8,
-      "end": 27.34,
-      "text": "Conoscete al centesimo il valore vivo di ogni minuto operativo, riattivate con garbo i preventivi sospesi e leggete il posizionamento reale del vostro territorio attraverso i dati camerali ufficiali."
+      "start": 21.15,
+      "end": 32.5,
+      "text": "In ogni istante sapete al centesimo quanto vi costa un minuto di una sala o di una linea produttiva, quali prestazioni generano utile vero e quali lavorano in perdita."
+    },
+    {
+      "start": 32.5,
+      "end": 53.24,
+      "text": "Non solo: il sistema individua i clienti che avevano iniziato un percorso e si sono fermati, preparando messaggi cortesi e personalizzati per riaccendere il rapporto, mentre il radar di mercato legge i dati ufficiali delle Camere di Commercio per mostrarvi come si muovono i concorrenti nella vostra zona."
     }
   ],
   "stazione_08": [
     {
       "start": 0.0,
-      "end": 5.03,
-      "text": "Non vi lasciamo mai soli davanti alla burocrazia o alla finanza agevolata."
+      "end": 8.91,
+      "text": "Un vero partner strategico non si limita a installare le macchine: vi aiuta anche a finanziarle e a proteggerle davanti alla legge."
     },
     {
-      "start": 5.03,
-      "end": 22.44,
-      "text": "Il nostro nucleo di Ricerca Fondi seleziona per voi i bandi regionali, camerali, nazionali ed europei più vantaggiosi, preparando le perizie tecniche per abbattere oltre il sessanta percento dell'investimento e finanziare anche la formazione del personale."
+      "start": 8.91,
+      "end": 26.59,
+      "text": "Il nostro reparto dedicato alla ricerca fondi analizza la vostra azienda per individuare tutti i bandi regionali, camerali, nazionali ed europei a cui avete diritto, inclusi i fondi interprofessionali che coprono per intero i costi di formazione del personale."
     },
     {
-      "start": 22.44,
-      "end": 25.91,
-      "text": "Tutto blindato dalle valutazioni d'impatto europee."
+      "start": 26.59,
+      "end": 44.13,
+      "text": "Prepariamo per voi le relazioni tecniche e le perizie di interconnessione per accedere agli incentivi di Transizione Cinque Punto Zero, Industria Quattro Punto Zero e Nuova Sabatini, arrivando a ridurre il costo netto reale del sessanta virgola uno percento."
     },
     {
-      "start": 25.91,
-      "end": 29.11,
+      "start": 44.13,
+      "end": 57.6,
+      "text": "Infine, vi consegniamo il fascicolo completo di conformità europea sulla privacy e sull'intelligenza artificiale, lasciandovi liberi di scegliere tra le sedici schede della nostra Carta dei Servizi."
+    },
+    {
+      "start": 57.6,
+      "end": 61.1,
       "text": "Nessun agente speciale veste di serie."
     }
   ]
