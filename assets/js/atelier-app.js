@@ -482,15 +482,28 @@
     }
   }
 
-  const INTRO_FRAC = 0.22; // la prima parte e emozionale: i punti partono dopo
+  const INTRO_FRAC = 0.22; // piano B se mancano i tempi veri dei punti
+  let puntiTempi = {};
+  fetch("assets/audio/punti.json", { cache: "no-store" })
+    .then((r) => (r.ok ? r.json() : {}))
+    .then((j) => { puntiTempi = j || {}; })
+    .catch(() => {});
+
   function syncPointsToVoice(t, dur) {
     if (!dur || Date.now() < vcState.lockUntil) return;
     const card = carouselTrack ? carouselTrack.querySelector('.card-3d-slide[data-pos="0"]') : null;
     if (!card) return;
     const n = card.querySelectorAll(".vc-item").length;
     if (!n) return;
-    const f = t / dur;
-    const idx = f < INTRO_FRAC ? 0 : Math.floor(((f - INTRO_FRAC) / (1 - INTRO_FRAC)) * n);
+    const st = DATA.stations[currentStationIdx];
+    const tempi = st && puntiTempi["stazione_" + st.codice];
+    let idx;
+    if (tempi && tempi.inizi && tempi.inizi.length) {
+      idx = Math.max(0, tempi.inizi.filter((x) => t >= x).length - 1);
+    } else {
+      const f = t / dur;
+      idx = f < INTRO_FRAC ? 0 : Math.floor(((f - INTRO_FRAC) / (1 - INTRO_FRAC)) * n);
+    }
     if (idx !== vcState.idx) setPoint(idx, false);
   }
 
