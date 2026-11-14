@@ -740,6 +740,30 @@ window.TRINAI_DATA = {
           { label: "3 · Scudo Europeo + 16 Schede Atelier", tempo: "100% Garantito", reparti: "Fascicolo DPIA Articolo 35 e FRIA AI Act · Scelta modulare graduale con la Direzione TrinAI" }
         ]
       }
+    },
+    {
+      id: "atto-10",
+      codice: "10",
+      titolo: "La Carta dei Servizi Sedici Schede, Scegliete Voi",
+      titoloLuce: "La Carta dei Servizi",
+      titoloOro: "Sedici Schede, Scegliete Voi",
+      sottotitolo: "Sedici schede componibili, dal progetto all'assistenza",
+      domandaGuida: "Come si compone su misura il proprio percorso, una scheda alla volta",
+      blueprintType: "carta",
+      img: "assets/img/slide10_carta.jpg",
+      voce: "nicola",
+      voceNome: "Nicola · Voce Narrante Atelier",
+      audio: "assets/audio/act_10.mp3",
+      kpi: [
+        { valore: "Schede 1–4", label: "Dal progetto all'avvio in sede" },
+        { valore: "Schede 5–8", label: "Servizi, immagine e conti" },
+        { valore: "Schede 9–12", label: "Relazioni, eventi e partner" },
+        { valore: "Schede 13–16", label: "Formazione, regole, fondi, assistenza" }
+      ],
+      narrazioneBreve: "",
+      doveSiApplica: [],
+      cassetti: [],
+      schede: []
     }
   ]
 };

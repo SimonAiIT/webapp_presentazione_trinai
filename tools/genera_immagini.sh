@@ -27,4 +27,5 @@ gen slide7_training "a round table with warm light and five empty elegant chairs
 gen slide8_care "an old university library with arched windows and golden light, an open book and a small brass compass on a wooden desk"
 gen slide6_marketing "a golden hourglass with golden coins falling like sand on dark marble, a faint line of light rising like a chart behind it"
 gen slide1_problema "a dark ornate vault door left slightly ajar with golden light spilling out, a single glowing golden cable leading away across a dark ocean toward distant city lights, tense atmosphere"
+gen slide10_carta "sixteen identical blank cream-colored index cards neatly arranged in a grid on a dark walnut tailor's table, a golden fountain pen laid beside them, no playing cards, no symbols, warm light"
 echo "tutte fatte"
