@@ -899,34 +899,84 @@
     }
   });
 
-  // Swipe Orizzontale Mobile per Ruotare il Carosello 3D
+  // Trascinamento orizzontale con molla: la card segue il dito, al rilascio scatta o torna indietro
+  const drag = { active: false, locked: false, x0: 0, y0: 0, t0: 0, dx: 0 };
+
+  function impostaDrag(dx) {
+    if (!carouselTrack) return;
+    carouselTrack.style.setProperty("--dx", dx.toFixed(1) + "px");
+    carouselTrack.style.setProperty("--dxn", dx.toFixed(1));
+  }
+
+  function trascinamentoBloccato() {
+    if (!appShell || !appShell.classList.contains("active")) return true;
+    if (labModal && labModal.classList.contains("open")) return true;
+    if (hamburgerDrawer && hamburgerDrawer.classList.contains("open")) return true;
+    return false;
+  }
+
   document.addEventListener(
     "touchstart",
     (e) => {
-      if (e.changedTouches && e.changedTouches[0]) {
-        touchStartX = e.changedTouches[0].screenX;
-        touchStartY = e.changedTouches[0].screenY;
-      }
+      drag.active = false;
+      drag.locked = false;
+      if (trascinamentoBloccato() || !e.touches || e.touches.length !== 1) return;
+      if (e.target.closest && e.target.closest(".audio-hud, .topbar")) return;
+      drag.active = true;
+      drag.x0 = e.touches[0].clientX;
+      drag.y0 = e.touches[0].clientY;
+      drag.t0 = Date.now();
+      drag.dx = 0;
     },
     { passive: true }
   );
 
   document.addEventListener(
-    "touchend",
+    "touchmove",
     (e) => {
-      if (!appShell || !appShell.classList.contains("active")) return;
-      if (labModal && labModal.classList.contains("open")) return;
-      if (hamburgerDrawer && hamburgerDrawer.classList.contains("open")) return;
-      if (!e.changedTouches || !e.changedTouches[0]) return;
-      const dx = e.changedTouches[0].screenX - touchStartX;
-      const dy = e.changedTouches[0].screenY - touchStartY;
-      if (Math.abs(dx) > 85 && Math.abs(dx) > Math.abs(dy) * 1.7) {
-        playUiSound("click");
-        goToStation(dx < 0 ? currentStationIdx + 1 : currentStationIdx - 1, true);
+      if (!drag.active || !e.touches[0]) return;
+      const dx = e.touches[0].clientX - drag.x0;
+      const dy = e.touches[0].clientY - drag.y0;
+      if (!drag.locked) {
+        if (Math.abs(dx) > 10 && Math.abs(dx) > Math.abs(dy) * 1.3) {
+          drag.locked = true;
+          if (carouselTrack) carouselTrack.classList.add("dragging");
+        } else if (Math.abs(dy) > 14) {
+          drag.active = false;
+          return;
+        } else {
+          return;
+        }
       }
+      // resistenza: piu ci si allontana, piu la card oppone
+      const w = window.innerWidth || 390;
+      const r = Math.sign(dx) * Math.min(Math.abs(dx), w * 0.9);
+      drag.dx = r * (1 - Math.min(Math.abs(r) / (w * 2.2), 0.4));
+      impostaDrag(drag.dx);
     },
     { passive: true }
   );
+
+  function fineTrascinamento() {
+    if (!drag.active) return;
+    const era = drag.locked;
+    drag.active = false;
+    drag.locked = false;
+    if (!era) return;
+    const dt = Math.max(1, Date.now() - drag.t0);
+    const v = drag.dx / dt; // px per millisecondo
+    const w = window.innerWidth || 390;
+    const scatta = Math.abs(drag.dx) > w * 0.2 || (Math.abs(v) > 0.45 && Math.abs(drag.dx) > 28);
+    if (carouselTrack) carouselTrack.classList.remove("dragging");
+    impostaDrag(0);
+    if (scatta) {
+      playUiSound("click");
+      goToStation(drag.dx < 0 ? currentStationIdx + 1 : currentStationIdx - 1, true);
+    }
+    drag.dx = 0;
+  }
+  document.addEventListener("touchend", fineTrascinamento, { passive: true });
+  document.addEventListener("touchcancel", fineTrascinamento, { passive: true });
 
   window.addEventListener("pagehide", () => salvaProgresso(true));
   document.addEventListener("visibilitychange", () => {

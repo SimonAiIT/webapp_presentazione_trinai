@@ -1465,3 +1465,32 @@ body {
 
 /* video di apertura: nessuno zoom aggiuntivo, il movimento e gia nel filmato */
 video.hero-media { animation: none; object-position: 50% 20%; }
+
+/* =========================================================
+   SCORRIMENTO CON MOLLA: la card segue il dito, le vicine si avvicinano,
+   al rilascio scatta con un piccolo rimbalzo
+   ========================================================= */
+.carousel-3d-track { --dx: 0px; --dxn: 0; }
+.carousel-3d-viewport { touch-action: pan-y; }
+.card-3d-slide {
+  transition: transform 0.75s cubic-bezier(0.34, 1.45, 0.64, 1), opacity 0.45s ease, filter 0.45s ease;
+  will-change: transform;
+}
+.carousel-3d-track.dragging .card-3d-slide { transition: none; }
+.card-3d-slide[data-pos="0"] {
+  transform: translate3d(var(--dx), 0, 0) rotateY(calc(var(--dxn) * -0.045deg)) scale(calc(1 - var(--dxn) * var(--dxn) * 0.0000025));
+}
+.card-3d-slide[data-pos="-1"] {
+  transform: translate3d(calc(-62% + var(--dx) * 0.55), 18px, -210px) rotateY(calc(28deg - var(--dxn) * 0.1deg)) scale(0.86);
+}
+.card-3d-slide[data-pos="1"] {
+  transform: translate3d(calc(62% + var(--dx) * 0.55), 18px, -210px) rotateY(calc(-28deg - var(--dxn) * 0.1deg)) scale(0.86);
+}
+@media (max-width: 860px) {
+  .card-3d-slide[data-pos="-1"] {
+    transform: translate3d(calc(-84% + var(--dx) * 0.55), 14px, -240px) rotateY(calc(32deg - var(--dxn) * 0.1deg)) scale(0.82);
+  }
+  .card-3d-slide[data-pos="1"] {
+    transform: translate3d(calc(84% + var(--dx) * 0.55), 14px, -240px) rotateY(calc(-32deg - var(--dxn) * 0.1deg)) scale(0.82);
+  }
+}
