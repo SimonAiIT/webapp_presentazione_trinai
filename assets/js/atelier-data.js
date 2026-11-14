@@ -28,9 +28,9 @@ window.TRINAI_DATA = {
     {
       id: "atto-00",
       codice: "00",
-      titolo: "L'Invito Riservato E la Vostra Azienda Pronta in Cinque Minuti",
-      titoloLuce: "L'Invito Riservato",
-      titoloOro: "E la Vostra Azienda Pronta in Cinque Minuti",
+      titolo: "L'invito riservato e la vostra azienda pronta in cinque minuti",
+      titoloLuce: "L'invito riservato",
+      titoloOro: "E la vostra azienda pronta in cinque minuti",
       sottotitolo: "Start-up Innovativa iscritta nella Sezione Speciale del Registro Imprese e Architettura di Fondazione",
       domandaGuida: "Perché con noi non perdete settimane a inserire dati a mano per iniziare a lavorare",
       blueprintType: "video_invito",
@@ -41,10 +41,10 @@ window.TRINAI_DATA = {
       voceNome: "Elsa · Voce Narrante Atelier",
       audio: "assets/audio/act_00.mp3",
       kpi: [
-        { valore: "5 Minuti", label: "Per Creare la Vostra Base" },
-        { valore: "6 Aree", label: "Pronte fin dal Primo Giorno" },
-        { valore: "7 Specialisti", label: "Soci tra Medici, Ingegneri e Formatori" },
-        { valore: "Relatori", label: "Invitati ai principali eventi del settore" }
+        { valore: "5 minuti", label: "Per creare la vostra base" },
+        { valore: "6 aree", label: "Pronte fin dal primo giorno" },
+        { valore: "7 specialisti", label: "Soci tra medici, ingegneri e formatori" },
+        { valore: "Con le istituzioni", label: "Relatori negli incontri di settore" }
       ],
       narrazioneBreve: "I posti che contano non hanno insegne sulla porta, hanno un invito. Benvenuti nell'Atelier di Trinacria Artificial Intelligence, Start-up Innovativa ad alto valore tecnologico iscritta nella Sezione Speciale del Registro delle Imprese. Non siamo una software house tradizionale: nella nostra compagine lavorano fianco a fianco medici specialisti, esperti di risorse umane, architetti di intelligenza artificiale e ingegneri industriali. Quando entrate nell'Atelier non comprate un programma vuoto da compilare per mesi. La nostra Architettura di Fondazione parte dalla vostra Partita IVA, legge i registri ufficiali delle Camere di Commercio e in cinque minuti genera l'ossatura digitale completa della vostra azienda, attivando sei reparti operativi già pronti a dialogare tra loro.",
       doveSiApplica: [
@@ -106,9 +106,9 @@ window.TRINAI_DATA = {
     {
       id: "atto-01",
       codice: "01",
-      titolo: "Il Problema che Nessuno Vi Racconta",
-      titoloLuce: "Il Problema che",
-      titoloOro: "Nessuno Vi Racconta",
+      titolo: "Il problema che nessuno vi racconta",
+      titoloLuce: "Il problema che",
+      titoloOro: "Nessuno vi racconta",
       sottotitolo: "Dove finiscono i dati mandati ai servizi cloud e l'opportunità di agenti e modelli locali dentro la vostra sede",
       domandaGuida: "A chi state affidando i vostri dati, e come potete tenerli in casa",
       blueprintType: "problema",
@@ -119,10 +119,10 @@ window.TRINAI_DATA = {
       videos: ["assets/video/atto_01.mp4", "assets/video/s13.mp4", "assets/video/s12.mp4", "assets/video/s11.mp4"],
       audio: "assets/audio/act_01.mp3",
       kpi: [
-        { valore: "Dati Fuori Casa", label: "Su computer altrui, sotto altre leggi" },
-        { valore: "La Legge", label: "Il dato riservato deve restare vostro" },
-        { valore: "Due Alleati", label: "Assistenti che lavorano nel vostro server" },
-        { valore: "Dati in Casa", label: "Piccoli modelli che lavorano in sede" }
+        { valore: "Dati fuori casa", label: "Su computer altrui, sotto altre leggi" },
+        { valore: "La legge", label: "Il dato riservato deve restare vostro" },
+        { valore: "Due alleati", label: "Assistenti che lavorano nel vostro server" },
+        { valore: "Dati in casa", label: "Modelli dedicati che lavorano in sede" }
       ],
       narrazioneBreve: "",
       doveSiApplica: [],
@@ -132,9 +132,9 @@ window.TRINAI_DATA = {
     {
       id: "atto-02",
       codice: "02",
-      titolo: "Chi è Victor Il Direttore Operativo che Non Dorme Mai",
+      titolo: "Chi è Victor il direttore operativo che non dorme mai",
       titoloLuce: "Chi è Victor",
-      titoloOro: "Il Direttore Operativo che Non Dorme Mai",
+      titoloOro: "Il direttore operativo che non dorme mai",
       sottotitolo: "Un compagno di squadra silenzioso che unisce cinque sensi e prende decisioni in meno di due millisecondi",
       domandaGuida: "Qual è la differenza tra i programmi che chiacchierano su internet e un vero compagno di squadra",
       blueprintType: "victor_dual_brain",
@@ -145,10 +145,10 @@ window.TRINAI_DATA = {
       videos: ["assets/video/atto_02.mp4", "assets/video/s03.mp4", "assets/video/s06.mp4", "assets/video/s09.mp4"],
       audio: "assets/audio/act_02.mp3",
       kpi: [
-        { valore: "Un Istante", label: "Due Millisecondi per Decidere" },
-        { valore: "Due Righe", label: "Per Spiegarvi Cosa Fare" },
-        { valore: "Cinque Sensi", label: "Vede, Ascolta e Fa i Conti" },
-        { valore: "Zero Invenzioni", label: "Parla Solo su Dati Veri" }
+        { valore: "Un istante", label: "Due millisecondi per decidere" },
+        { valore: "Due righe", label: "Per spiegarvi cosa fare" },
+        { valore: "Cinque sensi", label: "Vede, ascolta e fa i conti" },
+        { valore: "Zero invenzioni", label: "Parla solo su dati veri" }
       ],
       narrazioneBreve: "Chi è Victor? Victor non è uno di quei programmi famosi che chiacchierano su internet e spesso inventano risposte. Victor è un automa decisionale silenzioso, progettato per lavorare dentro la vostra azienda come un direttore operativo che non dorme mai. Senza svelare le formule segrete con cui lo abbiamo forgiato, vi basta sapere che è costruito come la mente umana: ha cinque sensi per percepire la realtà e due cervelli ben distinti. Il primo cervello è l'istinto matematico: in meno di due millisecondi legge contemporaneamente i numeri del bilancio, l'andamento del tempo, le forme tridimensionali e persino il rumore dei macchinari, individuando subito un problema o un'opportunità. Il secondo cervello entra in azione solo quando la decisione è già presa e messa al sicuro: vi parla o vi scrive due sole righe chiarissime per spiegarvi il perché, senza alcuna possibilità di inventare dati.",
       doveSiApplica: [
@@ -210,9 +210,9 @@ window.TRINAI_DATA = {
     {
       id: "atto-03",
       codice: "03",
-      titolo: "I Vostri Dati Restano Chiusi a Chiave in Casa Vostra",
-      titoloLuce: "I Vostri Dati Restano",
-      titoloOro: "Chiusi a Chiave in Casa Vostra",
+      titolo: "I vostri dati restano chiusi a chiave in casa vostra",
+      titoloLuce: "I vostri dati restano",
+      titoloOro: "Chiusi a chiave in casa vostra",
       sottotitolo: "I vostri segreti non lasciano mai le vostre mura mentre voi governate una o dieci sedi in totale sicurezza",
       domandaGuida: "Perché tenere l'intelligenza dentro le vostre mura è l'unica vera garanzia di sicurezza",
       blueprintType: "two_planes_sovereign",
@@ -223,10 +223,10 @@ window.TRINAI_DATA = {
       videos: ["assets/video/atto_03.mp4", "assets/video/s12.mp4", "assets/video/s13.mp4", "assets/video/s14.mp4"],
       audio: "assets/audio/act_03.mp3",
       kpi: [
-        { valore: "100% in Sede", label: "Nessun Dato Mandato Fuori" },
-        { valore: "Sempre Attivo", label: "Funziona Anche Senza Internet" },
-        { valore: "Incancellabile", label: "Archivio Protetto da Manomissioni" },
-        { valore: "Più Sedi", label: "Controllo Centrale Riservato" }
+        { valore: "100% in sede", label: "Nessun dato mandato fuori" },
+        { valore: "Sempre attivo", label: "Funziona anche senza internet" },
+        { valore: "Incancellabile", label: "Archivio protetto da manomissioni" },
+        { valore: "Più sedi", label: "Controllo centrale riservato" }
       ],
       narrazioneBreve: "Quando affidate i dati dei vostri clienti, dei vostri pazienti o dei vostri progetti a un servizio in cloud, state consegnando il cuore della vostra azienda a un server esterno. Noi abbiamo scelto la via opposta: l'intelligenza diffusa e sovrana, divisa su due piani fisicamente separati. Sul primo piano, dentro i vostri uffici o le vostre sale, installiamo postazioni compatte da trentadue gigabyte e un Nodo Sovrano di Sede da centoventotto gigabyte. Qui dentro rimangono chiusi a chiave tutti i nomi, le immagini, le voci e i segreti industriali, protetti da un archivio immutabile che nessun virus può cancellare. E se un giorno cade la linea internet, ogni postazione entra in Modalità Isola e continua a lavorare senza perdere un minuto. Sul secondo piano, se avete più sedi, la direzione centrale riceve solo i totali economici anonimizzati, così governate l'intero gruppo senza mai esporre un solo dato personale.",
       doveSiApplica: [
@@ -288,9 +288,9 @@ window.TRINAI_DATA = {
     {
       id: "atto-04",
       codice: "04",
-      titolo: "Tenete i Vostri Programmi Al Lavoro Ripetitivo Pensa Lui",
-      titoloLuce: "Tenete i Vostri Programmi",
-      titoloOro: "Al Lavoro Ripetitivo Pensa Lui",
+      titolo: "Tenete i vostri programmi al lavoro ripetitivo pensa lui",
+      titoloLuce: "Tenete i vostri programmi",
+      titoloOro: "Al lavoro ripetitivo pensa lui",
       sottotitolo: "Un assistente invisibile che compila, controlla e prepara il lavoro sui software che usate già ogni giorno",
       domandaGuida: "Come si elimina la fatica di caricare dati senza costringere la squadra a cambiare abitudini",
       blueprintType: "rust_semantic_daemon",
@@ -305,10 +305,10 @@ window.TRINAI_DATA = {
         label: "Apri Laboratorio Visivo 3D e Geometria"
       },
       kpi: [
-        { valore: "Zero Cambi", label: "Usate i Programmi che Avete Già" },
-        { valore: "Mani Libere", label: "Non Vi Blocca Mai il Mouse" },
-        { valore: "Leggerissimo", label: "Non Rallenta Mai il Computer" },
-        { valore: "Voi Decidete", label: "Lui Prepara e Voi Confermate" }
+        { valore: "Zero cambi", label: "Usate i programmi che avete già" },
+        { valore: "Mani libere", label: "Non vi blocca mai il mouse" },
+        { valore: "Leggerissimo", label: "Non rallenta mai il computer" },
+        { valore: "Voi decidete", label: "Lui prepara e voi confermate" }
       ],
       narrazioneBreve: "Il più grande ostacolo all'innovazione è la paura di dover buttare via il proprio gestionale storico e ricominciare da capo. Con noi non cambiate nemmeno un'abitudine. Abbiamo creato un motore leggerissimo, scritto in linguaggio Rust, che sa leggere e usare direttamente i programmi già installati sui vostri computer. A differenza dei vecchi sistemi automatici che muovono la freccia del mouse sullo schermo impedendovi di lavorare, il nostro assistente opera dietro le quinte: non vi ruba mai il mouse, non appesantisce il computer e non clicca mai a caso. Nei primi giorni vi guarda lavorare in silenzio e impara le vostre sequenze; poi inizia a preparare per voi fatture, richiami, schede tecniche e ordini, fermandosi sempre un istante prima dell'invio per chiedervi il permesso con un semplice clic.",
       doveSiApplica: [
@@ -370,9 +370,9 @@ window.TRINAI_DATA = {
     {
       id: "atto-05",
       codice: "05",
-      titolo: "Prepariamo Tutto Prima E in Due Giorni Siete Attivi",
-      titoloLuce: "Prepariamo Tutto Prima",
-      titoloOro: "E in Due Giorni Siete Attivi",
+      titolo: "Prepariamo tutto prima e in due giorni siete attivi",
+      titoloLuce: "Prepariamo tutto prima",
+      titoloOro: "E in due giorni siete attivi",
       sottotitolo: "Audit ed estrazione dati, addestramento e collaudo nei laboratori TrinAI, installazione fisica e istruzione in 48 ore salvo imprevisti",
       domandaGuida: "Come si attiva l'intero sistema in quarantotto ore senza perdere nemmeno un cliente o un'ora di lavoro",
       blueprintType: "lab_to_site_48h",
@@ -383,10 +383,10 @@ window.TRINAI_DATA = {
       videos: ["assets/video/atto_05.mp4", "assets/video/s04.mp4", "assets/video/s05.mp4", "assets/video/s01.mp4"],
       audio: "assets/audio/act_05.mp3",
       kpi: [
-        { valore: "4 Passi", label: "Metodo Chiaro e Collaudato" },
-        { valore: "Da Noi", label: "Prepariamo le Macchine Prima" },
-        { valore: "2 Giorni", label: "Installazione e Corso in Sede" },
-        { valore: "Riservatezza", label: "Vede gli Strumenti e Mai i Volti" }
+        { valore: "4 passi", label: "Metodo chiaro e collaudato" },
+        { valore: "Da noi", label: "Prepariamo le macchine prima" },
+        { valore: "2 giorni", label: "Installazione e corso in sede" },
+        { valore: "Riservatezza", label: "Vede gli strumenti e mai i volti" }
       ],
       narrazioneBreve: "Chi fa impresa non può permettersi cantieri informatici che bloccano gli uffici o le sale per settimane. Per questo abbiamo creato un metodo di messa in opera in quattro fasi che sposta tutta la complessità dentro i nostri laboratori. Nella prima fase facciamo un audit accurato ed estraiamo in modo cifrato i vostri dati storici. Nella seconda fase portiamo questo patrimonio nei laboratori TrinAI, dove pre-addestriamo Victor sulla vostra storia reale e cuciniamo l'abito su misura. Nella terza fase eseguiamo il collaudo completo dell'ambiente simulando le vostre giornate di lavoro. Solo quando tutto è perfetto passiamo alla quarta fase: veniamo fisicamente da voi e in soli due giorni lavorativi, salvo imprevisti, posiamo le macchine, attiviamo il vassoio ottico che riconosce i materiali senza mai riprendere i volti e istruiamo tutta la vostra squadra.",
       doveSiApplica: [
@@ -448,9 +448,9 @@ window.TRINAI_DATA = {
     {
       id: "atto-06",
       codice: "06",
-      titolo: "Far Crescere la Squadra E Liberare il Tempo del Titolare",
-      titoloLuce: "Far Crescere la Squadra",
-      titoloOro: "E Liberare il Tempo del Titolare",
+      titolo: "Far crescere la squadra e liberare il tempo del titolare",
+      titoloLuce: "Far crescere la squadra",
+      titoloOro: "E liberare il tempo del titolare",
       sottotitolo: "Valorizzare il talento della squadra, costruire la delega in novanta giorni e liberare il tempo di chi guida",
       domandaGuida: "Come si passa da un'azienda dove il titolare deve controllare tutto a una squadra organizzata e autonoma",
       blueprintType: "human_orchestra_150",
@@ -461,10 +461,10 @@ window.TRINAI_DATA = {
       videos: ["assets/video/atto_06.mp4", "assets/video/s10.mp4", "assets/video/s02.mp4", "assets/video/s01.mp4"],
       audio: "assets/audio/act_06.mp3",
       kpi: [
-        { valore: "150 Casi Reali", label: "Per Scoprire i Punti di Forza" },
-        { valore: "90 Giorni", label: "Per Imparare a Delegare Davvero" },
-        { valore: "Zero Giudizi", label: "Aiuto al Ruolo e Mai Classifiche" },
-        { valore: "Attestato UE", label: "Personale Formato a Norma di Legge" }
+        { valore: "150 casi reali", label: "Per scoprire i punti di forza" },
+        { valore: "90 giorni", label: "Per imparare a delegare davvero" },
+        { valore: "Zero giudizi", label: "Aiuto al ruolo e mai classifiche" },
+        { valore: "Attestato UE", label: "Personale formato a norma di legge" }
       ],
       narrazioneBreve: "Anche la tecnologia più potente del mondo serve a poco se le persone che lavorano con voi sono confuse, sovraccariche o messe nel ruolo sbagliato. La nostra regola fondamentale è semplice: si misura il processo e si supporta il ruolo, non si giudica mai la persona. Attraverso centocinquanta domande basate su situazioni concrete di lavoro quotidiano, incrociamo il modo di guidare del titolare con i punti di forza reali di ogni collaboratore. In questo modo scoprite chi è portato per l'accoglienza, chi per l'organizzazione di precisione e chi per la chiusura degli accordi, ottenendo un piano pratico a trenta, sessanta e novanta giorni per delegare in serenità e accompagnare il team con brevi consigli settimanali.",
       doveSiApplica: [
@@ -526,11 +526,11 @@ window.TRINAI_DATA = {
     {
       id: "atto-07",
       codice: "07",
-      titolo: "Il Metodo che Portiamo Nelle Istituzioni Entra in Azienda",
-      titoloLuce: "Il Metodo che Portiamo",
-      titoloOro: "Nelle Istituzioni Entra in Azienda",
-      sottotitolo: "Nelle università insegniamo la metodologia scientifica di gestione e comunicazione, nell'Atelier la trasformiamo in sistema",
-      domandaGuida: "Perché un cliente o un paziente accetta più volentieri quando viene accompagnato un passo alla volta",
+      titolo: "Dialogo con le istituzioni il confronto con il mondo accademico e associativo",
+      titoloLuce: "Dialogo con le istituzioni",
+      titoloOro: "Il confronto con il mondo accademico e associativo",
+      sottotitolo: "Il confronto con il mondo accademico e associativo, e gli incontri dal vivo con noi",
+      domandaGuida: "Come si costruisce fiducia con le istituzioni e con chi guida le imprese, un passo alla volta",
       blueprintType: "accademia_master_postgrad",
       img: "assets/img/slide8_care.jpg",
       voce: "elsa",
@@ -539,10 +539,10 @@ window.TRINAI_DATA = {
       videos: ["assets/video/atto_07.mp4", "assets/video/s10.mp4", "assets/video/s09.mp4", "assets/video/s15.mp4"],
       audio: "assets/audio/act_07.mp3",
       kpi: [
-        { valore: "Ci incontriamo", label: "Master, Confindustria, Unidi, Expodental" },
-        { valore: "Alta Direzione", label: "Percorsi per Imprenditori e Titolari" },
-        { valore: "Un Passo per Volta", label: "Spiegazioni Chiare Senza Spaventare" },
-        { valore: "Basta Così", label: "Fermarsi Quando il Cliente Dice Sì" }
+        { valore: "Relatori invitati", label: "Ospiti nei contesti accademici e associativi" },
+        { valore: "Incontri dal vivo", label: "Confindustria, Unidi ed Expodental" },
+        { valore: "Proposte per fasi", label: "Preventivi chiari che mettono a proprio agio" },
+        { valore: "Ascolto vero", label: "Riconoscere il momento giusto nel dialogo" }
       ],
       narrazioneBreve: "TrinAI non nasce in un garage di programmatori isolati dal mondo, ma sui banchi dell'alta formazione accademica. Come attestato nel Registro delle Imprese, collaboriamo ufficialmente con l'Università Cattolica del Sacro Cuore e con l'Università Vita-Salute San Raffaele per il Master di Secondo Livello sulla gestione delle strutture sanitarie, oltre a tenere corsi Postgraduate di alta direzione. Nelle aule universitarie e nei percorsi Postgraduate noi spieghiamo la metodologia: insegniamo agli imprenditori e ai direttori come governare i numeri, come guidare le persone e come comunicare con il cliente o il paziente un passo alla volta, senza mai generare ansia o rifiuto. Nell'Atelier TrinAI facciamo il passo successivo: prendiamo quella stessa metodologia insegnata all'università e la cuciamo dentro i vostri computer, affinché tutta la vostra squadra la applichi ogni giorno in automatico.",
       doveSiApplica: [
@@ -604,9 +604,9 @@ window.TRINAI_DATA = {
     {
       id: "atto-08",
       codice: "08",
-      titolo: "Conoscere il Guadagno Vero Di Ogni Minuto e Recuperare i Sospesi",
-      titoloLuce: "Conoscere il Guadagno Vero",
-      titoloOro: "Di Ogni Minuto e Recuperare i Sospesi",
+      titolo: "Conoscere il guadagno vero di ogni minuto e recuperare i sospesi",
+      titoloLuce: "Conoscere il guadagno vero",
+      titoloOro: "Di ogni minuto e recuperare i sospesi",
       sottotitolo: "Ventisei indicatori calcolati con matematica pura, recupero elegante dei preventivi sospesi e analisi del territorio",
       domandaGuida: "Quanto lavoro e quanto margine recuperate quando sapete esattamente dove state guadagnando e chi ricontattare",
       blueprintType: "deterministic_roi_26",
@@ -621,10 +621,10 @@ window.TRINAI_DATA = {
         label: "Apri Plancia Direzionale Multi-Sede Live"
       },
       kpi: [
-        { valore: "26 Voci Chiave", label: "Conti Veri Fatti al Centesimo" },
-        { valore: "Ogni Minuto", label: "Sapete Quanto Costa e Quanto Rende" },
-        { valore: "Lavoro Recuperato", label: "Preventivi e Richiami Riattivati" },
-        { valore: "Uno Sguardo Fuori", label: "Come Si Muove il Vostro Territorio" }
+        { valore: "26 voci chiave", label: "Conti veri fatti al centesimo" },
+        { valore: "Ogni minuto", label: "Sapete quanto costa e quanto rende" },
+        { valore: "Lavoro recuperato", label: "Preventivi e richiami riattivati" },
+        { valore: "Uno sguardo fuori", label: "Come si muove il vostro territorio" }
       ],
       narrazioneBreve: "Molti imprenditori lavorano dodici ore al giorno ma scoprono solo a fine anno, dal commercialista, se hanno davvero guadagnato e dove hanno perso margine. Nella nostra architettura i conti non li fa un modello linguistico che tira a indovinare: li eseguono formule matematiche pure su ventisei indicatori chiave. In ogni istante sapete quanto vi costa un minuto di una sala o di una linea produttiva, quali prestazioni generano utile vero e quali lavorano in perdita. Non solo: il sistema individua i clienti che avevano iniziato un percorso e si sono fermati, preparando messaggi cortesi e personalizzati per riaccendere il rapporto, mentre il radar di mercato legge i dati ufficiali delle Camere di Commercio per mostrarvi come si muovono i concorrenti nella vostra zona.",
       doveSiApplica: [
@@ -686,9 +686,9 @@ window.TRINAI_DATA = {
     {
       id: "atto-09",
       codice: "09",
-      titolo: "Cerchiamo Noi i Fondi Per Ripagare e Blindare l'Investimento",
-      titoloLuce: "Cerchiamo Noi i Fondi",
-      titoloOro: "Per Ripagare e Blindare l'Investimento",
+      titolo: "Cerchiamo noi i fondi per ripagare e blindare l'investimento",
+      titoloLuce: "Cerchiamo noi i fondi",
+      titoloOro: "Per ripagare e blindare l'investimento",
       sottotitolo: "Cerchiamo per voi i bandi e i fondi migliori, prepariamo le perizie fino al 60,1% di risparmio e blindiamo la conformità europea",
       domandaGuida: "Come si riduce la spesa reale attingendo ai contributi pubblici senza doversi preoccupare della burocrazia",
       blueprintType: "fund_scouting_eu_shield",
@@ -699,10 +699,10 @@ window.TRINAI_DATA = {
       videos: ["assets/video/atto_09.mp4", "assets/video/s08.mp4", "assets/video/s07.mp4", "assets/video/s09.mp4"],
       audio: "assets/audio/act_09.mp3",
       kpi: [
-        { valore: "Fino al -60%", label: "Risparmio Reale con gli Incentivi" },
-        { valore: "Ricerca Bandi", label: "Troviamo i Fondi Adatti a Voi" },
-        { valore: "Formazione Gratis", label: "Coperta dai Fondi Aziendali" },
-        { valore: "Carte in Regola", label: "Tutela Completa per Ogni Controllo" }
+        { valore: "Fino al -60%", label: "Risparmio reale con gli incentivi" },
+        { valore: "Ricerca bandi", label: "Troviamo i fondi adatti a voi" },
+        { valore: "Formazione finanziata", label: "Sostenuta dai fondi per la formazione" },
+        { valore: "Carte in regola", label: "Tutela completa per ogni controllo" }
       ],
       narrazioneBreve: "Un vero partner strategico non si limita a installare le macchine: vi aiuta anche a finanziarle e a proteggerle davanti alla legge. Il nostro reparto dedicato alla ricerca fondi analizza la vostra azienda per individuare tutti i bandi regionali, camerali, nazionali ed europei a cui avete diritto, inclusi i fondi interprofessionali che coprono i costi di formazione del personale. Prepariamo per voi le relazioni tecniche e le perizie di interconnessione per accedere agli incentivi di Transizione Cinque Punto Zero, Industria Quattro Punto Zero e Nuova Sabatini, arrivando a ridurre il costo netto reale di oltre il sessanta percento. Infine, vi consegniamo il fascicolo completo di conformità europea sulla privacy e sull'intelligenza artificiale, lasciandovi liberi di comporre il vostro abito scegliendo tra le sedici schede della nostra Carta dei Servizi. Nessun agente speciale veste di serie.",
       doveSiApplica: [
@@ -763,9 +763,9 @@ window.TRINAI_DATA = {
     {
       id: "atto-10",
       codice: "10",
-      titolo: "La Carta dei Servizi Tutto Quello che Facciamo per Voi",
-      titoloLuce: "La Carta dei Servizi",
-      titoloOro: "Tutto Quello che Facciamo per Voi",
+      titolo: "La carta dei servizi tutto quello che facciamo per voi",
+      titoloLuce: "La carta dei servizi",
+      titoloOro: "Tutto quello che facciamo per voi",
       sottotitolo: "Sedici servizi, dal primo sopralluogo all'assistenza",
       domandaGuida: "Che cosa trovate dentro l'Atelier, dal primo sopralluogo all'assistenza",
       blueprintType: "carta",

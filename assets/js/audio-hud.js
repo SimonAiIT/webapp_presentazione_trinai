@@ -16,7 +16,9 @@
   themeEl.loop = true;
   themeEl.preload = "auto";
   themeEl.playsInline = true;
-  themeEl.volume = 0.02;
+  // il file theme.mp3 e gia attenuato di 30 dB alla fonte, cosi anche su iPhone e iPad (dove il volume
+  // di un <audio> non si puo cambiare) resta un sottofondo morbido; qui il volume 1 vale il livello pieno del file
+  themeEl.volume = 0.6;
 
   let subtitlesMap = {};
   let currentSubKey = null;
@@ -40,7 +42,7 @@
       themeEl.pause();
       return;
     }
-    themeEl.volume = speaking ? 0.01 : 0.03;
+    themeEl.volume = speaking ? 0.33 : 1;
     if (themeEl.paused) {
       themeEl.play().catch(() => {});
     }
