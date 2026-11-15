@@ -63,21 +63,39 @@ export default {
     // 1. Endpoint di verifica codice
     if (url.pathname === "/_auth" && request.method === "POST") {
       const form = await request.formData();
-      const rawCode = String(form.get("code") || "").trim().toUpperCase();
+      const rawCodeExact = String(form.get("code") || "").trim();
+      const rawCode = rawCodeExact.toUpperCase();
+      let record = null;
+
       const recordRaw = await env.ATELIER_CODES.get(`code:${rawCode}`);
+      if (recordRaw) {
+        record = JSON.parse(recordRaw);
+        if (record.expiresAt && Date.now() > record.expiresAt) {
+          await env.ATELIER_CODES.delete(`code:${rawCode}`);
+          return new Response(gateHtml("Codice scaduto."), { status: 403, headers: { "Content-Type": "text/html; charset=utf-8" } });
+        }
+        if (record.singleUse) {
+          await env.ATELIER_CODES.delete(`code:${rawCode}`);
+        }
+      } else if (env.GAS_URL && env.GAS_SYNC_SECRET) {
+        // Fallback live sul portale Google Drive (codici generati da Giulia/Professore)
+        const gasRes = await fetch(env.GAS_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            action: "verifica_codice",
+            code: rawCodeExact,
+            secret: env.GAS_SYNC_SECRET
+          })
+        });
+        const gasData = await gasRes.json().catch(() => null);
+        if (gasData && gasData.ok) {
+          record = { role: gasData.role || "OSPITE", sessionDays: gasData.sessionDays || 14 };
+        }
+      }
 
-      if (!recordRaw) {
+      if (!record) {
         return new Response(gateHtml("Codice non valido o scaduto."), { status: 403, headers: { "Content-Type": "text/html; charset=utf-8" } });
-      }
-
-      const record = JSON.parse(recordRaw);
-      if (record.expiresAt && Date.now() > record.expiresAt) {
-        await env.ATELIER_CODES.delete(`code:${rawCode}`);
-        return new Response(gateHtml("Codice scaduto."), { status: 403, headers: { "Content-Type": "text/html; charset=utf-8" } });
-      }
-
-      if (record.singleUse) {
-        await env.ATELIER_CODES.delete(`code:${rawCode}`);
       }
 
       const ttlMs = (record.sessionDays || 14) * 86400 * 1000;

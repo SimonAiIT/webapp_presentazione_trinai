@@ -15,3 +15,12 @@ Questo Cloudflare Worker trasforma la presentazione statica in un sito **realmen
    - **Scadenza 14 giorni:** chiavetta `code:OSPITE-14GG` -> `{"role":"OSPITE","singleUse":false,"sessionDays":14,"expiresAt":1796000000000}`
    - **Usa e getta:** chiavetta `code:ONESHOT-99` -> `{"role":"ONESHOT","singleUse":true,"sessionDays":1}`
 4. Collega il Worker alla route `atelier.trinai.it/*` con `wrangler deploy`.
+
+## Collegamento ai codici generati dal Portale Drive (opzionale)
+Se vuoi che i codici generati da Giulia e dal Professore su Drive sblocchino automaticamente anche `atelier.trinai.it`:
+1. In Google Apps Script (**Impostazioni progetto** -> **Proprietà script**), aggiungi `GAS_SYNC_SECRET` con una password segreta a tua scelta.
+2. Su Cloudflare Worker imposta le stesse due variabili:
+   ```bash
+   wrangler secret put GAS_URL          # URL .../exec della Web App Google Apps Script
+   wrangler secret put GAS_SYNC_SECRET  # Stesso segreto impostato su Google Apps Script
+   ```
