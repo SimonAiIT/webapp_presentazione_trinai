@@ -64,7 +64,7 @@ window.TRINAI_DATA = {
       cassetti: [
         {
           titolo: "Start-up Innovativa e Compagine Multidisciplinare",
-          testo: "Trinacria Artificial Intelligence S.r.l., sigla TrinAi S.r.l., è iscritta nella Sezione Speciale del Registro delle Imprese di Palermo ed Enna con protocollo ufficiale 90661 del 2026. Riunisce sette soci persone fisiche tra clinici specialisti, esperti in relazioni umane, architetti cloud AI e ingegneri civili e industriali."
+          testo: "Trinacria Artificial Intelligence S.r.l., sigla TrinAi S.r.l., è iscritta nella Sezione Speciale del Registro delle Imprese di Palermo ed Enna con protocollo ufficiale 90661 del 2026. Riunisce un team multidisciplinare completo tra clinici specialisti, economisti sanitari, architetti AI e cloud, direzione operativa, tributaristi, psicologi del lavoro e avvocati."
         },
         {
           titolo: "Dalla Partita IVA all'Azienda Attiva in Cinque Minuti",
@@ -90,6 +90,41 @@ window.TRINAI_DATA = {
           badge: "ISTITUZIONALE",
           titolo: "Garanzia di Start-up Innovativa Certificata",
           testo: "Soluzione ingegnerizzata da un team multidisciplinare con collaborazioni accademiche iscritte al Registro delle Imprese."
+        },
+        {
+          badge: "PRESIDENTE · CFO & OPINION LEADER",
+          titolo: "Dott. Giuseppe Buscemi",
+          testo: "Medico odontoiatra specialista, cura la gestione finanziaria, i bandi e i conti della società ed è Opinion Leader clinico del progetto."
+        },
+        {
+          badge: "STRATEGIA & ADVISORY",
+          titolo: "Prof. Antonio Pelliccia",
+          testo: "The AppManager, economista e docente universitario dal 1993. Guida la strategia d'impresa, l'advisory direzionale e i modelli di economia sanitaria."
+        },
+        {
+          badge: "AI ARCHITECT · CAIO",
+          titolo: "Giuseppe Garofalo",
+          testo: "AI Solution Architect con esperienza tecnica negli studi odontoiatrici. Progetta l'architettura di Victor, i flussi operativi e i sistemi di distribuzione."
+        },
+        {
+          badge: "CTO · INFRASTRUTTURA",
+          titolo: "Davide Calè",
+          testo: "Full Stack Product Architect con oltre tredici anni di esperienza su SaaS, CRM e containerizzazione. Dirige infrastruttura cloud, reti private e sicurezza."
+        },
+        {
+          badge: "DGTI · IMMAGINE",
+          titolo: "Dott. Mario Butera",
+          testo: "Direttore marketing, web engineering e SEO digitale dal 2007. Cura identità visiva, interfacce utente e comunicazione istituzionale di gruppo."
+        },
+        {
+          badge: "DIREZIONE GENERALE COMMERCIALE",
+          titolo: "Giulia Pompili",
+          testo: "Clinic Manager e formatrice per segreterie e assistenti, coautrice con il prof. Pelliccia. Guida la direzione generale commerciale e valida l'operatività in studio."
+        },
+        {
+          badge: "PRESIDIO MULTIDISCIPLINARE",
+          titolo: "Tributaristi, Psicologi e Avvocati",
+          testo: "Nucleo specialistico integrato per governance fiscale e societaria, psicologia organizzativa, tutela legale, contrattualistica e conformità normativa."
         }
       ],
       simulatore: {
