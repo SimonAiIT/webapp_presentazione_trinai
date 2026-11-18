@@ -63,8 +63,8 @@ window.TRINAI_DATA = {
       ],
       cassetti: [
         {
-          titolo: "Start-up Innovativa e Gruppo Multidisciplinare",
-          testo: "Trinacria Artificial Intelligence S.r.l., sigla TrinAi S.r.l., è iscritta nella Sezione Speciale del Registro delle Imprese di Palermo ed Enna con protocollo ufficiale 90661 del 2026. Riunisce un gruppo multidisciplinare di alto profilo composto da medici specialisti, economisti sanitari, psicologi del lavoro, avvocati, tributaristi, architetti AI, ingegneri di infrastruttura ed esperti di comunicazione."
+          titolo: "Start-up Innovativa e Alleanza Multidisciplinare",
+          testo: "Trinacria Artificial Intelligence S.r.l., sigla TrinAi S.r.l., è iscritta nella Sezione Speciale del Registro delle Imprese di Palermo ed Enna con protocollo ufficiale 90661 del 2026. Collabora in alleanza con un gruppo multidisciplinare di professionisti indipendenti di alto profilo tra medici specialisti, economisti sanitari, psicologi del lavoro, avvocati, tributaristi, architetti AI, ingegneri di infrastruttura ed esperti di comunicazione e direzione operativa per raggiungere l'eccellenza."
         },
         {
           titolo: "Dalla Partita IVA all'Azienda Attiva in Cinque Minuti",
