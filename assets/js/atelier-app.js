@@ -764,23 +764,24 @@
   }
 
   // Event Listeners
-  if (btnInstantPass) {
-    btnInstantPass.addEventListener("click", () => {
-      playUiSound("unlock");
-      const session = window.TRINAI_LOCK.createGuestPassSession();
-      enterExperience(session, true);
-    });
-  }
-
   if (gateForm) {
     gateForm.addEventListener("submit", async (e) => {
       e.preventDefault();
       if (gateError) gateError.textContent = "";
       const code = gateInput ? gateInput.value : "";
+      const submitBtn = document.getElementById("gate-submit-btn");
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = "<span>Verifica codice...</span>";
+      }
       const session = await window.TRINAI_LOCK.verifyCode(code);
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = "<span>Entra nell'Atelier</span>";
+      }
       if (!session) {
         playUiSound("error");
-        if (gateError) gateError.textContent = "Codice non riconosciuto.";
+        if (gateError) gateError.textContent = "Codice non valido o scaduto.";
         return;
       }
       playUiSound("unlock");

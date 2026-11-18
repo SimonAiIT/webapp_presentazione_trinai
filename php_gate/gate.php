@@ -64,7 +64,7 @@ function render_gate_html(string $err = ''): string {
         . 'form{width:100%;max-width:380px;background:#0e111a;border:1px solid rgba(212,175,55,.3);border-radius:16px;padding:26px}'
         . 'h1{margin:0 0 8px;font-size:20px;color:#fff}p{margin:0 0 18px;font-size:13px;color:#94a3b8}'
         . 'input,button{width:100%;box-sizing:border-box;min-height:46px;border-radius:10px;font-size:14px}'
-        . 'input{background:#050609;border:1px solid rgba(255,255,255,.15);color:#fff;padding:0 12px;margin-bottom:10px;text-transform:uppercase}'
+        . 'input{background:#050609;border:1px solid rgba(255,255,255,.15);color:#fff;padding:0 12px;margin-bottom:10px}'
         . 'button{background:#d4af37;color:#06070b;border:0;font-weight:700;cursor:pointer}'
         . '.err{color:#ef4444;font-size:12px;margin-top:10px}</style></head>'
         . '<body><form method="POST" action="/_auth">'

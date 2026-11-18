@@ -43,29 +43,40 @@
 
       <h1 class="gate-title">TrinAI Atelier</h1>
       <p class="gate-subtitle">
-        I posti che contano non hanno insegne sulla porta, hanno un invito. Entra nel laboratorio sartoriale e lasciati guidare dalla voce narrante.
+        I posti che contano non hanno insegne sulla porta, hanno un invito. Inserisci il tuo codice personale per entrare nel laboratorio sartoriale.
       </p>
 
-      <button id="btn-instant-pass" type="button" class="gate-btn gate-btn-gold">
-        <span>Entra nell'Atelier</span>
-      </button>
-
-      <details class="gate-code-drawer">
-        <summary>Hai ricevuto una chiave riservata</summary>
-        <form id="gate-form" class="gate-form" autocomplete="off">
+      <form id="gate-form" class="gate-form" autocomplete="off" style="margin-top:16px;width:100%;">
+        <div style="position:relative;display:flex;align-items:center;width:100%;">
           <input
             id="gate-code-input"
             class="gate-input"
             type="password"
-            placeholder="CODICE DIREZIONE"
-            autocapitalize="characters"
+            placeholder="Inserisci codice di accesso..."
+            autocapitalize="none"
+            autocorrect="off"
+            spellcheck="false"
+            required
+            style="padding-right:46px;text-transform:none;"
           >
-          <button type="submit" class="gate-btn gate-btn-secondary">
-            <span>Verifica Codice</span>
+          <button
+            type="button"
+            id="gate-toggle-eye"
+            aria-label="Mostra o nascondi codice"
+            onclick="(function(){var i=document.getElementById('gate-code-input');i.type=i.type==='password'?'text':'password';})()"
+            style="position:absolute;right:10px;background:transparent;border:none;color:#94a3b8;cursor:pointer;padding:6px;display:flex;align-items:center;justify-content:center;"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
           </button>
-          <div id="gate-error" class="gate-error" role="alert"></div>
-        </form>
-      </details>
+        </div>
+        <button id="gate-submit-btn" type="submit" class="gate-btn gate-btn-gold" style="margin-top:12px;">
+          <span>Entra nell'Atelier</span>
+        </button>
+        <div id="gate-error" class="gate-error" role="alert"></div>
+      </form>
 
       <div class="gate-footnote">
         <strong>Trinacria Artificial Intelligence S.r.l.</strong> · Start-up Innovativa D.L. 179/2012 art. 25 · REA PA 452478 · P.IVA 07335120825

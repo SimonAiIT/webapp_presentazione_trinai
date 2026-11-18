@@ -1,20 +1,38 @@
 ﻿/**
- * TRINAI ATELIER // SECURITY LOCK, MAGIC PASS & WATERMARK
- * - Verifica codice via SHA-256 + supporto Magic Link (?k=...) e Black Card Pass a tocco singolo
+ * TRINAI ATELIER // SECURITY LOCK & WATERMARK (ACCESSO ESCLUSIVO CON CODICE)
+ * - Verifica codice via SHA-256 (codici fissi + hash salati Drive + verifica live GAS per nuovi codici temporanei)
+ * - Nessun ingresso libero senza codice
  * - Filigrana dinamica non invasiva + deterrente anti-copia UI + listener Ably
  */
 (function () {
   "use strict";
+
+  const GAS_VERIFY_URL =
+    "https://script.google.com/macros/s/AKfycbwORN94QznZcSk00icL7DoQwNBRrzdGZY6wEcD8H_V6yyK_h8i6kB4JuUkf3c3M0Xfg/exec";
 
   const ALLOWED_HASHES = {
     "e8e35d09f3f6bde23a0a092b44a79ddd9fd73d1e76900a88127256a48999ae1f": { role: "MASTER", label: "DIREZIONE TRINAI" },
     "80bb41008ab9cb80e34ee654b02e4c3fa8f418c0c4565abe0e25f30242057655": { role: "OSPITE", label: "OSPITE RISERVATO" }
   };
 
-  const SESSION_KEY = "trinai_atelier_session_v2";
+  // Hash salati SHA-256 allineati con il portale Drive (_config/accessi.json)
+  const SALTED_ACCESS_LIST = [
+    { salt: "93e1432dee67af8e07ce326849a19c08", hash: "20e5e1ecebe40a2bbb10aeeab1836aa65a06b9e928ee8ae4935c1c1c1b12a53a", role: "OPERATORE", label: "THE APPMANAGER" },
+    { salt: "de00a4925dc3a3389ac01b86324f27a1", hash: "803750b26083beb23d8ecb2f8f156abb01d2a79c4190ca50d5e8bb2c9b6e0858", role: "MASTER", label: "DIREZIONE CAIO" },
+    { salt: "efae729f89ca15b5d65219b303cee8ae", hash: "622763cfe8e77a0a21ef59f21dac40fd8e38fc54dfb34aa3ad22e2a279a8b0fa", role: "MASTER", label: "CFO & OPINION LEADER" },
+    { salt: "0da1c3382a8a14eac6d43beccd010dc0", hash: "6d11010d05563d4ac97d769719e8db7e976d42ff371561b41978f10e22b07f3d", role: "OPERATORE", label: "DIREZIONE COMMERCIALE" },
+    { salt: "f0ac2789605dea550f62b1df3e308212", hash: "4954b21395a5d5038d8bd394ba17e2c2a47b37950eb52f418bfc05a8696f2340", role: "OPERATORE", label: "DIREZIONE CTO" },
+    { salt: "ee83af288e1d49fcb2a97355b436a4e0", hash: "a555cd5fa8f8beaa32b99e09aa595e6ce88102c2dd24329af7e4992cfa8b3a26", role: "OPERATORE", label: "DIREZIONE DGTI" },
+    { salt: "d631c5dada8c9195b6e176bc728aabb6", hash: "c5098a1716ef0605ebf29a306cfb2ac4c06edf8fe73b4730be58ee02b68076cd", role: "OSPITE", label: "OSPITE BROCHURE" },
+    { salt: "eed75bd3e7361e77175e5d8a028402e3", hash: "c844adc9ff972897a4f579c93f996e41876dbdeb31e010bc888c6740405f555e", role: "OSPITE", label: "GRUPPO FAVERO" },
+    { salt: "ee19dcef9823f6e3c3dbd3130ab665ba", hash: "b0f259abe3966b855e9ad4d24098b8a2b27a157ff2249318d067531c6b5e8e96", role: "OSPITE", label: "OSPITE RISERVATO" },
+    { salt: "3c93c4fa317b84600c6dae0113fa718f", hash: "b6efd18d09972771284cb3aa1b6cfbaa0476c36de36156c7940be28372627e9c", role: "OSPITE", label: "GRUPPO FAVERO" }
+  ];
 
-  async function sha256Hex(str) {
-    const buf = new TextEncoder().encode(str.trim().toUpperCase());
+  const SESSION_KEY = "trinai_atelier_session_v3";
+
+  async function sha256HexRaw(str) {
+    const buf = new TextEncoder().encode(str);
     const hash = await crypto.subtle.digest("SHA-256", buf);
     return Array.from(new Uint8Array(hash))
       .map((b) => b.toString(16).padStart(2, "0"))
@@ -24,7 +42,10 @@
   function getSession() {
     try {
       const raw = sessionStorage.getItem(SESSION_KEY);
-      return raw ? JSON.parse(raw) : null;
+      if (!raw) return null;
+      const parsed = JSON.parse(raw);
+      if (!parsed || parsed.role === "VIP_PASS") return null;
+      return parsed;
     } catch {
       return null;
     }
@@ -39,6 +60,7 @@
   function clearSession() {
     try {
       sessionStorage.removeItem(SESSION_KEY);
+      sessionStorage.removeItem("trinai_atelier_session_v2");
     } catch {}
   }
 
@@ -104,29 +126,63 @@
   }
 
   async function verifyCode(code) {
-    if (!code) return null;
-    const hex = await sha256Hex(code);
-    const hit = ALLOWED_HASHES[hex];
-    if (!hit) return null;
-    const session = {
-      role: hit.role,
-      label: hit.label,
-      sig: hex.slice(0, 8).toUpperCase(),
-      ts: Date.now()
-    };
-    saveSession(session);
-    return session;
-  }
+    const clean = (code || "").trim();
+    if (!clean) return null;
 
-  function createGuestPassSession() {
-    const session = {
-      role: "VIP_PASS",
-      label: "INVITO BLACK CARD",
-      sig: "BC" + Math.random().toString(16).slice(2, 8).toUpperCase(),
-      ts: Date.now()
-    };
-    saveSession(session);
-    return session;
+    // 1. Verifica hash legacy (maiuscolo)
+    const upperHex = await sha256HexRaw(clean.toUpperCase());
+    if (ALLOWED_HASHES[upperHex]) {
+      const hit = ALLOWED_HASHES[upperHex];
+      const session = {
+        role: hit.role,
+        label: hit.label,
+        sig: upperHex.slice(0, 8).toUpperCase(),
+        ts: Date.now()
+      };
+      saveSession(session);
+      return session;
+    }
+
+    // 2. Verifica hash salati locali (istantanea per team e codici fissi)
+    for (let i = 0; i < SALTED_ACCESS_LIST.length; i++) {
+      const item = SALTED_ACCESS_LIST[i];
+      const saltedHex = await sha256HexRaw(item.salt + clean);
+      if (saltedHex === item.hash) {
+        const session = {
+          role: item.role,
+          label: item.label,
+          sig: saltedHex.slice(0, 8).toUpperCase(),
+          ts: Date.now()
+        };
+        saveSession(session);
+        return session;
+      }
+    }
+
+    // 3. Verifica live su Google Apps Script (per tutti i nuovi codici temporanei generati dal portale Drive)
+    try {
+      const res = await fetch(GAS_VERIFY_URL, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({ action: "verifica_codice_pubblico", code: clean })
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.ok) {
+          const sigHex = await sha256HexRaw(clean);
+          const session = {
+            role: data.role || "OSPITE",
+            label: (data.label || "OSPITE RISERVATO").toUpperCase(),
+            sig: sigHex.slice(0, 8).toUpperCase(),
+            ts: Date.now()
+          };
+          saveSession(session);
+          return session;
+        }
+      }
+    } catch (_e) {}
+
+    return null;
   }
 
   function activateLock(session) {
@@ -138,7 +194,6 @@
   window.TRINAI_LOCK = {
     getSession,
     verifyCode,
-    createGuestPassSession,
     activateLock,
     clearSession
   };
