@@ -100,6 +100,15 @@
     "chiusura": "Il costo scende e le carte sono in regola. Vediamo ora tutto quello che facciamo per voi."
   },
   "10": {
+    "intro": "Un'architettura di questo livello non è un costo, è un moltiplicatore operativo che si ripaga nel lavoro di ogni giorno.",
+    "punti": [
+      "Il ritorno sull'investimento nasce dal recupero delle ore di poltrona non saturate, dall'eliminazione delle attività ripetitive in segreteria e dal controllo continuo dei margini per reparto.",
+      "La chiarezza visiva dei percorsi di cura rafforza la fiducia del paziente e rende più naturale l'accettazione dei piani proposti.",
+      "Per gli studi e i gruppi che vogliono crescere insieme a noi sul territorio, è aperto il Programma Partner TrinAI, un'alleanza diretta con il nostro gruppo multidisciplinare costruita su misura senza listini rigidi."
+    ],
+    "chiusura": "Richiedete alla nostra direzione un incontro riservato per valutare insieme il percorso più adatto alla vostra struttura."
+  },
+  "11": {
     "intro": "Ecco tutto quello che facciamo per voi, una cosa alla volta.",
     "punti": [
       "Studiamo ogni vostra sede e progettiamo l'intervento su misura.",
@@ -120,14 +129,5 @@
       "E dopo l'installazione restiamo al vostro fianco con l'assistenza."
     ],
     "chiusura": "Grazie per aver visitato il nostro Atelier. Chiedeteci il calendario dei nostri prossimi incontri, dove avremo il piacere di conoscervi di persona. Nessun agente speciale veste di serie. Il ritorno economico di ogni intervento si misura sempre rispetto a quanto progettiamo insieme."
-  },
-  "11": {
-    "intro": "Un'architettura di questo livello non è un costo, è un moltiplicatore operativo che si ripaga nel lavoro di ogni giorno.",
-    "punti": [
-      "Il ritorno sull'investimento nasce dal recupero delle ore di poltrona non saturate, dall'eliminazione delle attività ripetitive in segreteria e dal controllo continuo dei margini per reparto.",
-      "La chiarezza visiva dei percorsi di cura rafforza la fiducia del paziente e rende più naturale l'accettazione dei piani proposti.",
-      "Per gli studi e i gruppi che vogliono crescere insieme a noi sul territorio, è aperto il Programma Partner TrinAI, un'alleanza diretta con il nostro gruppo multidisciplinare costruita su misura senza listini rigidi."
-    ],
-    "chiusura": "Richiedete alla nostra direzione un incontro riservato per valutare insieme il percorso più adatto alla vostra struttura."
   }
 }
