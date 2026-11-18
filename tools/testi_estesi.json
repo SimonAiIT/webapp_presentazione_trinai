@@ -1,10 +1,10 @@
 {
   "00": {
-    "intro": "I posti che contano non hanno insegne sulla porta. Hanno un invito. Benvenuti nell'Atelier TrinAI. Qui non troverete programmi preconfezionati. Qui ogni passo accresce il vostro successo, le vostre relazioni, il valore della vostra attività e il vostro prestigio. Ogni risultato nasce su misura per voi e si misura con chiarezza fino all'ultimo euro.",
+    "intro": "I posti che contano non hanno insegne sulla porta. Hanno un invito. Ogni giorno, senza accorgervene, ore preziose di poltrona e di segreteria vanno perdute tra attese, burocrazia e strumenti che non si parlano. Benvenuti nell'Atelier TrinAI. Qui ogni passo accresce il vostro successo, il controllo dei margini e il valore della vostra attività.",
     "punti": [
       "Chi guida uno studio, un laboratorio o un'azienda sa quanto è frustrante comprare un programma nuovo e passare mesi a caricare dati a mano. Con noi questo non esiste. Ci basta il codice della vostra attività per leggere i registri ufficiali. In soli cinque minuti costruiamo la casa digitale della vostra impresa.",
       "Sei aree di lavoro si accendono insieme, già pronte a parlarsi tra loro. Dalla segreteria alla produzione, dalle persone fino al controllo dei conti. Niente dieci abbonamenti che non si capiscono.",
-      "Siamo una realtà nata dall'incontro tra medici, ingegneri, architetti digitali ed esperti del lavoro umano. Sette soci, ognuno con il suo mestiere, seduti allo stesso tavolo.",
+      "Dietro questo sistema opera un gruppo multidisciplinare di alto profilo, composto da medici specialisti, economisti sanitari, psicologi del lavoro, avvocati, tributaristi, architetti di intelligenza artificiale, ingegneri di infrastruttura ed esperti di comunicazione e direzione operativa.",
       "Collaboriamo con le istituzioni. Siamo stati invitati come relatori nei contesti più autorevoli del settore, dai Master universitari fino a Confindustria."
     ],
     "chiusura": "Questo è l'inizio. Ora lasciate che vi presenti, tappa dopo tappa, il nostro abito su misura."
@@ -120,5 +120,14 @@
       "E dopo l'installazione restiamo al vostro fianco con l'assistenza."
     ],
     "chiusura": "Grazie per aver visitato il nostro Atelier. Chiedeteci il calendario dei nostri prossimi incontri, dove avremo il piacere di conoscervi di persona. Nessun agente speciale veste di serie. Il ritorno economico di ogni intervento si misura sempre rispetto a quanto progettiamo insieme."
+  },
+  "11": {
+    "intro": "Un'architettura di questo livello non è un costo, è un moltiplicatore operativo che si ripaga nel lavoro di ogni giorno.",
+    "punti": [
+      "Il ritorno sull'investimento nasce dal recupero delle ore di poltrona non saturate, dall'eliminazione delle attività ripetitive in segreteria e dal controllo continuo dei margini per reparto.",
+      "La chiarezza visiva dei percorsi di cura rafforza la fiducia del paziente e rende più naturale l'accettazione dei piani proposti.",
+      "Per gli studi e i gruppi che vogliono crescere insieme a noi sul territorio, è aperto il Programma Partner TrinAI, un'alleanza diretta con il nostro gruppo multidisciplinare costruita su misura senza listini rigidi."
+    ],
+    "chiusura": "Richiedete alla nostra direzione un incontro riservato per valutare insieme il percorso più adatto alla vostra struttura."
   }
 }

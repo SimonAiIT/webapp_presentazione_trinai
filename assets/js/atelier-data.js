@@ -160,70 +160,6 @@ window.TRINAI_DATA = {
       schede: []
     },
     {
-      id: "atto-11",
-      codice: "11",
-      titolo: "Il ritorno sull'investimento e il programma partner",
-      titoloLuce: "Ritorno sull'investimento",
-      titoloOro: "E il Programma Partner TrinAI",
-      sottotitolo: "Valore misurabile in sede e alleanza strategica sul territorio",
-      domandaGuida: "Come si ripaga l'architettura nella pratica quotidiana e come entrare nel Programma Partner",
-      blueprintType: "carta",
-      img: "assets/img/hero_trinai_luxury.jpg",
-      voce: "elsa",
-      voceNome: "Elsa · Voce Narrante Atelier",
-      video: "assets/video/invito_prequel1.mp4",
-      videos: ["assets/video/invito_prequel1.mp4", "assets/video/s15.mp4", "assets/video/s14.mp4"],
-      audio: "assets/audio/act_00.mp3",
-      kpi: [
-        { valore: "Ore recuperate", label: "Meno burocrazia e agende più piene" },
-        { valore: "Margini visibili", label: "Controllo continuo su ogni reparto" },
-        { valore: "Programma Partner", label: "Alleanza dedicata per sedi e opinion leader" },
-        { valore: "Accesso su misura", label: "Valutazione personalizzata in sede" }
-      ],
-      narrazioneBreve: "Un'architettura di questo livello non è un costo, è un moltiplicatore operativo. Il ritorno sull'investimento nasce ogni giorno dal recupero delle ore di poltrona non saturate, dall'eliminazione del lavoro ripetitivo in segreteria, dalla maggiore chiarezza visiva che aiuta il paziente ad accettare i piani di cura e dal controllo costante dei margini aziendali. Per gli studi e i gruppi che vogliono fare un passo ulteriore, abbiamo aperto il Programma Partner TrinAI, un percorso di collaborazione diretta pensato per chi desidera crescere insieme al nostro gruppo multidisciplinare sul territorio. Ogni adesione viene costruita su misura durante un confronto riservato con la nostra direzione.",
-      doveSiApplica: [
-        {
-          ambito: "Efficienza Operativa e Riduzione degli Sprechi",
-          esempio: "Recupero sistematico dei tempi morti tra una seduta e l'altra, richiami ordinati e meno errori di passaggio tra segreteria e clinica."
-        },
-        {
-          ambito: "Valore Percepito e Accettazione dei Piani",
-          esempio: "La comunicazione visiva e la chiarezza espositiva rafforzano la fiducia del paziente e la qualità percepita dello studio."
-        },
-        {
-          ambito: "Programma Partner TrinAI",
-          esempio: "Accesso prioritario agli aggiornamenti dell'Atelier, confronto diretto con il gruppo multidisciplinare e iniziative congiunte sul territorio."
-        }
-      ],
-      cassetti: [
-        {
-          titolo: "Perché il Ritorno È Misurabile Fin dalle Prime Settimane",
-          testo: "Invece di promettere risparmi astratti, il sistema misura l'andamento reale di agende, tempi operativi e margini per reparto, trasformando i numeri quotidiani in decisioni chiare."
-        },
-        {
-          titolo: "Come Funziona il Programma Partner",
-          testo: "È un'alleanza riservata a realtà selezionate che vogliono integrare l'Atelier come standard di riferimento, con affiancamento continuo del nostro gruppo multidisciplinare e nessun listino rigido preconfezionato."
-        }
-      ],
-      schede: [
-        {
-          badge: "IMPATTO ROI",
-          titolo: "Tempo, Margini e Continuità",
-          testo: "Ogni reparto guadagna ore utili e riduce le dispersioni operative senza stravolgere le abitudini dei professionisti."
-        },
-        {
-          badge: "PROGRAMMA PARTNER",
-          titolo: "Crescita Condivisa sul Territorio",
-          testo: "Collaborazione diretta, priorità evolutiva e confronto continuo con clinici, economisti, psicologi, legali e architetti AI."
-        },
-        {
-          badge: "PROSSIMO PASSO",
-          titolo: "Incontro Riservato su Misura",
-          testo: "Richiedi alla nostra direzione un'analisi dedicata sulla tua struttura per definire il percorso più adatto."
-        }
-      ]
-    },
-    {
       id: "atto-02",
       codice: "02",
       titolo: "Chi è Victor il direttore operativo che non dorme mai",
@@ -906,7 +842,7 @@ window.TRINAI_DATA = {
       voceNome: "Elsa · Voce Narrante Atelier",
       video: "assets/video/invito_prequel1.mp4",
       videos: ["assets/video/invito_prequel1.mp4", "assets/video/s15.mp4", "assets/video/s14.mp4"],
-      audio: "assets/audio/act_00.mp3",
+      audio: "assets/audio/act_11.mp3",
       kpi: [
         { valore: "Ore recuperate", label: "Meno burocrazia e agende più piene" },
         { valore: "Margini visibili", label: "Controllo continuo su ogni reparto" },
