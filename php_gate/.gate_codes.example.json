@@ -1,0 +1,18 @@
+{
+  "TRINAI-MASTER-01": {
+    "role": "MASTER",
+    "singleUse": false,
+    "sessionDays": 30
+  },
+  "OSPITE-14GG": {
+    "role": "OSPITE",
+    "singleUse": false,
+    "sessionDays": 14,
+    "expiresAt": 1796000000000
+  },
+  "ONESHOT-99": {
+    "role": "ONESHOT",
+    "singleUse": true,
+    "sessionDays": 1
+  }
+}

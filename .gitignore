@@ -2,3 +2,5 @@
 Thumbs.db
 desktop.ini
 *.log
+.gate_config.php
+.gate_codes.json
