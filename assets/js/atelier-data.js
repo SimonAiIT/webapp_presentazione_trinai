@@ -43,10 +43,10 @@ window.TRINAI_DATA = {
       kpi: [
         { valore: "5 minuti", label: "Per creare la vostra base" },
         { valore: "6 aree", label: "Pronte fin dal primo giorno" },
-        { valore: "7 specialisti", label: "Soci tra medici, ingegneri e formatori" },
-        { valore: "Con le istituzioni", label: "Relatori negli incontri di settore" }
+        { valore: "Gruppo Multidisciplinare", label: "Clinici, economisti, psicologi, legali e AI" },
+        { valore: "Ritorno misurabile", label: "Margini, tempi e processi sotto controllo" }
       ],
-      narrazioneBreve: "I posti che contano non hanno insegne sulla porta, hanno un invito. Benvenuti nell'Atelier di Trinacria Artificial Intelligence, Start-up Innovativa ad alto valore tecnologico iscritta nella Sezione Speciale del Registro delle Imprese. Non siamo una software house tradizionale: nella nostra compagine lavorano fianco a fianco medici specialisti, esperti di risorse umane, architetti di intelligenza artificiale e ingegneri industriali. Quando entrate nell'Atelier non comprate un programma vuoto da compilare per mesi. La nostra Architettura di Fondazione parte dalla vostra Partita IVA, legge i registri ufficiali delle Camere di Commercio e in cinque minuti genera l'ossatura digitale completa della vostra azienda, attivando sei reparti operativi già pronti a dialogare tra loro.",
+      narrazioneBreve: "I posti che contano non hanno insegne sulla porta, hanno un invito. Ogni giorno, senza accorgervene, ore preziose di poltrona e di segreteria vanno perdute tra attese, burocrazia e strumenti che non si parlano. Benvenuti nell'Atelier di Trinacria Artificial Intelligence, Start-up Innovativa iscritta nella Sezione Speciale del Registro delle Imprese. Non siamo una software house tradizionale: dietro questo sistema opera un gruppo multidisciplinare di alto profilo che unisce medici specialisti, economisti sanitari, psicologi del lavoro, avvocati, tributaristi, architetti di intelligenza artificiale, ingegneri di infrastruttura ed esperti di comunicazione. Quando entrate nell'Atelier non comprate un programma vuoto da compilare per mesi. La nostra Architettura di Fondazione parte dalla vostra Partita IVA, legge i registri ufficiali delle Camere di Commercio e in cinque minuti genera l'ossatura digitale completa della vostra azienda, attivando sei reparti operativi già pronti a generare valore.",
       doveSiApplica: [
         {
           ambito: "Studi Medici e Poliambulatori",
@@ -63,8 +63,8 @@ window.TRINAI_DATA = {
       ],
       cassetti: [
         {
-          titolo: "Start-up Innovativa e Compagine Multidisciplinare",
-          testo: "Trinacria Artificial Intelligence S.r.l., sigla TrinAi S.r.l., è iscritta nella Sezione Speciale del Registro delle Imprese di Palermo ed Enna con protocollo ufficiale 90661 del 2026. Riunisce un team multidisciplinare completo tra clinici specialisti, economisti sanitari, architetti AI e cloud, direzione operativa, tributaristi, psicologi del lavoro e avvocati."
+          titolo: "Start-up Innovativa e Gruppo Multidisciplinare",
+          testo: "Trinacria Artificial Intelligence S.r.l., sigla TrinAi S.r.l., è iscritta nella Sezione Speciale del Registro delle Imprese di Palermo ed Enna con protocollo ufficiale 90661 del 2026. Riunisce un gruppo multidisciplinare di alto profilo composto da medici specialisti, economisti sanitari, psicologi del lavoro, avvocati, tributaristi, architetti AI, ingegneri di infrastruttura ed esperti di comunicazione."
         },
         {
           titolo: "Dalla Partita IVA all'Azienda Attiva in Cinque Minuti",
@@ -92,39 +92,34 @@ window.TRINAI_DATA = {
           testo: "Soluzione ingegnerizzata da un team multidisciplinare con collaborazioni accademiche iscritte al Registro delle Imprese."
         },
         {
-          badge: "PRESIDENTE · CFO & OPINION LEADER",
-          titolo: "Dott. Giuseppe Buscemi",
-          testo: "Medico odontoiatra specialista, cura la gestione finanziaria, i bandi e i conti della società ed è Opinion Leader clinico del progetto."
+          badge: "DIREZIONE CLINICA",
+          titolo: "Medici Specialisti e Clinic Operations",
+          testo: "Esperienza diretta alla poltrona e nella direzione di clinica per tradurre ogni flusso in protocolli reali di reparto e segreteria."
         },
         {
-          badge: "STRATEGIA & ADVISORY",
-          titolo: "Prof. Antonio Pelliccia",
-          testo: "The AppManager, economista e docente universitario dal 1993. Guida la strategia d'impresa, l'advisory direzionale e i modelli di economia sanitaria."
+          badge: "ECONOMIA & STRATEGIA",
+          titolo: "Economisti Sanitari di Alto Profilo",
+          testo: "Controllo di gestione, analisi dei margini orari, sostenibilità degli investimenti e pianificazione strategica d'impresa."
         },
         {
-          badge: "AI ARCHITECT · CAIO",
-          titolo: "Giuseppe Garofalo",
-          testo: "AI Solution Architect con esperienza tecnica negli studi odontoiatrici. Progetta l'architettura di Victor, i flussi operativi e i sistemi di distribuzione."
+          badge: "AI & INFRASTRUTTURA",
+          titolo: "Architetti AI e Ingegneri di Sicurezza",
+          testo: "Progettazione dei modelli locali in sede, reti private, continuità operativa e protezione fisica dei dati aziendali."
         },
         {
-          badge: "CTO · INFRASTRUTTURA",
-          titolo: "Davide Calè",
-          testo: "Full Stack Product Architect con oltre tredici anni di esperienza su SaaS, CRM e containerizzazione. Dirige infrastruttura cloud, reti private e sicurezza."
+          badge: "PSICOLOGIA & PERSONE",
+          titolo: "Psicologi del Lavoro e Formatori",
+          testo: "Adozione serena delle tecnologie in squadra, clima organizzativo e comunicazione efficace con il paziente."
         },
         {
-          badge: "DGTI · IMMAGINE",
-          titolo: "Dott. Mario Butera",
-          testo: "Direttore marketing, web engineering e SEO digitale dal 2007. Cura identità visiva, interfacce utente e comunicazione istituzionale di gruppo."
+          badge: "TUTELA LEGALE & FISCALE",
+          titolo: "Avvocati e Tributaristi",
+          testo: "Governance societaria, contrattualistica, finanza agevolata e piena conformità alle normative europee."
         },
         {
-          badge: "DIREZIONE GENERALE COMMERCIALE",
-          titolo: "Giulia Pompili",
-          testo: "Clinic Manager e formatrice per segreterie e assistenti, coautrice con il prof. Pelliccia. Guida la direzione generale commerciale e valida l'operatività in studio."
-        },
-        {
-          badge: "PRESIDIO MULTIDISCIPLINARE",
-          titolo: "Tributaristi, Psicologi e Avvocati",
-          testo: "Nucleo specialistico integrato per governance fiscale e societaria, psicologia organizzativa, tutela legale, contrattualistica e conformità normativa."
+          badge: "IMMAGINE & RELAZIONI",
+          titolo: "Direzione Marketing e Design",
+          testo: "Identità visiva, esperienza digitale e posizionamento autorevole dello studio sul proprio territorio."
         }
       ],
       simulatore: {
@@ -163,6 +158,70 @@ window.TRINAI_DATA = {
       doveSiApplica: [],
       cassetti: [],
       schede: []
+    },
+    {
+      id: "atto-11",
+      codice: "11",
+      titolo: "Il ritorno sull'investimento e il programma partner",
+      titoloLuce: "Ritorno sull'investimento",
+      titoloOro: "E il Programma Partner TrinAI",
+      sottotitolo: "Valore misurabile in sede e alleanza strategica sul territorio",
+      domandaGuida: "Come si ripaga l'architettura nella pratica quotidiana e come entrare nel Programma Partner",
+      blueprintType: "carta",
+      img: "assets/img/hero_trinai_luxury.jpg",
+      voce: "elsa",
+      voceNome: "Elsa · Voce Narrante Atelier",
+      video: "assets/video/invito_prequel1.mp4",
+      videos: ["assets/video/invito_prequel1.mp4", "assets/video/s15.mp4", "assets/video/s14.mp4"],
+      audio: "assets/audio/act_00.mp3",
+      kpi: [
+        { valore: "Ore recuperate", label: "Meno burocrazia e agende più piene" },
+        { valore: "Margini visibili", label: "Controllo continuo su ogni reparto" },
+        { valore: "Programma Partner", label: "Alleanza dedicata per sedi e opinion leader" },
+        { valore: "Accesso su misura", label: "Valutazione personalizzata in sede" }
+      ],
+      narrazioneBreve: "Un'architettura di questo livello non è un costo, è un moltiplicatore operativo. Il ritorno sull'investimento nasce ogni giorno dal recupero delle ore di poltrona non saturate, dall'eliminazione del lavoro ripetitivo in segreteria, dalla maggiore chiarezza visiva che aiuta il paziente ad accettare i piani di cura e dal controllo costante dei margini aziendali. Per gli studi e i gruppi che vogliono fare un passo ulteriore, abbiamo aperto il Programma Partner TrinAI, un percorso di collaborazione diretta pensato per chi desidera crescere insieme al nostro gruppo multidisciplinare sul territorio. Ogni adesione viene costruita su misura durante un confronto riservato con la nostra direzione.",
+      doveSiApplica: [
+        {
+          ambito: "Efficienza Operativa e Riduzione degli Sprechi",
+          esempio: "Recupero sistematico dei tempi morti tra una seduta e l'altra, richiami ordinati e meno errori di passaggio tra segreteria e clinica."
+        },
+        {
+          ambito: "Valore Percepito e Accettazione dei Piani",
+          esempio: "La comunicazione visiva e la chiarezza espositiva rafforzano la fiducia del paziente e la qualità percepita dello studio."
+        },
+        {
+          ambito: "Programma Partner TrinAI",
+          esempio: "Accesso prioritario agli aggiornamenti dell'Atelier, confronto diretto con il gruppo multidisciplinare e iniziative congiunte sul territorio."
+        }
+      ],
+      cassetti: [
+        {
+          titolo: "Perché il Ritorno È Misurabile Fin dalle Prime Settimane",
+          testo: "Invece di promettere risparmi astratti, il sistema misura l'andamento reale di agende, tempi operativi e margini per reparto, trasformando i numeri quotidiani in decisioni chiare."
+        },
+        {
+          titolo: "Come Funziona il Programma Partner",
+          testo: "È un'alleanza riservata a realtà selezionate che vogliono integrare l'Atelier come standard di riferimento, con affiancamento continuo del nostro gruppo multidisciplinare e nessun listino rigido preconfezionato."
+        }
+      ],
+      schede: [
+        {
+          badge: "IMPATTO ROI",
+          titolo: "Tempo, Margini e Continuità",
+          testo: "Ogni reparto guadagna ore utili e riduce le dispersioni operative senza stravolgere le abitudini dei professionisti."
+        },
+        {
+          badge: "PROGRAMMA PARTNER",
+          titolo: "Crescita Condivisa sul Territorio",
+          testo: "Collaborazione diretta, priorità evolutiva e confronto continuo con clinici, economisti, psicologi, legali e architetti AI."
+        },
+        {
+          badge: "PROSSIMO PASSO",
+          titolo: "Incontro Riservato su Misura",
+          testo: "Richiedi alla nostra direzione un'analisi dedicata sulla tua struttura per definire il percorso più adatto."
+        }
+      ]
     },
     {
       id: "atto-02",
@@ -832,6 +891,70 @@ window.TRINAI_DATA = {
       doveSiApplica: [],
       cassetti: [],
       schede: []
+    },
+    {
+      id: "atto-11",
+      codice: "11",
+      titolo: "Il ritorno sull'investimento e il programma partner",
+      titoloLuce: "Ritorno sull'investimento",
+      titoloOro: "E il Programma Partner TrinAI",
+      sottotitolo: "Valore misurabile in sede e alleanza strategica sul territorio",
+      domandaGuida: "Come si ripaga l'architettura nella pratica quotidiana e come entrare nel Programma Partner",
+      blueprintType: "carta",
+      img: "assets/img/hero_trinai_luxury.jpg",
+      voce: "elsa",
+      voceNome: "Elsa · Voce Narrante Atelier",
+      video: "assets/video/invito_prequel1.mp4",
+      videos: ["assets/video/invito_prequel1.mp4", "assets/video/s15.mp4", "assets/video/s14.mp4"],
+      audio: "assets/audio/act_00.mp3",
+      kpi: [
+        { valore: "Ore recuperate", label: "Meno burocrazia e agende più piene" },
+        { valore: "Margini visibili", label: "Controllo continuo su ogni reparto" },
+        { valore: "Programma Partner", label: "Alleanza dedicata per sedi e opinion leader" },
+        { valore: "Accesso su misura", label: "Valutazione personalizzata in sede" }
+      ],
+      narrazioneBreve: "Un'architettura di questo livello non è un costo, è un moltiplicatore operativo. Il ritorno sull'investimento nasce ogni giorno dal recupero delle ore di poltrona non saturate, dall'eliminazione del lavoro ripetitivo in segreteria, dalla maggiore chiarezza visiva che aiuta il paziente ad accettare i piani di cura e dal controllo costante dei margini aziendali. Per gli studi e i gruppi che vogliono fare un passo ulteriore, abbiamo aperto il Programma Partner TrinAI, un percorso di collaborazione diretta pensato per chi desidera crescere insieme al nostro gruppo multidisciplinare sul territorio. Ogni adesione viene costruita su misura durante un confronto riservato con la nostra direzione.",
+      doveSiApplica: [
+        {
+          ambito: "Efficienza Operativa e Riduzione degli Sprechi",
+          esempio: "Recupero sistematico dei tempi morti tra una seduta e l'altra, richiami ordinati e meno errori di passaggio tra segreteria e clinica."
+        },
+        {
+          ambito: "Valore Percepito e Accettazione dei Piani",
+          esempio: "La comunicazione visiva e la chiarezza espositiva rafforzano la fiducia del paziente e la qualità percepita dello studio."
+        },
+        {
+          ambito: "Programma Partner TrinAI",
+          esempio: "Accesso prioritario agli aggiornamenti dell'Atelier, confronto diretto con il gruppo multidisciplinare e iniziative congiunte sul territorio."
+        }
+      ],
+      cassetti: [
+        {
+          titolo: "Perché il Ritorno È Misurabile Fin dalle Prime Settimane",
+          testo: "Invece di promettere risparmi astratti, il sistema misura l'andamento reale di agende, tempi operativi e margini per reparto, trasformando i numeri quotidiani in decisioni chiare."
+        },
+        {
+          titolo: "Come Funziona il Programma Partner",
+          testo: "È un'alleanza riservata a realtà selezionate che vogliono integrare l'Atelier come standard di riferimento, con affiancamento continuo del nostro gruppo multidisciplinare e nessun listino rigido preconfezionato."
+        }
+      ],
+      schede: [
+        {
+          badge: "IMPATTO ROI",
+          titolo: "Tempo, Margini e Continuità",
+          testo: "Ogni reparto guadagna ore utili e riduce le dispersioni operative senza stravolgere le abitudini dei professionisti."
+        },
+        {
+          badge: "PROGRAMMA PARTNER",
+          titolo: "Crescita Condivisa sul Territorio",
+          testo: "Collaborazione diretta, priorità evolutiva e confronto continuo con clinici, economisti, psicologi, legali e architetti AI."
+        },
+        {
+          badge: "PROSSIMO PASSO",
+          titolo: "Incontro Riservato su Misura",
+          testo: "Richiedi alla nostra direzione un'analisi dedicata sulla tua struttura per definire il percorso più adatto."
+        }
+      ]
     }
   ]
 };
